@@ -1,0 +1,57 @@
+# GitHub Pages Configuration for Japanese Calendar API
+
+# Site settings
+title: "日本暦データAPI"
+description: "日本の暦データをJSON形式で提供する無料APIサービス"
+baseurl: ""
+url: "https://your-username.github.io"
+
+# Repository
+repository: "your-username/japanese-calendar-api"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: null
+
+# Plugin settings
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+
+# Include/exclude files
+include:
+  - api/
+  - css/
+  - js/
+  - _headers
+
+exclude:
+  - README.md
+  - generate_data.py
+  - .gitignore
+  - .github/
+
+# Enable CORS headers
+headers:
+  "/api/**/*":
+    - "Access-Control-Allow-Origin: *"
+    - "Access-Control-Allow-Methods: GET, OPTIONS"
+    - "Access-Control-Allow-Headers: Content-Type"
+    - "Cache-Control: public, max-age=3600"
+
+# Custom configuration
+timezone: Asia/Tokyo
+lang: ja
+
+# GitHub Pages specific settings
+safe: true
+source: .
+destination: ./_site
+incremental: false
+highlighter: rouge
+gist:
+  noscript: false
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge

@@ -1,0 +1,252 @@
+// Japanese Calendar API Documentation Site JavaScript
+
+// DOM Content Loaded Event
+document.addEventListener('DOMContentLoaded', function() {
+    initializeApp();
+    loadTodayData();
+});
+
+// Initialize the application
+function initializeApp() {
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // Initialize Prism.js for code highlighting
+    if (typeof Prism !== 'undefined') {
+        Prism.highlightAll();
+    }
+
+    // Copy code functionality
+    addCopyCodeButtons();
+}
+
+// Load today's data for the demo card
+async function loadTodayData() {
+    const todayDataElement = document.getElementById('today-data');
+    
+    try {
+        const today = new Date();
+        const month = String(today.getMonth() + 1).padStart(2, '0');
+        const day = today.getDate();
+        
+        // Get current month data
+        const response = await fetch(`./api/2025/${month}.json`);
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        
+        const monthData = await response.json();
+        const todayData = monthData.days.find(d => d.day === day);
+        
+        if (todayData) {
+            displayTodayData(todayData);
+        } else {
+            showTodayDataError('本日のデータが見つかりません');
+        }
+    } catch (error) {
+        console.error('Error loading today data:', error);
+        showTodayDataError('データの読み込みに失敗しました');
+    }
+}
+
+// Display today's data in the demo card
+function displayTodayData(data) {
+    const todayDataElement = document.getElementById('today-data');
+    
+    const html = `
+        <div class="today-data-item">
+            <span class="today-data-label">日付</span>
+            <span class="today-data-value">${data.day}日 (${data.weekday})</span>
+        </div>
+        <div class="today-data-item">
+            <span class="today-data-label">六曜</span>
+            <span class="today-data-value">${data.rokuyo}</span>
+        </div>
+        ${data.is_holiday ? `
+        <div class="today-data-item">
+            <span class="today-data-label">祝日</span>
+            <span class="holiday-badge">${data.holiday_name}</span>
+        </div>
+        ` : ''}
+        <div class="today-data-item">
+            <span class="today-data-label">キーワード</span>
+            <span class="today-data-value">${data.daily_keyword}</span>
+        </div>
+        <div class="today-data-item">
+            <span class="today-data-label">おすすめお茶</span>
+            <span class="today-data-value">${data.recommended_tea}</span>
+        </div>
+        <div class="today-data-item">
+            <span class="today-data-label">曜日カラー</span>
+            <span class="today-data-value">
+                <span style="display: inline-block; width: 20px; height: 20px; background-color: ${data.color_of_the_day}; border-radius: 50%; margin-right: 8px; vertical-align: middle;"></span>
+                ${data.color_of_the_day}
+            </span>
+        </div>
+    `;
+    
+    todayDataElement.innerHTML = html;
+}
+
+// Show error message for today's data
+function showTodayDataError(message) {
+    const todayDataElement = document.getElementById('today-data');
+    todayDataElement.innerHTML = `
+        <div class="alert alert-warning" role="alert">
+            <i class="fas fa-exclamation-triangle me-2"></i>
+            ${message}
+        </div>
+    `;
+}
+
+// Test API endpoint functionality
+async function testEndpoint(endpoint) {
+    const button = event.target;
+    const originalText = button.textContent;
+    
+    // Show loading state
+    button.textContent = '読み込み中...';
+    button.disabled = true;
+    button.classList.add('loading');
+    
+    try {
+        const response = await fetch(`.${endpoint}`);
+        if (!response.ok) {
+            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
+        
+        const data = await response.json();
+        showEndpointResult(button, data, true);
+    } catch (error) {
+        console.error('Endpoint test failed:', error);
+        showEndpointResult(button, { error: error.message }, false);
+    } finally {
+        // Reset button state
+        setTimeout(() => {
+            button.textContent = originalText;
+            button.disabled = false;
+            button.classList.remove('loading');
+        }, 2000);
+    }
+}
+
+// Show endpoint test result
+function showEndpointResult(button, data, success) {
+    // Remove any existing result
+    const existingResult = button.parentNode.querySelector('.endpoint-result');
+    if (existingResult) {
+        existingResult.remove();
+    }
+    
+    // Create result element
+    const resultElement = document.createElement('div');
+    resultElement.className = `endpoint-result ${success ? '' : 'endpoint-error'}`;
+    
+    if (success) {
+        const dataPreview = data.days ? 
+            `${data.days.length}日分のデータを取得しました` : 
+            `${data.months ? data.months.length : '不明'}ヶ月分のデータを取得しました`;
+        
+        resultElement.innerHTML = `
+            <div class="d-flex align-items-center">
+                <i class="fas fa-check-circle text-success me-2"></i>
+                <strong>成功:</strong> ${dataPreview}
+            </div>
+            <small class="text-muted">詳細はブラウザの開発者ツールをご確認ください</small>
+        `;
+        console.log('API Response:', data);
+    } else {
+        resultElement.innerHTML = `
+            <div class="d-flex align-items-center">
+                <i class="fas fa-exclamation-circle text-danger me-2"></i>
+                <strong>エラー:</strong> ${data.error}
+            </div>
+        `;
+    }
+    
+    // Insert result after the button's parent
+    button.parentNode.appendChild(resultElement);
+}
+
+// Add copy code functionality to code blocks
+function addCopyCodeButtons() {
+    document.querySelectorAll('pre code').forEach((codeBlock) => {
+        const pre = codeBlock.parentNode;
+        const wrapper = document.createElement('div');
+        wrapper.className = 'code-block-wrapper position-relative';
+        
+        // Create copy button
+        const copyButton = document.createElement('button');
+        copyButton.className = 'btn btn-sm btn-outline-secondary position-absolute';
+        copyButton.style.cssText = 'top: 0.5rem; right: 0.5rem; z-index: 1;';
+        copyButton.innerHTML = '<i class="fas fa-copy"></i>';
+        copyButton.title = 'コードをコピー';
+        
+        // Wrap the pre element
+        pre.parentNode.insertBefore(wrapper, pre);
+        wrapper.appendChild(copyButton);
+        wrapper.appendChild(pre);
+        
+        // Add click event
+        copyButton.addEventListener('click', () => {
+            copyCodeToClipboard(codeBlock, copyButton);
+        });
+    });
+}
+
+// Copy code to clipboard
+async function copyCodeToClipboard(codeBlock, button) {
+    const code = codeBlock.textContent;
+    const originalContent = button.innerHTML;
+    
+    try {
+        await navigator.clipboard.writeText(code);
+        button.innerHTML = '<i class="fas fa-check text-success"></i>';
+        button.classList.add('btn-success');
+        button.classList.remove('btn-outline-secondary');
+        
+        setTimeout(() => {
+            button.innerHTML = originalContent;
+            button.classList.remove('btn-success');
+            button.classList.add('btn-outline-secondary');
+        }, 2000);
+    } catch (err) {
+        console.error('Failed to copy code:', err);
+        button.innerHTML = '<i class="fas fa-times text-danger"></i>';
+        
+        setTimeout(() => {
+            button.innerHTML = originalContent;
+        }, 2000);
+    }
+}
+
+// Utility function to format JSON
+function formatJSON(obj, indent = 2) {
+    return JSON.stringify(obj, null, indent);
+}
+
+// Utility function to validate date
+function isValidDate(dateString) {
+    const date = new Date(dateString);
+    return date instanceof Date && !isNaN(date);
+}
+
+// Export functions for testing (if needed)
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = {
+        loadTodayData,
+        testEndpoint,
+        displayTodayData
+    };
+}
