@@ -123,10 +123,14 @@
             </div>
 
             <div class="file-section">
-                <h3>📊 年間データ</h3>
+                <h3>📊 年間データ (2025年〜2027年)</h3>
                 <ul class="file-list">
                     <li><a href="api/2025/all.json">2025年全データ <span class="format-badge">JSON</span></a></li>
                     <li><a href="api/2025/all.csv">2025年全データ <span class="format-badge">CSV</span></a></li>
+                    <li><a href="api/2025/all.xml">2025年全データ <span class="format-badge">XML</span></a></li>
+                    <li><a href="api/2025/all.txt">2025年全データ <span class="format-badge">TXT</span></a></li>
+                    <li><a href="api/2026/all.json">2026年全データ <span class="format-badge">JSON</span></a></li>
+                    <li><a href="api/2027/all.json">2027年全データ <span class="format-badge">JSON</span></a></li>
                 </ul>
             </div>
 
@@ -166,24 +170,32 @@ GET /api/2025/all.json</div>
             { ext: 'txt', name: 'TXT', color: '#f39c12' }
         ];
 
-        // 月別ファイル一覧を生成
+        // 月別ファイル一覧を生成（3年分）
         function generateMonthlyFiles() {
             const container = document.getElementById('monthlyFiles');
-            for (let month = 1; month <= 12; month++) {
-                const monthNum = month.toString().padStart(2, '0');
-                const li = document.createElement('li');
-                li.innerHTML = `<strong>${monthNames[month-1]}:</strong> `;
+            const years = [2025, 2026, 2027];
+            
+            years.forEach(year => {
+                const yearDiv = document.createElement('div');
+                yearDiv.innerHTML = `<h4 style="color: #2c3e50; margin: 15px 0 10px 0;">${year}年</h4>`;
+                container.appendChild(yearDiv);
                 
-                formats.forEach(format => {
-                    const link = document.createElement('a');
-                    link.href = `api/2025/${monthNum}.${format.ext}`;
-                    link.innerHTML = `<span class="format-badge" style="background:${format.color}">${format.name}</span>`;
-                    link.style.marginRight = '5px';
-                    li.appendChild(link);
-                });
-                
-                container.appendChild(li);
-            }
+                for (let month = 1; month <= 12; month++) {
+                    const monthNum = month.toString().padStart(2, '0');
+                    const li = document.createElement('li');
+                    li.innerHTML = `<strong>${monthNames[month-1]}:</strong> `;
+                    
+                    formats.forEach(format => {
+                        const link = document.createElement('a');
+                        link.href = `api/${year}/${monthNum}.${format.ext}`;
+                        link.innerHTML = `<span class="format-badge" style="background:${format.color}">${format.name}</span>`;
+                        link.style.marginRight = '5px';
+                        li.appendChild(link);
+                    });
+                    
+                    container.appendChild(li);
+                }
+            });
         }
 
         // 今日のデータを取得して表示
