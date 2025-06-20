@@ -193,6 +193,8 @@ GET /api/2025/all.json</div>
                 const month = today.getMonth() + 1;
                 const day = today.getDate();
                 
+                console.log(`今日の日付: ${today.getFullYear()}-${month}-${day}`);
+                
                 const response = await fetch(`api/2025/${month.toString().padStart(2, '0')}.json`);
                 const data = await response.json();
                 const todayData = data.days.find(d => d.day === day);
@@ -200,11 +202,20 @@ GET /api/2025/all.json</div>
                 if (todayData) {
                     document.getElementById('todayData').innerHTML = `
                         <strong>${todayData.date} (${todayData.weekday})</strong><br>
-                        六曜: ${todayData.rokuyo} | 
-                        キーワード: ${todayData.daily_keyword}<br>
-                        今日の色: ${todayData.color_of_the_day} | 
-                        おすすめのお茶: ${todayData.recommended_tea}
+                        <div style="margin-top: 10px;">
+                            <span style="color: #2980b9;">六曜:</span> ${todayData.rokuyo} | 
+                            <span style="color: #27ae60;">ラッキーナンバー:</span> ${todayData.lucky_number}<br>
+                            <span style="color: #8e44ad;">キーワード:</span> ${todayData.daily_keyword}<br>
+                            <span style="color: #f39c12;">今日の色:</span> ${todayData.color_of_the_day} | 
+                            <span style="color: #e67e22;">パワーストーン:</span> ${todayData.power_stone}<br>
+                            <span style="color: #16a085;">お茶:</span> ${todayData.recommended_tea} | 
+                            <span style="color: #c0392b;">タロット:</span> ${todayData.tarot_card}<br>
+                            <span style="color: #34495e;">格言:</span> ${todayData.wise_quote}
+                        </div>
                     `;
+                } else {
+                    document.getElementById('todayData').innerHTML = 
+                        `<span style="color:#e74c3c">今日(${month}月${day}日)のデータが見つかりません</span>`;
                 }
                 
                 // 更新日時も表示
@@ -212,6 +223,7 @@ GET /api/2025/all.json</div>
                     new Date(data.generated_at).toLocaleString('ja-JP');
                     
             } catch (error) {
+                console.error('データ読み込みエラー:', error);
                 document.getElementById('todayData').innerHTML = 
                     '<span style="color:#e74c3c">データの読み込みに失敗しました</span>';
             }
