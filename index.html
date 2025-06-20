@@ -49,7 +49,7 @@
                         <a href="#examples" class="btn btn-primary btn-lg">
                             <i class="fas fa-play me-2"></i>使い始める
                         </a>
-                        <a href="https://github.com/your-username/japanese-calendar-api" class="btn btn-outline-primary btn-lg" target="_blank">
+                        <a href="https://github.com/rei-abekura-lvgs/CalendarAPI" class="btn btn-outline-primary btn-lg" target="_blank">
                             <i class="fab fa-github me-2"></i>GitHub
                         </a>
                     </div>
@@ -198,7 +198,7 @@ from datetime import datetime
 
 # 2025年全体のデータを取得
 def get_yearly_data():
-    url = 'https://your-username.github.io/japanese-calendar-api/api/2025/all.json'
+    url = 'https://rei-abekura-lvgs.github.io/CalendarAPI/api/2025/all.json'
     try:
         response = requests.get(url)
         response.raise_for_status()
@@ -212,7 +212,7 @@ def get_today_data():
     today = datetime.now()
     month = f"{today.month:02d}"
     
-    url = f'https://your-username.github.io/japanese-calendar-api/api/2025/{month}.json'
+    url = f'https://rei-abekura-lvgs.github.io/CalendarAPI/api/2025/{month}.json'
     try:
         response = requests.get(url)
         response.raise_for_status()
@@ -243,16 +243,16 @@ if __name__ == '__main__':
             <div class="example-card mb-4">
                 <h4><i class="fas fa-terminal text-success me-2"></i>cURL</h4>
                 <pre><code class="language-bash"># 2025年1月のデータを取得
-curl -X GET "https://your-username.github.io/japanese-calendar-api/api/2025/01.json" \
+curl -X GET "https://rei-abekura-lvgs.github.io/CalendarAPI/api/2025/01.json" \
      -H "Accept: application/json"
 
 # 2025年全体のデータを取得
-curl -X GET "https://your-username.github.io/japanese-calendar-api/api/2025/all.json" \
+curl -X GET "https://rei-abekura-lvgs.github.io/CalendarAPI/api/2025/all.json" \
      -H "Accept: application/json" | jq '.'
 
 # 特定の月のデータをファイルに保存
 curl -o "january_2025.json" \
-     "https://your-username.github.io/japanese-calendar-api/api/2025/01.json"</code></pre>
+     "https://rei-abekura-lvgs.github.io/CalendarAPI/api/2025/01.json"</code></pre>
             </div>
         </section>
 
@@ -346,7 +346,7 @@ curl -o "january_2025.json" \
                 </ul>
                 
                 <h4 class="mt-4">ライセンス</h4>
-                <p>MIT License - 詳細は<a href="https://github.com/your-username/japanese-calendar-api/blob/main/LICENSE" target="_blank">GitHubリポジトリ</a>をご確認ください。</p>
+                <p>MIT License - 詳細は<a href="https://github.com/rei-abekura-lvgs/CalendarAPI/blob/main/LICENSE" target="_blank">GitHubリポジトリ</a>をご確認ください。</p>
                 
                 <h4 class="mt-4">免責事項</h4>
                 <p class="text-muted">

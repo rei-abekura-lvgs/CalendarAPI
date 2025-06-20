@@ -122,6 +122,7 @@ The system follows a **Static Site Generator + API** architecture:
 - June 20, 2025: データ再生成完了 - 27項目の完全なデータで365日分を更新、トップページJavaScript更新
 - June 20, 2025: ドキュメントサイト最適化 - フィールド説明を主要項目に絞り、全27項目の存在を適切に案内
 - June 20, 2025: プロジェクト名変更 - 「日本暦データAPI」から「暦データAPI」に変更（西暦も扱うため、より正確な名称）
+- June 20, 2025: GitHub Pages対応 - 実際のGitHub Pages URL（rei-abekura-lvgs.github.io/CalendarAPI）に全てのエンドポイントを更新
 
 ## User Preferences
 
