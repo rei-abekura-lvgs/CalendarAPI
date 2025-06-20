@@ -119,6 +119,7 @@ The system follows a **Static Site Generator + API** architecture:
 - June 20, 2025: 複数形式対応完了 - CSV、XML、TXT形式を追加、READMEファイル作成
 - June 20, 2025: データ種類大幅拡張 - ラッキーナンバー、パワーストーン、アロマオイル、瞑想テーマ、花言葉、エネルギーアドバイス追加
 - June 20, 2025: 最終拡張完了 - 占星術、タロット、名言、音楽推奨、食事推奨、クリスタルヒーリング、風水アドバイス追加（計19データカテゴリ）
+- June 20, 2025: データ再生成完了 - 27項目の完全なデータで365日分を更新、トップページJavaScript更新
 
 ## User Preferences
 
