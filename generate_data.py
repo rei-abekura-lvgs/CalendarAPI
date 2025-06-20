@@ -5,7 +5,7 @@ from pathlib import Path
 
 # --- 設定とマスターデータ ---
 
-YEAR = 2025  # 生成する年
+YEARS = [2025, 2026, 2027]  # 生成する年（複数年対応）
 
 # 簡易的な祝日マスター (本来はライブラリなどを使う)
 HOLIDAYS = {
@@ -231,6 +231,10 @@ def generate_koyomi_data(year):
         print(f"-> {all_file_path} を生成しました。")
 
 if __name__ == "__main__":
-    generate_koyomi_data(YEAR)
-    print("\nすべてのデータの生成が完了しました。")
+    for year in YEARS:
+        print(f"\n=== {year}年のデータを生成中 ===")
+        generate_koyomi_data(year)
+    
+    print(f"\n{len(YEARS)}年分のデータ生成が完了しました。")
+    print("対象年:", ", ".join(map(str, YEARS)))
     print("'api' ディレクトリの中身をGitHubリポジトリに配置してください。")
