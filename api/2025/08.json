@@ -4,7 +4,7 @@
   "month_name": "August",
   "month_name_jp": "8月",
   "api_version": "v1",
-  "generated_at": "2025-06-20T10:00:00.000000",
+  "generated_at": "2025-06-20T08:40:42.957847",
   "days": [
     {
       "day": 1,
@@ -15,12 +15,12 @@
       "is_weekend": false,
       "is_holiday": false,
       "holiday_name": null,
-      "rokuyo": "大安",
+      "rokuyo": "友引",
       "season_24": null,
       "moon_phase": "調査中",
-      "daily_keyword": "静寂",
-      "color_of_the_day": "#DAA520",
-      "recommended_tea": "ほうじ茶"
+      "daily_keyword": "豊かな共有",
+      "color_of_the_day": "黄金色",
+      "recommended_tea": "ペパーミントティー"
     },
     {
       "day": 2,
@@ -31,12 +31,12 @@
       "is_weekend": true,
       "is_holiday": false,
       "holiday_name": null,
-      "rokuyo": "赤口",
+      "rokuyo": "先負",
       "season_24": null,
       "moon_phase": "調査中",
-      "daily_keyword": "祝福",
-      "color_of_the_day": "#4682B4",
-      "recommended_tea": "ジャスミンティー"
+      "daily_keyword": "胸躍る冒険",
+      "color_of_the_day": "鋼青色",
+      "recommended_tea": "緑茶"
     },
     {
       "day": 3,
@@ -47,12 +47,12 @@
       "is_weekend": true,
       "is_holiday": false,
       "holiday_name": null,
-      "rokuyo": "先勝",
+      "rokuyo": "仏滅",
       "season_24": null,
       "moon_phase": "調査中",
-      "daily_keyword": "解放",
-      "color_of_the_day": "#DC143C",
-      "recommended_tea": "ルイボスティー"
+      "daily_keyword": "美しい静寂",
+      "color_of_the_day": "深紅色",
+      "recommended_tea": "ほうじ茶"
     },
     {
       "day": 4,
@@ -63,12 +63,12 @@
       "is_weekend": false,
       "is_holiday": false,
       "holiday_name": null,
-      "rokuyo": "友引",
+      "rokuyo": "大安",
       "season_24": null,
       "moon_phase": "調査中",
-      "daily_keyword": "探求",
-      "color_of_the_day": "#FFD700",
-      "recommended_tea": "ローズヒップティー"
+      "daily_keyword": "心からの祝福",
+      "color_of_the_day": "金色",
+      "recommended_tea": "ジャスミンティー"
     },
     {
       "day": 5,
@@ -79,12 +79,12 @@
       "is_weekend": false,
       "is_holiday": false,
       "holiday_name": null,
-      "rokuyo": "先負",
+      "rokuyo": "赤口",
       "season_24": null,
       "moon_phase": "調査中",
-      "daily_keyword": "発見",
-      "color_of_the_day": "#FF4500",
-      "recommended_tea": "アールグレイ"
+      "daily_keyword": "魂の解放",
+      "color_of_the_day": "朱色",
+      "recommended_tea": "ルイボスティー"
     },
     {
       "day": 6,
@@ -95,12 +95,12 @@
       "is_weekend": false,
       "is_holiday": false,
       "holiday_name": null,
-      "rokuyo": "仏滅",
+      "rokuyo": "先勝",
       "season_24": null,
       "moon_phase": "調査中",
-      "daily_keyword": "感謝",
-      "color_of_the_day": "#87CEEB",
-      "recommended_tea": "カモミールティー"
+      "daily_keyword": "真実の探求",
+      "color_of_the_day": "空色",
+      "recommended_tea": "ローズヒップティー"
     },
     {
       "day": 7,
@@ -111,12 +111,12 @@
       "is_weekend": false,
       "is_holiday": false,
       "holiday_name": null,
-      "rokuyo": "大安",
+      "rokuyo": "友引",
       "season_24": null,
       "moon_phase": "調査中",
-      "daily_keyword": "挑戦",
-      "color_of_the_day": "#9ACD32",
-      "recommended_tea": "ペパーミントティー"
+      "daily_keyword": "希望の光",
+      "color_of_the_day": "若草色",
+      "recommended_tea": "白茶"
     },
     {
       "day": 8,
@@ -127,12 +127,12 @@
       "is_weekend": false,
       "is_holiday": false,
       "holiday_name": null,
-      "rokuyo": "赤口",
+      "rokuyo": "先負",
       "season_24": null,
       "moon_phase": "調査中",
-      "daily_keyword": "安らぎ",
-      "color_of_the_day": "#DAA520",
-      "recommended_tea": "緑茶"
+      "daily_keyword": "愛と慈悲",
+      "color_of_the_day": "黄金色",
+      "recommended_tea": "烏龍茶"
     },
     {
       "day": 9,
@@ -143,12 +143,12 @@
       "is_weekend": true,
       "is_holiday": false,
       "holiday_name": null,
-      "rokuyo": "先勝",
+      "rokuyo": "仏滅",
       "season_24": null,
       "moon_phase": "調査中",
-      "daily_keyword": "創造",
-      "color_of_the_day": "#4682B4",
-      "recommended_tea": "ほうじ茶"
+      "daily_keyword": "内なる平和",
+      "color_of_the_day": "鋼青色",
+      "recommended_tea": "玄米茶"
     },
     {
       "day": 10,
@@ -159,12 +159,12 @@
       "is_weekend": true,
       "is_holiday": false,
       "holiday_name": null,
-      "rokuyo": "友引",
+      "rokuyo": "大安",
       "season_24": null,
       "moon_phase": "調査中",
-      "daily_keyword": "交流",
-      "color_of_the_day": "#DC143C",
-      "recommended_tea": "ジャスミンティー"
+      "daily_keyword": "調和の響き",
+      "color_of_the_day": "深紅色",
+      "recommended_tea": "抹茶"
     },
     {
       "day": 11,
@@ -175,12 +175,12 @@
       "is_weekend": false,
       "is_holiday": true,
       "holiday_name": "山の日",
-      "rokuyo": "先負",
+      "rokuyo": "赤口",
       "season_24": null,
       "moon_phase": "調査中",
-      "daily_keyword": "学び",
-      "color_of_the_day": "#FFD700",
-      "recommended_tea": "ルイボスティー"
+      "daily_keyword": "自然との一体",
+      "color_of_the_day": "金色",
+      "recommended_tea": "柚子茶"
     },
     {
       "day": 12,
@@ -191,12 +191,12 @@
       "is_weekend": false,
       "is_holiday": false,
       "holiday_name": null,
-      "rokuyo": "仏滅",
+      "rokuyo": "先勝",
       "season_24": null,
       "moon_phase": "調査中",
-      "daily_keyword": "整理",
-      "color_of_the_day": "#FF4500",
-      "recommended_tea": "ローズヒップティー"
+      "daily_keyword": "知恵の開花",
+      "color_of_the_day": "朱色",
+      "recommended_tea": "生姜茶"
     },
     {
       "day": 13,
@@ -207,12 +207,12 @@
       "is_weekend": false,
       "is_holiday": false,
       "holiday_name": null,
-      "rokuyo": "大安",
+      "rokuyo": "友引",
       "season_24": null,
       "moon_phase": "調査中",
-      "daily_keyword": "喜び",
-      "color_of_the_day": "#87CEEB",
-      "recommended_tea": "アールグレイ"
+      "daily_keyword": "幸福の実感",
+      "color_of_the_day": "空色",
+      "recommended_tea": "黒豆茶"
     },
     {
       "day": 14,
@@ -223,12 +223,12 @@
       "is_weekend": false,
       "is_holiday": false,
       "holiday_name": null,
-      "rokuyo": "赤口",
+      "rokuyo": "先負",
       "season_24": null,
       "moon_phase": "調査中",
-      "daily_keyword": "成長",
-      "color_of_the_day": "#9ACD32",
-      "recommended_tea": "カモミールティー"
+      "daily_keyword": "新しい始まり",
+      "color_of_the_day": "若草色",
+      "recommended_tea": "アールグレイ"
     },
     {
       "day": 15,
@@ -239,12 +239,12 @@
       "is_weekend": false,
       "is_holiday": false,
       "holiday_name": null,
-      "rokuyo": "先勝",
+      "rokuyo": "仏滅",
       "season_24": null,
       "moon_phase": "調査中",
-      "daily_keyword": "変化",
-      "color_of_the_day": "#DAA520",
-      "recommended_tea": "ペパーミントティー"
+      "daily_keyword": "心からの感謝",
+      "color_of_the_day": "黄金色",
+      "recommended_tea": "カモミールティー"
     },
     {
       "day": 16,
@@ -255,12 +255,12 @@
       "is_weekend": true,
       "is_holiday": false,
       "holiday_name": null,
-      "rokuyo": "友引",
+      "rokuyo": "大安",
       "season_24": null,
       "moon_phase": "調査中",
-      "daily_keyword": "集中",
-      "color_of_the_day": "#4682B4",
-      "recommended_tea": "緑茶"
+      "daily_keyword": "勇気ある挑戦",
+      "color_of_the_day": "鋼青色",
+      "recommended_tea": "ペパーミントティー"
     },
     {
       "day": 17,
@@ -271,12 +271,12 @@
       "is_weekend": true,
       "is_holiday": false,
       "holiday_name": null,
-      "rokuyo": "先負",
+      "rokuyo": "赤口",
       "season_24": null,
       "moon_phase": "調査中",
-      "daily_keyword": "共有",
-      "color_of_the_day": "#DC143C",
-      "recommended_tea": "ほうじ茶"
+      "daily_keyword": "穏やかな安らぎ",
+      "color_of_the_day": "深紅色",
+      "recommended_tea": "緑茶"
     },
     {
       "day": 18,
@@ -287,12 +287,12 @@
       "is_weekend": false,
       "is_holiday": false,
       "holiday_name": null,
-      "rokuyo": "仏滅",
+      "rokuyo": "先勝",
       "season_24": null,
       "moon_phase": "調査中",
-      "daily_keyword": "冒険",
-      "color_of_the_day": "#FFD700",
-      "recommended_tea": "ジャスミンティー"
+      "daily_keyword": "無限の創造",
+      "color_of_the_day": "金色",
+      "recommended_tea": "ほうじ茶"
     },
     {
       "day": 19,
@@ -303,12 +303,12 @@
       "is_weekend": false,
       "is_holiday": false,
       "holiday_name": null,
-      "rokuyo": "大安",
+      "rokuyo": "友引",
       "season_24": null,
       "moon_phase": "調査中",
-      "daily_keyword": "静寂",
-      "color_of_the_day": "#FF4500",
-      "recommended_tea": "ルイボスティー"
+      "daily_keyword": "温かい交流",
+      "color_of_the_day": "朱色",
+      "recommended_tea": "ジャスミンティー"
     },
     {
       "day": 20,
@@ -319,12 +319,12 @@
       "is_weekend": false,
       "is_holiday": false,
       "holiday_name": null,
-      "rokuyo": "赤口",
+      "rokuyo": "先負",
       "season_24": null,
       "moon_phase": "調査中",
-      "daily_keyword": "祝福",
-      "color_of_the_day": "#87CEEB",
-      "recommended_tea": "ローズヒップティー"
+      "daily_keyword": "深い学び",
+      "color_of_the_day": "空色",
+      "recommended_tea": "ルイボスティー"
     },
     {
       "day": 21,
@@ -335,12 +335,12 @@
       "is_weekend": false,
       "is_holiday": false,
       "holiday_name": null,
-      "rokuyo": "先勝",
+      "rokuyo": "仏滅",
       "season_24": null,
       "moon_phase": "調査中",
-      "daily_keyword": "解放",
-      "color_of_the_day": "#9ACD32",
-      "recommended_tea": "アールグレイ"
+      "daily_keyword": "心の整理",
+      "color_of_the_day": "若草色",
+      "recommended_tea": "ローズヒップティー"
     },
     {
       "day": 22,
@@ -351,12 +351,12 @@
       "is_weekend": false,
       "is_holiday": false,
       "holiday_name": null,
-      "rokuyo": "友引",
+      "rokuyo": "大安",
       "season_24": null,
       "moon_phase": "調査中",
-      "daily_keyword": "探求",
-      "color_of_the_day": "#DAA520",
-      "recommended_tea": "カモミールティー"
+      "daily_keyword": "純粋な喜び",
+      "color_of_the_day": "黄金色",
+      "recommended_tea": "白茶"
     },
     {
       "day": 23,
@@ -367,12 +367,12 @@
       "is_weekend": true,
       "is_holiday": false,
       "holiday_name": null,
-      "rokuyo": "先負",
+      "rokuyo": "赤口",
       "season_24": null,
       "moon_phase": "調査中",
-      "daily_keyword": "発見",
-      "color_of_the_day": "#4682B4",
-      "recommended_tea": "ペパーミントティー"
+      "daily_keyword": "着実な成長",
+      "color_of_the_day": "鋼青色",
+      "recommended_tea": "烏龍茶"
     },
     {
       "day": 24,
@@ -383,12 +383,12 @@
       "is_weekend": true,
       "is_holiday": false,
       "holiday_name": null,
-      "rokuyo": "仏滅",
+      "rokuyo": "先勝",
       "season_24": null,
       "moon_phase": "調査中",
-      "daily_keyword": "感謝",
-      "color_of_the_day": "#DC143C",
-      "recommended_tea": "緑茶"
+      "daily_keyword": "前向きな変化",
+      "color_of_the_day": "深紅色",
+      "recommended_tea": "玄米茶"
     },
     {
       "day": 25,
@@ -399,12 +399,12 @@
       "is_weekend": false,
       "is_holiday": false,
       "holiday_name": null,
-      "rokuyo": "大安",
+      "rokuyo": "友引",
       "season_24": null,
       "moon_phase": "調査中",
-      "daily_keyword": "挑戦",
-      "color_of_the_day": "#FFD700",
-      "recommended_tea": "ほうじ茶"
+      "daily_keyword": "静かな集中",
+      "color_of_the_day": "金色",
+      "recommended_tea": "抹茶"
     },
     {
       "day": 26,
@@ -415,12 +415,12 @@
       "is_weekend": false,
       "is_holiday": false,
       "holiday_name": null,
-      "rokuyo": "赤口",
+      "rokuyo": "先負",
       "season_24": null,
       "moon_phase": "調査中",
-      "daily_keyword": "安らぎ",
-      "color_of_the_day": "#FF4500",
-      "recommended_tea": "ジャスミンティー"
+      "daily_keyword": "豊かな共有",
+      "color_of_the_day": "朱色",
+      "recommended_tea": "柚子茶"
     },
     {
       "day": 27,
@@ -431,12 +431,12 @@
       "is_weekend": false,
       "is_holiday": false,
       "holiday_name": null,
-      "rokuyo": "先勝",
+      "rokuyo": "仏滅",
       "season_24": null,
       "moon_phase": "調査中",
-      "daily_keyword": "創造",
-      "color_of_the_day": "#87CEEB",
-      "recommended_tea": "ルイボスティー"
+      "daily_keyword": "胸躍る冒険",
+      "color_of_the_day": "空色",
+      "recommended_tea": "生姜茶"
     },
     {
       "day": 28,
@@ -447,12 +447,12 @@
       "is_weekend": false,
       "is_holiday": false,
       "holiday_name": null,
-      "rokuyo": "友引",
+      "rokuyo": "大安",
       "season_24": null,
       "moon_phase": "調査中",
-      "daily_keyword": "交流",
-      "color_of_the_day": "#9ACD32",
-      "recommended_tea": "ローズヒップティー"
+      "daily_keyword": "美しい静寂",
+      "color_of_the_day": "若草色",
+      "recommended_tea": "黒豆茶"
     },
     {
       "day": 29,
@@ -463,11 +463,11 @@
       "is_weekend": false,
       "is_holiday": false,
       "holiday_name": null,
-      "rokuyo": "先負",
+      "rokuyo": "赤口",
       "season_24": null,
       "moon_phase": "調査中",
-      "daily_keyword": "学び",
-      "color_of_the_day": "#DAA520",
+      "daily_keyword": "心からの祝福",
+      "color_of_the_day": "黄金色",
       "recommended_tea": "アールグレイ"
     },
     {
@@ -479,11 +479,11 @@
       "is_weekend": true,
       "is_holiday": false,
       "holiday_name": null,
-      "rokuyo": "仏滅",
+      "rokuyo": "先勝",
       "season_24": null,
       "moon_phase": "調査中",
-      "daily_keyword": "整理",
-      "color_of_the_day": "#4682B4",
+      "daily_keyword": "魂の解放",
+      "color_of_the_day": "鋼青色",
       "recommended_tea": "カモミールティー"
     },
     {
@@ -495,11 +495,11 @@
       "is_weekend": true,
       "is_holiday": false,
       "holiday_name": null,
-      "rokuyo": "大安",
+      "rokuyo": "友引",
       "season_24": null,
       "moon_phase": "調査中",
-      "daily_keyword": "喜び",
-      "color_of_the_day": "#DC143C",
+      "daily_keyword": "真実の探求",
+      "color_of_the_day": "深紅色",
       "recommended_tea": "ペパーミントティー"
     }
   ]
