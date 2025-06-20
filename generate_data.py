@@ -74,6 +74,46 @@ ENERGY_ADVICE = [
     "夢を描く時間", "心を整理する日", "自然と触れ合う日"
 ]
 
+# さらなる追加データ
+ZODIAC_SIGNS = [
+    "牡羊座", "牡牛座", "双子座", "蟹座", "獅子座", "乙女座",
+    "天秤座", "蠍座", "射手座", "山羊座", "水瓶座", "魚座"
+]
+TAROT_CARDS = [
+    "愚者 - 新しい始まり", "魔術師 - 創造力", "女教皇 - 直感", "女帝 - 豊穣", "皇帝 - 安定",
+    "教皇 - 叡智", "恋人 - 選択", "戦車 - 意志力", "力 - 内なる強さ", "隠者 - 内省",
+    "運命の輪 - 転機", "正義 - バランス", "吊られた男 - 犠牲", "死神 - 変容", "節制 - 調和",
+    "悪魔 - 誘惑", "塔 - 変革", "星 - 希望", "月 - 幻想", "太陽 - 成功", "審判 - 再生", "世界 - 完成"
+]
+WISE_QUOTES = [
+    "一歩一歩が大切な旅路", "今日という日は二度と来ない", "心の平安が真の豊かさ", "変化は成長の扉",
+    "感謝の心が幸福を呼ぶ", "愛は最も強いエネルギー", "困難は成長のギフト", "今この瞬間が全て",
+    "笑顔は心の太陽", "優しさは伝染する", "夢は現実の種", "勇気は恐れを超越する",
+    "知恵は経験から生まれる", "調和は美の根源", "希望は明日への光", "慈悲は魂の栄養"
+]
+MUSIC_GENRES = [
+    "クラシック", "ジャズ", "アンビエント", "ヒーリング", "ネイチャーサウンド",
+    "瞑想音楽", "ピアノソロ", "オルゴール", "シンギングボウル", "チルアウト",
+    "ボサノバ", "レゲエ", "フォーク", "インストゥルメンタル", "ワールドミュージック"
+]
+RECOMMENDED_FOODS = [
+    "季節の野菜スープ", "玄米おにぎり", "緑黄色野菜サラダ", "蒸し魚", "豆腐料理",
+    "発酵食品", "ナッツとドライフルーツ", "ハーブティーと蜂蜜", "旬の果物", "薬膳粥",
+    "温野菜", "海藻料理", "きのこ類", "根菜の煮物", "自然食品"
+]
+CRYSTAL_HEALING = [
+    "アメジスト - 心の浄化", "ローズクォーツ - 愛の波動", "クリアクォーツ - エネルギー増幅",
+    "ブラックトルマリン - 邪気払い", "シトリン - 金運上昇", "ラピスラズリ - 真実の洞察",
+    "ムーンストーン - 女性性", "ガーネット - 情熱", "アクアマリン - 平和", "ペリドット - 癒し",
+    "オニキス - 意志力", "マラカイト - 変容", "ターコイズ - 護符", "オパール - 創造性", "エメラルド - 豊穣"
+]
+FENG_SHUI_ADVICE = [
+    "玄関を清潔に保つ", "観葉植物で気の流れを良くする", "鏡で光を取り入れる", "水回りの掃除",
+    "不要な物を手放す", "東向きに花を飾る", "ピンク色で恋愛運向上", "金色で金運アップ",
+    "緑で健康運向上", "赤で活力を高める", "青で冷静さを保つ", "紫で精神性を高める",
+    "オレンジで社交性向上", "黄色で明るさを増す", "白で清浄化"
+]
+
 # --- メイン処理 ---
 def generate_koyomi_data(year):
     print(f"{year}年の暦データを生成します...")
@@ -134,6 +174,15 @@ def generate_koyomi_data(year):
             meditation_theme = MEDITATION_THEMES[(day_of_year - 1) % len(MEDITATION_THEMES)]
             flower_meaning = FLOWER_MEANINGS[(day_of_year - 1) % len(FLOWER_MEANINGS)]
             energy_advice = ENERGY_ADVICE[(day_of_year - 1) % len(ENERGY_ADVICE)]
+            
+            # さらなる追加データ
+            zodiac_sign = ZODIAC_SIGNS[(day_of_year - 1) % len(ZODIAC_SIGNS)]
+            tarot_card = TAROT_CARDS[(day_of_year - 1) % len(TAROT_CARDS)]
+            wise_quote = WISE_QUOTES[(day_of_year - 1) % len(WISE_QUOTES)]
+            music_genre = MUSIC_GENRES[(day_of_year - 1) % len(MUSIC_GENRES)]
+            recommended_food = RECOMMENDED_FOODS[(day_of_year - 1) % len(RECOMMENDED_FOODS)]
+            crystal_healing = CRYSTAL_HEALING[(day_of_year - 1) % len(CRYSTAL_HEALING)]
+            feng_shui_advice = FENG_SHUI_ADVICE[(day_of_year - 1) % len(FENG_SHUI_ADVICE)]
 
             day_info = {
                 "day": day,
@@ -155,7 +204,14 @@ def generate_koyomi_data(year):
                 "aroma_oil": aroma_oil,
                 "meditation_theme": meditation_theme,
                 "flower_of_the_day": flower_meaning,
-                "energy_advice": energy_advice
+                "energy_advice": energy_advice,
+                "zodiac_influence": zodiac_sign,
+                "tarot_card": tarot_card,
+                "wise_quote": wise_quote,
+                "recommended_music": music_genre,
+                "recommended_food": recommended_food,
+                "crystal_healing": crystal_healing,
+                "feng_shui_tip": feng_shui_advice
             }
             month_data["days"].append(day_info)
 
