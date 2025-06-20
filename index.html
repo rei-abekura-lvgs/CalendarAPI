@@ -27,6 +27,7 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#overview">概要</a></li>
                     <li class="nav-item"><a class="nav-link" href="#endpoints">エンドポイント</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#quick-access">クイックアクセス</a></li>
                     <li class="nav-item"><a class="nav-link" href="#examples">使用例</a></li>
                     <li class="nav-item"><a class="nav-link" href="#response">レスポンス形式</a></li>
                     <li class="nav-item"><a class="nav-link" href="#license">ライセンス</a></li>
@@ -121,31 +122,125 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><code>/api/2025/01.json</code></td>
+                            <td><code><a href="https://rei-abekura-lvgs.github.io/CalendarAPI/api/2025/01.json" target="_blank">/api/2025/01.json</a></code></td>
                             <td>2025年1月のデータ</td>
                             <td>月別データオブジェクト</td>
-                            <td><button class="btn btn-sm btn-outline-primary" onclick="testEndpoint('/api/2025/01.json')">テスト</button></td>
+                            <td>
+                                <a href="https://rei-abekura-lvgs.github.io/CalendarAPI/api/2025/01.json" target="_blank" class="btn btn-sm btn-primary me-1">
+                                    <i class="fas fa-external-link-alt"></i> 開く
+                                </a>
+                                <button class="btn btn-sm btn-outline-primary" onclick="testEndpoint('/api/2025/01.json')">テスト</button>
+                            </td>
                         </tr>
                         <tr>
-                            <td><code>/api/2025/02.json</code></td>
+                            <td><code><a href="https://rei-abekura-lvgs.github.io/CalendarAPI/api/2025/02.json" target="_blank">/api/2025/02.json</a></code></td>
                             <td>2025年2月のデータ</td>
                             <td>月別データオブジェクト</td>
-                            <td><button class="btn btn-sm btn-outline-primary" onclick="testEndpoint('/api/2025/02.json')">テスト</button></td>
+                            <td>
+                                <a href="https://rei-abekura-lvgs.github.io/CalendarAPI/api/2025/02.json" target="_blank" class="btn btn-sm btn-primary me-1">
+                                    <i class="fas fa-external-link-alt"></i> 開く
+                                </a>
+                                <button class="btn btn-sm btn-outline-primary" onclick="testEndpoint('/api/2025/02.json')">テスト</button>
+                            </td>
                         </tr>
                         <tr>
                             <td><code>/api/2025/[MM].json</code></td>
                             <td>2025年の指定月データ（01-12）</td>
                             <td>月別データオブジェクト</td>
-                            <td>-</td>
+                            <td><span class="text-muted">上記リンクを参照</span></td>
                         </tr>
                         <tr>
-                            <td><code>/api/2025/all.json</code></td>
+                            <td><code><a href="https://rei-abekura-lvgs.github.io/CalendarAPI/api/2025/all.json" target="_blank">/api/2025/all.json</a></code></td>
                             <td>2025年全体のデータ</td>
                             <td>年間データオブジェクト</td>
-                            <td><button class="btn btn-sm btn-outline-primary" onclick="testEndpoint('/api/2025/all.json')">テスト</button></td>
+                            <td>
+                                <a href="https://rei-abekura-lvgs.github.io/CalendarAPI/api/2025/all.json" target="_blank" class="btn btn-sm btn-primary me-1">
+                                    <i class="fas fa-external-link-alt"></i> 開く
+                                </a>
+                                <button class="btn btn-sm btn-outline-primary" onclick="testEndpoint('/api/2025/all.json')">テスト</button>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
+            </div>
+        </section>
+
+        <!-- Quick Access Section -->
+        <section id="quick-access" class="mb-5">
+            <h2 class="section-title"><i class="fas fa-link me-2"></i>クイックアクセス</h2>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="mb-0"><i class="fas fa-calendar me-2"></i>月別データ</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row g-2">
+                                <div class="col-4">
+                                    <a href="https://rei-abekura-lvgs.github.io/CalendarAPI/api/2025/01.json" target="_blank" class="btn btn-outline-primary btn-sm w-100">1月</a>
+                                </div>
+                                <div class="col-4">
+                                    <a href="https://rei-abekura-lvgs.github.io/CalendarAPI/api/2025/02.json" target="_blank" class="btn btn-outline-primary btn-sm w-100">2月</a>
+                                </div>
+                                <div class="col-4">
+                                    <a href="https://rei-abekura-lvgs.github.io/CalendarAPI/api/2025/03.json" target="_blank" class="btn btn-outline-primary btn-sm w-100">3月</a>
+                                </div>
+                                <div class="col-4">
+                                    <a href="https://rei-abekura-lvgs.github.io/CalendarAPI/api/2025/04.json" target="_blank" class="btn btn-outline-primary btn-sm w-100">4月</a>
+                                </div>
+                                <div class="col-4">
+                                    <a href="https://rei-abekura-lvgs.github.io/CalendarAPI/api/2025/05.json" target="_blank" class="btn btn-outline-primary btn-sm w-100">5月</a>
+                                </div>
+                                <div class="col-4">
+                                    <a href="https://rei-abekura-lvgs.github.io/CalendarAPI/api/2025/06.json" target="_blank" class="btn btn-outline-primary btn-sm w-100">6月</a>
+                                </div>
+                                <div class="col-4">
+                                    <a href="https://rei-abekura-lvgs.github.io/CalendarAPI/api/2025/07.json" target="_blank" class="btn btn-outline-primary btn-sm w-100">7月</a>
+                                </div>
+                                <div class="col-4">
+                                    <a href="https://rei-abekura-lvgs.github.io/CalendarAPI/api/2025/08.json" target="_blank" class="btn btn-outline-primary btn-sm w-100">8月</a>
+                                </div>
+                                <div class="col-4">
+                                    <a href="https://rei-abekura-lvgs.github.io/CalendarAPI/api/2025/09.json" target="_blank" class="btn btn-outline-primary btn-sm w-100">9月</a>
+                                </div>
+                                <div class="col-4">
+                                    <a href="https://rei-abekura-lvgs.github.io/CalendarAPI/api/2025/10.json" target="_blank" class="btn btn-outline-primary btn-sm w-100">10月</a>
+                                </div>
+                                <div class="col-4">
+                                    <a href="https://rei-abekura-lvgs.github.io/CalendarAPI/api/2025/11.json" target="_blank" class="btn btn-outline-primary btn-sm w-100">11月</a>
+                                </div>
+                                <div class="col-4">
+                                    <a href="https://rei-abekura-lvgs.github.io/CalendarAPI/api/2025/12.json" target="_blank" class="btn btn-outline-primary btn-sm w-100">12月</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="mb-0"><i class="fas fa-database me-2"></i>年間データ・その他形式</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-grid gap-2">
+                                <a href="https://rei-abekura-lvgs.github.io/CalendarAPI/api/2025/all.json" target="_blank" class="btn btn-primary">
+                                    <i class="fas fa-download me-2"></i>2025年全データ (JSON)
+                                </a>
+                                <a href="https://rei-abekura-lvgs.github.io/CalendarAPI/api/2025/all.csv" target="_blank" class="btn btn-outline-success">
+                                    <i class="fas fa-file-csv me-2"></i>CSV形式
+                                </a>
+                                <a href="https://rei-abekura-lvgs.github.io/CalendarAPI/api/2025/all.xml" target="_blank" class="btn btn-outline-warning">
+                                    <i class="fas fa-file-code me-2"></i>XML形式
+                                </a>
+                                <a href="https://rei-abekura-lvgs.github.io/CalendarAPI/api/2025/all.txt" target="_blank" class="btn btn-outline-info">
+                                    <i class="fas fa-file-alt me-2"></i>TXT形式
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
