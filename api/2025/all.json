@@ -1,7 +1,7 @@
 {
   "year": 2025,
   "api_version": "v1",
-  "generated_at": "2025-06-20T08:40:42.941345",
+  "generated_at": "2025-06-20T08:45:25.817138",
   "months": [
     {
       "year": 2025,
@@ -9,7 +9,7 @@
       "month_name": "January",
       "month_name_jp": "1月",
       "api_version": "v1",
-      "generated_at": "2025-06-20T08:40:42.941382",
+      "generated_at": "2025-06-20T08:45:25.817177",
       "days": [
         {
           "day": 1,
@@ -23,7 +23,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "新しい始まり",
+          "daily_keyword": "運命の扉が開く日",
           "color_of_the_day": "空色",
           "recommended_tea": "アールグレイ"
         },
@@ -39,7 +39,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "心からの感謝",
+          "daily_keyword": "宇宙からのメッセージ",
           "color_of_the_day": "若草色",
           "recommended_tea": "カモミールティー"
         },
@@ -55,7 +55,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "勇気ある挑戦",
+          "daily_keyword": "奇跡を呼ぶ波動",
           "color_of_the_day": "黄金色",
           "recommended_tea": "ペパーミントティー"
         },
@@ -71,7 +71,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "穏やかな安らぎ",
+          "daily_keyword": "龍神様のご加護",
           "color_of_the_day": "鋼青色",
           "recommended_tea": "緑茶"
         },
@@ -87,7 +87,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "無限の創造",
+          "daily_keyword": "金運上昇のサイン",
           "color_of_the_day": "深紅色",
           "recommended_tea": "ほうじ茶"
         },
@@ -103,7 +103,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "温かい交流",
+          "daily_keyword": "恋愛運絶好調",
           "color_of_the_day": "金色",
           "recommended_tea": "ジャスミンティー"
         },
@@ -119,7 +119,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "深い学び",
+          "daily_keyword": "直感力が冴える",
           "color_of_the_day": "朱色",
           "recommended_tea": "ルイボスティー"
         },
@@ -135,7 +135,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "心の整理",
+          "daily_keyword": "隠れた才能開花",
           "color_of_the_day": "空色",
           "recommended_tea": "ローズヒップティー"
         },
@@ -151,7 +151,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "純粋な喜び",
+          "daily_keyword": "人生の転機到来",
           "color_of_the_day": "若草色",
           "recommended_tea": "白茶"
         },
@@ -167,7 +167,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "着実な成長",
+          "daily_keyword": "幸運の風が吹く",
           "color_of_the_day": "黄金色",
           "recommended_tea": "烏龍茶"
         },
@@ -183,7 +183,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "前向きな変化",
+          "daily_keyword": "魂の成長期間",
           "color_of_the_day": "鋼青色",
           "recommended_tea": "玄米茶"
         },
@@ -199,7 +199,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "静かな集中",
+          "daily_keyword": "エネルギー充電日",
           "color_of_the_day": "深紅色",
           "recommended_tea": "抹茶"
         },
@@ -215,7 +215,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "豊かな共有",
+          "daily_keyword": "新次元への扉",
           "color_of_the_day": "金色",
           "recommended_tea": "柚子茶"
         },
@@ -231,7 +231,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "胸躍る冒険",
+          "daily_keyword": "守護霊のささやき",
           "color_of_the_day": "朱色",
           "recommended_tea": "生姜茶"
         },
@@ -247,7 +247,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "美しい静寂",
+          "daily_keyword": "願いが叶う予感",
           "color_of_the_day": "空色",
           "recommended_tea": "黒豆茶"
         },
@@ -263,7 +263,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "心からの祝福",
+          "daily_keyword": "心のデトックス",
           "color_of_the_day": "若草色",
           "recommended_tea": "アールグレイ"
         },
@@ -279,7 +279,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "魂の解放",
+          "daily_keyword": "創造力爆発",
           "color_of_the_day": "黄金色",
           "recommended_tea": "カモミールティー"
         },
@@ -295,7 +295,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "真実の探求",
+          "daily_keyword": "人との縁を結ぶ",
           "color_of_the_day": "鋼青色",
           "recommended_tea": "ペパーミントティー"
         },
@@ -311,7 +311,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "希望の光",
+          "daily_keyword": "未来への種まき",
           "color_of_the_day": "深紅色",
           "recommended_tea": "緑茶"
         },
@@ -327,7 +327,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "愛と慈悲",
+          "daily_keyword": "宝物発見の予感",
           "color_of_the_day": "金色",
           "recommended_tea": "ほうじ茶"
         },
@@ -343,7 +343,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "内なる平和",
+          "daily_keyword": "内なる光が輝く",
           "color_of_the_day": "朱色",
           "recommended_tea": "ジャスミンティー"
         },
@@ -359,7 +359,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "調和の響き",
+          "daily_keyword": "調和のメロディ",
           "color_of_the_day": "空色",
           "recommended_tea": "ルイボスティー"
         },
@@ -375,7 +375,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "自然との一体",
+          "daily_keyword": "自然の叡智授受",
           "color_of_the_day": "若草色",
           "recommended_tea": "ローズヒップティー"
         },
@@ -391,7 +391,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "知恵の開花",
+          "daily_keyword": "知恵の泉湧出",
           "color_of_the_day": "黄金色",
           "recommended_tea": "白茶"
         },
@@ -407,7 +407,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "幸福の実感",
+          "daily_keyword": "至福の時間軸",
           "color_of_the_day": "鋼青色",
           "recommended_tea": "烏龍茶"
         },
@@ -423,7 +423,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "新しい始まり",
+          "daily_keyword": "運気上昇の兆し",
           "color_of_the_day": "深紅色",
           "recommended_tea": "玄米茶"
         },
@@ -439,7 +439,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "心からの感謝",
+          "daily_keyword": "心の扉が開放",
           "color_of_the_day": "金色",
           "recommended_tea": "抹茶"
         },
@@ -455,7 +455,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "勇気ある挑戦",
+          "daily_keyword": "宇宙との同調",
           "color_of_the_day": "朱色",
           "recommended_tea": "柚子茶"
         },
@@ -471,7 +471,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "穏やかな安らぎ",
+          "daily_keyword": "愛のバイブレーション",
           "color_of_the_day": "空色",
           "recommended_tea": "生姜茶"
         },
@@ -487,7 +487,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "無限の創造",
+          "daily_keyword": "豊かさの波動",
           "color_of_the_day": "若草色",
           "recommended_tea": "黒豆茶"
         },
@@ -503,7 +503,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "温かい交流",
+          "daily_keyword": "運命の扉が開く日",
           "color_of_the_day": "黄金色",
           "recommended_tea": "アールグレイ"
         }
@@ -515,7 +515,7 @@
       "month_name": "February",
       "month_name_jp": "2月",
       "api_version": "v1",
-      "generated_at": "2025-06-20T08:40:42.944473",
+      "generated_at": "2025-06-20T08:45:25.820516",
       "days": [
         {
           "day": 1,
@@ -529,7 +529,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "深い学び",
+          "daily_keyword": "宇宙からのメッセージ",
           "color_of_the_day": "鋼青色",
           "recommended_tea": "カモミールティー"
         },
@@ -545,7 +545,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "心の整理",
+          "daily_keyword": "奇跡を呼ぶ波動",
           "color_of_the_day": "深紅色",
           "recommended_tea": "ペパーミントティー"
         },
@@ -561,7 +561,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "純粋な喜び",
+          "daily_keyword": "龍神様のご加護",
           "color_of_the_day": "金色",
           "recommended_tea": "緑茶"
         },
@@ -577,7 +577,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "着実な成長",
+          "daily_keyword": "金運上昇のサイン",
           "color_of_the_day": "朱色",
           "recommended_tea": "ほうじ茶"
         },
@@ -593,7 +593,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "前向きな変化",
+          "daily_keyword": "恋愛運絶好調",
           "color_of_the_day": "空色",
           "recommended_tea": "ジャスミンティー"
         },
@@ -609,7 +609,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "静かな集中",
+          "daily_keyword": "直感力が冴える",
           "color_of_the_day": "若草色",
           "recommended_tea": "ルイボスティー"
         },
@@ -625,7 +625,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "豊かな共有",
+          "daily_keyword": "隠れた才能開花",
           "color_of_the_day": "黄金色",
           "recommended_tea": "ローズヒップティー"
         },
@@ -641,7 +641,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "胸躍る冒険",
+          "daily_keyword": "人生の転機到来",
           "color_of_the_day": "鋼青色",
           "recommended_tea": "白茶"
         },
@@ -657,7 +657,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "美しい静寂",
+          "daily_keyword": "幸運の風が吹く",
           "color_of_the_day": "深紅色",
           "recommended_tea": "烏龍茶"
         },
@@ -673,7 +673,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "心からの祝福",
+          "daily_keyword": "魂の成長期間",
           "color_of_the_day": "金色",
           "recommended_tea": "玄米茶"
         },
@@ -689,7 +689,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "魂の解放",
+          "daily_keyword": "エネルギー充電日",
           "color_of_the_day": "朱色",
           "recommended_tea": "抹茶"
         },
@@ -705,7 +705,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "真実の探求",
+          "daily_keyword": "新次元への扉",
           "color_of_the_day": "空色",
           "recommended_tea": "柚子茶"
         },
@@ -721,7 +721,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "希望の光",
+          "daily_keyword": "守護霊のささやき",
           "color_of_the_day": "若草色",
           "recommended_tea": "生姜茶"
         },
@@ -737,7 +737,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "愛と慈悲",
+          "daily_keyword": "願いが叶う予感",
           "color_of_the_day": "黄金色",
           "recommended_tea": "黒豆茶"
         },
@@ -753,7 +753,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "内なる平和",
+          "daily_keyword": "心のデトックス",
           "color_of_the_day": "鋼青色",
           "recommended_tea": "アールグレイ"
         },
@@ -769,7 +769,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "調和の響き",
+          "daily_keyword": "創造力爆発",
           "color_of_the_day": "深紅色",
           "recommended_tea": "カモミールティー"
         },
@@ -785,7 +785,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "自然との一体",
+          "daily_keyword": "人との縁を結ぶ",
           "color_of_the_day": "金色",
           "recommended_tea": "ペパーミントティー"
         },
@@ -801,7 +801,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "知恵の開花",
+          "daily_keyword": "未来への種まき",
           "color_of_the_day": "朱色",
           "recommended_tea": "緑茶"
         },
@@ -817,7 +817,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "幸福の実感",
+          "daily_keyword": "宝物発見の予感",
           "color_of_the_day": "空色",
           "recommended_tea": "ほうじ茶"
         },
@@ -833,7 +833,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "新しい始まり",
+          "daily_keyword": "内なる光が輝く",
           "color_of_the_day": "若草色",
           "recommended_tea": "ジャスミンティー"
         },
@@ -849,7 +849,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "心からの感謝",
+          "daily_keyword": "調和のメロディ",
           "color_of_the_day": "黄金色",
           "recommended_tea": "ルイボスティー"
         },
@@ -865,7 +865,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "勇気ある挑戦",
+          "daily_keyword": "自然の叡智授受",
           "color_of_the_day": "鋼青色",
           "recommended_tea": "ローズヒップティー"
         },
@@ -881,7 +881,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "穏やかな安らぎ",
+          "daily_keyword": "知恵の泉湧出",
           "color_of_the_day": "深紅色",
           "recommended_tea": "白茶"
         },
@@ -897,7 +897,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "無限の創造",
+          "daily_keyword": "至福の時間軸",
           "color_of_the_day": "金色",
           "recommended_tea": "烏龍茶"
         },
@@ -913,7 +913,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "温かい交流",
+          "daily_keyword": "運気上昇の兆し",
           "color_of_the_day": "朱色",
           "recommended_tea": "玄米茶"
         },
@@ -929,7 +929,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "深い学び",
+          "daily_keyword": "心の扉が開放",
           "color_of_the_day": "空色",
           "recommended_tea": "抹茶"
         },
@@ -945,7 +945,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "心の整理",
+          "daily_keyword": "宇宙との同調",
           "color_of_the_day": "若草色",
           "recommended_tea": "柚子茶"
         },
@@ -961,7 +961,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "純粋な喜び",
+          "daily_keyword": "愛のバイブレーション",
           "color_of_the_day": "黄金色",
           "recommended_tea": "生姜茶"
         }
@@ -973,7 +973,7 @@
       "month_name": "March",
       "month_name_jp": "3月",
       "api_version": "v1",
-      "generated_at": "2025-06-20T08:40:42.947719",
+      "generated_at": "2025-06-20T08:45:25.822651",
       "days": [
         {
           "day": 1,
@@ -987,7 +987,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "着実な成長",
+          "daily_keyword": "豊かさの波動",
           "color_of_the_day": "鋼青色",
           "recommended_tea": "黒豆茶"
         },
@@ -1003,7 +1003,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "前向きな変化",
+          "daily_keyword": "運命の扉が開く日",
           "color_of_the_day": "深紅色",
           "recommended_tea": "アールグレイ"
         },
@@ -1019,7 +1019,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "静かな集中",
+          "daily_keyword": "宇宙からのメッセージ",
           "color_of_the_day": "金色",
           "recommended_tea": "カモミールティー"
         },
@@ -1035,7 +1035,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "豊かな共有",
+          "daily_keyword": "奇跡を呼ぶ波動",
           "color_of_the_day": "朱色",
           "recommended_tea": "ペパーミントティー"
         },
@@ -1051,7 +1051,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "胸躍る冒険",
+          "daily_keyword": "龍神様のご加護",
           "color_of_the_day": "空色",
           "recommended_tea": "緑茶"
         },
@@ -1067,7 +1067,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "美しい静寂",
+          "daily_keyword": "金運上昇のサイン",
           "color_of_the_day": "若草色",
           "recommended_tea": "ほうじ茶"
         },
@@ -1083,7 +1083,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "心からの祝福",
+          "daily_keyword": "恋愛運絶好調",
           "color_of_the_day": "黄金色",
           "recommended_tea": "ジャスミンティー"
         },
@@ -1099,7 +1099,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "魂の解放",
+          "daily_keyword": "直感力が冴える",
           "color_of_the_day": "鋼青色",
           "recommended_tea": "ルイボスティー"
         },
@@ -1115,7 +1115,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "真実の探求",
+          "daily_keyword": "隠れた才能開花",
           "color_of_the_day": "深紅色",
           "recommended_tea": "ローズヒップティー"
         },
@@ -1131,7 +1131,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "希望の光",
+          "daily_keyword": "人生の転機到来",
           "color_of_the_day": "金色",
           "recommended_tea": "白茶"
         },
@@ -1147,7 +1147,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "愛と慈悲",
+          "daily_keyword": "幸運の風が吹く",
           "color_of_the_day": "朱色",
           "recommended_tea": "烏龍茶"
         },
@@ -1163,7 +1163,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "内なる平和",
+          "daily_keyword": "魂の成長期間",
           "color_of_the_day": "空色",
           "recommended_tea": "玄米茶"
         },
@@ -1179,7 +1179,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "調和の響き",
+          "daily_keyword": "エネルギー充電日",
           "color_of_the_day": "若草色",
           "recommended_tea": "抹茶"
         },
@@ -1195,7 +1195,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "自然との一体",
+          "daily_keyword": "新次元への扉",
           "color_of_the_day": "黄金色",
           "recommended_tea": "柚子茶"
         },
@@ -1211,7 +1211,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "知恵の開花",
+          "daily_keyword": "守護霊のささやき",
           "color_of_the_day": "鋼青色",
           "recommended_tea": "生姜茶"
         },
@@ -1227,7 +1227,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "幸福の実感",
+          "daily_keyword": "願いが叶う予感",
           "color_of_the_day": "深紅色",
           "recommended_tea": "黒豆茶"
         },
@@ -1243,7 +1243,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "新しい始まり",
+          "daily_keyword": "心のデトックス",
           "color_of_the_day": "金色",
           "recommended_tea": "アールグレイ"
         },
@@ -1259,7 +1259,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "心からの感謝",
+          "daily_keyword": "創造力爆発",
           "color_of_the_day": "朱色",
           "recommended_tea": "カモミールティー"
         },
@@ -1275,7 +1275,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "勇気ある挑戦",
+          "daily_keyword": "人との縁を結ぶ",
           "color_of_the_day": "空色",
           "recommended_tea": "ペパーミントティー"
         },
@@ -1291,7 +1291,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "穏やかな安らぎ",
+          "daily_keyword": "未来への種まき",
           "color_of_the_day": "若草色",
           "recommended_tea": "緑茶"
         },
@@ -1307,7 +1307,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "無限の創造",
+          "daily_keyword": "宝物発見の予感",
           "color_of_the_day": "黄金色",
           "recommended_tea": "ほうじ茶"
         },
@@ -1323,7 +1323,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "温かい交流",
+          "daily_keyword": "内なる光が輝く",
           "color_of_the_day": "鋼青色",
           "recommended_tea": "ジャスミンティー"
         },
@@ -1339,7 +1339,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "深い学び",
+          "daily_keyword": "調和のメロディ",
           "color_of_the_day": "深紅色",
           "recommended_tea": "ルイボスティー"
         },
@@ -1355,7 +1355,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "心の整理",
+          "daily_keyword": "自然の叡智授受",
           "color_of_the_day": "金色",
           "recommended_tea": "ローズヒップティー"
         },
@@ -1371,7 +1371,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "純粋な喜び",
+          "daily_keyword": "知恵の泉湧出",
           "color_of_the_day": "朱色",
           "recommended_tea": "白茶"
         },
@@ -1387,7 +1387,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "着実な成長",
+          "daily_keyword": "至福の時間軸",
           "color_of_the_day": "空色",
           "recommended_tea": "烏龍茶"
         },
@@ -1403,7 +1403,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "前向きな変化",
+          "daily_keyword": "運気上昇の兆し",
           "color_of_the_day": "若草色",
           "recommended_tea": "玄米茶"
         },
@@ -1419,7 +1419,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "静かな集中",
+          "daily_keyword": "心の扉が開放",
           "color_of_the_day": "黄金色",
           "recommended_tea": "抹茶"
         },
@@ -1435,7 +1435,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "豊かな共有",
+          "daily_keyword": "宇宙との同調",
           "color_of_the_day": "鋼青色",
           "recommended_tea": "柚子茶"
         },
@@ -1451,7 +1451,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "胸躍る冒険",
+          "daily_keyword": "愛のバイブレーション",
           "color_of_the_day": "深紅色",
           "recommended_tea": "生姜茶"
         },
@@ -1467,7 +1467,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "美しい静寂",
+          "daily_keyword": "豊かさの波動",
           "color_of_the_day": "金色",
           "recommended_tea": "黒豆茶"
         }
@@ -1479,7 +1479,7 @@
       "month_name": "April",
       "month_name_jp": "4月",
       "api_version": "v1",
-      "generated_at": "2025-06-20T08:40:42.950009",
+      "generated_at": "2025-06-20T08:45:25.826969",
       "days": [
         {
           "day": 1,
@@ -1493,7 +1493,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "心からの祝福",
+          "daily_keyword": "運命の扉が開く日",
           "color_of_the_day": "朱色",
           "recommended_tea": "アールグレイ"
         },
@@ -1509,7 +1509,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "魂の解放",
+          "daily_keyword": "宇宙からのメッセージ",
           "color_of_the_day": "空色",
           "recommended_tea": "カモミールティー"
         },
@@ -1525,7 +1525,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "真実の探求",
+          "daily_keyword": "奇跡を呼ぶ波動",
           "color_of_the_day": "若草色",
           "recommended_tea": "ペパーミントティー"
         },
@@ -1541,7 +1541,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "希望の光",
+          "daily_keyword": "龍神様のご加護",
           "color_of_the_day": "黄金色",
           "recommended_tea": "緑茶"
         },
@@ -1557,7 +1557,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "愛と慈悲",
+          "daily_keyword": "金運上昇のサイン",
           "color_of_the_day": "鋼青色",
           "recommended_tea": "ほうじ茶"
         },
@@ -1573,7 +1573,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "内なる平和",
+          "daily_keyword": "恋愛運絶好調",
           "color_of_the_day": "深紅色",
           "recommended_tea": "ジャスミンティー"
         },
@@ -1589,7 +1589,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "調和の響き",
+          "daily_keyword": "直感力が冴える",
           "color_of_the_day": "金色",
           "recommended_tea": "ルイボスティー"
         },
@@ -1605,7 +1605,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "自然との一体",
+          "daily_keyword": "隠れた才能開花",
           "color_of_the_day": "朱色",
           "recommended_tea": "ローズヒップティー"
         },
@@ -1621,7 +1621,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "知恵の開花",
+          "daily_keyword": "人生の転機到来",
           "color_of_the_day": "空色",
           "recommended_tea": "白茶"
         },
@@ -1637,7 +1637,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "幸福の実感",
+          "daily_keyword": "幸運の風が吹く",
           "color_of_the_day": "若草色",
           "recommended_tea": "烏龍茶"
         },
@@ -1653,7 +1653,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "新しい始まり",
+          "daily_keyword": "魂の成長期間",
           "color_of_the_day": "黄金色",
           "recommended_tea": "玄米茶"
         },
@@ -1669,7 +1669,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "心からの感謝",
+          "daily_keyword": "エネルギー充電日",
           "color_of_the_day": "鋼青色",
           "recommended_tea": "抹茶"
         },
@@ -1685,7 +1685,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "勇気ある挑戦",
+          "daily_keyword": "新次元への扉",
           "color_of_the_day": "深紅色",
           "recommended_tea": "柚子茶"
         },
@@ -1701,7 +1701,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "穏やかな安らぎ",
+          "daily_keyword": "守護霊のささやき",
           "color_of_the_day": "金色",
           "recommended_tea": "生姜茶"
         },
@@ -1717,7 +1717,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "無限の創造",
+          "daily_keyword": "願いが叶う予感",
           "color_of_the_day": "朱色",
           "recommended_tea": "黒豆茶"
         },
@@ -1733,7 +1733,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "温かい交流",
+          "daily_keyword": "心のデトックス",
           "color_of_the_day": "空色",
           "recommended_tea": "アールグレイ"
         },
@@ -1749,7 +1749,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "深い学び",
+          "daily_keyword": "創造力爆発",
           "color_of_the_day": "若草色",
           "recommended_tea": "カモミールティー"
         },
@@ -1765,7 +1765,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "心の整理",
+          "daily_keyword": "人との縁を結ぶ",
           "color_of_the_day": "黄金色",
           "recommended_tea": "ペパーミントティー"
         },
@@ -1781,7 +1781,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "純粋な喜び",
+          "daily_keyword": "未来への種まき",
           "color_of_the_day": "鋼青色",
           "recommended_tea": "緑茶"
         },
@@ -1797,7 +1797,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "着実な成長",
+          "daily_keyword": "宝物発見の予感",
           "color_of_the_day": "深紅色",
           "recommended_tea": "ほうじ茶"
         },
@@ -1813,7 +1813,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "前向きな変化",
+          "daily_keyword": "内なる光が輝く",
           "color_of_the_day": "金色",
           "recommended_tea": "ジャスミンティー"
         },
@@ -1829,7 +1829,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "静かな集中",
+          "daily_keyword": "調和のメロディ",
           "color_of_the_day": "朱色",
           "recommended_tea": "ルイボスティー"
         },
@@ -1845,7 +1845,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "豊かな共有",
+          "daily_keyword": "自然の叡智授受",
           "color_of_the_day": "空色",
           "recommended_tea": "ローズヒップティー"
         },
@@ -1861,7 +1861,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "胸躍る冒険",
+          "daily_keyword": "知恵の泉湧出",
           "color_of_the_day": "若草色",
           "recommended_tea": "白茶"
         },
@@ -1877,7 +1877,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "美しい静寂",
+          "daily_keyword": "至福の時間軸",
           "color_of_the_day": "黄金色",
           "recommended_tea": "烏龍茶"
         },
@@ -1893,7 +1893,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "心からの祝福",
+          "daily_keyword": "運気上昇の兆し",
           "color_of_the_day": "鋼青色",
           "recommended_tea": "玄米茶"
         },
@@ -1909,7 +1909,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "魂の解放",
+          "daily_keyword": "心の扉が開放",
           "color_of_the_day": "深紅色",
           "recommended_tea": "抹茶"
         },
@@ -1925,7 +1925,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "真実の探求",
+          "daily_keyword": "宇宙との同調",
           "color_of_the_day": "金色",
           "recommended_tea": "柚子茶"
         },
@@ -1941,7 +1941,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "希望の光",
+          "daily_keyword": "愛のバイブレーション",
           "color_of_the_day": "朱色",
           "recommended_tea": "生姜茶"
         },
@@ -1957,7 +1957,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "愛と慈悲",
+          "daily_keyword": "豊かさの波動",
           "color_of_the_day": "空色",
           "recommended_tea": "黒豆茶"
         }
@@ -1969,7 +1969,7 @@
       "month_name": "May",
       "month_name_jp": "5月",
       "api_version": "v1",
-      "generated_at": "2025-06-20T08:40:42.951801",
+      "generated_at": "2025-06-20T08:45:25.829432",
       "days": [
         {
           "day": 1,
@@ -1983,7 +1983,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "内なる平和",
+          "daily_keyword": "運命の扉が開く日",
           "color_of_the_day": "若草色",
           "recommended_tea": "アールグレイ"
         },
@@ -1999,7 +1999,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "調和の響き",
+          "daily_keyword": "宇宙からのメッセージ",
           "color_of_the_day": "黄金色",
           "recommended_tea": "カモミールティー"
         },
@@ -2015,7 +2015,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "自然との一体",
+          "daily_keyword": "奇跡を呼ぶ波動",
           "color_of_the_day": "鋼青色",
           "recommended_tea": "ペパーミントティー"
         },
@@ -2031,7 +2031,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "知恵の開花",
+          "daily_keyword": "龍神様のご加護",
           "color_of_the_day": "深紅色",
           "recommended_tea": "緑茶"
         },
@@ -2047,7 +2047,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "幸福の実感",
+          "daily_keyword": "金運上昇のサイン",
           "color_of_the_day": "金色",
           "recommended_tea": "ほうじ茶"
         },
@@ -2063,7 +2063,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "新しい始まり",
+          "daily_keyword": "恋愛運絶好調",
           "color_of_the_day": "朱色",
           "recommended_tea": "ジャスミンティー"
         },
@@ -2079,7 +2079,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "心からの感謝",
+          "daily_keyword": "直感力が冴える",
           "color_of_the_day": "空色",
           "recommended_tea": "ルイボスティー"
         },
@@ -2095,7 +2095,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "勇気ある挑戦",
+          "daily_keyword": "隠れた才能開花",
           "color_of_the_day": "若草色",
           "recommended_tea": "ローズヒップティー"
         },
@@ -2111,7 +2111,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "穏やかな安らぎ",
+          "daily_keyword": "人生の転機到来",
           "color_of_the_day": "黄金色",
           "recommended_tea": "白茶"
         },
@@ -2127,7 +2127,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "無限の創造",
+          "daily_keyword": "幸運の風が吹く",
           "color_of_the_day": "鋼青色",
           "recommended_tea": "烏龍茶"
         },
@@ -2143,7 +2143,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "温かい交流",
+          "daily_keyword": "魂の成長期間",
           "color_of_the_day": "深紅色",
           "recommended_tea": "玄米茶"
         },
@@ -2159,7 +2159,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "深い学び",
+          "daily_keyword": "エネルギー充電日",
           "color_of_the_day": "金色",
           "recommended_tea": "抹茶"
         },
@@ -2175,7 +2175,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "心の整理",
+          "daily_keyword": "新次元への扉",
           "color_of_the_day": "朱色",
           "recommended_tea": "柚子茶"
         },
@@ -2191,7 +2191,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "純粋な喜び",
+          "daily_keyword": "守護霊のささやき",
           "color_of_the_day": "空色",
           "recommended_tea": "生姜茶"
         },
@@ -2207,7 +2207,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "着実な成長",
+          "daily_keyword": "願いが叶う予感",
           "color_of_the_day": "若草色",
           "recommended_tea": "黒豆茶"
         },
@@ -2223,7 +2223,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "前向きな変化",
+          "daily_keyword": "心のデトックス",
           "color_of_the_day": "黄金色",
           "recommended_tea": "アールグレイ"
         },
@@ -2239,7 +2239,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "静かな集中",
+          "daily_keyword": "創造力爆発",
           "color_of_the_day": "鋼青色",
           "recommended_tea": "カモミールティー"
         },
@@ -2255,7 +2255,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "豊かな共有",
+          "daily_keyword": "人との縁を結ぶ",
           "color_of_the_day": "深紅色",
           "recommended_tea": "ペパーミントティー"
         },
@@ -2271,7 +2271,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "胸躍る冒険",
+          "daily_keyword": "未来への種まき",
           "color_of_the_day": "金色",
           "recommended_tea": "緑茶"
         },
@@ -2287,7 +2287,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "美しい静寂",
+          "daily_keyword": "宝物発見の予感",
           "color_of_the_day": "朱色",
           "recommended_tea": "ほうじ茶"
         },
@@ -2303,7 +2303,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "心からの祝福",
+          "daily_keyword": "内なる光が輝く",
           "color_of_the_day": "空色",
           "recommended_tea": "ジャスミンティー"
         },
@@ -2319,7 +2319,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "魂の解放",
+          "daily_keyword": "調和のメロディ",
           "color_of_the_day": "若草色",
           "recommended_tea": "ルイボスティー"
         },
@@ -2335,7 +2335,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "真実の探求",
+          "daily_keyword": "自然の叡智授受",
           "color_of_the_day": "黄金色",
           "recommended_tea": "ローズヒップティー"
         },
@@ -2351,7 +2351,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "希望の光",
+          "daily_keyword": "知恵の泉湧出",
           "color_of_the_day": "鋼青色",
           "recommended_tea": "白茶"
         },
@@ -2367,7 +2367,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "愛と慈悲",
+          "daily_keyword": "至福の時間軸",
           "color_of_the_day": "深紅色",
           "recommended_tea": "烏龍茶"
         },
@@ -2383,7 +2383,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "内なる平和",
+          "daily_keyword": "運気上昇の兆し",
           "color_of_the_day": "金色",
           "recommended_tea": "玄米茶"
         },
@@ -2399,7 +2399,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "調和の響き",
+          "daily_keyword": "心の扉が開放",
           "color_of_the_day": "朱色",
           "recommended_tea": "抹茶"
         },
@@ -2415,7 +2415,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "自然との一体",
+          "daily_keyword": "宇宙との同調",
           "color_of_the_day": "空色",
           "recommended_tea": "柚子茶"
         },
@@ -2431,7 +2431,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "知恵の開花",
+          "daily_keyword": "愛のバイブレーション",
           "color_of_the_day": "若草色",
           "recommended_tea": "生姜茶"
         },
@@ -2447,7 +2447,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "幸福の実感",
+          "daily_keyword": "豊かさの波動",
           "color_of_the_day": "黄金色",
           "recommended_tea": "黒豆茶"
         },
@@ -2463,7 +2463,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "新しい始まり",
+          "daily_keyword": "運命の扉が開く日",
           "color_of_the_day": "鋼青色",
           "recommended_tea": "アールグレイ"
         }
@@ -2475,7 +2475,7 @@
       "month_name": "June",
       "month_name_jp": "6月",
       "api_version": "v1",
-      "generated_at": "2025-06-20T08:40:42.953438",
+      "generated_at": "2025-06-20T08:45:25.831680",
       "days": [
         {
           "day": 1,
@@ -2489,7 +2489,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "心からの感謝",
+          "daily_keyword": "宇宙からのメッセージ",
           "color_of_the_day": "深紅色",
           "recommended_tea": "カモミールティー"
         },
@@ -2505,7 +2505,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "勇気ある挑戦",
+          "daily_keyword": "奇跡を呼ぶ波動",
           "color_of_the_day": "金色",
           "recommended_tea": "ペパーミントティー"
         },
@@ -2521,7 +2521,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "穏やかな安らぎ",
+          "daily_keyword": "龍神様のご加護",
           "color_of_the_day": "朱色",
           "recommended_tea": "緑茶"
         },
@@ -2537,7 +2537,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "無限の創造",
+          "daily_keyword": "金運上昇のサイン",
           "color_of_the_day": "空色",
           "recommended_tea": "ほうじ茶"
         },
@@ -2553,7 +2553,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "温かい交流",
+          "daily_keyword": "恋愛運絶好調",
           "color_of_the_day": "若草色",
           "recommended_tea": "ジャスミンティー"
         },
@@ -2569,7 +2569,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "深い学び",
+          "daily_keyword": "直感力が冴える",
           "color_of_the_day": "黄金色",
           "recommended_tea": "ルイボスティー"
         },
@@ -2585,7 +2585,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "心の整理",
+          "daily_keyword": "隠れた才能開花",
           "color_of_the_day": "鋼青色",
           "recommended_tea": "ローズヒップティー"
         },
@@ -2601,7 +2601,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "純粋な喜び",
+          "daily_keyword": "人生の転機到来",
           "color_of_the_day": "深紅色",
           "recommended_tea": "白茶"
         },
@@ -2617,7 +2617,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "着実な成長",
+          "daily_keyword": "幸運の風が吹く",
           "color_of_the_day": "金色",
           "recommended_tea": "烏龍茶"
         },
@@ -2633,7 +2633,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "前向きな変化",
+          "daily_keyword": "魂の成長期間",
           "color_of_the_day": "朱色",
           "recommended_tea": "玄米茶"
         },
@@ -2649,7 +2649,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "静かな集中",
+          "daily_keyword": "エネルギー充電日",
           "color_of_the_day": "空色",
           "recommended_tea": "抹茶"
         },
@@ -2665,7 +2665,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "豊かな共有",
+          "daily_keyword": "新次元への扉",
           "color_of_the_day": "若草色",
           "recommended_tea": "柚子茶"
         },
@@ -2681,7 +2681,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "胸躍る冒険",
+          "daily_keyword": "守護霊のささやき",
           "color_of_the_day": "黄金色",
           "recommended_tea": "生姜茶"
         },
@@ -2697,7 +2697,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "美しい静寂",
+          "daily_keyword": "願いが叶う予感",
           "color_of_the_day": "鋼青色",
           "recommended_tea": "黒豆茶"
         },
@@ -2713,7 +2713,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "心からの祝福",
+          "daily_keyword": "心のデトックス",
           "color_of_the_day": "深紅色",
           "recommended_tea": "アールグレイ"
         },
@@ -2729,7 +2729,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "魂の解放",
+          "daily_keyword": "創造力爆発",
           "color_of_the_day": "金色",
           "recommended_tea": "カモミールティー"
         },
@@ -2745,7 +2745,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "真実の探求",
+          "daily_keyword": "人との縁を結ぶ",
           "color_of_the_day": "朱色",
           "recommended_tea": "ペパーミントティー"
         },
@@ -2761,7 +2761,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "希望の光",
+          "daily_keyword": "未来への種まき",
           "color_of_the_day": "空色",
           "recommended_tea": "緑茶"
         },
@@ -2777,7 +2777,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "愛と慈悲",
+          "daily_keyword": "宝物発見の予感",
           "color_of_the_day": "若草色",
           "recommended_tea": "ほうじ茶"
         },
@@ -2793,7 +2793,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "内なる平和",
+          "daily_keyword": "内なる光が輝く",
           "color_of_the_day": "黄金色",
           "recommended_tea": "ジャスミンティー"
         },
@@ -2809,7 +2809,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "調和の響き",
+          "daily_keyword": "調和のメロディ",
           "color_of_the_day": "鋼青色",
           "recommended_tea": "ルイボスティー"
         },
@@ -2825,7 +2825,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "自然との一体",
+          "daily_keyword": "自然の叡智授受",
           "color_of_the_day": "深紅色",
           "recommended_tea": "ローズヒップティー"
         },
@@ -2841,7 +2841,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "知恵の開花",
+          "daily_keyword": "知恵の泉湧出",
           "color_of_the_day": "金色",
           "recommended_tea": "白茶"
         },
@@ -2857,7 +2857,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "幸福の実感",
+          "daily_keyword": "至福の時間軸",
           "color_of_the_day": "朱色",
           "recommended_tea": "烏龍茶"
         },
@@ -2873,7 +2873,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "新しい始まり",
+          "daily_keyword": "運気上昇の兆し",
           "color_of_the_day": "空色",
           "recommended_tea": "玄米茶"
         },
@@ -2889,7 +2889,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "心からの感謝",
+          "daily_keyword": "心の扉が開放",
           "color_of_the_day": "若草色",
           "recommended_tea": "抹茶"
         },
@@ -2905,7 +2905,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "勇気ある挑戦",
+          "daily_keyword": "宇宙との同調",
           "color_of_the_day": "黄金色",
           "recommended_tea": "柚子茶"
         },
@@ -2921,7 +2921,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "穏やかな安らぎ",
+          "daily_keyword": "愛のバイブレーション",
           "color_of_the_day": "鋼青色",
           "recommended_tea": "生姜茶"
         },
@@ -2937,7 +2937,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "無限の創造",
+          "daily_keyword": "豊かさの波動",
           "color_of_the_day": "深紅色",
           "recommended_tea": "黒豆茶"
         },
@@ -2953,7 +2953,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "温かい交流",
+          "daily_keyword": "運命の扉が開く日",
           "color_of_the_day": "金色",
           "recommended_tea": "アールグレイ"
         }
@@ -2965,7 +2965,7 @@
       "month_name": "July",
       "month_name_jp": "7月",
       "api_version": "v1",
-      "generated_at": "2025-06-20T08:40:42.955657",
+      "generated_at": "2025-06-20T08:45:25.833585",
       "days": [
         {
           "day": 1,
@@ -2979,7 +2979,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "深い学び",
+          "daily_keyword": "宇宙からのメッセージ",
           "color_of_the_day": "朱色",
           "recommended_tea": "カモミールティー"
         },
@@ -2995,7 +2995,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "心の整理",
+          "daily_keyword": "奇跡を呼ぶ波動",
           "color_of_the_day": "空色",
           "recommended_tea": "ペパーミントティー"
         },
@@ -3011,7 +3011,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "純粋な喜び",
+          "daily_keyword": "龍神様のご加護",
           "color_of_the_day": "若草色",
           "recommended_tea": "緑茶"
         },
@@ -3027,7 +3027,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "着実な成長",
+          "daily_keyword": "金運上昇のサイン",
           "color_of_the_day": "黄金色",
           "recommended_tea": "ほうじ茶"
         },
@@ -3043,7 +3043,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "前向きな変化",
+          "daily_keyword": "恋愛運絶好調",
           "color_of_the_day": "鋼青色",
           "recommended_tea": "ジャスミンティー"
         },
@@ -3059,7 +3059,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "静かな集中",
+          "daily_keyword": "直感力が冴える",
           "color_of_the_day": "深紅色",
           "recommended_tea": "ルイボスティー"
         },
@@ -3075,7 +3075,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "豊かな共有",
+          "daily_keyword": "隠れた才能開花",
           "color_of_the_day": "金色",
           "recommended_tea": "ローズヒップティー"
         },
@@ -3091,7 +3091,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "胸躍る冒険",
+          "daily_keyword": "人生の転機到来",
           "color_of_the_day": "朱色",
           "recommended_tea": "白茶"
         },
@@ -3107,7 +3107,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "美しい静寂",
+          "daily_keyword": "幸運の風が吹く",
           "color_of_the_day": "空色",
           "recommended_tea": "烏龍茶"
         },
@@ -3123,7 +3123,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "心からの祝福",
+          "daily_keyword": "魂の成長期間",
           "color_of_the_day": "若草色",
           "recommended_tea": "玄米茶"
         },
@@ -3139,7 +3139,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "魂の解放",
+          "daily_keyword": "エネルギー充電日",
           "color_of_the_day": "黄金色",
           "recommended_tea": "抹茶"
         },
@@ -3155,7 +3155,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "真実の探求",
+          "daily_keyword": "新次元への扉",
           "color_of_the_day": "鋼青色",
           "recommended_tea": "柚子茶"
         },
@@ -3171,7 +3171,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "希望の光",
+          "daily_keyword": "守護霊のささやき",
           "color_of_the_day": "深紅色",
           "recommended_tea": "生姜茶"
         },
@@ -3187,7 +3187,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "愛と慈悲",
+          "daily_keyword": "願いが叶う予感",
           "color_of_the_day": "金色",
           "recommended_tea": "黒豆茶"
         },
@@ -3203,7 +3203,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "内なる平和",
+          "daily_keyword": "心のデトックス",
           "color_of_the_day": "朱色",
           "recommended_tea": "アールグレイ"
         },
@@ -3219,7 +3219,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "調和の響き",
+          "daily_keyword": "創造力爆発",
           "color_of_the_day": "空色",
           "recommended_tea": "カモミールティー"
         },
@@ -3235,7 +3235,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "自然との一体",
+          "daily_keyword": "人との縁を結ぶ",
           "color_of_the_day": "若草色",
           "recommended_tea": "ペパーミントティー"
         },
@@ -3251,7 +3251,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "知恵の開花",
+          "daily_keyword": "未来への種まき",
           "color_of_the_day": "黄金色",
           "recommended_tea": "緑茶"
         },
@@ -3267,7 +3267,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "幸福の実感",
+          "daily_keyword": "宝物発見の予感",
           "color_of_the_day": "鋼青色",
           "recommended_tea": "ほうじ茶"
         },
@@ -3283,7 +3283,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "新しい始まり",
+          "daily_keyword": "内なる光が輝く",
           "color_of_the_day": "深紅色",
           "recommended_tea": "ジャスミンティー"
         },
@@ -3299,7 +3299,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "心からの感謝",
+          "daily_keyword": "調和のメロディ",
           "color_of_the_day": "金色",
           "recommended_tea": "ルイボスティー"
         },
@@ -3315,7 +3315,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "勇気ある挑戦",
+          "daily_keyword": "自然の叡智授受",
           "color_of_the_day": "朱色",
           "recommended_tea": "ローズヒップティー"
         },
@@ -3331,7 +3331,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "穏やかな安らぎ",
+          "daily_keyword": "知恵の泉湧出",
           "color_of_the_day": "空色",
           "recommended_tea": "白茶"
         },
@@ -3347,7 +3347,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "無限の創造",
+          "daily_keyword": "至福の時間軸",
           "color_of_the_day": "若草色",
           "recommended_tea": "烏龍茶"
         },
@@ -3363,7 +3363,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "温かい交流",
+          "daily_keyword": "運気上昇の兆し",
           "color_of_the_day": "黄金色",
           "recommended_tea": "玄米茶"
         },
@@ -3379,7 +3379,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "深い学び",
+          "daily_keyword": "心の扉が開放",
           "color_of_the_day": "鋼青色",
           "recommended_tea": "抹茶"
         },
@@ -3395,7 +3395,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "心の整理",
+          "daily_keyword": "宇宙との同調",
           "color_of_the_day": "深紅色",
           "recommended_tea": "柚子茶"
         },
@@ -3411,7 +3411,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "純粋な喜び",
+          "daily_keyword": "愛のバイブレーション",
           "color_of_the_day": "金色",
           "recommended_tea": "生姜茶"
         },
@@ -3427,7 +3427,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "着実な成長",
+          "daily_keyword": "豊かさの波動",
           "color_of_the_day": "朱色",
           "recommended_tea": "黒豆茶"
         },
@@ -3443,7 +3443,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "前向きな変化",
+          "daily_keyword": "運命の扉が開く日",
           "color_of_the_day": "空色",
           "recommended_tea": "アールグレイ"
         },
@@ -3459,7 +3459,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "静かな集中",
+          "daily_keyword": "宇宙からのメッセージ",
           "color_of_the_day": "若草色",
           "recommended_tea": "カモミールティー"
         }
@@ -3471,7 +3471,7 @@
       "month_name": "August",
       "month_name_jp": "8月",
       "api_version": "v1",
-      "generated_at": "2025-06-20T08:40:42.957847",
+      "generated_at": "2025-06-20T08:45:25.837087",
       "days": [
         {
           "day": 1,
@@ -3485,7 +3485,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "豊かな共有",
+          "daily_keyword": "奇跡を呼ぶ波動",
           "color_of_the_day": "黄金色",
           "recommended_tea": "ペパーミントティー"
         },
@@ -3501,7 +3501,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "胸躍る冒険",
+          "daily_keyword": "龍神様のご加護",
           "color_of_the_day": "鋼青色",
           "recommended_tea": "緑茶"
         },
@@ -3517,7 +3517,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "美しい静寂",
+          "daily_keyword": "金運上昇のサイン",
           "color_of_the_day": "深紅色",
           "recommended_tea": "ほうじ茶"
         },
@@ -3533,7 +3533,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "心からの祝福",
+          "daily_keyword": "恋愛運絶好調",
           "color_of_the_day": "金色",
           "recommended_tea": "ジャスミンティー"
         },
@@ -3549,7 +3549,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "魂の解放",
+          "daily_keyword": "直感力が冴える",
           "color_of_the_day": "朱色",
           "recommended_tea": "ルイボスティー"
         },
@@ -3565,7 +3565,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "真実の探求",
+          "daily_keyword": "隠れた才能開花",
           "color_of_the_day": "空色",
           "recommended_tea": "ローズヒップティー"
         },
@@ -3581,7 +3581,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "希望の光",
+          "daily_keyword": "人生の転機到来",
           "color_of_the_day": "若草色",
           "recommended_tea": "白茶"
         },
@@ -3597,7 +3597,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "愛と慈悲",
+          "daily_keyword": "幸運の風が吹く",
           "color_of_the_day": "黄金色",
           "recommended_tea": "烏龍茶"
         },
@@ -3613,7 +3613,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "内なる平和",
+          "daily_keyword": "魂の成長期間",
           "color_of_the_day": "鋼青色",
           "recommended_tea": "玄米茶"
         },
@@ -3629,7 +3629,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "調和の響き",
+          "daily_keyword": "エネルギー充電日",
           "color_of_the_day": "深紅色",
           "recommended_tea": "抹茶"
         },
@@ -3645,7 +3645,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "自然との一体",
+          "daily_keyword": "新次元への扉",
           "color_of_the_day": "金色",
           "recommended_tea": "柚子茶"
         },
@@ -3661,7 +3661,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "知恵の開花",
+          "daily_keyword": "守護霊のささやき",
           "color_of_the_day": "朱色",
           "recommended_tea": "生姜茶"
         },
@@ -3677,7 +3677,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "幸福の実感",
+          "daily_keyword": "願いが叶う予感",
           "color_of_the_day": "空色",
           "recommended_tea": "黒豆茶"
         },
@@ -3693,7 +3693,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "新しい始まり",
+          "daily_keyword": "心のデトックス",
           "color_of_the_day": "若草色",
           "recommended_tea": "アールグレイ"
         },
@@ -3709,7 +3709,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "心からの感謝",
+          "daily_keyword": "創造力爆発",
           "color_of_the_day": "黄金色",
           "recommended_tea": "カモミールティー"
         },
@@ -3725,7 +3725,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "勇気ある挑戦",
+          "daily_keyword": "人との縁を結ぶ",
           "color_of_the_day": "鋼青色",
           "recommended_tea": "ペパーミントティー"
         },
@@ -3741,7 +3741,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "穏やかな安らぎ",
+          "daily_keyword": "未来への種まき",
           "color_of_the_day": "深紅色",
           "recommended_tea": "緑茶"
         },
@@ -3757,7 +3757,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "無限の創造",
+          "daily_keyword": "宝物発見の予感",
           "color_of_the_day": "金色",
           "recommended_tea": "ほうじ茶"
         },
@@ -3773,7 +3773,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "温かい交流",
+          "daily_keyword": "内なる光が輝く",
           "color_of_the_day": "朱色",
           "recommended_tea": "ジャスミンティー"
         },
@@ -3789,7 +3789,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "深い学び",
+          "daily_keyword": "調和のメロディ",
           "color_of_the_day": "空色",
           "recommended_tea": "ルイボスティー"
         },
@@ -3805,7 +3805,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "心の整理",
+          "daily_keyword": "自然の叡智授受",
           "color_of_the_day": "若草色",
           "recommended_tea": "ローズヒップティー"
         },
@@ -3821,7 +3821,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "純粋な喜び",
+          "daily_keyword": "知恵の泉湧出",
           "color_of_the_day": "黄金色",
           "recommended_tea": "白茶"
         },
@@ -3837,7 +3837,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "着実な成長",
+          "daily_keyword": "至福の時間軸",
           "color_of_the_day": "鋼青色",
           "recommended_tea": "烏龍茶"
         },
@@ -3853,7 +3853,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "前向きな変化",
+          "daily_keyword": "運気上昇の兆し",
           "color_of_the_day": "深紅色",
           "recommended_tea": "玄米茶"
         },
@@ -3869,7 +3869,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "静かな集中",
+          "daily_keyword": "心の扉が開放",
           "color_of_the_day": "金色",
           "recommended_tea": "抹茶"
         },
@@ -3885,7 +3885,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "豊かな共有",
+          "daily_keyword": "宇宙との同調",
           "color_of_the_day": "朱色",
           "recommended_tea": "柚子茶"
         },
@@ -3901,7 +3901,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "胸躍る冒険",
+          "daily_keyword": "愛のバイブレーション",
           "color_of_the_day": "空色",
           "recommended_tea": "生姜茶"
         },
@@ -3917,7 +3917,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "美しい静寂",
+          "daily_keyword": "豊かさの波動",
           "color_of_the_day": "若草色",
           "recommended_tea": "黒豆茶"
         },
@@ -3933,7 +3933,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "心からの祝福",
+          "daily_keyword": "運命の扉が開く日",
           "color_of_the_day": "黄金色",
           "recommended_tea": "アールグレイ"
         },
@@ -3949,7 +3949,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "魂の解放",
+          "daily_keyword": "宇宙からのメッセージ",
           "color_of_the_day": "鋼青色",
           "recommended_tea": "カモミールティー"
         },
@@ -3965,7 +3965,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "真実の探求",
+          "daily_keyword": "奇跡を呼ぶ波動",
           "color_of_the_day": "深紅色",
           "recommended_tea": "ペパーミントティー"
         }
@@ -3977,7 +3977,7 @@
       "month_name": "September",
       "month_name_jp": "9月",
       "api_version": "v1",
-      "generated_at": "2025-06-20T08:40:42.962520",
+      "generated_at": "2025-06-20T08:45:25.839855",
       "days": [
         {
           "day": 1,
@@ -3991,7 +3991,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "希望の光",
+          "daily_keyword": "龍神様のご加護",
           "color_of_the_day": "金色",
           "recommended_tea": "緑茶"
         },
@@ -4007,7 +4007,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "愛と慈悲",
+          "daily_keyword": "金運上昇のサイン",
           "color_of_the_day": "朱色",
           "recommended_tea": "ほうじ茶"
         },
@@ -4023,7 +4023,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "内なる平和",
+          "daily_keyword": "恋愛運絶好調",
           "color_of_the_day": "空色",
           "recommended_tea": "ジャスミンティー"
         },
@@ -4039,7 +4039,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "調和の響き",
+          "daily_keyword": "直感力が冴える",
           "color_of_the_day": "若草色",
           "recommended_tea": "ルイボスティー"
         },
@@ -4055,7 +4055,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "自然との一体",
+          "daily_keyword": "隠れた才能開花",
           "color_of_the_day": "黄金色",
           "recommended_tea": "ローズヒップティー"
         },
@@ -4071,7 +4071,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "知恵の開花",
+          "daily_keyword": "人生の転機到来",
           "color_of_the_day": "鋼青色",
           "recommended_tea": "白茶"
         },
@@ -4087,7 +4087,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "幸福の実感",
+          "daily_keyword": "幸運の風が吹く",
           "color_of_the_day": "深紅色",
           "recommended_tea": "烏龍茶"
         },
@@ -4103,7 +4103,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "新しい始まり",
+          "daily_keyword": "魂の成長期間",
           "color_of_the_day": "金色",
           "recommended_tea": "玄米茶"
         },
@@ -4119,7 +4119,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "心からの感謝",
+          "daily_keyword": "エネルギー充電日",
           "color_of_the_day": "朱色",
           "recommended_tea": "抹茶"
         },
@@ -4135,7 +4135,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "勇気ある挑戦",
+          "daily_keyword": "新次元への扉",
           "color_of_the_day": "空色",
           "recommended_tea": "柚子茶"
         },
@@ -4151,7 +4151,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "穏やかな安らぎ",
+          "daily_keyword": "守護霊のささやき",
           "color_of_the_day": "若草色",
           "recommended_tea": "生姜茶"
         },
@@ -4167,7 +4167,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "無限の創造",
+          "daily_keyword": "願いが叶う予感",
           "color_of_the_day": "黄金色",
           "recommended_tea": "黒豆茶"
         },
@@ -4183,7 +4183,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "温かい交流",
+          "daily_keyword": "心のデトックス",
           "color_of_the_day": "鋼青色",
           "recommended_tea": "アールグレイ"
         },
@@ -4199,7 +4199,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "深い学び",
+          "daily_keyword": "創造力爆発",
           "color_of_the_day": "深紅色",
           "recommended_tea": "カモミールティー"
         },
@@ -4215,7 +4215,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "心の整理",
+          "daily_keyword": "人との縁を結ぶ",
           "color_of_the_day": "金色",
           "recommended_tea": "ペパーミントティー"
         },
@@ -4231,7 +4231,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "純粋な喜び",
+          "daily_keyword": "未来への種まき",
           "color_of_the_day": "朱色",
           "recommended_tea": "緑茶"
         },
@@ -4247,7 +4247,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "着実な成長",
+          "daily_keyword": "宝物発見の予感",
           "color_of_the_day": "空色",
           "recommended_tea": "ほうじ茶"
         },
@@ -4263,7 +4263,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "前向きな変化",
+          "daily_keyword": "内なる光が輝く",
           "color_of_the_day": "若草色",
           "recommended_tea": "ジャスミンティー"
         },
@@ -4279,7 +4279,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "静かな集中",
+          "daily_keyword": "調和のメロディ",
           "color_of_the_day": "黄金色",
           "recommended_tea": "ルイボスティー"
         },
@@ -4295,7 +4295,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "豊かな共有",
+          "daily_keyword": "自然の叡智授受",
           "color_of_the_day": "鋼青色",
           "recommended_tea": "ローズヒップティー"
         },
@@ -4311,7 +4311,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "胸躍る冒険",
+          "daily_keyword": "知恵の泉湧出",
           "color_of_the_day": "深紅色",
           "recommended_tea": "白茶"
         },
@@ -4327,7 +4327,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "美しい静寂",
+          "daily_keyword": "至福の時間軸",
           "color_of_the_day": "金色",
           "recommended_tea": "烏龍茶"
         },
@@ -4343,7 +4343,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "心からの祝福",
+          "daily_keyword": "運気上昇の兆し",
           "color_of_the_day": "朱色",
           "recommended_tea": "玄米茶"
         },
@@ -4359,7 +4359,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "魂の解放",
+          "daily_keyword": "心の扉が開放",
           "color_of_the_day": "空色",
           "recommended_tea": "抹茶"
         },
@@ -4375,7 +4375,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "真実の探求",
+          "daily_keyword": "宇宙との同調",
           "color_of_the_day": "若草色",
           "recommended_tea": "柚子茶"
         },
@@ -4391,7 +4391,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "希望の光",
+          "daily_keyword": "愛のバイブレーション",
           "color_of_the_day": "黄金色",
           "recommended_tea": "生姜茶"
         },
@@ -4407,7 +4407,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "愛と慈悲",
+          "daily_keyword": "豊かさの波動",
           "color_of_the_day": "鋼青色",
           "recommended_tea": "黒豆茶"
         },
@@ -4423,7 +4423,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "内なる平和",
+          "daily_keyword": "運命の扉が開く日",
           "color_of_the_day": "深紅色",
           "recommended_tea": "アールグレイ"
         },
@@ -4439,7 +4439,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "調和の響き",
+          "daily_keyword": "宇宙からのメッセージ",
           "color_of_the_day": "金色",
           "recommended_tea": "カモミールティー"
         },
@@ -4455,7 +4455,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "自然との一体",
+          "daily_keyword": "奇跡を呼ぶ波動",
           "color_of_the_day": "朱色",
           "recommended_tea": "ペパーミントティー"
         }
@@ -4467,7 +4467,7 @@
       "month_name": "October",
       "month_name_jp": "10月",
       "api_version": "v1",
-      "generated_at": "2025-06-20T08:40:42.969171",
+      "generated_at": "2025-06-20T08:45:25.842291",
       "days": [
         {
           "day": 1,
@@ -4481,7 +4481,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "知恵の開花",
+          "daily_keyword": "龍神様のご加護",
           "color_of_the_day": "空色",
           "recommended_tea": "緑茶"
         },
@@ -4497,7 +4497,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "幸福の実感",
+          "daily_keyword": "金運上昇のサイン",
           "color_of_the_day": "若草色",
           "recommended_tea": "ほうじ茶"
         },
@@ -4513,7 +4513,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "新しい始まり",
+          "daily_keyword": "恋愛運絶好調",
           "color_of_the_day": "黄金色",
           "recommended_tea": "ジャスミンティー"
         },
@@ -4529,7 +4529,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "心からの感謝",
+          "daily_keyword": "直感力が冴える",
           "color_of_the_day": "鋼青色",
           "recommended_tea": "ルイボスティー"
         },
@@ -4545,7 +4545,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "勇気ある挑戦",
+          "daily_keyword": "隠れた才能開花",
           "color_of_the_day": "深紅色",
           "recommended_tea": "ローズヒップティー"
         },
@@ -4561,7 +4561,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "穏やかな安らぎ",
+          "daily_keyword": "人生の転機到来",
           "color_of_the_day": "金色",
           "recommended_tea": "白茶"
         },
@@ -4577,7 +4577,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "無限の創造",
+          "daily_keyword": "幸運の風が吹く",
           "color_of_the_day": "朱色",
           "recommended_tea": "烏龍茶"
         },
@@ -4593,7 +4593,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "温かい交流",
+          "daily_keyword": "魂の成長期間",
           "color_of_the_day": "空色",
           "recommended_tea": "玄米茶"
         },
@@ -4609,7 +4609,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "深い学び",
+          "daily_keyword": "エネルギー充電日",
           "color_of_the_day": "若草色",
           "recommended_tea": "抹茶"
         },
@@ -4625,7 +4625,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "心の整理",
+          "daily_keyword": "新次元への扉",
           "color_of_the_day": "黄金色",
           "recommended_tea": "柚子茶"
         },
@@ -4641,7 +4641,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "純粋な喜び",
+          "daily_keyword": "守護霊のささやき",
           "color_of_the_day": "鋼青色",
           "recommended_tea": "生姜茶"
         },
@@ -4657,7 +4657,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "着実な成長",
+          "daily_keyword": "願いが叶う予感",
           "color_of_the_day": "深紅色",
           "recommended_tea": "黒豆茶"
         },
@@ -4673,7 +4673,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "前向きな変化",
+          "daily_keyword": "心のデトックス",
           "color_of_the_day": "金色",
           "recommended_tea": "アールグレイ"
         },
@@ -4689,7 +4689,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "静かな集中",
+          "daily_keyword": "創造力爆発",
           "color_of_the_day": "朱色",
           "recommended_tea": "カモミールティー"
         },
@@ -4705,7 +4705,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "豊かな共有",
+          "daily_keyword": "人との縁を結ぶ",
           "color_of_the_day": "空色",
           "recommended_tea": "ペパーミントティー"
         },
@@ -4721,7 +4721,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "胸躍る冒険",
+          "daily_keyword": "未来への種まき",
           "color_of_the_day": "若草色",
           "recommended_tea": "緑茶"
         },
@@ -4737,7 +4737,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "美しい静寂",
+          "daily_keyword": "宝物発見の予感",
           "color_of_the_day": "黄金色",
           "recommended_tea": "ほうじ茶"
         },
@@ -4753,7 +4753,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "心からの祝福",
+          "daily_keyword": "内なる光が輝く",
           "color_of_the_day": "鋼青色",
           "recommended_tea": "ジャスミンティー"
         },
@@ -4769,7 +4769,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "魂の解放",
+          "daily_keyword": "調和のメロディ",
           "color_of_the_day": "深紅色",
           "recommended_tea": "ルイボスティー"
         },
@@ -4785,7 +4785,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "真実の探求",
+          "daily_keyword": "自然の叡智授受",
           "color_of_the_day": "金色",
           "recommended_tea": "ローズヒップティー"
         },
@@ -4801,7 +4801,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "希望の光",
+          "daily_keyword": "知恵の泉湧出",
           "color_of_the_day": "朱色",
           "recommended_tea": "白茶"
         },
@@ -4817,7 +4817,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "愛と慈悲",
+          "daily_keyword": "至福の時間軸",
           "color_of_the_day": "空色",
           "recommended_tea": "烏龍茶"
         },
@@ -4833,7 +4833,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "内なる平和",
+          "daily_keyword": "運気上昇の兆し",
           "color_of_the_day": "若草色",
           "recommended_tea": "玄米茶"
         },
@@ -4849,7 +4849,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "調和の響き",
+          "daily_keyword": "心の扉が開放",
           "color_of_the_day": "黄金色",
           "recommended_tea": "抹茶"
         },
@@ -4865,7 +4865,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "自然との一体",
+          "daily_keyword": "宇宙との同調",
           "color_of_the_day": "鋼青色",
           "recommended_tea": "柚子茶"
         },
@@ -4881,7 +4881,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "知恵の開花",
+          "daily_keyword": "愛のバイブレーション",
           "color_of_the_day": "深紅色",
           "recommended_tea": "生姜茶"
         },
@@ -4897,7 +4897,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "幸福の実感",
+          "daily_keyword": "豊かさの波動",
           "color_of_the_day": "金色",
           "recommended_tea": "黒豆茶"
         },
@@ -4913,7 +4913,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "新しい始まり",
+          "daily_keyword": "運命の扉が開く日",
           "color_of_the_day": "朱色",
           "recommended_tea": "アールグレイ"
         },
@@ -4929,7 +4929,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "心からの感謝",
+          "daily_keyword": "宇宙からのメッセージ",
           "color_of_the_day": "空色",
           "recommended_tea": "カモミールティー"
         },
@@ -4945,7 +4945,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "勇気ある挑戦",
+          "daily_keyword": "奇跡を呼ぶ波動",
           "color_of_the_day": "若草色",
           "recommended_tea": "ペパーミントティー"
         },
@@ -4961,7 +4961,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "穏やかな安らぎ",
+          "daily_keyword": "龍神様のご加護",
           "color_of_the_day": "黄金色",
           "recommended_tea": "緑茶"
         }
@@ -4973,7 +4973,7 @@
       "month_name": "November",
       "month_name_jp": "11月",
       "api_version": "v1",
-      "generated_at": "2025-06-20T08:40:42.971107",
+      "generated_at": "2025-06-20T08:45:25.843713",
       "days": [
         {
           "day": 1,
@@ -4987,7 +4987,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "無限の創造",
+          "daily_keyword": "金運上昇のサイン",
           "color_of_the_day": "鋼青色",
           "recommended_tea": "ほうじ茶"
         },
@@ -5003,7 +5003,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "温かい交流",
+          "daily_keyword": "恋愛運絶好調",
           "color_of_the_day": "深紅色",
           "recommended_tea": "ジャスミンティー"
         },
@@ -5019,7 +5019,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "深い学び",
+          "daily_keyword": "直感力が冴える",
           "color_of_the_day": "金色",
           "recommended_tea": "ルイボスティー"
         },
@@ -5035,7 +5035,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "心の整理",
+          "daily_keyword": "隠れた才能開花",
           "color_of_the_day": "朱色",
           "recommended_tea": "ローズヒップティー"
         },
@@ -5051,7 +5051,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "純粋な喜び",
+          "daily_keyword": "人生の転機到来",
           "color_of_the_day": "空色",
           "recommended_tea": "白茶"
         },
@@ -5067,7 +5067,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "着実な成長",
+          "daily_keyword": "幸運の風が吹く",
           "color_of_the_day": "若草色",
           "recommended_tea": "烏龍茶"
         },
@@ -5083,7 +5083,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "前向きな変化",
+          "daily_keyword": "魂の成長期間",
           "color_of_the_day": "黄金色",
           "recommended_tea": "玄米茶"
         },
@@ -5099,7 +5099,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "静かな集中",
+          "daily_keyword": "エネルギー充電日",
           "color_of_the_day": "鋼青色",
           "recommended_tea": "抹茶"
         },
@@ -5115,7 +5115,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "豊かな共有",
+          "daily_keyword": "新次元への扉",
           "color_of_the_day": "深紅色",
           "recommended_tea": "柚子茶"
         },
@@ -5131,7 +5131,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "胸躍る冒険",
+          "daily_keyword": "守護霊のささやき",
           "color_of_the_day": "金色",
           "recommended_tea": "生姜茶"
         },
@@ -5147,7 +5147,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "美しい静寂",
+          "daily_keyword": "願いが叶う予感",
           "color_of_the_day": "朱色",
           "recommended_tea": "黒豆茶"
         },
@@ -5163,7 +5163,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "心からの祝福",
+          "daily_keyword": "心のデトックス",
           "color_of_the_day": "空色",
           "recommended_tea": "アールグレイ"
         },
@@ -5179,7 +5179,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "魂の解放",
+          "daily_keyword": "創造力爆発",
           "color_of_the_day": "若草色",
           "recommended_tea": "カモミールティー"
         },
@@ -5195,7 +5195,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "真実の探求",
+          "daily_keyword": "人との縁を結ぶ",
           "color_of_the_day": "黄金色",
           "recommended_tea": "ペパーミントティー"
         },
@@ -5211,7 +5211,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "希望の光",
+          "daily_keyword": "未来への種まき",
           "color_of_the_day": "鋼青色",
           "recommended_tea": "緑茶"
         },
@@ -5227,7 +5227,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "愛と慈悲",
+          "daily_keyword": "宝物発見の予感",
           "color_of_the_day": "深紅色",
           "recommended_tea": "ほうじ茶"
         },
@@ -5243,7 +5243,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "内なる平和",
+          "daily_keyword": "内なる光が輝く",
           "color_of_the_day": "金色",
           "recommended_tea": "ジャスミンティー"
         },
@@ -5259,7 +5259,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "調和の響き",
+          "daily_keyword": "調和のメロディ",
           "color_of_the_day": "朱色",
           "recommended_tea": "ルイボスティー"
         },
@@ -5275,7 +5275,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "自然との一体",
+          "daily_keyword": "自然の叡智授受",
           "color_of_the_day": "空色",
           "recommended_tea": "ローズヒップティー"
         },
@@ -5291,7 +5291,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "知恵の開花",
+          "daily_keyword": "知恵の泉湧出",
           "color_of_the_day": "若草色",
           "recommended_tea": "白茶"
         },
@@ -5307,7 +5307,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "幸福の実感",
+          "daily_keyword": "至福の時間軸",
           "color_of_the_day": "黄金色",
           "recommended_tea": "烏龍茶"
         },
@@ -5323,7 +5323,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "新しい始まり",
+          "daily_keyword": "運気上昇の兆し",
           "color_of_the_day": "鋼青色",
           "recommended_tea": "玄米茶"
         },
@@ -5339,7 +5339,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "心からの感謝",
+          "daily_keyword": "心の扉が開放",
           "color_of_the_day": "深紅色",
           "recommended_tea": "抹茶"
         },
@@ -5355,7 +5355,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "勇気ある挑戦",
+          "daily_keyword": "宇宙との同調",
           "color_of_the_day": "金色",
           "recommended_tea": "柚子茶"
         },
@@ -5371,7 +5371,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "穏やかな安らぎ",
+          "daily_keyword": "愛のバイブレーション",
           "color_of_the_day": "朱色",
           "recommended_tea": "生姜茶"
         },
@@ -5387,7 +5387,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "無限の創造",
+          "daily_keyword": "豊かさの波動",
           "color_of_the_day": "空色",
           "recommended_tea": "黒豆茶"
         },
@@ -5403,7 +5403,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "温かい交流",
+          "daily_keyword": "運命の扉が開く日",
           "color_of_the_day": "若草色",
           "recommended_tea": "アールグレイ"
         },
@@ -5419,7 +5419,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "深い学び",
+          "daily_keyword": "宇宙からのメッセージ",
           "color_of_the_day": "黄金色",
           "recommended_tea": "カモミールティー"
         },
@@ -5435,7 +5435,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "心の整理",
+          "daily_keyword": "奇跡を呼ぶ波動",
           "color_of_the_day": "鋼青色",
           "recommended_tea": "ペパーミントティー"
         },
@@ -5451,7 +5451,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "純粋な喜び",
+          "daily_keyword": "龍神様のご加護",
           "color_of_the_day": "深紅色",
           "recommended_tea": "緑茶"
         }
@@ -5463,7 +5463,7 @@
       "month_name": "December",
       "month_name_jp": "12月",
       "api_version": "v1",
-      "generated_at": "2025-06-20T08:40:42.972814",
+      "generated_at": "2025-06-20T08:45:25.844958",
       "days": [
         {
           "day": 1,
@@ -5477,7 +5477,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "着実な成長",
+          "daily_keyword": "金運上昇のサイン",
           "color_of_the_day": "金色",
           "recommended_tea": "ほうじ茶"
         },
@@ -5493,7 +5493,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "前向きな変化",
+          "daily_keyword": "恋愛運絶好調",
           "color_of_the_day": "朱色",
           "recommended_tea": "ジャスミンティー"
         },
@@ -5509,7 +5509,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "静かな集中",
+          "daily_keyword": "直感力が冴える",
           "color_of_the_day": "空色",
           "recommended_tea": "ルイボスティー"
         },
@@ -5525,7 +5525,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "豊かな共有",
+          "daily_keyword": "隠れた才能開花",
           "color_of_the_day": "若草色",
           "recommended_tea": "ローズヒップティー"
         },
@@ -5541,7 +5541,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "胸躍る冒険",
+          "daily_keyword": "人生の転機到来",
           "color_of_the_day": "黄金色",
           "recommended_tea": "白茶"
         },
@@ -5557,7 +5557,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "美しい静寂",
+          "daily_keyword": "幸運の風が吹く",
           "color_of_the_day": "鋼青色",
           "recommended_tea": "烏龍茶"
         },
@@ -5573,7 +5573,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "心からの祝福",
+          "daily_keyword": "魂の成長期間",
           "color_of_the_day": "深紅色",
           "recommended_tea": "玄米茶"
         },
@@ -5589,7 +5589,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "魂の解放",
+          "daily_keyword": "エネルギー充電日",
           "color_of_the_day": "金色",
           "recommended_tea": "抹茶"
         },
@@ -5605,7 +5605,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "真実の探求",
+          "daily_keyword": "新次元への扉",
           "color_of_the_day": "朱色",
           "recommended_tea": "柚子茶"
         },
@@ -5621,7 +5621,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "希望の光",
+          "daily_keyword": "守護霊のささやき",
           "color_of_the_day": "空色",
           "recommended_tea": "生姜茶"
         },
@@ -5637,7 +5637,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "愛と慈悲",
+          "daily_keyword": "願いが叶う予感",
           "color_of_the_day": "若草色",
           "recommended_tea": "黒豆茶"
         },
@@ -5653,7 +5653,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "内なる平和",
+          "daily_keyword": "心のデトックス",
           "color_of_the_day": "黄金色",
           "recommended_tea": "アールグレイ"
         },
@@ -5669,7 +5669,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "調和の響き",
+          "daily_keyword": "創造力爆発",
           "color_of_the_day": "鋼青色",
           "recommended_tea": "カモミールティー"
         },
@@ -5685,7 +5685,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "自然との一体",
+          "daily_keyword": "人との縁を結ぶ",
           "color_of_the_day": "深紅色",
           "recommended_tea": "ペパーミントティー"
         },
@@ -5701,7 +5701,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "知恵の開花",
+          "daily_keyword": "未来への種まき",
           "color_of_the_day": "金色",
           "recommended_tea": "緑茶"
         },
@@ -5717,7 +5717,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "幸福の実感",
+          "daily_keyword": "宝物発見の予感",
           "color_of_the_day": "朱色",
           "recommended_tea": "ほうじ茶"
         },
@@ -5733,7 +5733,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "新しい始まり",
+          "daily_keyword": "内なる光が輝く",
           "color_of_the_day": "空色",
           "recommended_tea": "ジャスミンティー"
         },
@@ -5749,7 +5749,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "心からの感謝",
+          "daily_keyword": "調和のメロディ",
           "color_of_the_day": "若草色",
           "recommended_tea": "ルイボスティー"
         },
@@ -5765,7 +5765,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "勇気ある挑戦",
+          "daily_keyword": "自然の叡智授受",
           "color_of_the_day": "黄金色",
           "recommended_tea": "ローズヒップティー"
         },
@@ -5781,7 +5781,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "穏やかな安らぎ",
+          "daily_keyword": "知恵の泉湧出",
           "color_of_the_day": "鋼青色",
           "recommended_tea": "白茶"
         },
@@ -5797,7 +5797,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "無限の創造",
+          "daily_keyword": "至福の時間軸",
           "color_of_the_day": "深紅色",
           "recommended_tea": "烏龍茶"
         },
@@ -5813,7 +5813,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "温かい交流",
+          "daily_keyword": "運気上昇の兆し",
           "color_of_the_day": "金色",
           "recommended_tea": "玄米茶"
         },
@@ -5829,7 +5829,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "深い学び",
+          "daily_keyword": "心の扉が開放",
           "color_of_the_day": "朱色",
           "recommended_tea": "抹茶"
         },
@@ -5845,7 +5845,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "心の整理",
+          "daily_keyword": "宇宙との同調",
           "color_of_the_day": "空色",
           "recommended_tea": "柚子茶"
         },
@@ -5861,7 +5861,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "純粋な喜び",
+          "daily_keyword": "愛のバイブレーション",
           "color_of_the_day": "若草色",
           "recommended_tea": "生姜茶"
         },
@@ -5877,7 +5877,7 @@
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "着実な成長",
+          "daily_keyword": "豊かさの波動",
           "color_of_the_day": "黄金色",
           "recommended_tea": "黒豆茶"
         },
@@ -5893,7 +5893,7 @@
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "前向きな変化",
+          "daily_keyword": "運命の扉が開く日",
           "color_of_the_day": "鋼青色",
           "recommended_tea": "アールグレイ"
         },
@@ -5909,7 +5909,7 @@
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "静かな集中",
+          "daily_keyword": "宇宙からのメッセージ",
           "color_of_the_day": "深紅色",
           "recommended_tea": "カモミールティー"
         },
@@ -5925,7 +5925,7 @@
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "豊かな共有",
+          "daily_keyword": "奇跡を呼ぶ波動",
           "color_of_the_day": "金色",
           "recommended_tea": "ペパーミントティー"
         },
@@ -5941,7 +5941,7 @@
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "胸躍る冒険",
+          "daily_keyword": "龍神様のご加護",
           "color_of_the_day": "朱色",
           "recommended_tea": "緑茶"
         },
@@ -5957,7 +5957,7 @@
           "rokuyo": "赤口",
           "season_24": null,
           "moon_phase": "調査中",
-          "daily_keyword": "美しい静寂",
+          "daily_keyword": "金運上昇のサイン",
           "color_of_the_day": "空色",
           "recommended_tea": "ほうじ茶"
         }
