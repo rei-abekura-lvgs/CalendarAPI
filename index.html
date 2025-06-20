@@ -283,9 +283,16 @@ curl -o "january_2025.json" \
       "rokuyo": "先勝",
       "season_24": null,
       "moon_phase": "調査中",
-      "daily_keyword": "発見",
-      "color_of_the_day": "#87CEEB",
-      "recommended_tea": "アールグレイ"
+      "daily_keyword": "運命の扉が開く日",
+      "color_of_the_day": "空色",
+      "recommended_tea": "アールグレイ",
+      "lucky_number": 1,
+      "power_stone": "アメジスト",
+      "aroma_oil": "ラベンダー",
+      "meditation_theme": "感謝の瞑想",
+      "flower_of_the_day": "桜 - 精神の美",
+      "energy_advice": "今日は新しい挑戦の時",
+      "...": "（他17項目）"
     }
   ]
 }</code></pre>
@@ -293,7 +300,8 @@ curl -o "january_2025.json" \
 
             <!-- Data Field Descriptions -->
             <div class="response-card">
-                <h4>フィールド説明</h4>
+                <h4>主要フィールド説明</h4>
+                <p class="text-muted mb-3">実際のAPIレスポンスには27項目の包括的なデータが含まれています。以下は主要なフィールドです。</p>
                 <div class="table-responsive">
                     <table class="table table-bordered">
                         <thead class="table-light">
@@ -313,10 +321,14 @@ curl -o "january_2025.json" \
                             <tr><td><code>holiday_name</code></td><td>string|null</td><td>祝日名</td></tr>
                             <tr><td><code>rokuyo</code></td><td>string</td><td>六曜</td></tr>
                             <tr><td><code>daily_keyword</code></td><td>string</td><td>その日のキーワード</td></tr>
-                            <tr><td><code>color_of_the_day</code></td><td>string</td><td>曜日カラー（HEXコード）</td></tr>
+                            <tr><td><code>color_of_the_day</code></td><td>string</td><td>今日の色（日本語）</td></tr>
                             <tr><td><code>recommended_tea</code></td><td>string</td><td>おすすめのお茶</td></tr>
                         </tbody>
                     </table>
+                </div>
+                <div class="alert alert-info mt-3">
+                    <i class="fas fa-info-circle me-2"></i>
+                    <strong>その他のデータ項目：</strong>ラッキーナンバー、パワーストーン、アロマオイル、瞑想テーマ、花言葉、エネルギーアドバイス、占星術、タロット、格言、音楽推奨、食事推奨、クリスタルヒーリング、風水アドバイスなど、合計27項目のデータを提供しています。
                 </div>
             </div>
         </section>
