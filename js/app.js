@@ -84,15 +84,44 @@ function displayTodayData(data) {
             <span class="today-data-value">${data.daily_keyword}</span>
         </div>
         <div class="today-data-item">
+            <span class="today-data-label">ラッキーナンバー</span>
+            <span class="today-data-value">${data.lucky_number}</span>
+        </div>
+        <div class="today-data-item">
+            <span class="today-data-label">パワーストーン</span>
+            <span class="today-data-value">${data.power_stone}</span>
+        </div>
+        <div class="today-data-item">
+            <span class="today-data-label">今日の色</span>
+            <span class="today-data-value">${data.color_of_the_day}</span>
+        </div>
+        <div class="today-data-item">
+            <span class="today-data-label">タロットカード</span>
+            <span class="today-data-value">${data.tarot_card}</span>
+        </div>
+        <div class="today-data-item">
             <span class="today-data-label">おすすめお茶</span>
             <span class="today-data-value">${data.recommended_tea}</span>
         </div>
         <div class="today-data-item">
-            <span class="today-data-label">曜日カラー</span>
-            <span class="today-data-value">
-                <span style="display: inline-block; width: 20px; height: 20px; background-color: ${data.color_of_the_day}; border-radius: 50%; margin-right: 8px; vertical-align: middle;"></span>
-                ${data.color_of_the_day}
-            </span>
+            <span class="today-data-label">瞑想テーマ</span>
+            <span class="today-data-value">${data.meditation_theme}</span>
+        </div>
+        <div class="today-data-item">
+            <span class="today-data-label">今日の格言</span>
+            <span class="today-data-value">${data.wise_quote}</span>
+        </div>
+        <div class="today-data-item">
+            <span class="today-data-label">推奨音楽</span>
+            <span class="today-data-value">${data.recommended_music}</span>
+        </div>
+        <div class="today-data-item">
+            <span class="today-data-label">推奨食材</span>
+            <span class="today-data-value">${data.recommended_food}</span>
+        </div>
+        <div class="today-data-item">
+            <span class="today-data-label">風水アドバイス</span>
+            <span class="today-data-value">${data.feng_shui_tip}</span>
         </div>
     `;
     
