@@ -40,8 +40,9 @@ async function loadTodayData() {
         const month = String(today.getMonth() + 1).padStart(2, '0');
         const day = today.getDate();
         
-        // Get current month data
-        const response = await fetch(`./api/2025/${month}.json`);
+        // Get current month data with cache busting
+        const cacheBuster = new Date().getTime();
+        const response = await fetch(`./api/2025/${month}.json?v=${cacheBuster}`);
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }

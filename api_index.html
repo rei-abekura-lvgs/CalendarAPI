@@ -195,7 +195,8 @@ GET /api/2025/all.json</div>
                 
                 console.log(`今日の日付: ${today.getFullYear()}-${month}-${day}`);
                 
-                const response = await fetch(`api/2025/${month.toString().padStart(2, '0')}.json`);
+                const cacheBuster = new Date().getTime();
+                const response = await fetch(`api/2025/${month.toString().padStart(2, '0')}.json?v=${cacheBuster}`);
                 const data = await response.json();
                 const todayData = data.days.find(d => d.day === day);
                 
