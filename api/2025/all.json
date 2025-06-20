@@ -1,7 +1,7 @@
 {
   "year": 2025,
   "api_version": "v1",
-  "generated_at": "2025-06-20T08:45:25.817138",
+  "generated_at": "2025-06-20T09:23:31.147124",
   "months": [
     {
       "year": 2025,
@@ -9,7 +9,7 @@
       "month_name": "January",
       "month_name_jp": "1月",
       "api_version": "v1",
-      "generated_at": "2025-06-20T08:45:25.817177",
+      "generated_at": "2025-06-20T09:23:31.147177",
       "days": [
         {
           "day": 1,
@@ -25,7 +25,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "運命の扉が開く日",
           "color_of_the_day": "空色",
-          "recommended_tea": "アールグレイ"
+          "recommended_tea": "アールグレイ",
+          "lucky_number": 1,
+          "power_stone": "アメジスト",
+          "aroma_oil": "ラベンダー",
+          "meditation_theme": "感謝の瞑想",
+          "flower_of_the_day": "桜 - 精神の美",
+          "energy_advice": "今日は新しい挑戦の時"
         },
         {
           "day": 2,
@@ -41,7 +47,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "宇宙からのメッセージ",
           "color_of_the_day": "若草色",
-          "recommended_tea": "カモミールティー"
+          "recommended_tea": "カモミールティー",
+          "lucky_number": 2,
+          "power_stone": "ローズクォーツ",
+          "aroma_oil": "ユーカリ",
+          "meditation_theme": "慈悲の瞑想",
+          "flower_of_the_day": "梅 - 気品",
+          "energy_advice": "休息を大切にする日"
         },
         {
           "day": 3,
@@ -57,7 +69,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "奇跡を呼ぶ波動",
           "color_of_the_day": "黄金色",
-          "recommended_tea": "ペパーミントティー"
+          "recommended_tea": "ペパーミントティー",
+          "lucky_number": 3,
+          "power_stone": "クリスタル",
+          "aroma_oil": "ローズマリー",
+          "meditation_theme": "呼吸に集中",
+          "flower_of_the_day": "椿 - 控えめな素晴らしさ",
+          "energy_advice": "人との繋がりを深める日"
         },
         {
           "day": 4,
@@ -73,7 +91,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "龍神様のご加護",
           "color_of_the_day": "鋼青色",
-          "recommended_tea": "緑茶"
+          "recommended_tea": "緑茶",
+          "lucky_number": 4,
+          "power_stone": "アクアマリン",
+          "aroma_oil": "オレンジ",
+          "meditation_theme": "マインドフルネス",
+          "flower_of_the_day": "菊 - 高貴",
+          "energy_advice": "創造性を発揮する時"
         },
         {
           "day": 5,
@@ -89,7 +113,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "金運上昇のサイン",
           "color_of_the_day": "深紅色",
-          "recommended_tea": "ほうじ茶"
+          "recommended_tea": "ほうじ茶",
+          "lucky_number": 5,
+          "power_stone": "ガーネット",
+          "aroma_oil": "レモングラス",
+          "meditation_theme": "ボディスキャン",
+          "flower_of_the_day": "蓮 - 清らかな心",
+          "energy_advice": "内省の時間を作る日"
         },
         {
           "day": 6,
@@ -105,7 +135,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "恋愛運絶好調",
           "color_of_the_day": "金色",
-          "recommended_tea": "ジャスミンティー"
+          "recommended_tea": "ジャスミンティー",
+          "lucky_number": 6,
+          "power_stone": "ムーンストーン",
+          "aroma_oil": "イランイラン",
+          "meditation_theme": "愛と光の瞑想",
+          "flower_of_the_day": "薔薇 - 愛情",
+          "energy_advice": "感謝を表現する日"
         },
         {
           "day": 7,
@@ -121,7 +157,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "直感力が冴える",
           "color_of_the_day": "朱色",
-          "recommended_tea": "ルイボスティー"
+          "recommended_tea": "ルイボスティー",
+          "lucky_number": 7,
+          "power_stone": "ラピスラズリ",
+          "aroma_oil": "サンダルウッド",
+          "meditation_theme": "チャクラ調整",
+          "flower_of_the_day": "向日葵 - 憧れ",
+          "energy_advice": "勇気を出して行動する時"
         },
         {
           "day": 8,
@@ -137,7 +179,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "隠れた才能開花",
           "color_of_the_day": "空色",
-          "recommended_tea": "ローズヒップティー"
+          "recommended_tea": "ローズヒップティー",
+          "lucky_number": 8,
+          "power_stone": "マラカイト",
+          "aroma_oil": "フランキンセンス",
+          "meditation_theme": "グラウンディング",
+          "flower_of_the_day": "紫陽花 - 移り気",
+          "energy_advice": "直感に従う日"
         },
         {
           "day": 9,
@@ -153,7 +201,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "人生の転機到来",
           "color_of_the_day": "若草色",
-          "recommended_tea": "白茶"
+          "recommended_tea": "白茶",
+          "lucky_number": 9,
+          "power_stone": "オニキス",
+          "aroma_oil": "ジャスミン",
+          "meditation_theme": "エネルギー浄化",
+          "flower_of_the_day": "牡丹 - 富貴",
+          "energy_advice": "学びを深める好機"
         },
         {
           "day": 10,
@@ -169,7 +223,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "幸運の風が吹く",
           "color_of_the_day": "黄金色",
-          "recommended_tea": "烏龍茶"
+          "recommended_tea": "烏龍茶",
+          "lucky_number": 10,
+          "power_stone": "シトリン",
+          "aroma_oil": "ベルガモット",
+          "meditation_theme": "未来創造",
+          "flower_of_the_day": "百合 - 純粋",
+          "energy_advice": "愛を分かち合う日"
         },
         {
           "day": 11,
@@ -185,7 +245,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "魂の成長期間",
           "color_of_the_day": "鋼青色",
-          "recommended_tea": "玄米茶"
+          "recommended_tea": "玄米茶",
+          "lucky_number": 11,
+          "power_stone": "ペリドット",
+          "aroma_oil": "ティーツリー",
+          "meditation_theme": "過去の癒し",
+          "flower_of_the_day": "カーネーション - 母の愛",
+          "energy_advice": "エネルギーを充電する時"
         },
         {
           "day": 12,
@@ -201,7 +267,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "エネルギー充電日",
           "color_of_the_day": "深紅色",
-          "recommended_tea": "抹茶"
+          "recommended_tea": "抹茶",
+          "lucky_number": 12,
+          "power_stone": "トルマリン",
+          "aroma_oil": "ゼラニウム",
+          "meditation_theme": "内なる平和",
+          "flower_of_the_day": "コスモス - 乙女の真心",
+          "energy_advice": "変化を受け入れる日"
         },
         {
           "day": 13,
@@ -217,7 +289,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "新次元への扉",
           "color_of_the_day": "金色",
-          "recommended_tea": "柚子茶"
+          "recommended_tea": "柚子茶",
+          "lucky_number": 13,
+          "power_stone": "オパール",
+          "aroma_oil": "パチュリ",
+          "meditation_theme": "宇宙との繋がり",
+          "flower_of_the_day": "すずらん - 謙遜",
+          "energy_advice": "夢を描く時間"
         },
         {
           "day": 14,
@@ -233,7 +311,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "守護霊のささやき",
           "color_of_the_day": "朱色",
-          "recommended_tea": "生姜茶"
+          "recommended_tea": "生姜茶",
+          "lucky_number": 14,
+          "power_stone": "ターコイズ",
+          "aroma_oil": "シダーウッド",
+          "meditation_theme": "直感力向上",
+          "flower_of_the_day": "菜の花 - 快活",
+          "energy_advice": "心を整理する日"
         },
         {
           "day": 15,
@@ -249,7 +333,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "願いが叶う予感",
           "color_of_the_day": "空色",
-          "recommended_tea": "黒豆茶"
+          "recommended_tea": "黒豆茶",
+          "lucky_number": 15,
+          "power_stone": "エメラルド",
+          "aroma_oil": "カモミール",
+          "meditation_theme": "創造性開花",
+          "flower_of_the_day": "藤 - 優しさ",
+          "energy_advice": "自然と触れ合う日"
         },
         {
           "day": 16,
@@ -265,7 +355,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "心のデトックス",
           "color_of_the_day": "若草色",
-          "recommended_tea": "アールグレイ"
+          "recommended_tea": "アールグレイ",
+          "lucky_number": 16,
+          "power_stone": "アメジスト",
+          "aroma_oil": "ラベンダー",
+          "meditation_theme": "感謝の瞑想",
+          "flower_of_the_day": "桜 - 精神の美",
+          "energy_advice": "今日は新しい挑戦の時"
         },
         {
           "day": 17,
@@ -281,7 +377,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "創造力爆発",
           "color_of_the_day": "黄金色",
-          "recommended_tea": "カモミールティー"
+          "recommended_tea": "カモミールティー",
+          "lucky_number": 17,
+          "power_stone": "ローズクォーツ",
+          "aroma_oil": "ユーカリ",
+          "meditation_theme": "慈悲の瞑想",
+          "flower_of_the_day": "梅 - 気品",
+          "energy_advice": "休息を大切にする日"
         },
         {
           "day": 18,
@@ -297,7 +399,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "人との縁を結ぶ",
           "color_of_the_day": "鋼青色",
-          "recommended_tea": "ペパーミントティー"
+          "recommended_tea": "ペパーミントティー",
+          "lucky_number": 18,
+          "power_stone": "クリスタル",
+          "aroma_oil": "ローズマリー",
+          "meditation_theme": "呼吸に集中",
+          "flower_of_the_day": "椿 - 控えめな素晴らしさ",
+          "energy_advice": "人との繋がりを深める日"
         },
         {
           "day": 19,
@@ -313,7 +421,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "未来への種まき",
           "color_of_the_day": "深紅色",
-          "recommended_tea": "緑茶"
+          "recommended_tea": "緑茶",
+          "lucky_number": 19,
+          "power_stone": "アクアマリン",
+          "aroma_oil": "オレンジ",
+          "meditation_theme": "マインドフルネス",
+          "flower_of_the_day": "菊 - 高貴",
+          "energy_advice": "創造性を発揮する時"
         },
         {
           "day": 20,
@@ -329,7 +443,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "宝物発見の予感",
           "color_of_the_day": "金色",
-          "recommended_tea": "ほうじ茶"
+          "recommended_tea": "ほうじ茶",
+          "lucky_number": 20,
+          "power_stone": "ガーネット",
+          "aroma_oil": "レモングラス",
+          "meditation_theme": "ボディスキャン",
+          "flower_of_the_day": "蓮 - 清らかな心",
+          "energy_advice": "内省の時間を作る日"
         },
         {
           "day": 21,
@@ -345,7 +465,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "内なる光が輝く",
           "color_of_the_day": "朱色",
-          "recommended_tea": "ジャスミンティー"
+          "recommended_tea": "ジャスミンティー",
+          "lucky_number": 21,
+          "power_stone": "ムーンストーン",
+          "aroma_oil": "イランイラン",
+          "meditation_theme": "愛と光の瞑想",
+          "flower_of_the_day": "薔薇 - 愛情",
+          "energy_advice": "感謝を表現する日"
         },
         {
           "day": 22,
@@ -361,7 +487,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "調和のメロディ",
           "color_of_the_day": "空色",
-          "recommended_tea": "ルイボスティー"
+          "recommended_tea": "ルイボスティー",
+          "lucky_number": 22,
+          "power_stone": "ラピスラズリ",
+          "aroma_oil": "サンダルウッド",
+          "meditation_theme": "チャクラ調整",
+          "flower_of_the_day": "向日葵 - 憧れ",
+          "energy_advice": "勇気を出して行動する時"
         },
         {
           "day": 23,
@@ -377,7 +509,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "自然の叡智授受",
           "color_of_the_day": "若草色",
-          "recommended_tea": "ローズヒップティー"
+          "recommended_tea": "ローズヒップティー",
+          "lucky_number": 23,
+          "power_stone": "マラカイト",
+          "aroma_oil": "フランキンセンス",
+          "meditation_theme": "グラウンディング",
+          "flower_of_the_day": "紫陽花 - 移り気",
+          "energy_advice": "直感に従う日"
         },
         {
           "day": 24,
@@ -393,7 +531,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "知恵の泉湧出",
           "color_of_the_day": "黄金色",
-          "recommended_tea": "白茶"
+          "recommended_tea": "白茶",
+          "lucky_number": 24,
+          "power_stone": "オニキス",
+          "aroma_oil": "ジャスミン",
+          "meditation_theme": "エネルギー浄化",
+          "flower_of_the_day": "牡丹 - 富貴",
+          "energy_advice": "学びを深める好機"
         },
         {
           "day": 25,
@@ -409,7 +553,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "至福の時間軸",
           "color_of_the_day": "鋼青色",
-          "recommended_tea": "烏龍茶"
+          "recommended_tea": "烏龍茶",
+          "lucky_number": 25,
+          "power_stone": "シトリン",
+          "aroma_oil": "ベルガモット",
+          "meditation_theme": "未来創造",
+          "flower_of_the_day": "百合 - 純粋",
+          "energy_advice": "愛を分かち合う日"
         },
         {
           "day": 26,
@@ -425,7 +575,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "運気上昇の兆し",
           "color_of_the_day": "深紅色",
-          "recommended_tea": "玄米茶"
+          "recommended_tea": "玄米茶",
+          "lucky_number": 26,
+          "power_stone": "ペリドット",
+          "aroma_oil": "ティーツリー",
+          "meditation_theme": "過去の癒し",
+          "flower_of_the_day": "カーネーション - 母の愛",
+          "energy_advice": "エネルギーを充電する時"
         },
         {
           "day": 27,
@@ -441,7 +597,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "心の扉が開放",
           "color_of_the_day": "金色",
-          "recommended_tea": "抹茶"
+          "recommended_tea": "抹茶",
+          "lucky_number": 27,
+          "power_stone": "トルマリン",
+          "aroma_oil": "ゼラニウム",
+          "meditation_theme": "内なる平和",
+          "flower_of_the_day": "コスモス - 乙女の真心",
+          "energy_advice": "変化を受け入れる日"
         },
         {
           "day": 28,
@@ -457,7 +619,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "宇宙との同調",
           "color_of_the_day": "朱色",
-          "recommended_tea": "柚子茶"
+          "recommended_tea": "柚子茶",
+          "lucky_number": 28,
+          "power_stone": "オパール",
+          "aroma_oil": "パチュリ",
+          "meditation_theme": "宇宙との繋がり",
+          "flower_of_the_day": "すずらん - 謙遜",
+          "energy_advice": "夢を描く時間"
         },
         {
           "day": 29,
@@ -473,7 +641,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "愛のバイブレーション",
           "color_of_the_day": "空色",
-          "recommended_tea": "生姜茶"
+          "recommended_tea": "生姜茶",
+          "lucky_number": 29,
+          "power_stone": "ターコイズ",
+          "aroma_oil": "シダーウッド",
+          "meditation_theme": "直感力向上",
+          "flower_of_the_day": "菜の花 - 快活",
+          "energy_advice": "心を整理する日"
         },
         {
           "day": 30,
@@ -489,7 +663,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "豊かさの波動",
           "color_of_the_day": "若草色",
-          "recommended_tea": "黒豆茶"
+          "recommended_tea": "黒豆茶",
+          "lucky_number": 30,
+          "power_stone": "エメラルド",
+          "aroma_oil": "カモミール",
+          "meditation_theme": "創造性開花",
+          "flower_of_the_day": "藤 - 優しさ",
+          "energy_advice": "自然と触れ合う日"
         },
         {
           "day": 31,
@@ -505,7 +685,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "運命の扉が開く日",
           "color_of_the_day": "黄金色",
-          "recommended_tea": "アールグレイ"
+          "recommended_tea": "アールグレイ",
+          "lucky_number": 31,
+          "power_stone": "アメジスト",
+          "aroma_oil": "ラベンダー",
+          "meditation_theme": "感謝の瞑想",
+          "flower_of_the_day": "桜 - 精神の美",
+          "energy_advice": "今日は新しい挑戦の時"
         }
       ]
     },
@@ -515,7 +701,7 @@
       "month_name": "February",
       "month_name_jp": "2月",
       "api_version": "v1",
-      "generated_at": "2025-06-20T08:45:25.820516",
+      "generated_at": "2025-06-20T09:23:31.149599",
       "days": [
         {
           "day": 1,
@@ -531,7 +717,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "宇宙からのメッセージ",
           "color_of_the_day": "鋼青色",
-          "recommended_tea": "カモミールティー"
+          "recommended_tea": "カモミールティー",
+          "lucky_number": 32,
+          "power_stone": "ローズクォーツ",
+          "aroma_oil": "ユーカリ",
+          "meditation_theme": "慈悲の瞑想",
+          "flower_of_the_day": "梅 - 気品",
+          "energy_advice": "休息を大切にする日"
         },
         {
           "day": 2,
@@ -547,7 +739,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "奇跡を呼ぶ波動",
           "color_of_the_day": "深紅色",
-          "recommended_tea": "ペパーミントティー"
+          "recommended_tea": "ペパーミントティー",
+          "lucky_number": 33,
+          "power_stone": "クリスタル",
+          "aroma_oil": "ローズマリー",
+          "meditation_theme": "呼吸に集中",
+          "flower_of_the_day": "椿 - 控えめな素晴らしさ",
+          "energy_advice": "人との繋がりを深める日"
         },
         {
           "day": 3,
@@ -563,7 +761,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "龍神様のご加護",
           "color_of_the_day": "金色",
-          "recommended_tea": "緑茶"
+          "recommended_tea": "緑茶",
+          "lucky_number": 34,
+          "power_stone": "アクアマリン",
+          "aroma_oil": "オレンジ",
+          "meditation_theme": "マインドフルネス",
+          "flower_of_the_day": "菊 - 高貴",
+          "energy_advice": "創造性を発揮する時"
         },
         {
           "day": 4,
@@ -579,7 +783,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "金運上昇のサイン",
           "color_of_the_day": "朱色",
-          "recommended_tea": "ほうじ茶"
+          "recommended_tea": "ほうじ茶",
+          "lucky_number": 35,
+          "power_stone": "ガーネット",
+          "aroma_oil": "レモングラス",
+          "meditation_theme": "ボディスキャン",
+          "flower_of_the_day": "蓮 - 清らかな心",
+          "energy_advice": "内省の時間を作る日"
         },
         {
           "day": 5,
@@ -595,7 +805,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "恋愛運絶好調",
           "color_of_the_day": "空色",
-          "recommended_tea": "ジャスミンティー"
+          "recommended_tea": "ジャスミンティー",
+          "lucky_number": 36,
+          "power_stone": "ムーンストーン",
+          "aroma_oil": "イランイラン",
+          "meditation_theme": "愛と光の瞑想",
+          "flower_of_the_day": "薔薇 - 愛情",
+          "energy_advice": "感謝を表現する日"
         },
         {
           "day": 6,
@@ -611,7 +827,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "直感力が冴える",
           "color_of_the_day": "若草色",
-          "recommended_tea": "ルイボスティー"
+          "recommended_tea": "ルイボスティー",
+          "lucky_number": 37,
+          "power_stone": "ラピスラズリ",
+          "aroma_oil": "サンダルウッド",
+          "meditation_theme": "チャクラ調整",
+          "flower_of_the_day": "向日葵 - 憧れ",
+          "energy_advice": "勇気を出して行動する時"
         },
         {
           "day": 7,
@@ -627,7 +849,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "隠れた才能開花",
           "color_of_the_day": "黄金色",
-          "recommended_tea": "ローズヒップティー"
+          "recommended_tea": "ローズヒップティー",
+          "lucky_number": 38,
+          "power_stone": "マラカイト",
+          "aroma_oil": "フランキンセンス",
+          "meditation_theme": "グラウンディング",
+          "flower_of_the_day": "紫陽花 - 移り気",
+          "energy_advice": "直感に従う日"
         },
         {
           "day": 8,
@@ -643,7 +871,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "人生の転機到来",
           "color_of_the_day": "鋼青色",
-          "recommended_tea": "白茶"
+          "recommended_tea": "白茶",
+          "lucky_number": 39,
+          "power_stone": "オニキス",
+          "aroma_oil": "ジャスミン",
+          "meditation_theme": "エネルギー浄化",
+          "flower_of_the_day": "牡丹 - 富貴",
+          "energy_advice": "学びを深める好機"
         },
         {
           "day": 9,
@@ -659,7 +893,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "幸運の風が吹く",
           "color_of_the_day": "深紅色",
-          "recommended_tea": "烏龍茶"
+          "recommended_tea": "烏龍茶",
+          "lucky_number": 40,
+          "power_stone": "シトリン",
+          "aroma_oil": "ベルガモット",
+          "meditation_theme": "未来創造",
+          "flower_of_the_day": "百合 - 純粋",
+          "energy_advice": "愛を分かち合う日"
         },
         {
           "day": 10,
@@ -675,7 +915,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "魂の成長期間",
           "color_of_the_day": "金色",
-          "recommended_tea": "玄米茶"
+          "recommended_tea": "玄米茶",
+          "lucky_number": 41,
+          "power_stone": "ペリドット",
+          "aroma_oil": "ティーツリー",
+          "meditation_theme": "過去の癒し",
+          "flower_of_the_day": "カーネーション - 母の愛",
+          "energy_advice": "エネルギーを充電する時"
         },
         {
           "day": 11,
@@ -691,7 +937,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "エネルギー充電日",
           "color_of_the_day": "朱色",
-          "recommended_tea": "抹茶"
+          "recommended_tea": "抹茶",
+          "lucky_number": 42,
+          "power_stone": "トルマリン",
+          "aroma_oil": "ゼラニウム",
+          "meditation_theme": "内なる平和",
+          "flower_of_the_day": "コスモス - 乙女の真心",
+          "energy_advice": "変化を受け入れる日"
         },
         {
           "day": 12,
@@ -707,7 +959,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "新次元への扉",
           "color_of_the_day": "空色",
-          "recommended_tea": "柚子茶"
+          "recommended_tea": "柚子茶",
+          "lucky_number": 43,
+          "power_stone": "オパール",
+          "aroma_oil": "パチュリ",
+          "meditation_theme": "宇宙との繋がり",
+          "flower_of_the_day": "すずらん - 謙遜",
+          "energy_advice": "夢を描く時間"
         },
         {
           "day": 13,
@@ -723,7 +981,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "守護霊のささやき",
           "color_of_the_day": "若草色",
-          "recommended_tea": "生姜茶"
+          "recommended_tea": "生姜茶",
+          "lucky_number": 44,
+          "power_stone": "ターコイズ",
+          "aroma_oil": "シダーウッド",
+          "meditation_theme": "直感力向上",
+          "flower_of_the_day": "菜の花 - 快活",
+          "energy_advice": "心を整理する日"
         },
         {
           "day": 14,
@@ -739,7 +1003,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "願いが叶う予感",
           "color_of_the_day": "黄金色",
-          "recommended_tea": "黒豆茶"
+          "recommended_tea": "黒豆茶",
+          "lucky_number": 45,
+          "power_stone": "エメラルド",
+          "aroma_oil": "カモミール",
+          "meditation_theme": "創造性開花",
+          "flower_of_the_day": "藤 - 優しさ",
+          "energy_advice": "自然と触れ合う日"
         },
         {
           "day": 15,
@@ -755,7 +1025,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "心のデトックス",
           "color_of_the_day": "鋼青色",
-          "recommended_tea": "アールグレイ"
+          "recommended_tea": "アールグレイ",
+          "lucky_number": 46,
+          "power_stone": "アメジスト",
+          "aroma_oil": "ラベンダー",
+          "meditation_theme": "感謝の瞑想",
+          "flower_of_the_day": "桜 - 精神の美",
+          "energy_advice": "今日は新しい挑戦の時"
         },
         {
           "day": 16,
@@ -771,7 +1047,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "創造力爆発",
           "color_of_the_day": "深紅色",
-          "recommended_tea": "カモミールティー"
+          "recommended_tea": "カモミールティー",
+          "lucky_number": 47,
+          "power_stone": "ローズクォーツ",
+          "aroma_oil": "ユーカリ",
+          "meditation_theme": "慈悲の瞑想",
+          "flower_of_the_day": "梅 - 気品",
+          "energy_advice": "休息を大切にする日"
         },
         {
           "day": 17,
@@ -787,7 +1069,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "人との縁を結ぶ",
           "color_of_the_day": "金色",
-          "recommended_tea": "ペパーミントティー"
+          "recommended_tea": "ペパーミントティー",
+          "lucky_number": 48,
+          "power_stone": "クリスタル",
+          "aroma_oil": "ローズマリー",
+          "meditation_theme": "呼吸に集中",
+          "flower_of_the_day": "椿 - 控えめな素晴らしさ",
+          "energy_advice": "人との繋がりを深める日"
         },
         {
           "day": 18,
@@ -803,7 +1091,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "未来への種まき",
           "color_of_the_day": "朱色",
-          "recommended_tea": "緑茶"
+          "recommended_tea": "緑茶",
+          "lucky_number": 49,
+          "power_stone": "アクアマリン",
+          "aroma_oil": "オレンジ",
+          "meditation_theme": "マインドフルネス",
+          "flower_of_the_day": "菊 - 高貴",
+          "energy_advice": "創造性を発揮する時"
         },
         {
           "day": 19,
@@ -819,7 +1113,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "宝物発見の予感",
           "color_of_the_day": "空色",
-          "recommended_tea": "ほうじ茶"
+          "recommended_tea": "ほうじ茶",
+          "lucky_number": 50,
+          "power_stone": "ガーネット",
+          "aroma_oil": "レモングラス",
+          "meditation_theme": "ボディスキャン",
+          "flower_of_the_day": "蓮 - 清らかな心",
+          "energy_advice": "内省の時間を作る日"
         },
         {
           "day": 20,
@@ -835,7 +1135,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "内なる光が輝く",
           "color_of_the_day": "若草色",
-          "recommended_tea": "ジャスミンティー"
+          "recommended_tea": "ジャスミンティー",
+          "lucky_number": 51,
+          "power_stone": "ムーンストーン",
+          "aroma_oil": "イランイラン",
+          "meditation_theme": "愛と光の瞑想",
+          "flower_of_the_day": "薔薇 - 愛情",
+          "energy_advice": "感謝を表現する日"
         },
         {
           "day": 21,
@@ -851,7 +1157,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "調和のメロディ",
           "color_of_the_day": "黄金色",
-          "recommended_tea": "ルイボスティー"
+          "recommended_tea": "ルイボスティー",
+          "lucky_number": 52,
+          "power_stone": "ラピスラズリ",
+          "aroma_oil": "サンダルウッド",
+          "meditation_theme": "チャクラ調整",
+          "flower_of_the_day": "向日葵 - 憧れ",
+          "energy_advice": "勇気を出して行動する時"
         },
         {
           "day": 22,
@@ -867,7 +1179,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "自然の叡智授受",
           "color_of_the_day": "鋼青色",
-          "recommended_tea": "ローズヒップティー"
+          "recommended_tea": "ローズヒップティー",
+          "lucky_number": 53,
+          "power_stone": "マラカイト",
+          "aroma_oil": "フランキンセンス",
+          "meditation_theme": "グラウンディング",
+          "flower_of_the_day": "紫陽花 - 移り気",
+          "energy_advice": "直感に従う日"
         },
         {
           "day": 23,
@@ -883,7 +1201,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "知恵の泉湧出",
           "color_of_the_day": "深紅色",
-          "recommended_tea": "白茶"
+          "recommended_tea": "白茶",
+          "lucky_number": 54,
+          "power_stone": "オニキス",
+          "aroma_oil": "ジャスミン",
+          "meditation_theme": "エネルギー浄化",
+          "flower_of_the_day": "牡丹 - 富貴",
+          "energy_advice": "学びを深める好機"
         },
         {
           "day": 24,
@@ -899,7 +1223,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "至福の時間軸",
           "color_of_the_day": "金色",
-          "recommended_tea": "烏龍茶"
+          "recommended_tea": "烏龍茶",
+          "lucky_number": 55,
+          "power_stone": "シトリン",
+          "aroma_oil": "ベルガモット",
+          "meditation_theme": "未来創造",
+          "flower_of_the_day": "百合 - 純粋",
+          "energy_advice": "愛を分かち合う日"
         },
         {
           "day": 25,
@@ -915,7 +1245,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "運気上昇の兆し",
           "color_of_the_day": "朱色",
-          "recommended_tea": "玄米茶"
+          "recommended_tea": "玄米茶",
+          "lucky_number": 56,
+          "power_stone": "ペリドット",
+          "aroma_oil": "ティーツリー",
+          "meditation_theme": "過去の癒し",
+          "flower_of_the_day": "カーネーション - 母の愛",
+          "energy_advice": "エネルギーを充電する時"
         },
         {
           "day": 26,
@@ -931,7 +1267,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "心の扉が開放",
           "color_of_the_day": "空色",
-          "recommended_tea": "抹茶"
+          "recommended_tea": "抹茶",
+          "lucky_number": 57,
+          "power_stone": "トルマリン",
+          "aroma_oil": "ゼラニウム",
+          "meditation_theme": "内なる平和",
+          "flower_of_the_day": "コスモス - 乙女の真心",
+          "energy_advice": "変化を受け入れる日"
         },
         {
           "day": 27,
@@ -947,7 +1289,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "宇宙との同調",
           "color_of_the_day": "若草色",
-          "recommended_tea": "柚子茶"
+          "recommended_tea": "柚子茶",
+          "lucky_number": 58,
+          "power_stone": "オパール",
+          "aroma_oil": "パチュリ",
+          "meditation_theme": "宇宙との繋がり",
+          "flower_of_the_day": "すずらん - 謙遜",
+          "energy_advice": "夢を描く時間"
         },
         {
           "day": 28,
@@ -963,7 +1311,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "愛のバイブレーション",
           "color_of_the_day": "黄金色",
-          "recommended_tea": "生姜茶"
+          "recommended_tea": "生姜茶",
+          "lucky_number": 59,
+          "power_stone": "ターコイズ",
+          "aroma_oil": "シダーウッド",
+          "meditation_theme": "直感力向上",
+          "flower_of_the_day": "菜の花 - 快活",
+          "energy_advice": "心を整理する日"
         }
       ]
     },
@@ -973,7 +1327,7 @@
       "month_name": "March",
       "month_name_jp": "3月",
       "api_version": "v1",
-      "generated_at": "2025-06-20T08:45:25.822651",
+      "generated_at": "2025-06-20T09:23:31.151946",
       "days": [
         {
           "day": 1,
@@ -989,7 +1343,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "豊かさの波動",
           "color_of_the_day": "鋼青色",
-          "recommended_tea": "黒豆茶"
+          "recommended_tea": "黒豆茶",
+          "lucky_number": 60,
+          "power_stone": "エメラルド",
+          "aroma_oil": "カモミール",
+          "meditation_theme": "創造性開花",
+          "flower_of_the_day": "藤 - 優しさ",
+          "energy_advice": "自然と触れ合う日"
         },
         {
           "day": 2,
@@ -1005,7 +1365,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "運命の扉が開く日",
           "color_of_the_day": "深紅色",
-          "recommended_tea": "アールグレイ"
+          "recommended_tea": "アールグレイ",
+          "lucky_number": 61,
+          "power_stone": "アメジスト",
+          "aroma_oil": "ラベンダー",
+          "meditation_theme": "感謝の瞑想",
+          "flower_of_the_day": "桜 - 精神の美",
+          "energy_advice": "今日は新しい挑戦の時"
         },
         {
           "day": 3,
@@ -1021,7 +1387,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "宇宙からのメッセージ",
           "color_of_the_day": "金色",
-          "recommended_tea": "カモミールティー"
+          "recommended_tea": "カモミールティー",
+          "lucky_number": 62,
+          "power_stone": "ローズクォーツ",
+          "aroma_oil": "ユーカリ",
+          "meditation_theme": "慈悲の瞑想",
+          "flower_of_the_day": "梅 - 気品",
+          "energy_advice": "休息を大切にする日"
         },
         {
           "day": 4,
@@ -1037,7 +1409,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "奇跡を呼ぶ波動",
           "color_of_the_day": "朱色",
-          "recommended_tea": "ペパーミントティー"
+          "recommended_tea": "ペパーミントティー",
+          "lucky_number": 63,
+          "power_stone": "クリスタル",
+          "aroma_oil": "ローズマリー",
+          "meditation_theme": "呼吸に集中",
+          "flower_of_the_day": "椿 - 控えめな素晴らしさ",
+          "energy_advice": "人との繋がりを深める日"
         },
         {
           "day": 5,
@@ -1053,7 +1431,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "龍神様のご加護",
           "color_of_the_day": "空色",
-          "recommended_tea": "緑茶"
+          "recommended_tea": "緑茶",
+          "lucky_number": 64,
+          "power_stone": "アクアマリン",
+          "aroma_oil": "オレンジ",
+          "meditation_theme": "マインドフルネス",
+          "flower_of_the_day": "菊 - 高貴",
+          "energy_advice": "創造性を発揮する時"
         },
         {
           "day": 6,
@@ -1069,7 +1453,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "金運上昇のサイン",
           "color_of_the_day": "若草色",
-          "recommended_tea": "ほうじ茶"
+          "recommended_tea": "ほうじ茶",
+          "lucky_number": 65,
+          "power_stone": "ガーネット",
+          "aroma_oil": "レモングラス",
+          "meditation_theme": "ボディスキャン",
+          "flower_of_the_day": "蓮 - 清らかな心",
+          "energy_advice": "内省の時間を作る日"
         },
         {
           "day": 7,
@@ -1085,7 +1475,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "恋愛運絶好調",
           "color_of_the_day": "黄金色",
-          "recommended_tea": "ジャスミンティー"
+          "recommended_tea": "ジャスミンティー",
+          "lucky_number": 66,
+          "power_stone": "ムーンストーン",
+          "aroma_oil": "イランイラン",
+          "meditation_theme": "愛と光の瞑想",
+          "flower_of_the_day": "薔薇 - 愛情",
+          "energy_advice": "感謝を表現する日"
         },
         {
           "day": 8,
@@ -1101,7 +1497,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "直感力が冴える",
           "color_of_the_day": "鋼青色",
-          "recommended_tea": "ルイボスティー"
+          "recommended_tea": "ルイボスティー",
+          "lucky_number": 67,
+          "power_stone": "ラピスラズリ",
+          "aroma_oil": "サンダルウッド",
+          "meditation_theme": "チャクラ調整",
+          "flower_of_the_day": "向日葵 - 憧れ",
+          "energy_advice": "勇気を出して行動する時"
         },
         {
           "day": 9,
@@ -1117,7 +1519,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "隠れた才能開花",
           "color_of_the_day": "深紅色",
-          "recommended_tea": "ローズヒップティー"
+          "recommended_tea": "ローズヒップティー",
+          "lucky_number": 68,
+          "power_stone": "マラカイト",
+          "aroma_oil": "フランキンセンス",
+          "meditation_theme": "グラウンディング",
+          "flower_of_the_day": "紫陽花 - 移り気",
+          "energy_advice": "直感に従う日"
         },
         {
           "day": 10,
@@ -1133,7 +1541,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "人生の転機到来",
           "color_of_the_day": "金色",
-          "recommended_tea": "白茶"
+          "recommended_tea": "白茶",
+          "lucky_number": 69,
+          "power_stone": "オニキス",
+          "aroma_oil": "ジャスミン",
+          "meditation_theme": "エネルギー浄化",
+          "flower_of_the_day": "牡丹 - 富貴",
+          "energy_advice": "学びを深める好機"
         },
         {
           "day": 11,
@@ -1149,7 +1563,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "幸運の風が吹く",
           "color_of_the_day": "朱色",
-          "recommended_tea": "烏龍茶"
+          "recommended_tea": "烏龍茶",
+          "lucky_number": 70,
+          "power_stone": "シトリン",
+          "aroma_oil": "ベルガモット",
+          "meditation_theme": "未来創造",
+          "flower_of_the_day": "百合 - 純粋",
+          "energy_advice": "愛を分かち合う日"
         },
         {
           "day": 12,
@@ -1165,7 +1585,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "魂の成長期間",
           "color_of_the_day": "空色",
-          "recommended_tea": "玄米茶"
+          "recommended_tea": "玄米茶",
+          "lucky_number": 71,
+          "power_stone": "ペリドット",
+          "aroma_oil": "ティーツリー",
+          "meditation_theme": "過去の癒し",
+          "flower_of_the_day": "カーネーション - 母の愛",
+          "energy_advice": "エネルギーを充電する時"
         },
         {
           "day": 13,
@@ -1181,7 +1607,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "エネルギー充電日",
           "color_of_the_day": "若草色",
-          "recommended_tea": "抹茶"
+          "recommended_tea": "抹茶",
+          "lucky_number": 72,
+          "power_stone": "トルマリン",
+          "aroma_oil": "ゼラニウム",
+          "meditation_theme": "内なる平和",
+          "flower_of_the_day": "コスモス - 乙女の真心",
+          "energy_advice": "変化を受け入れる日"
         },
         {
           "day": 14,
@@ -1197,7 +1629,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "新次元への扉",
           "color_of_the_day": "黄金色",
-          "recommended_tea": "柚子茶"
+          "recommended_tea": "柚子茶",
+          "lucky_number": 73,
+          "power_stone": "オパール",
+          "aroma_oil": "パチュリ",
+          "meditation_theme": "宇宙との繋がり",
+          "flower_of_the_day": "すずらん - 謙遜",
+          "energy_advice": "夢を描く時間"
         },
         {
           "day": 15,
@@ -1213,7 +1651,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "守護霊のささやき",
           "color_of_the_day": "鋼青色",
-          "recommended_tea": "生姜茶"
+          "recommended_tea": "生姜茶",
+          "lucky_number": 74,
+          "power_stone": "ターコイズ",
+          "aroma_oil": "シダーウッド",
+          "meditation_theme": "直感力向上",
+          "flower_of_the_day": "菜の花 - 快活",
+          "energy_advice": "心を整理する日"
         },
         {
           "day": 16,
@@ -1229,7 +1673,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "願いが叶う予感",
           "color_of_the_day": "深紅色",
-          "recommended_tea": "黒豆茶"
+          "recommended_tea": "黒豆茶",
+          "lucky_number": 75,
+          "power_stone": "エメラルド",
+          "aroma_oil": "カモミール",
+          "meditation_theme": "創造性開花",
+          "flower_of_the_day": "藤 - 優しさ",
+          "energy_advice": "自然と触れ合う日"
         },
         {
           "day": 17,
@@ -1245,7 +1695,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "心のデトックス",
           "color_of_the_day": "金色",
-          "recommended_tea": "アールグレイ"
+          "recommended_tea": "アールグレイ",
+          "lucky_number": 76,
+          "power_stone": "アメジスト",
+          "aroma_oil": "ラベンダー",
+          "meditation_theme": "感謝の瞑想",
+          "flower_of_the_day": "桜 - 精神の美",
+          "energy_advice": "今日は新しい挑戦の時"
         },
         {
           "day": 18,
@@ -1261,7 +1717,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "創造力爆発",
           "color_of_the_day": "朱色",
-          "recommended_tea": "カモミールティー"
+          "recommended_tea": "カモミールティー",
+          "lucky_number": 77,
+          "power_stone": "ローズクォーツ",
+          "aroma_oil": "ユーカリ",
+          "meditation_theme": "慈悲の瞑想",
+          "flower_of_the_day": "梅 - 気品",
+          "energy_advice": "休息を大切にする日"
         },
         {
           "day": 19,
@@ -1277,7 +1739,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "人との縁を結ぶ",
           "color_of_the_day": "空色",
-          "recommended_tea": "ペパーミントティー"
+          "recommended_tea": "ペパーミントティー",
+          "lucky_number": 78,
+          "power_stone": "クリスタル",
+          "aroma_oil": "ローズマリー",
+          "meditation_theme": "呼吸に集中",
+          "flower_of_the_day": "椿 - 控えめな素晴らしさ",
+          "energy_advice": "人との繋がりを深める日"
         },
         {
           "day": 20,
@@ -1293,7 +1761,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "未来への種まき",
           "color_of_the_day": "若草色",
-          "recommended_tea": "緑茶"
+          "recommended_tea": "緑茶",
+          "lucky_number": 79,
+          "power_stone": "アクアマリン",
+          "aroma_oil": "オレンジ",
+          "meditation_theme": "マインドフルネス",
+          "flower_of_the_day": "菊 - 高貴",
+          "energy_advice": "創造性を発揮する時"
         },
         {
           "day": 21,
@@ -1309,7 +1783,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "宝物発見の予感",
           "color_of_the_day": "黄金色",
-          "recommended_tea": "ほうじ茶"
+          "recommended_tea": "ほうじ茶",
+          "lucky_number": 80,
+          "power_stone": "ガーネット",
+          "aroma_oil": "レモングラス",
+          "meditation_theme": "ボディスキャン",
+          "flower_of_the_day": "蓮 - 清らかな心",
+          "energy_advice": "内省の時間を作る日"
         },
         {
           "day": 22,
@@ -1325,7 +1805,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "内なる光が輝く",
           "color_of_the_day": "鋼青色",
-          "recommended_tea": "ジャスミンティー"
+          "recommended_tea": "ジャスミンティー",
+          "lucky_number": 81,
+          "power_stone": "ムーンストーン",
+          "aroma_oil": "イランイラン",
+          "meditation_theme": "愛と光の瞑想",
+          "flower_of_the_day": "薔薇 - 愛情",
+          "energy_advice": "感謝を表現する日"
         },
         {
           "day": 23,
@@ -1341,7 +1827,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "調和のメロディ",
           "color_of_the_day": "深紅色",
-          "recommended_tea": "ルイボスティー"
+          "recommended_tea": "ルイボスティー",
+          "lucky_number": 82,
+          "power_stone": "ラピスラズリ",
+          "aroma_oil": "サンダルウッド",
+          "meditation_theme": "チャクラ調整",
+          "flower_of_the_day": "向日葵 - 憧れ",
+          "energy_advice": "勇気を出して行動する時"
         },
         {
           "day": 24,
@@ -1357,7 +1849,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "自然の叡智授受",
           "color_of_the_day": "金色",
-          "recommended_tea": "ローズヒップティー"
+          "recommended_tea": "ローズヒップティー",
+          "lucky_number": 83,
+          "power_stone": "マラカイト",
+          "aroma_oil": "フランキンセンス",
+          "meditation_theme": "グラウンディング",
+          "flower_of_the_day": "紫陽花 - 移り気",
+          "energy_advice": "直感に従う日"
         },
         {
           "day": 25,
@@ -1373,7 +1871,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "知恵の泉湧出",
           "color_of_the_day": "朱色",
-          "recommended_tea": "白茶"
+          "recommended_tea": "白茶",
+          "lucky_number": 84,
+          "power_stone": "オニキス",
+          "aroma_oil": "ジャスミン",
+          "meditation_theme": "エネルギー浄化",
+          "flower_of_the_day": "牡丹 - 富貴",
+          "energy_advice": "学びを深める好機"
         },
         {
           "day": 26,
@@ -1389,7 +1893,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "至福の時間軸",
           "color_of_the_day": "空色",
-          "recommended_tea": "烏龍茶"
+          "recommended_tea": "烏龍茶",
+          "lucky_number": 85,
+          "power_stone": "シトリン",
+          "aroma_oil": "ベルガモット",
+          "meditation_theme": "未来創造",
+          "flower_of_the_day": "百合 - 純粋",
+          "energy_advice": "愛を分かち合う日"
         },
         {
           "day": 27,
@@ -1405,7 +1915,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "運気上昇の兆し",
           "color_of_the_day": "若草色",
-          "recommended_tea": "玄米茶"
+          "recommended_tea": "玄米茶",
+          "lucky_number": 86,
+          "power_stone": "ペリドット",
+          "aroma_oil": "ティーツリー",
+          "meditation_theme": "過去の癒し",
+          "flower_of_the_day": "カーネーション - 母の愛",
+          "energy_advice": "エネルギーを充電する時"
         },
         {
           "day": 28,
@@ -1421,7 +1937,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "心の扉が開放",
           "color_of_the_day": "黄金色",
-          "recommended_tea": "抹茶"
+          "recommended_tea": "抹茶",
+          "lucky_number": 87,
+          "power_stone": "トルマリン",
+          "aroma_oil": "ゼラニウム",
+          "meditation_theme": "内なる平和",
+          "flower_of_the_day": "コスモス - 乙女の真心",
+          "energy_advice": "変化を受け入れる日"
         },
         {
           "day": 29,
@@ -1437,7 +1959,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "宇宙との同調",
           "color_of_the_day": "鋼青色",
-          "recommended_tea": "柚子茶"
+          "recommended_tea": "柚子茶",
+          "lucky_number": 88,
+          "power_stone": "オパール",
+          "aroma_oil": "パチュリ",
+          "meditation_theme": "宇宙との繋がり",
+          "flower_of_the_day": "すずらん - 謙遜",
+          "energy_advice": "夢を描く時間"
         },
         {
           "day": 30,
@@ -1453,7 +1981,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "愛のバイブレーション",
           "color_of_the_day": "深紅色",
-          "recommended_tea": "生姜茶"
+          "recommended_tea": "生姜茶",
+          "lucky_number": 89,
+          "power_stone": "ターコイズ",
+          "aroma_oil": "シダーウッド",
+          "meditation_theme": "直感力向上",
+          "flower_of_the_day": "菜の花 - 快活",
+          "energy_advice": "心を整理する日"
         },
         {
           "day": 31,
@@ -1469,7 +2003,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "豊かさの波動",
           "color_of_the_day": "金色",
-          "recommended_tea": "黒豆茶"
+          "recommended_tea": "黒豆茶",
+          "lucky_number": 90,
+          "power_stone": "エメラルド",
+          "aroma_oil": "カモミール",
+          "meditation_theme": "創造性開花",
+          "flower_of_the_day": "藤 - 優しさ",
+          "energy_advice": "自然と触れ合う日"
         }
       ]
     },
@@ -1479,7 +2019,7 @@
       "month_name": "April",
       "month_name_jp": "4月",
       "api_version": "v1",
-      "generated_at": "2025-06-20T08:45:25.826969",
+      "generated_at": "2025-06-20T09:23:31.154210",
       "days": [
         {
           "day": 1,
@@ -1495,7 +2035,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "運命の扉が開く日",
           "color_of_the_day": "朱色",
-          "recommended_tea": "アールグレイ"
+          "recommended_tea": "アールグレイ",
+          "lucky_number": 91,
+          "power_stone": "アメジスト",
+          "aroma_oil": "ラベンダー",
+          "meditation_theme": "感謝の瞑想",
+          "flower_of_the_day": "桜 - 精神の美",
+          "energy_advice": "今日は新しい挑戦の時"
         },
         {
           "day": 2,
@@ -1511,7 +2057,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "宇宙からのメッセージ",
           "color_of_the_day": "空色",
-          "recommended_tea": "カモミールティー"
+          "recommended_tea": "カモミールティー",
+          "lucky_number": 92,
+          "power_stone": "ローズクォーツ",
+          "aroma_oil": "ユーカリ",
+          "meditation_theme": "慈悲の瞑想",
+          "flower_of_the_day": "梅 - 気品",
+          "energy_advice": "休息を大切にする日"
         },
         {
           "day": 3,
@@ -1527,7 +2079,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "奇跡を呼ぶ波動",
           "color_of_the_day": "若草色",
-          "recommended_tea": "ペパーミントティー"
+          "recommended_tea": "ペパーミントティー",
+          "lucky_number": 93,
+          "power_stone": "クリスタル",
+          "aroma_oil": "ローズマリー",
+          "meditation_theme": "呼吸に集中",
+          "flower_of_the_day": "椿 - 控えめな素晴らしさ",
+          "energy_advice": "人との繋がりを深める日"
         },
         {
           "day": 4,
@@ -1543,7 +2101,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "龍神様のご加護",
           "color_of_the_day": "黄金色",
-          "recommended_tea": "緑茶"
+          "recommended_tea": "緑茶",
+          "lucky_number": 94,
+          "power_stone": "アクアマリン",
+          "aroma_oil": "オレンジ",
+          "meditation_theme": "マインドフルネス",
+          "flower_of_the_day": "菊 - 高貴",
+          "energy_advice": "創造性を発揮する時"
         },
         {
           "day": 5,
@@ -1559,7 +2123,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "金運上昇のサイン",
           "color_of_the_day": "鋼青色",
-          "recommended_tea": "ほうじ茶"
+          "recommended_tea": "ほうじ茶",
+          "lucky_number": 95,
+          "power_stone": "ガーネット",
+          "aroma_oil": "レモングラス",
+          "meditation_theme": "ボディスキャン",
+          "flower_of_the_day": "蓮 - 清らかな心",
+          "energy_advice": "内省の時間を作る日"
         },
         {
           "day": 6,
@@ -1575,7 +2145,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "恋愛運絶好調",
           "color_of_the_day": "深紅色",
-          "recommended_tea": "ジャスミンティー"
+          "recommended_tea": "ジャスミンティー",
+          "lucky_number": 96,
+          "power_stone": "ムーンストーン",
+          "aroma_oil": "イランイラン",
+          "meditation_theme": "愛と光の瞑想",
+          "flower_of_the_day": "薔薇 - 愛情",
+          "energy_advice": "感謝を表現する日"
         },
         {
           "day": 7,
@@ -1591,7 +2167,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "直感力が冴える",
           "color_of_the_day": "金色",
-          "recommended_tea": "ルイボスティー"
+          "recommended_tea": "ルイボスティー",
+          "lucky_number": 97,
+          "power_stone": "ラピスラズリ",
+          "aroma_oil": "サンダルウッド",
+          "meditation_theme": "チャクラ調整",
+          "flower_of_the_day": "向日葵 - 憧れ",
+          "energy_advice": "勇気を出して行動する時"
         },
         {
           "day": 8,
@@ -1607,7 +2189,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "隠れた才能開花",
           "color_of_the_day": "朱色",
-          "recommended_tea": "ローズヒップティー"
+          "recommended_tea": "ローズヒップティー",
+          "lucky_number": 98,
+          "power_stone": "マラカイト",
+          "aroma_oil": "フランキンセンス",
+          "meditation_theme": "グラウンディング",
+          "flower_of_the_day": "紫陽花 - 移り気",
+          "energy_advice": "直感に従う日"
         },
         {
           "day": 9,
@@ -1623,7 +2211,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "人生の転機到来",
           "color_of_the_day": "空色",
-          "recommended_tea": "白茶"
+          "recommended_tea": "白茶",
+          "lucky_number": 99,
+          "power_stone": "オニキス",
+          "aroma_oil": "ジャスミン",
+          "meditation_theme": "エネルギー浄化",
+          "flower_of_the_day": "牡丹 - 富貴",
+          "energy_advice": "学びを深める好機"
         },
         {
           "day": 10,
@@ -1639,7 +2233,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "幸運の風が吹く",
           "color_of_the_day": "若草色",
-          "recommended_tea": "烏龍茶"
+          "recommended_tea": "烏龍茶",
+          "lucky_number": 1,
+          "power_stone": "シトリン",
+          "aroma_oil": "ベルガモット",
+          "meditation_theme": "未来創造",
+          "flower_of_the_day": "百合 - 純粋",
+          "energy_advice": "愛を分かち合う日"
         },
         {
           "day": 11,
@@ -1655,7 +2255,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "魂の成長期間",
           "color_of_the_day": "黄金色",
-          "recommended_tea": "玄米茶"
+          "recommended_tea": "玄米茶",
+          "lucky_number": 2,
+          "power_stone": "ペリドット",
+          "aroma_oil": "ティーツリー",
+          "meditation_theme": "過去の癒し",
+          "flower_of_the_day": "カーネーション - 母の愛",
+          "energy_advice": "エネルギーを充電する時"
         },
         {
           "day": 12,
@@ -1671,7 +2277,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "エネルギー充電日",
           "color_of_the_day": "鋼青色",
-          "recommended_tea": "抹茶"
+          "recommended_tea": "抹茶",
+          "lucky_number": 3,
+          "power_stone": "トルマリン",
+          "aroma_oil": "ゼラニウム",
+          "meditation_theme": "内なる平和",
+          "flower_of_the_day": "コスモス - 乙女の真心",
+          "energy_advice": "変化を受け入れる日"
         },
         {
           "day": 13,
@@ -1687,7 +2299,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "新次元への扉",
           "color_of_the_day": "深紅色",
-          "recommended_tea": "柚子茶"
+          "recommended_tea": "柚子茶",
+          "lucky_number": 4,
+          "power_stone": "オパール",
+          "aroma_oil": "パチュリ",
+          "meditation_theme": "宇宙との繋がり",
+          "flower_of_the_day": "すずらん - 謙遜",
+          "energy_advice": "夢を描く時間"
         },
         {
           "day": 14,
@@ -1703,7 +2321,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "守護霊のささやき",
           "color_of_the_day": "金色",
-          "recommended_tea": "生姜茶"
+          "recommended_tea": "生姜茶",
+          "lucky_number": 5,
+          "power_stone": "ターコイズ",
+          "aroma_oil": "シダーウッド",
+          "meditation_theme": "直感力向上",
+          "flower_of_the_day": "菜の花 - 快活",
+          "energy_advice": "心を整理する日"
         },
         {
           "day": 15,
@@ -1719,7 +2343,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "願いが叶う予感",
           "color_of_the_day": "朱色",
-          "recommended_tea": "黒豆茶"
+          "recommended_tea": "黒豆茶",
+          "lucky_number": 6,
+          "power_stone": "エメラルド",
+          "aroma_oil": "カモミール",
+          "meditation_theme": "創造性開花",
+          "flower_of_the_day": "藤 - 優しさ",
+          "energy_advice": "自然と触れ合う日"
         },
         {
           "day": 16,
@@ -1735,7 +2365,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "心のデトックス",
           "color_of_the_day": "空色",
-          "recommended_tea": "アールグレイ"
+          "recommended_tea": "アールグレイ",
+          "lucky_number": 7,
+          "power_stone": "アメジスト",
+          "aroma_oil": "ラベンダー",
+          "meditation_theme": "感謝の瞑想",
+          "flower_of_the_day": "桜 - 精神の美",
+          "energy_advice": "今日は新しい挑戦の時"
         },
         {
           "day": 17,
@@ -1751,7 +2387,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "創造力爆発",
           "color_of_the_day": "若草色",
-          "recommended_tea": "カモミールティー"
+          "recommended_tea": "カモミールティー",
+          "lucky_number": 8,
+          "power_stone": "ローズクォーツ",
+          "aroma_oil": "ユーカリ",
+          "meditation_theme": "慈悲の瞑想",
+          "flower_of_the_day": "梅 - 気品",
+          "energy_advice": "休息を大切にする日"
         },
         {
           "day": 18,
@@ -1767,7 +2409,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "人との縁を結ぶ",
           "color_of_the_day": "黄金色",
-          "recommended_tea": "ペパーミントティー"
+          "recommended_tea": "ペパーミントティー",
+          "lucky_number": 9,
+          "power_stone": "クリスタル",
+          "aroma_oil": "ローズマリー",
+          "meditation_theme": "呼吸に集中",
+          "flower_of_the_day": "椿 - 控えめな素晴らしさ",
+          "energy_advice": "人との繋がりを深める日"
         },
         {
           "day": 19,
@@ -1783,7 +2431,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "未来への種まき",
           "color_of_the_day": "鋼青色",
-          "recommended_tea": "緑茶"
+          "recommended_tea": "緑茶",
+          "lucky_number": 10,
+          "power_stone": "アクアマリン",
+          "aroma_oil": "オレンジ",
+          "meditation_theme": "マインドフルネス",
+          "flower_of_the_day": "菊 - 高貴",
+          "energy_advice": "創造性を発揮する時"
         },
         {
           "day": 20,
@@ -1799,7 +2453,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "宝物発見の予感",
           "color_of_the_day": "深紅色",
-          "recommended_tea": "ほうじ茶"
+          "recommended_tea": "ほうじ茶",
+          "lucky_number": 11,
+          "power_stone": "ガーネット",
+          "aroma_oil": "レモングラス",
+          "meditation_theme": "ボディスキャン",
+          "flower_of_the_day": "蓮 - 清らかな心",
+          "energy_advice": "内省の時間を作る日"
         },
         {
           "day": 21,
@@ -1815,7 +2475,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "内なる光が輝く",
           "color_of_the_day": "金色",
-          "recommended_tea": "ジャスミンティー"
+          "recommended_tea": "ジャスミンティー",
+          "lucky_number": 12,
+          "power_stone": "ムーンストーン",
+          "aroma_oil": "イランイラン",
+          "meditation_theme": "愛と光の瞑想",
+          "flower_of_the_day": "薔薇 - 愛情",
+          "energy_advice": "感謝を表現する日"
         },
         {
           "day": 22,
@@ -1831,7 +2497,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "調和のメロディ",
           "color_of_the_day": "朱色",
-          "recommended_tea": "ルイボスティー"
+          "recommended_tea": "ルイボスティー",
+          "lucky_number": 13,
+          "power_stone": "ラピスラズリ",
+          "aroma_oil": "サンダルウッド",
+          "meditation_theme": "チャクラ調整",
+          "flower_of_the_day": "向日葵 - 憧れ",
+          "energy_advice": "勇気を出して行動する時"
         },
         {
           "day": 23,
@@ -1847,7 +2519,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "自然の叡智授受",
           "color_of_the_day": "空色",
-          "recommended_tea": "ローズヒップティー"
+          "recommended_tea": "ローズヒップティー",
+          "lucky_number": 14,
+          "power_stone": "マラカイト",
+          "aroma_oil": "フランキンセンス",
+          "meditation_theme": "グラウンディング",
+          "flower_of_the_day": "紫陽花 - 移り気",
+          "energy_advice": "直感に従う日"
         },
         {
           "day": 24,
@@ -1863,7 +2541,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "知恵の泉湧出",
           "color_of_the_day": "若草色",
-          "recommended_tea": "白茶"
+          "recommended_tea": "白茶",
+          "lucky_number": 15,
+          "power_stone": "オニキス",
+          "aroma_oil": "ジャスミン",
+          "meditation_theme": "エネルギー浄化",
+          "flower_of_the_day": "牡丹 - 富貴",
+          "energy_advice": "学びを深める好機"
         },
         {
           "day": 25,
@@ -1879,7 +2563,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "至福の時間軸",
           "color_of_the_day": "黄金色",
-          "recommended_tea": "烏龍茶"
+          "recommended_tea": "烏龍茶",
+          "lucky_number": 16,
+          "power_stone": "シトリン",
+          "aroma_oil": "ベルガモット",
+          "meditation_theme": "未来創造",
+          "flower_of_the_day": "百合 - 純粋",
+          "energy_advice": "愛を分かち合う日"
         },
         {
           "day": 26,
@@ -1895,7 +2585,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "運気上昇の兆し",
           "color_of_the_day": "鋼青色",
-          "recommended_tea": "玄米茶"
+          "recommended_tea": "玄米茶",
+          "lucky_number": 17,
+          "power_stone": "ペリドット",
+          "aroma_oil": "ティーツリー",
+          "meditation_theme": "過去の癒し",
+          "flower_of_the_day": "カーネーション - 母の愛",
+          "energy_advice": "エネルギーを充電する時"
         },
         {
           "day": 27,
@@ -1911,7 +2607,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "心の扉が開放",
           "color_of_the_day": "深紅色",
-          "recommended_tea": "抹茶"
+          "recommended_tea": "抹茶",
+          "lucky_number": 18,
+          "power_stone": "トルマリン",
+          "aroma_oil": "ゼラニウム",
+          "meditation_theme": "内なる平和",
+          "flower_of_the_day": "コスモス - 乙女の真心",
+          "energy_advice": "変化を受け入れる日"
         },
         {
           "day": 28,
@@ -1927,7 +2629,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "宇宙との同調",
           "color_of_the_day": "金色",
-          "recommended_tea": "柚子茶"
+          "recommended_tea": "柚子茶",
+          "lucky_number": 19,
+          "power_stone": "オパール",
+          "aroma_oil": "パチュリ",
+          "meditation_theme": "宇宙との繋がり",
+          "flower_of_the_day": "すずらん - 謙遜",
+          "energy_advice": "夢を描く時間"
         },
         {
           "day": 29,
@@ -1943,7 +2651,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "愛のバイブレーション",
           "color_of_the_day": "朱色",
-          "recommended_tea": "生姜茶"
+          "recommended_tea": "生姜茶",
+          "lucky_number": 20,
+          "power_stone": "ターコイズ",
+          "aroma_oil": "シダーウッド",
+          "meditation_theme": "直感力向上",
+          "flower_of_the_day": "菜の花 - 快活",
+          "energy_advice": "心を整理する日"
         },
         {
           "day": 30,
@@ -1959,7 +2673,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "豊かさの波動",
           "color_of_the_day": "空色",
-          "recommended_tea": "黒豆茶"
+          "recommended_tea": "黒豆茶",
+          "lucky_number": 21,
+          "power_stone": "エメラルド",
+          "aroma_oil": "カモミール",
+          "meditation_theme": "創造性開花",
+          "flower_of_the_day": "藤 - 優しさ",
+          "energy_advice": "自然と触れ合う日"
         }
       ]
     },
@@ -1969,7 +2689,7 @@
       "month_name": "May",
       "month_name_jp": "5月",
       "api_version": "v1",
-      "generated_at": "2025-06-20T08:45:25.829432",
+      "generated_at": "2025-06-20T09:23:31.156020",
       "days": [
         {
           "day": 1,
@@ -1985,7 +2705,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "運命の扉が開く日",
           "color_of_the_day": "若草色",
-          "recommended_tea": "アールグレイ"
+          "recommended_tea": "アールグレイ",
+          "lucky_number": 22,
+          "power_stone": "アメジスト",
+          "aroma_oil": "ラベンダー",
+          "meditation_theme": "感謝の瞑想",
+          "flower_of_the_day": "桜 - 精神の美",
+          "energy_advice": "今日は新しい挑戦の時"
         },
         {
           "day": 2,
@@ -2001,7 +2727,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "宇宙からのメッセージ",
           "color_of_the_day": "黄金色",
-          "recommended_tea": "カモミールティー"
+          "recommended_tea": "カモミールティー",
+          "lucky_number": 23,
+          "power_stone": "ローズクォーツ",
+          "aroma_oil": "ユーカリ",
+          "meditation_theme": "慈悲の瞑想",
+          "flower_of_the_day": "梅 - 気品",
+          "energy_advice": "休息を大切にする日"
         },
         {
           "day": 3,
@@ -2017,7 +2749,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "奇跡を呼ぶ波動",
           "color_of_the_day": "鋼青色",
-          "recommended_tea": "ペパーミントティー"
+          "recommended_tea": "ペパーミントティー",
+          "lucky_number": 24,
+          "power_stone": "クリスタル",
+          "aroma_oil": "ローズマリー",
+          "meditation_theme": "呼吸に集中",
+          "flower_of_the_day": "椿 - 控えめな素晴らしさ",
+          "energy_advice": "人との繋がりを深める日"
         },
         {
           "day": 4,
@@ -2033,7 +2771,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "龍神様のご加護",
           "color_of_the_day": "深紅色",
-          "recommended_tea": "緑茶"
+          "recommended_tea": "緑茶",
+          "lucky_number": 25,
+          "power_stone": "アクアマリン",
+          "aroma_oil": "オレンジ",
+          "meditation_theme": "マインドフルネス",
+          "flower_of_the_day": "菊 - 高貴",
+          "energy_advice": "創造性を発揮する時"
         },
         {
           "day": 5,
@@ -2049,7 +2793,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "金運上昇のサイン",
           "color_of_the_day": "金色",
-          "recommended_tea": "ほうじ茶"
+          "recommended_tea": "ほうじ茶",
+          "lucky_number": 26,
+          "power_stone": "ガーネット",
+          "aroma_oil": "レモングラス",
+          "meditation_theme": "ボディスキャン",
+          "flower_of_the_day": "蓮 - 清らかな心",
+          "energy_advice": "内省の時間を作る日"
         },
         {
           "day": 6,
@@ -2065,7 +2815,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "恋愛運絶好調",
           "color_of_the_day": "朱色",
-          "recommended_tea": "ジャスミンティー"
+          "recommended_tea": "ジャスミンティー",
+          "lucky_number": 27,
+          "power_stone": "ムーンストーン",
+          "aroma_oil": "イランイラン",
+          "meditation_theme": "愛と光の瞑想",
+          "flower_of_the_day": "薔薇 - 愛情",
+          "energy_advice": "感謝を表現する日"
         },
         {
           "day": 7,
@@ -2081,7 +2837,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "直感力が冴える",
           "color_of_the_day": "空色",
-          "recommended_tea": "ルイボスティー"
+          "recommended_tea": "ルイボスティー",
+          "lucky_number": 28,
+          "power_stone": "ラピスラズリ",
+          "aroma_oil": "サンダルウッド",
+          "meditation_theme": "チャクラ調整",
+          "flower_of_the_day": "向日葵 - 憧れ",
+          "energy_advice": "勇気を出して行動する時"
         },
         {
           "day": 8,
@@ -2097,7 +2859,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "隠れた才能開花",
           "color_of_the_day": "若草色",
-          "recommended_tea": "ローズヒップティー"
+          "recommended_tea": "ローズヒップティー",
+          "lucky_number": 29,
+          "power_stone": "マラカイト",
+          "aroma_oil": "フランキンセンス",
+          "meditation_theme": "グラウンディング",
+          "flower_of_the_day": "紫陽花 - 移り気",
+          "energy_advice": "直感に従う日"
         },
         {
           "day": 9,
@@ -2113,7 +2881,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "人生の転機到来",
           "color_of_the_day": "黄金色",
-          "recommended_tea": "白茶"
+          "recommended_tea": "白茶",
+          "lucky_number": 30,
+          "power_stone": "オニキス",
+          "aroma_oil": "ジャスミン",
+          "meditation_theme": "エネルギー浄化",
+          "flower_of_the_day": "牡丹 - 富貴",
+          "energy_advice": "学びを深める好機"
         },
         {
           "day": 10,
@@ -2129,7 +2903,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "幸運の風が吹く",
           "color_of_the_day": "鋼青色",
-          "recommended_tea": "烏龍茶"
+          "recommended_tea": "烏龍茶",
+          "lucky_number": 31,
+          "power_stone": "シトリン",
+          "aroma_oil": "ベルガモット",
+          "meditation_theme": "未来創造",
+          "flower_of_the_day": "百合 - 純粋",
+          "energy_advice": "愛を分かち合う日"
         },
         {
           "day": 11,
@@ -2145,7 +2925,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "魂の成長期間",
           "color_of_the_day": "深紅色",
-          "recommended_tea": "玄米茶"
+          "recommended_tea": "玄米茶",
+          "lucky_number": 32,
+          "power_stone": "ペリドット",
+          "aroma_oil": "ティーツリー",
+          "meditation_theme": "過去の癒し",
+          "flower_of_the_day": "カーネーション - 母の愛",
+          "energy_advice": "エネルギーを充電する時"
         },
         {
           "day": 12,
@@ -2161,7 +2947,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "エネルギー充電日",
           "color_of_the_day": "金色",
-          "recommended_tea": "抹茶"
+          "recommended_tea": "抹茶",
+          "lucky_number": 33,
+          "power_stone": "トルマリン",
+          "aroma_oil": "ゼラニウム",
+          "meditation_theme": "内なる平和",
+          "flower_of_the_day": "コスモス - 乙女の真心",
+          "energy_advice": "変化を受け入れる日"
         },
         {
           "day": 13,
@@ -2177,7 +2969,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "新次元への扉",
           "color_of_the_day": "朱色",
-          "recommended_tea": "柚子茶"
+          "recommended_tea": "柚子茶",
+          "lucky_number": 34,
+          "power_stone": "オパール",
+          "aroma_oil": "パチュリ",
+          "meditation_theme": "宇宙との繋がり",
+          "flower_of_the_day": "すずらん - 謙遜",
+          "energy_advice": "夢を描く時間"
         },
         {
           "day": 14,
@@ -2193,7 +2991,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "守護霊のささやき",
           "color_of_the_day": "空色",
-          "recommended_tea": "生姜茶"
+          "recommended_tea": "生姜茶",
+          "lucky_number": 35,
+          "power_stone": "ターコイズ",
+          "aroma_oil": "シダーウッド",
+          "meditation_theme": "直感力向上",
+          "flower_of_the_day": "菜の花 - 快活",
+          "energy_advice": "心を整理する日"
         },
         {
           "day": 15,
@@ -2209,7 +3013,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "願いが叶う予感",
           "color_of_the_day": "若草色",
-          "recommended_tea": "黒豆茶"
+          "recommended_tea": "黒豆茶",
+          "lucky_number": 36,
+          "power_stone": "エメラルド",
+          "aroma_oil": "カモミール",
+          "meditation_theme": "創造性開花",
+          "flower_of_the_day": "藤 - 優しさ",
+          "energy_advice": "自然と触れ合う日"
         },
         {
           "day": 16,
@@ -2225,7 +3035,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "心のデトックス",
           "color_of_the_day": "黄金色",
-          "recommended_tea": "アールグレイ"
+          "recommended_tea": "アールグレイ",
+          "lucky_number": 37,
+          "power_stone": "アメジスト",
+          "aroma_oil": "ラベンダー",
+          "meditation_theme": "感謝の瞑想",
+          "flower_of_the_day": "桜 - 精神の美",
+          "energy_advice": "今日は新しい挑戦の時"
         },
         {
           "day": 17,
@@ -2241,7 +3057,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "創造力爆発",
           "color_of_the_day": "鋼青色",
-          "recommended_tea": "カモミールティー"
+          "recommended_tea": "カモミールティー",
+          "lucky_number": 38,
+          "power_stone": "ローズクォーツ",
+          "aroma_oil": "ユーカリ",
+          "meditation_theme": "慈悲の瞑想",
+          "flower_of_the_day": "梅 - 気品",
+          "energy_advice": "休息を大切にする日"
         },
         {
           "day": 18,
@@ -2257,7 +3079,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "人との縁を結ぶ",
           "color_of_the_day": "深紅色",
-          "recommended_tea": "ペパーミントティー"
+          "recommended_tea": "ペパーミントティー",
+          "lucky_number": 39,
+          "power_stone": "クリスタル",
+          "aroma_oil": "ローズマリー",
+          "meditation_theme": "呼吸に集中",
+          "flower_of_the_day": "椿 - 控えめな素晴らしさ",
+          "energy_advice": "人との繋がりを深める日"
         },
         {
           "day": 19,
@@ -2273,7 +3101,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "未来への種まき",
           "color_of_the_day": "金色",
-          "recommended_tea": "緑茶"
+          "recommended_tea": "緑茶",
+          "lucky_number": 40,
+          "power_stone": "アクアマリン",
+          "aroma_oil": "オレンジ",
+          "meditation_theme": "マインドフルネス",
+          "flower_of_the_day": "菊 - 高貴",
+          "energy_advice": "創造性を発揮する時"
         },
         {
           "day": 20,
@@ -2289,7 +3123,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "宝物発見の予感",
           "color_of_the_day": "朱色",
-          "recommended_tea": "ほうじ茶"
+          "recommended_tea": "ほうじ茶",
+          "lucky_number": 41,
+          "power_stone": "ガーネット",
+          "aroma_oil": "レモングラス",
+          "meditation_theme": "ボディスキャン",
+          "flower_of_the_day": "蓮 - 清らかな心",
+          "energy_advice": "内省の時間を作る日"
         },
         {
           "day": 21,
@@ -2305,7 +3145,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "内なる光が輝く",
           "color_of_the_day": "空色",
-          "recommended_tea": "ジャスミンティー"
+          "recommended_tea": "ジャスミンティー",
+          "lucky_number": 42,
+          "power_stone": "ムーンストーン",
+          "aroma_oil": "イランイラン",
+          "meditation_theme": "愛と光の瞑想",
+          "flower_of_the_day": "薔薇 - 愛情",
+          "energy_advice": "感謝を表現する日"
         },
         {
           "day": 22,
@@ -2321,7 +3167,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "調和のメロディ",
           "color_of_the_day": "若草色",
-          "recommended_tea": "ルイボスティー"
+          "recommended_tea": "ルイボスティー",
+          "lucky_number": 43,
+          "power_stone": "ラピスラズリ",
+          "aroma_oil": "サンダルウッド",
+          "meditation_theme": "チャクラ調整",
+          "flower_of_the_day": "向日葵 - 憧れ",
+          "energy_advice": "勇気を出して行動する時"
         },
         {
           "day": 23,
@@ -2337,7 +3189,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "自然の叡智授受",
           "color_of_the_day": "黄金色",
-          "recommended_tea": "ローズヒップティー"
+          "recommended_tea": "ローズヒップティー",
+          "lucky_number": 44,
+          "power_stone": "マラカイト",
+          "aroma_oil": "フランキンセンス",
+          "meditation_theme": "グラウンディング",
+          "flower_of_the_day": "紫陽花 - 移り気",
+          "energy_advice": "直感に従う日"
         },
         {
           "day": 24,
@@ -2353,7 +3211,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "知恵の泉湧出",
           "color_of_the_day": "鋼青色",
-          "recommended_tea": "白茶"
+          "recommended_tea": "白茶",
+          "lucky_number": 45,
+          "power_stone": "オニキス",
+          "aroma_oil": "ジャスミン",
+          "meditation_theme": "エネルギー浄化",
+          "flower_of_the_day": "牡丹 - 富貴",
+          "energy_advice": "学びを深める好機"
         },
         {
           "day": 25,
@@ -2369,7 +3233,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "至福の時間軸",
           "color_of_the_day": "深紅色",
-          "recommended_tea": "烏龍茶"
+          "recommended_tea": "烏龍茶",
+          "lucky_number": 46,
+          "power_stone": "シトリン",
+          "aroma_oil": "ベルガモット",
+          "meditation_theme": "未来創造",
+          "flower_of_the_day": "百合 - 純粋",
+          "energy_advice": "愛を分かち合う日"
         },
         {
           "day": 26,
@@ -2385,7 +3255,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "運気上昇の兆し",
           "color_of_the_day": "金色",
-          "recommended_tea": "玄米茶"
+          "recommended_tea": "玄米茶",
+          "lucky_number": 47,
+          "power_stone": "ペリドット",
+          "aroma_oil": "ティーツリー",
+          "meditation_theme": "過去の癒し",
+          "flower_of_the_day": "カーネーション - 母の愛",
+          "energy_advice": "エネルギーを充電する時"
         },
         {
           "day": 27,
@@ -2401,7 +3277,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "心の扉が開放",
           "color_of_the_day": "朱色",
-          "recommended_tea": "抹茶"
+          "recommended_tea": "抹茶",
+          "lucky_number": 48,
+          "power_stone": "トルマリン",
+          "aroma_oil": "ゼラニウム",
+          "meditation_theme": "内なる平和",
+          "flower_of_the_day": "コスモス - 乙女の真心",
+          "energy_advice": "変化を受け入れる日"
         },
         {
           "day": 28,
@@ -2417,7 +3299,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "宇宙との同調",
           "color_of_the_day": "空色",
-          "recommended_tea": "柚子茶"
+          "recommended_tea": "柚子茶",
+          "lucky_number": 49,
+          "power_stone": "オパール",
+          "aroma_oil": "パチュリ",
+          "meditation_theme": "宇宙との繋がり",
+          "flower_of_the_day": "すずらん - 謙遜",
+          "energy_advice": "夢を描く時間"
         },
         {
           "day": 29,
@@ -2433,7 +3321,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "愛のバイブレーション",
           "color_of_the_day": "若草色",
-          "recommended_tea": "生姜茶"
+          "recommended_tea": "生姜茶",
+          "lucky_number": 50,
+          "power_stone": "ターコイズ",
+          "aroma_oil": "シダーウッド",
+          "meditation_theme": "直感力向上",
+          "flower_of_the_day": "菜の花 - 快活",
+          "energy_advice": "心を整理する日"
         },
         {
           "day": 30,
@@ -2449,7 +3343,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "豊かさの波動",
           "color_of_the_day": "黄金色",
-          "recommended_tea": "黒豆茶"
+          "recommended_tea": "黒豆茶",
+          "lucky_number": 51,
+          "power_stone": "エメラルド",
+          "aroma_oil": "カモミール",
+          "meditation_theme": "創造性開花",
+          "flower_of_the_day": "藤 - 優しさ",
+          "energy_advice": "自然と触れ合う日"
         },
         {
           "day": 31,
@@ -2465,7 +3365,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "運命の扉が開く日",
           "color_of_the_day": "鋼青色",
-          "recommended_tea": "アールグレイ"
+          "recommended_tea": "アールグレイ",
+          "lucky_number": 52,
+          "power_stone": "アメジスト",
+          "aroma_oil": "ラベンダー",
+          "meditation_theme": "感謝の瞑想",
+          "flower_of_the_day": "桜 - 精神の美",
+          "energy_advice": "今日は新しい挑戦の時"
         }
       ]
     },
@@ -2475,7 +3381,7 @@
       "month_name": "June",
       "month_name_jp": "6月",
       "api_version": "v1",
-      "generated_at": "2025-06-20T08:45:25.831680",
+      "generated_at": "2025-06-20T09:23:31.160175",
       "days": [
         {
           "day": 1,
@@ -2491,7 +3397,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "宇宙からのメッセージ",
           "color_of_the_day": "深紅色",
-          "recommended_tea": "カモミールティー"
+          "recommended_tea": "カモミールティー",
+          "lucky_number": 53,
+          "power_stone": "ローズクォーツ",
+          "aroma_oil": "ユーカリ",
+          "meditation_theme": "慈悲の瞑想",
+          "flower_of_the_day": "梅 - 気品",
+          "energy_advice": "休息を大切にする日"
         },
         {
           "day": 2,
@@ -2507,7 +3419,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "奇跡を呼ぶ波動",
           "color_of_the_day": "金色",
-          "recommended_tea": "ペパーミントティー"
+          "recommended_tea": "ペパーミントティー",
+          "lucky_number": 54,
+          "power_stone": "クリスタル",
+          "aroma_oil": "ローズマリー",
+          "meditation_theme": "呼吸に集中",
+          "flower_of_the_day": "椿 - 控えめな素晴らしさ",
+          "energy_advice": "人との繋がりを深める日"
         },
         {
           "day": 3,
@@ -2523,7 +3441,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "龍神様のご加護",
           "color_of_the_day": "朱色",
-          "recommended_tea": "緑茶"
+          "recommended_tea": "緑茶",
+          "lucky_number": 55,
+          "power_stone": "アクアマリン",
+          "aroma_oil": "オレンジ",
+          "meditation_theme": "マインドフルネス",
+          "flower_of_the_day": "菊 - 高貴",
+          "energy_advice": "創造性を発揮する時"
         },
         {
           "day": 4,
@@ -2539,7 +3463,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "金運上昇のサイン",
           "color_of_the_day": "空色",
-          "recommended_tea": "ほうじ茶"
+          "recommended_tea": "ほうじ茶",
+          "lucky_number": 56,
+          "power_stone": "ガーネット",
+          "aroma_oil": "レモングラス",
+          "meditation_theme": "ボディスキャン",
+          "flower_of_the_day": "蓮 - 清らかな心",
+          "energy_advice": "内省の時間を作る日"
         },
         {
           "day": 5,
@@ -2555,7 +3485,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "恋愛運絶好調",
           "color_of_the_day": "若草色",
-          "recommended_tea": "ジャスミンティー"
+          "recommended_tea": "ジャスミンティー",
+          "lucky_number": 57,
+          "power_stone": "ムーンストーン",
+          "aroma_oil": "イランイラン",
+          "meditation_theme": "愛と光の瞑想",
+          "flower_of_the_day": "薔薇 - 愛情",
+          "energy_advice": "感謝を表現する日"
         },
         {
           "day": 6,
@@ -2571,7 +3507,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "直感力が冴える",
           "color_of_the_day": "黄金色",
-          "recommended_tea": "ルイボスティー"
+          "recommended_tea": "ルイボスティー",
+          "lucky_number": 58,
+          "power_stone": "ラピスラズリ",
+          "aroma_oil": "サンダルウッド",
+          "meditation_theme": "チャクラ調整",
+          "flower_of_the_day": "向日葵 - 憧れ",
+          "energy_advice": "勇気を出して行動する時"
         },
         {
           "day": 7,
@@ -2587,7 +3529,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "隠れた才能開花",
           "color_of_the_day": "鋼青色",
-          "recommended_tea": "ローズヒップティー"
+          "recommended_tea": "ローズヒップティー",
+          "lucky_number": 59,
+          "power_stone": "マラカイト",
+          "aroma_oil": "フランキンセンス",
+          "meditation_theme": "グラウンディング",
+          "flower_of_the_day": "紫陽花 - 移り気",
+          "energy_advice": "直感に従う日"
         },
         {
           "day": 8,
@@ -2603,7 +3551,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "人生の転機到来",
           "color_of_the_day": "深紅色",
-          "recommended_tea": "白茶"
+          "recommended_tea": "白茶",
+          "lucky_number": 60,
+          "power_stone": "オニキス",
+          "aroma_oil": "ジャスミン",
+          "meditation_theme": "エネルギー浄化",
+          "flower_of_the_day": "牡丹 - 富貴",
+          "energy_advice": "学びを深める好機"
         },
         {
           "day": 9,
@@ -2619,7 +3573,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "幸運の風が吹く",
           "color_of_the_day": "金色",
-          "recommended_tea": "烏龍茶"
+          "recommended_tea": "烏龍茶",
+          "lucky_number": 61,
+          "power_stone": "シトリン",
+          "aroma_oil": "ベルガモット",
+          "meditation_theme": "未来創造",
+          "flower_of_the_day": "百合 - 純粋",
+          "energy_advice": "愛を分かち合う日"
         },
         {
           "day": 10,
@@ -2635,7 +3595,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "魂の成長期間",
           "color_of_the_day": "朱色",
-          "recommended_tea": "玄米茶"
+          "recommended_tea": "玄米茶",
+          "lucky_number": 62,
+          "power_stone": "ペリドット",
+          "aroma_oil": "ティーツリー",
+          "meditation_theme": "過去の癒し",
+          "flower_of_the_day": "カーネーション - 母の愛",
+          "energy_advice": "エネルギーを充電する時"
         },
         {
           "day": 11,
@@ -2651,7 +3617,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "エネルギー充電日",
           "color_of_the_day": "空色",
-          "recommended_tea": "抹茶"
+          "recommended_tea": "抹茶",
+          "lucky_number": 63,
+          "power_stone": "トルマリン",
+          "aroma_oil": "ゼラニウム",
+          "meditation_theme": "内なる平和",
+          "flower_of_the_day": "コスモス - 乙女の真心",
+          "energy_advice": "変化を受け入れる日"
         },
         {
           "day": 12,
@@ -2667,7 +3639,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "新次元への扉",
           "color_of_the_day": "若草色",
-          "recommended_tea": "柚子茶"
+          "recommended_tea": "柚子茶",
+          "lucky_number": 64,
+          "power_stone": "オパール",
+          "aroma_oil": "パチュリ",
+          "meditation_theme": "宇宙との繋がり",
+          "flower_of_the_day": "すずらん - 謙遜",
+          "energy_advice": "夢を描く時間"
         },
         {
           "day": 13,
@@ -2683,7 +3661,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "守護霊のささやき",
           "color_of_the_day": "黄金色",
-          "recommended_tea": "生姜茶"
+          "recommended_tea": "生姜茶",
+          "lucky_number": 65,
+          "power_stone": "ターコイズ",
+          "aroma_oil": "シダーウッド",
+          "meditation_theme": "直感力向上",
+          "flower_of_the_day": "菜の花 - 快活",
+          "energy_advice": "心を整理する日"
         },
         {
           "day": 14,
@@ -2699,7 +3683,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "願いが叶う予感",
           "color_of_the_day": "鋼青色",
-          "recommended_tea": "黒豆茶"
+          "recommended_tea": "黒豆茶",
+          "lucky_number": 66,
+          "power_stone": "エメラルド",
+          "aroma_oil": "カモミール",
+          "meditation_theme": "創造性開花",
+          "flower_of_the_day": "藤 - 優しさ",
+          "energy_advice": "自然と触れ合う日"
         },
         {
           "day": 15,
@@ -2715,7 +3705,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "心のデトックス",
           "color_of_the_day": "深紅色",
-          "recommended_tea": "アールグレイ"
+          "recommended_tea": "アールグレイ",
+          "lucky_number": 67,
+          "power_stone": "アメジスト",
+          "aroma_oil": "ラベンダー",
+          "meditation_theme": "感謝の瞑想",
+          "flower_of_the_day": "桜 - 精神の美",
+          "energy_advice": "今日は新しい挑戦の時"
         },
         {
           "day": 16,
@@ -2731,7 +3727,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "創造力爆発",
           "color_of_the_day": "金色",
-          "recommended_tea": "カモミールティー"
+          "recommended_tea": "カモミールティー",
+          "lucky_number": 68,
+          "power_stone": "ローズクォーツ",
+          "aroma_oil": "ユーカリ",
+          "meditation_theme": "慈悲の瞑想",
+          "flower_of_the_day": "梅 - 気品",
+          "energy_advice": "休息を大切にする日"
         },
         {
           "day": 17,
@@ -2747,7 +3749,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "人との縁を結ぶ",
           "color_of_the_day": "朱色",
-          "recommended_tea": "ペパーミントティー"
+          "recommended_tea": "ペパーミントティー",
+          "lucky_number": 69,
+          "power_stone": "クリスタル",
+          "aroma_oil": "ローズマリー",
+          "meditation_theme": "呼吸に集中",
+          "flower_of_the_day": "椿 - 控えめな素晴らしさ",
+          "energy_advice": "人との繋がりを深める日"
         },
         {
           "day": 18,
@@ -2763,7 +3771,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "未来への種まき",
           "color_of_the_day": "空色",
-          "recommended_tea": "緑茶"
+          "recommended_tea": "緑茶",
+          "lucky_number": 70,
+          "power_stone": "アクアマリン",
+          "aroma_oil": "オレンジ",
+          "meditation_theme": "マインドフルネス",
+          "flower_of_the_day": "菊 - 高貴",
+          "energy_advice": "創造性を発揮する時"
         },
         {
           "day": 19,
@@ -2779,7 +3793,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "宝物発見の予感",
           "color_of_the_day": "若草色",
-          "recommended_tea": "ほうじ茶"
+          "recommended_tea": "ほうじ茶",
+          "lucky_number": 71,
+          "power_stone": "ガーネット",
+          "aroma_oil": "レモングラス",
+          "meditation_theme": "ボディスキャン",
+          "flower_of_the_day": "蓮 - 清らかな心",
+          "energy_advice": "内省の時間を作る日"
         },
         {
           "day": 20,
@@ -2795,7 +3815,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "内なる光が輝く",
           "color_of_the_day": "黄金色",
-          "recommended_tea": "ジャスミンティー"
+          "recommended_tea": "ジャスミンティー",
+          "lucky_number": 72,
+          "power_stone": "ムーンストーン",
+          "aroma_oil": "イランイラン",
+          "meditation_theme": "愛と光の瞑想",
+          "flower_of_the_day": "薔薇 - 愛情",
+          "energy_advice": "感謝を表現する日"
         },
         {
           "day": 21,
@@ -2811,7 +3837,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "調和のメロディ",
           "color_of_the_day": "鋼青色",
-          "recommended_tea": "ルイボスティー"
+          "recommended_tea": "ルイボスティー",
+          "lucky_number": 73,
+          "power_stone": "ラピスラズリ",
+          "aroma_oil": "サンダルウッド",
+          "meditation_theme": "チャクラ調整",
+          "flower_of_the_day": "向日葵 - 憧れ",
+          "energy_advice": "勇気を出して行動する時"
         },
         {
           "day": 22,
@@ -2827,7 +3859,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "自然の叡智授受",
           "color_of_the_day": "深紅色",
-          "recommended_tea": "ローズヒップティー"
+          "recommended_tea": "ローズヒップティー",
+          "lucky_number": 74,
+          "power_stone": "マラカイト",
+          "aroma_oil": "フランキンセンス",
+          "meditation_theme": "グラウンディング",
+          "flower_of_the_day": "紫陽花 - 移り気",
+          "energy_advice": "直感に従う日"
         },
         {
           "day": 23,
@@ -2843,7 +3881,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "知恵の泉湧出",
           "color_of_the_day": "金色",
-          "recommended_tea": "白茶"
+          "recommended_tea": "白茶",
+          "lucky_number": 75,
+          "power_stone": "オニキス",
+          "aroma_oil": "ジャスミン",
+          "meditation_theme": "エネルギー浄化",
+          "flower_of_the_day": "牡丹 - 富貴",
+          "energy_advice": "学びを深める好機"
         },
         {
           "day": 24,
@@ -2859,7 +3903,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "至福の時間軸",
           "color_of_the_day": "朱色",
-          "recommended_tea": "烏龍茶"
+          "recommended_tea": "烏龍茶",
+          "lucky_number": 76,
+          "power_stone": "シトリン",
+          "aroma_oil": "ベルガモット",
+          "meditation_theme": "未来創造",
+          "flower_of_the_day": "百合 - 純粋",
+          "energy_advice": "愛を分かち合う日"
         },
         {
           "day": 25,
@@ -2875,7 +3925,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "運気上昇の兆し",
           "color_of_the_day": "空色",
-          "recommended_tea": "玄米茶"
+          "recommended_tea": "玄米茶",
+          "lucky_number": 77,
+          "power_stone": "ペリドット",
+          "aroma_oil": "ティーツリー",
+          "meditation_theme": "過去の癒し",
+          "flower_of_the_day": "カーネーション - 母の愛",
+          "energy_advice": "エネルギーを充電する時"
         },
         {
           "day": 26,
@@ -2891,7 +3947,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "心の扉が開放",
           "color_of_the_day": "若草色",
-          "recommended_tea": "抹茶"
+          "recommended_tea": "抹茶",
+          "lucky_number": 78,
+          "power_stone": "トルマリン",
+          "aroma_oil": "ゼラニウム",
+          "meditation_theme": "内なる平和",
+          "flower_of_the_day": "コスモス - 乙女の真心",
+          "energy_advice": "変化を受け入れる日"
         },
         {
           "day": 27,
@@ -2907,7 +3969,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "宇宙との同調",
           "color_of_the_day": "黄金色",
-          "recommended_tea": "柚子茶"
+          "recommended_tea": "柚子茶",
+          "lucky_number": 79,
+          "power_stone": "オパール",
+          "aroma_oil": "パチュリ",
+          "meditation_theme": "宇宙との繋がり",
+          "flower_of_the_day": "すずらん - 謙遜",
+          "energy_advice": "夢を描く時間"
         },
         {
           "day": 28,
@@ -2923,7 +3991,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "愛のバイブレーション",
           "color_of_the_day": "鋼青色",
-          "recommended_tea": "生姜茶"
+          "recommended_tea": "生姜茶",
+          "lucky_number": 80,
+          "power_stone": "ターコイズ",
+          "aroma_oil": "シダーウッド",
+          "meditation_theme": "直感力向上",
+          "flower_of_the_day": "菜の花 - 快活",
+          "energy_advice": "心を整理する日"
         },
         {
           "day": 29,
@@ -2939,7 +4013,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "豊かさの波動",
           "color_of_the_day": "深紅色",
-          "recommended_tea": "黒豆茶"
+          "recommended_tea": "黒豆茶",
+          "lucky_number": 81,
+          "power_stone": "エメラルド",
+          "aroma_oil": "カモミール",
+          "meditation_theme": "創造性開花",
+          "flower_of_the_day": "藤 - 優しさ",
+          "energy_advice": "自然と触れ合う日"
         },
         {
           "day": 30,
@@ -2955,7 +4035,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "運命の扉が開く日",
           "color_of_the_day": "金色",
-          "recommended_tea": "アールグレイ"
+          "recommended_tea": "アールグレイ",
+          "lucky_number": 82,
+          "power_stone": "アメジスト",
+          "aroma_oil": "ラベンダー",
+          "meditation_theme": "感謝の瞑想",
+          "flower_of_the_day": "桜 - 精神の美",
+          "energy_advice": "今日は新しい挑戦の時"
         }
       ]
     },
@@ -2965,7 +4051,7 @@
       "month_name": "July",
       "month_name_jp": "7月",
       "api_version": "v1",
-      "generated_at": "2025-06-20T08:45:25.833585",
+      "generated_at": "2025-06-20T09:23:31.166480",
       "days": [
         {
           "day": 1,
@@ -2981,7 +4067,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "宇宙からのメッセージ",
           "color_of_the_day": "朱色",
-          "recommended_tea": "カモミールティー"
+          "recommended_tea": "カモミールティー",
+          "lucky_number": 83,
+          "power_stone": "ローズクォーツ",
+          "aroma_oil": "ユーカリ",
+          "meditation_theme": "慈悲の瞑想",
+          "flower_of_the_day": "梅 - 気品",
+          "energy_advice": "休息を大切にする日"
         },
         {
           "day": 2,
@@ -2997,7 +4089,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "奇跡を呼ぶ波動",
           "color_of_the_day": "空色",
-          "recommended_tea": "ペパーミントティー"
+          "recommended_tea": "ペパーミントティー",
+          "lucky_number": 84,
+          "power_stone": "クリスタル",
+          "aroma_oil": "ローズマリー",
+          "meditation_theme": "呼吸に集中",
+          "flower_of_the_day": "椿 - 控えめな素晴らしさ",
+          "energy_advice": "人との繋がりを深める日"
         },
         {
           "day": 3,
@@ -3013,7 +4111,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "龍神様のご加護",
           "color_of_the_day": "若草色",
-          "recommended_tea": "緑茶"
+          "recommended_tea": "緑茶",
+          "lucky_number": 85,
+          "power_stone": "アクアマリン",
+          "aroma_oil": "オレンジ",
+          "meditation_theme": "マインドフルネス",
+          "flower_of_the_day": "菊 - 高貴",
+          "energy_advice": "創造性を発揮する時"
         },
         {
           "day": 4,
@@ -3029,7 +4133,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "金運上昇のサイン",
           "color_of_the_day": "黄金色",
-          "recommended_tea": "ほうじ茶"
+          "recommended_tea": "ほうじ茶",
+          "lucky_number": 86,
+          "power_stone": "ガーネット",
+          "aroma_oil": "レモングラス",
+          "meditation_theme": "ボディスキャン",
+          "flower_of_the_day": "蓮 - 清らかな心",
+          "energy_advice": "内省の時間を作る日"
         },
         {
           "day": 5,
@@ -3045,7 +4155,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "恋愛運絶好調",
           "color_of_the_day": "鋼青色",
-          "recommended_tea": "ジャスミンティー"
+          "recommended_tea": "ジャスミンティー",
+          "lucky_number": 87,
+          "power_stone": "ムーンストーン",
+          "aroma_oil": "イランイラン",
+          "meditation_theme": "愛と光の瞑想",
+          "flower_of_the_day": "薔薇 - 愛情",
+          "energy_advice": "感謝を表現する日"
         },
         {
           "day": 6,
@@ -3061,7 +4177,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "直感力が冴える",
           "color_of_the_day": "深紅色",
-          "recommended_tea": "ルイボスティー"
+          "recommended_tea": "ルイボスティー",
+          "lucky_number": 88,
+          "power_stone": "ラピスラズリ",
+          "aroma_oil": "サンダルウッド",
+          "meditation_theme": "チャクラ調整",
+          "flower_of_the_day": "向日葵 - 憧れ",
+          "energy_advice": "勇気を出して行動する時"
         },
         {
           "day": 7,
@@ -3077,7 +4199,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "隠れた才能開花",
           "color_of_the_day": "金色",
-          "recommended_tea": "ローズヒップティー"
+          "recommended_tea": "ローズヒップティー",
+          "lucky_number": 89,
+          "power_stone": "マラカイト",
+          "aroma_oil": "フランキンセンス",
+          "meditation_theme": "グラウンディング",
+          "flower_of_the_day": "紫陽花 - 移り気",
+          "energy_advice": "直感に従う日"
         },
         {
           "day": 8,
@@ -3093,7 +4221,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "人生の転機到来",
           "color_of_the_day": "朱色",
-          "recommended_tea": "白茶"
+          "recommended_tea": "白茶",
+          "lucky_number": 90,
+          "power_stone": "オニキス",
+          "aroma_oil": "ジャスミン",
+          "meditation_theme": "エネルギー浄化",
+          "flower_of_the_day": "牡丹 - 富貴",
+          "energy_advice": "学びを深める好機"
         },
         {
           "day": 9,
@@ -3109,7 +4243,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "幸運の風が吹く",
           "color_of_the_day": "空色",
-          "recommended_tea": "烏龍茶"
+          "recommended_tea": "烏龍茶",
+          "lucky_number": 91,
+          "power_stone": "シトリン",
+          "aroma_oil": "ベルガモット",
+          "meditation_theme": "未来創造",
+          "flower_of_the_day": "百合 - 純粋",
+          "energy_advice": "愛を分かち合う日"
         },
         {
           "day": 10,
@@ -3125,7 +4265,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "魂の成長期間",
           "color_of_the_day": "若草色",
-          "recommended_tea": "玄米茶"
+          "recommended_tea": "玄米茶",
+          "lucky_number": 92,
+          "power_stone": "ペリドット",
+          "aroma_oil": "ティーツリー",
+          "meditation_theme": "過去の癒し",
+          "flower_of_the_day": "カーネーション - 母の愛",
+          "energy_advice": "エネルギーを充電する時"
         },
         {
           "day": 11,
@@ -3141,7 +4287,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "エネルギー充電日",
           "color_of_the_day": "黄金色",
-          "recommended_tea": "抹茶"
+          "recommended_tea": "抹茶",
+          "lucky_number": 93,
+          "power_stone": "トルマリン",
+          "aroma_oil": "ゼラニウム",
+          "meditation_theme": "内なる平和",
+          "flower_of_the_day": "コスモス - 乙女の真心",
+          "energy_advice": "変化を受け入れる日"
         },
         {
           "day": 12,
@@ -3157,7 +4309,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "新次元への扉",
           "color_of_the_day": "鋼青色",
-          "recommended_tea": "柚子茶"
+          "recommended_tea": "柚子茶",
+          "lucky_number": 94,
+          "power_stone": "オパール",
+          "aroma_oil": "パチュリ",
+          "meditation_theme": "宇宙との繋がり",
+          "flower_of_the_day": "すずらん - 謙遜",
+          "energy_advice": "夢を描く時間"
         },
         {
           "day": 13,
@@ -3173,7 +4331,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "守護霊のささやき",
           "color_of_the_day": "深紅色",
-          "recommended_tea": "生姜茶"
+          "recommended_tea": "生姜茶",
+          "lucky_number": 95,
+          "power_stone": "ターコイズ",
+          "aroma_oil": "シダーウッド",
+          "meditation_theme": "直感力向上",
+          "flower_of_the_day": "菜の花 - 快活",
+          "energy_advice": "心を整理する日"
         },
         {
           "day": 14,
@@ -3189,7 +4353,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "願いが叶う予感",
           "color_of_the_day": "金色",
-          "recommended_tea": "黒豆茶"
+          "recommended_tea": "黒豆茶",
+          "lucky_number": 96,
+          "power_stone": "エメラルド",
+          "aroma_oil": "カモミール",
+          "meditation_theme": "創造性開花",
+          "flower_of_the_day": "藤 - 優しさ",
+          "energy_advice": "自然と触れ合う日"
         },
         {
           "day": 15,
@@ -3205,7 +4375,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "心のデトックス",
           "color_of_the_day": "朱色",
-          "recommended_tea": "アールグレイ"
+          "recommended_tea": "アールグレイ",
+          "lucky_number": 97,
+          "power_stone": "アメジスト",
+          "aroma_oil": "ラベンダー",
+          "meditation_theme": "感謝の瞑想",
+          "flower_of_the_day": "桜 - 精神の美",
+          "energy_advice": "今日は新しい挑戦の時"
         },
         {
           "day": 16,
@@ -3221,7 +4397,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "創造力爆発",
           "color_of_the_day": "空色",
-          "recommended_tea": "カモミールティー"
+          "recommended_tea": "カモミールティー",
+          "lucky_number": 98,
+          "power_stone": "ローズクォーツ",
+          "aroma_oil": "ユーカリ",
+          "meditation_theme": "慈悲の瞑想",
+          "flower_of_the_day": "梅 - 気品",
+          "energy_advice": "休息を大切にする日"
         },
         {
           "day": 17,
@@ -3237,7 +4419,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "人との縁を結ぶ",
           "color_of_the_day": "若草色",
-          "recommended_tea": "ペパーミントティー"
+          "recommended_tea": "ペパーミントティー",
+          "lucky_number": 99,
+          "power_stone": "クリスタル",
+          "aroma_oil": "ローズマリー",
+          "meditation_theme": "呼吸に集中",
+          "flower_of_the_day": "椿 - 控えめな素晴らしさ",
+          "energy_advice": "人との繋がりを深める日"
         },
         {
           "day": 18,
@@ -3253,7 +4441,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "未来への種まき",
           "color_of_the_day": "黄金色",
-          "recommended_tea": "緑茶"
+          "recommended_tea": "緑茶",
+          "lucky_number": 1,
+          "power_stone": "アクアマリン",
+          "aroma_oil": "オレンジ",
+          "meditation_theme": "マインドフルネス",
+          "flower_of_the_day": "菊 - 高貴",
+          "energy_advice": "創造性を発揮する時"
         },
         {
           "day": 19,
@@ -3269,7 +4463,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "宝物発見の予感",
           "color_of_the_day": "鋼青色",
-          "recommended_tea": "ほうじ茶"
+          "recommended_tea": "ほうじ茶",
+          "lucky_number": 2,
+          "power_stone": "ガーネット",
+          "aroma_oil": "レモングラス",
+          "meditation_theme": "ボディスキャン",
+          "flower_of_the_day": "蓮 - 清らかな心",
+          "energy_advice": "内省の時間を作る日"
         },
         {
           "day": 20,
@@ -3285,7 +4485,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "内なる光が輝く",
           "color_of_the_day": "深紅色",
-          "recommended_tea": "ジャスミンティー"
+          "recommended_tea": "ジャスミンティー",
+          "lucky_number": 3,
+          "power_stone": "ムーンストーン",
+          "aroma_oil": "イランイラン",
+          "meditation_theme": "愛と光の瞑想",
+          "flower_of_the_day": "薔薇 - 愛情",
+          "energy_advice": "感謝を表現する日"
         },
         {
           "day": 21,
@@ -3301,7 +4507,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "調和のメロディ",
           "color_of_the_day": "金色",
-          "recommended_tea": "ルイボスティー"
+          "recommended_tea": "ルイボスティー",
+          "lucky_number": 4,
+          "power_stone": "ラピスラズリ",
+          "aroma_oil": "サンダルウッド",
+          "meditation_theme": "チャクラ調整",
+          "flower_of_the_day": "向日葵 - 憧れ",
+          "energy_advice": "勇気を出して行動する時"
         },
         {
           "day": 22,
@@ -3317,7 +4529,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "自然の叡智授受",
           "color_of_the_day": "朱色",
-          "recommended_tea": "ローズヒップティー"
+          "recommended_tea": "ローズヒップティー",
+          "lucky_number": 5,
+          "power_stone": "マラカイト",
+          "aroma_oil": "フランキンセンス",
+          "meditation_theme": "グラウンディング",
+          "flower_of_the_day": "紫陽花 - 移り気",
+          "energy_advice": "直感に従う日"
         },
         {
           "day": 23,
@@ -3333,7 +4551,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "知恵の泉湧出",
           "color_of_the_day": "空色",
-          "recommended_tea": "白茶"
+          "recommended_tea": "白茶",
+          "lucky_number": 6,
+          "power_stone": "オニキス",
+          "aroma_oil": "ジャスミン",
+          "meditation_theme": "エネルギー浄化",
+          "flower_of_the_day": "牡丹 - 富貴",
+          "energy_advice": "学びを深める好機"
         },
         {
           "day": 24,
@@ -3349,7 +4573,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "至福の時間軸",
           "color_of_the_day": "若草色",
-          "recommended_tea": "烏龍茶"
+          "recommended_tea": "烏龍茶",
+          "lucky_number": 7,
+          "power_stone": "シトリン",
+          "aroma_oil": "ベルガモット",
+          "meditation_theme": "未来創造",
+          "flower_of_the_day": "百合 - 純粋",
+          "energy_advice": "愛を分かち合う日"
         },
         {
           "day": 25,
@@ -3365,7 +4595,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "運気上昇の兆し",
           "color_of_the_day": "黄金色",
-          "recommended_tea": "玄米茶"
+          "recommended_tea": "玄米茶",
+          "lucky_number": 8,
+          "power_stone": "ペリドット",
+          "aroma_oil": "ティーツリー",
+          "meditation_theme": "過去の癒し",
+          "flower_of_the_day": "カーネーション - 母の愛",
+          "energy_advice": "エネルギーを充電する時"
         },
         {
           "day": 26,
@@ -3381,7 +4617,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "心の扉が開放",
           "color_of_the_day": "鋼青色",
-          "recommended_tea": "抹茶"
+          "recommended_tea": "抹茶",
+          "lucky_number": 9,
+          "power_stone": "トルマリン",
+          "aroma_oil": "ゼラニウム",
+          "meditation_theme": "内なる平和",
+          "flower_of_the_day": "コスモス - 乙女の真心",
+          "energy_advice": "変化を受け入れる日"
         },
         {
           "day": 27,
@@ -3397,7 +4639,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "宇宙との同調",
           "color_of_the_day": "深紅色",
-          "recommended_tea": "柚子茶"
+          "recommended_tea": "柚子茶",
+          "lucky_number": 10,
+          "power_stone": "オパール",
+          "aroma_oil": "パチュリ",
+          "meditation_theme": "宇宙との繋がり",
+          "flower_of_the_day": "すずらん - 謙遜",
+          "energy_advice": "夢を描く時間"
         },
         {
           "day": 28,
@@ -3413,7 +4661,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "愛のバイブレーション",
           "color_of_the_day": "金色",
-          "recommended_tea": "生姜茶"
+          "recommended_tea": "生姜茶",
+          "lucky_number": 11,
+          "power_stone": "ターコイズ",
+          "aroma_oil": "シダーウッド",
+          "meditation_theme": "直感力向上",
+          "flower_of_the_day": "菜の花 - 快活",
+          "energy_advice": "心を整理する日"
         },
         {
           "day": 29,
@@ -3429,7 +4683,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "豊かさの波動",
           "color_of_the_day": "朱色",
-          "recommended_tea": "黒豆茶"
+          "recommended_tea": "黒豆茶",
+          "lucky_number": 12,
+          "power_stone": "エメラルド",
+          "aroma_oil": "カモミール",
+          "meditation_theme": "創造性開花",
+          "flower_of_the_day": "藤 - 優しさ",
+          "energy_advice": "自然と触れ合う日"
         },
         {
           "day": 30,
@@ -3445,7 +4705,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "運命の扉が開く日",
           "color_of_the_day": "空色",
-          "recommended_tea": "アールグレイ"
+          "recommended_tea": "アールグレイ",
+          "lucky_number": 13,
+          "power_stone": "アメジスト",
+          "aroma_oil": "ラベンダー",
+          "meditation_theme": "感謝の瞑想",
+          "flower_of_the_day": "桜 - 精神の美",
+          "energy_advice": "今日は新しい挑戦の時"
         },
         {
           "day": 31,
@@ -3461,7 +4727,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "宇宙からのメッセージ",
           "color_of_the_day": "若草色",
-          "recommended_tea": "カモミールティー"
+          "recommended_tea": "カモミールティー",
+          "lucky_number": 14,
+          "power_stone": "ローズクォーツ",
+          "aroma_oil": "ユーカリ",
+          "meditation_theme": "慈悲の瞑想",
+          "flower_of_the_day": "梅 - 気品",
+          "energy_advice": "休息を大切にする日"
         }
       ]
     },
@@ -3471,7 +4743,7 @@
       "month_name": "August",
       "month_name_jp": "8月",
       "api_version": "v1",
-      "generated_at": "2025-06-20T08:45:25.837087",
+      "generated_at": "2025-06-20T09:23:31.170324",
       "days": [
         {
           "day": 1,
@@ -3487,7 +4759,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "奇跡を呼ぶ波動",
           "color_of_the_day": "黄金色",
-          "recommended_tea": "ペパーミントティー"
+          "recommended_tea": "ペパーミントティー",
+          "lucky_number": 15,
+          "power_stone": "クリスタル",
+          "aroma_oil": "ローズマリー",
+          "meditation_theme": "呼吸に集中",
+          "flower_of_the_day": "椿 - 控えめな素晴らしさ",
+          "energy_advice": "人との繋がりを深める日"
         },
         {
           "day": 2,
@@ -3503,7 +4781,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "龍神様のご加護",
           "color_of_the_day": "鋼青色",
-          "recommended_tea": "緑茶"
+          "recommended_tea": "緑茶",
+          "lucky_number": 16,
+          "power_stone": "アクアマリン",
+          "aroma_oil": "オレンジ",
+          "meditation_theme": "マインドフルネス",
+          "flower_of_the_day": "菊 - 高貴",
+          "energy_advice": "創造性を発揮する時"
         },
         {
           "day": 3,
@@ -3519,7 +4803,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "金運上昇のサイン",
           "color_of_the_day": "深紅色",
-          "recommended_tea": "ほうじ茶"
+          "recommended_tea": "ほうじ茶",
+          "lucky_number": 17,
+          "power_stone": "ガーネット",
+          "aroma_oil": "レモングラス",
+          "meditation_theme": "ボディスキャン",
+          "flower_of_the_day": "蓮 - 清らかな心",
+          "energy_advice": "内省の時間を作る日"
         },
         {
           "day": 4,
@@ -3535,7 +4825,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "恋愛運絶好調",
           "color_of_the_day": "金色",
-          "recommended_tea": "ジャスミンティー"
+          "recommended_tea": "ジャスミンティー",
+          "lucky_number": 18,
+          "power_stone": "ムーンストーン",
+          "aroma_oil": "イランイラン",
+          "meditation_theme": "愛と光の瞑想",
+          "flower_of_the_day": "薔薇 - 愛情",
+          "energy_advice": "感謝を表現する日"
         },
         {
           "day": 5,
@@ -3551,7 +4847,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "直感力が冴える",
           "color_of_the_day": "朱色",
-          "recommended_tea": "ルイボスティー"
+          "recommended_tea": "ルイボスティー",
+          "lucky_number": 19,
+          "power_stone": "ラピスラズリ",
+          "aroma_oil": "サンダルウッド",
+          "meditation_theme": "チャクラ調整",
+          "flower_of_the_day": "向日葵 - 憧れ",
+          "energy_advice": "勇気を出して行動する時"
         },
         {
           "day": 6,
@@ -3567,7 +4869,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "隠れた才能開花",
           "color_of_the_day": "空色",
-          "recommended_tea": "ローズヒップティー"
+          "recommended_tea": "ローズヒップティー",
+          "lucky_number": 20,
+          "power_stone": "マラカイト",
+          "aroma_oil": "フランキンセンス",
+          "meditation_theme": "グラウンディング",
+          "flower_of_the_day": "紫陽花 - 移り気",
+          "energy_advice": "直感に従う日"
         },
         {
           "day": 7,
@@ -3583,7 +4891,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "人生の転機到来",
           "color_of_the_day": "若草色",
-          "recommended_tea": "白茶"
+          "recommended_tea": "白茶",
+          "lucky_number": 21,
+          "power_stone": "オニキス",
+          "aroma_oil": "ジャスミン",
+          "meditation_theme": "エネルギー浄化",
+          "flower_of_the_day": "牡丹 - 富貴",
+          "energy_advice": "学びを深める好機"
         },
         {
           "day": 8,
@@ -3599,7 +4913,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "幸運の風が吹く",
           "color_of_the_day": "黄金色",
-          "recommended_tea": "烏龍茶"
+          "recommended_tea": "烏龍茶",
+          "lucky_number": 22,
+          "power_stone": "シトリン",
+          "aroma_oil": "ベルガモット",
+          "meditation_theme": "未来創造",
+          "flower_of_the_day": "百合 - 純粋",
+          "energy_advice": "愛を分かち合う日"
         },
         {
           "day": 9,
@@ -3615,7 +4935,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "魂の成長期間",
           "color_of_the_day": "鋼青色",
-          "recommended_tea": "玄米茶"
+          "recommended_tea": "玄米茶",
+          "lucky_number": 23,
+          "power_stone": "ペリドット",
+          "aroma_oil": "ティーツリー",
+          "meditation_theme": "過去の癒し",
+          "flower_of_the_day": "カーネーション - 母の愛",
+          "energy_advice": "エネルギーを充電する時"
         },
         {
           "day": 10,
@@ -3631,7 +4957,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "エネルギー充電日",
           "color_of_the_day": "深紅色",
-          "recommended_tea": "抹茶"
+          "recommended_tea": "抹茶",
+          "lucky_number": 24,
+          "power_stone": "トルマリン",
+          "aroma_oil": "ゼラニウム",
+          "meditation_theme": "内なる平和",
+          "flower_of_the_day": "コスモス - 乙女の真心",
+          "energy_advice": "変化を受け入れる日"
         },
         {
           "day": 11,
@@ -3647,7 +4979,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "新次元への扉",
           "color_of_the_day": "金色",
-          "recommended_tea": "柚子茶"
+          "recommended_tea": "柚子茶",
+          "lucky_number": 25,
+          "power_stone": "オパール",
+          "aroma_oil": "パチュリ",
+          "meditation_theme": "宇宙との繋がり",
+          "flower_of_the_day": "すずらん - 謙遜",
+          "energy_advice": "夢を描く時間"
         },
         {
           "day": 12,
@@ -3663,7 +5001,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "守護霊のささやき",
           "color_of_the_day": "朱色",
-          "recommended_tea": "生姜茶"
+          "recommended_tea": "生姜茶",
+          "lucky_number": 26,
+          "power_stone": "ターコイズ",
+          "aroma_oil": "シダーウッド",
+          "meditation_theme": "直感力向上",
+          "flower_of_the_day": "菜の花 - 快活",
+          "energy_advice": "心を整理する日"
         },
         {
           "day": 13,
@@ -3679,7 +5023,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "願いが叶う予感",
           "color_of_the_day": "空色",
-          "recommended_tea": "黒豆茶"
+          "recommended_tea": "黒豆茶",
+          "lucky_number": 27,
+          "power_stone": "エメラルド",
+          "aroma_oil": "カモミール",
+          "meditation_theme": "創造性開花",
+          "flower_of_the_day": "藤 - 優しさ",
+          "energy_advice": "自然と触れ合う日"
         },
         {
           "day": 14,
@@ -3695,7 +5045,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "心のデトックス",
           "color_of_the_day": "若草色",
-          "recommended_tea": "アールグレイ"
+          "recommended_tea": "アールグレイ",
+          "lucky_number": 28,
+          "power_stone": "アメジスト",
+          "aroma_oil": "ラベンダー",
+          "meditation_theme": "感謝の瞑想",
+          "flower_of_the_day": "桜 - 精神の美",
+          "energy_advice": "今日は新しい挑戦の時"
         },
         {
           "day": 15,
@@ -3711,7 +5067,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "創造力爆発",
           "color_of_the_day": "黄金色",
-          "recommended_tea": "カモミールティー"
+          "recommended_tea": "カモミールティー",
+          "lucky_number": 29,
+          "power_stone": "ローズクォーツ",
+          "aroma_oil": "ユーカリ",
+          "meditation_theme": "慈悲の瞑想",
+          "flower_of_the_day": "梅 - 気品",
+          "energy_advice": "休息を大切にする日"
         },
         {
           "day": 16,
@@ -3727,7 +5089,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "人との縁を結ぶ",
           "color_of_the_day": "鋼青色",
-          "recommended_tea": "ペパーミントティー"
+          "recommended_tea": "ペパーミントティー",
+          "lucky_number": 30,
+          "power_stone": "クリスタル",
+          "aroma_oil": "ローズマリー",
+          "meditation_theme": "呼吸に集中",
+          "flower_of_the_day": "椿 - 控えめな素晴らしさ",
+          "energy_advice": "人との繋がりを深める日"
         },
         {
           "day": 17,
@@ -3743,7 +5111,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "未来への種まき",
           "color_of_the_day": "深紅色",
-          "recommended_tea": "緑茶"
+          "recommended_tea": "緑茶",
+          "lucky_number": 31,
+          "power_stone": "アクアマリン",
+          "aroma_oil": "オレンジ",
+          "meditation_theme": "マインドフルネス",
+          "flower_of_the_day": "菊 - 高貴",
+          "energy_advice": "創造性を発揮する時"
         },
         {
           "day": 18,
@@ -3759,7 +5133,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "宝物発見の予感",
           "color_of_the_day": "金色",
-          "recommended_tea": "ほうじ茶"
+          "recommended_tea": "ほうじ茶",
+          "lucky_number": 32,
+          "power_stone": "ガーネット",
+          "aroma_oil": "レモングラス",
+          "meditation_theme": "ボディスキャン",
+          "flower_of_the_day": "蓮 - 清らかな心",
+          "energy_advice": "内省の時間を作る日"
         },
         {
           "day": 19,
@@ -3775,7 +5155,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "内なる光が輝く",
           "color_of_the_day": "朱色",
-          "recommended_tea": "ジャスミンティー"
+          "recommended_tea": "ジャスミンティー",
+          "lucky_number": 33,
+          "power_stone": "ムーンストーン",
+          "aroma_oil": "イランイラン",
+          "meditation_theme": "愛と光の瞑想",
+          "flower_of_the_day": "薔薇 - 愛情",
+          "energy_advice": "感謝を表現する日"
         },
         {
           "day": 20,
@@ -3791,7 +5177,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "調和のメロディ",
           "color_of_the_day": "空色",
-          "recommended_tea": "ルイボスティー"
+          "recommended_tea": "ルイボスティー",
+          "lucky_number": 34,
+          "power_stone": "ラピスラズリ",
+          "aroma_oil": "サンダルウッド",
+          "meditation_theme": "チャクラ調整",
+          "flower_of_the_day": "向日葵 - 憧れ",
+          "energy_advice": "勇気を出して行動する時"
         },
         {
           "day": 21,
@@ -3807,7 +5199,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "自然の叡智授受",
           "color_of_the_day": "若草色",
-          "recommended_tea": "ローズヒップティー"
+          "recommended_tea": "ローズヒップティー",
+          "lucky_number": 35,
+          "power_stone": "マラカイト",
+          "aroma_oil": "フランキンセンス",
+          "meditation_theme": "グラウンディング",
+          "flower_of_the_day": "紫陽花 - 移り気",
+          "energy_advice": "直感に従う日"
         },
         {
           "day": 22,
@@ -3823,7 +5221,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "知恵の泉湧出",
           "color_of_the_day": "黄金色",
-          "recommended_tea": "白茶"
+          "recommended_tea": "白茶",
+          "lucky_number": 36,
+          "power_stone": "オニキス",
+          "aroma_oil": "ジャスミン",
+          "meditation_theme": "エネルギー浄化",
+          "flower_of_the_day": "牡丹 - 富貴",
+          "energy_advice": "学びを深める好機"
         },
         {
           "day": 23,
@@ -3839,7 +5243,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "至福の時間軸",
           "color_of_the_day": "鋼青色",
-          "recommended_tea": "烏龍茶"
+          "recommended_tea": "烏龍茶",
+          "lucky_number": 37,
+          "power_stone": "シトリン",
+          "aroma_oil": "ベルガモット",
+          "meditation_theme": "未来創造",
+          "flower_of_the_day": "百合 - 純粋",
+          "energy_advice": "愛を分かち合う日"
         },
         {
           "day": 24,
@@ -3855,7 +5265,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "運気上昇の兆し",
           "color_of_the_day": "深紅色",
-          "recommended_tea": "玄米茶"
+          "recommended_tea": "玄米茶",
+          "lucky_number": 38,
+          "power_stone": "ペリドット",
+          "aroma_oil": "ティーツリー",
+          "meditation_theme": "過去の癒し",
+          "flower_of_the_day": "カーネーション - 母の愛",
+          "energy_advice": "エネルギーを充電する時"
         },
         {
           "day": 25,
@@ -3871,7 +5287,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "心の扉が開放",
           "color_of_the_day": "金色",
-          "recommended_tea": "抹茶"
+          "recommended_tea": "抹茶",
+          "lucky_number": 39,
+          "power_stone": "トルマリン",
+          "aroma_oil": "ゼラニウム",
+          "meditation_theme": "内なる平和",
+          "flower_of_the_day": "コスモス - 乙女の真心",
+          "energy_advice": "変化を受け入れる日"
         },
         {
           "day": 26,
@@ -3887,7 +5309,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "宇宙との同調",
           "color_of_the_day": "朱色",
-          "recommended_tea": "柚子茶"
+          "recommended_tea": "柚子茶",
+          "lucky_number": 40,
+          "power_stone": "オパール",
+          "aroma_oil": "パチュリ",
+          "meditation_theme": "宇宙との繋がり",
+          "flower_of_the_day": "すずらん - 謙遜",
+          "energy_advice": "夢を描く時間"
         },
         {
           "day": 27,
@@ -3903,7 +5331,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "愛のバイブレーション",
           "color_of_the_day": "空色",
-          "recommended_tea": "生姜茶"
+          "recommended_tea": "生姜茶",
+          "lucky_number": 41,
+          "power_stone": "ターコイズ",
+          "aroma_oil": "シダーウッド",
+          "meditation_theme": "直感力向上",
+          "flower_of_the_day": "菜の花 - 快活",
+          "energy_advice": "心を整理する日"
         },
         {
           "day": 28,
@@ -3919,7 +5353,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "豊かさの波動",
           "color_of_the_day": "若草色",
-          "recommended_tea": "黒豆茶"
+          "recommended_tea": "黒豆茶",
+          "lucky_number": 42,
+          "power_stone": "エメラルド",
+          "aroma_oil": "カモミール",
+          "meditation_theme": "創造性開花",
+          "flower_of_the_day": "藤 - 優しさ",
+          "energy_advice": "自然と触れ合う日"
         },
         {
           "day": 29,
@@ -3935,7 +5375,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "運命の扉が開く日",
           "color_of_the_day": "黄金色",
-          "recommended_tea": "アールグレイ"
+          "recommended_tea": "アールグレイ",
+          "lucky_number": 43,
+          "power_stone": "アメジスト",
+          "aroma_oil": "ラベンダー",
+          "meditation_theme": "感謝の瞑想",
+          "flower_of_the_day": "桜 - 精神の美",
+          "energy_advice": "今日は新しい挑戦の時"
         },
         {
           "day": 30,
@@ -3951,7 +5397,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "宇宙からのメッセージ",
           "color_of_the_day": "鋼青色",
-          "recommended_tea": "カモミールティー"
+          "recommended_tea": "カモミールティー",
+          "lucky_number": 44,
+          "power_stone": "ローズクォーツ",
+          "aroma_oil": "ユーカリ",
+          "meditation_theme": "慈悲の瞑想",
+          "flower_of_the_day": "梅 - 気品",
+          "energy_advice": "休息を大切にする日"
         },
         {
           "day": 31,
@@ -3967,7 +5419,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "奇跡を呼ぶ波動",
           "color_of_the_day": "深紅色",
-          "recommended_tea": "ペパーミントティー"
+          "recommended_tea": "ペパーミントティー",
+          "lucky_number": 45,
+          "power_stone": "クリスタル",
+          "aroma_oil": "ローズマリー",
+          "meditation_theme": "呼吸に集中",
+          "flower_of_the_day": "椿 - 控えめな素晴らしさ",
+          "energy_advice": "人との繋がりを深める日"
         }
       ]
     },
@@ -3977,7 +5435,7 @@
       "month_name": "September",
       "month_name_jp": "9月",
       "api_version": "v1",
-      "generated_at": "2025-06-20T08:45:25.839855",
+      "generated_at": "2025-06-20T09:23:31.174058",
       "days": [
         {
           "day": 1,
@@ -3993,7 +5451,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "龍神様のご加護",
           "color_of_the_day": "金色",
-          "recommended_tea": "緑茶"
+          "recommended_tea": "緑茶",
+          "lucky_number": 46,
+          "power_stone": "アクアマリン",
+          "aroma_oil": "オレンジ",
+          "meditation_theme": "マインドフルネス",
+          "flower_of_the_day": "菊 - 高貴",
+          "energy_advice": "創造性を発揮する時"
         },
         {
           "day": 2,
@@ -4009,7 +5473,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "金運上昇のサイン",
           "color_of_the_day": "朱色",
-          "recommended_tea": "ほうじ茶"
+          "recommended_tea": "ほうじ茶",
+          "lucky_number": 47,
+          "power_stone": "ガーネット",
+          "aroma_oil": "レモングラス",
+          "meditation_theme": "ボディスキャン",
+          "flower_of_the_day": "蓮 - 清らかな心",
+          "energy_advice": "内省の時間を作る日"
         },
         {
           "day": 3,
@@ -4025,7 +5495,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "恋愛運絶好調",
           "color_of_the_day": "空色",
-          "recommended_tea": "ジャスミンティー"
+          "recommended_tea": "ジャスミンティー",
+          "lucky_number": 48,
+          "power_stone": "ムーンストーン",
+          "aroma_oil": "イランイラン",
+          "meditation_theme": "愛と光の瞑想",
+          "flower_of_the_day": "薔薇 - 愛情",
+          "energy_advice": "感謝を表現する日"
         },
         {
           "day": 4,
@@ -4041,7 +5517,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "直感力が冴える",
           "color_of_the_day": "若草色",
-          "recommended_tea": "ルイボスティー"
+          "recommended_tea": "ルイボスティー",
+          "lucky_number": 49,
+          "power_stone": "ラピスラズリ",
+          "aroma_oil": "サンダルウッド",
+          "meditation_theme": "チャクラ調整",
+          "flower_of_the_day": "向日葵 - 憧れ",
+          "energy_advice": "勇気を出して行動する時"
         },
         {
           "day": 5,
@@ -4057,7 +5539,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "隠れた才能開花",
           "color_of_the_day": "黄金色",
-          "recommended_tea": "ローズヒップティー"
+          "recommended_tea": "ローズヒップティー",
+          "lucky_number": 50,
+          "power_stone": "マラカイト",
+          "aroma_oil": "フランキンセンス",
+          "meditation_theme": "グラウンディング",
+          "flower_of_the_day": "紫陽花 - 移り気",
+          "energy_advice": "直感に従う日"
         },
         {
           "day": 6,
@@ -4073,7 +5561,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "人生の転機到来",
           "color_of_the_day": "鋼青色",
-          "recommended_tea": "白茶"
+          "recommended_tea": "白茶",
+          "lucky_number": 51,
+          "power_stone": "オニキス",
+          "aroma_oil": "ジャスミン",
+          "meditation_theme": "エネルギー浄化",
+          "flower_of_the_day": "牡丹 - 富貴",
+          "energy_advice": "学びを深める好機"
         },
         {
           "day": 7,
@@ -4089,7 +5583,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "幸運の風が吹く",
           "color_of_the_day": "深紅色",
-          "recommended_tea": "烏龍茶"
+          "recommended_tea": "烏龍茶",
+          "lucky_number": 52,
+          "power_stone": "シトリン",
+          "aroma_oil": "ベルガモット",
+          "meditation_theme": "未来創造",
+          "flower_of_the_day": "百合 - 純粋",
+          "energy_advice": "愛を分かち合う日"
         },
         {
           "day": 8,
@@ -4105,7 +5605,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "魂の成長期間",
           "color_of_the_day": "金色",
-          "recommended_tea": "玄米茶"
+          "recommended_tea": "玄米茶",
+          "lucky_number": 53,
+          "power_stone": "ペリドット",
+          "aroma_oil": "ティーツリー",
+          "meditation_theme": "過去の癒し",
+          "flower_of_the_day": "カーネーション - 母の愛",
+          "energy_advice": "エネルギーを充電する時"
         },
         {
           "day": 9,
@@ -4121,7 +5627,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "エネルギー充電日",
           "color_of_the_day": "朱色",
-          "recommended_tea": "抹茶"
+          "recommended_tea": "抹茶",
+          "lucky_number": 54,
+          "power_stone": "トルマリン",
+          "aroma_oil": "ゼラニウム",
+          "meditation_theme": "内なる平和",
+          "flower_of_the_day": "コスモス - 乙女の真心",
+          "energy_advice": "変化を受け入れる日"
         },
         {
           "day": 10,
@@ -4137,7 +5649,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "新次元への扉",
           "color_of_the_day": "空色",
-          "recommended_tea": "柚子茶"
+          "recommended_tea": "柚子茶",
+          "lucky_number": 55,
+          "power_stone": "オパール",
+          "aroma_oil": "パチュリ",
+          "meditation_theme": "宇宙との繋がり",
+          "flower_of_the_day": "すずらん - 謙遜",
+          "energy_advice": "夢を描く時間"
         },
         {
           "day": 11,
@@ -4153,7 +5671,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "守護霊のささやき",
           "color_of_the_day": "若草色",
-          "recommended_tea": "生姜茶"
+          "recommended_tea": "生姜茶",
+          "lucky_number": 56,
+          "power_stone": "ターコイズ",
+          "aroma_oil": "シダーウッド",
+          "meditation_theme": "直感力向上",
+          "flower_of_the_day": "菜の花 - 快活",
+          "energy_advice": "心を整理する日"
         },
         {
           "day": 12,
@@ -4169,7 +5693,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "願いが叶う予感",
           "color_of_the_day": "黄金色",
-          "recommended_tea": "黒豆茶"
+          "recommended_tea": "黒豆茶",
+          "lucky_number": 57,
+          "power_stone": "エメラルド",
+          "aroma_oil": "カモミール",
+          "meditation_theme": "創造性開花",
+          "flower_of_the_day": "藤 - 優しさ",
+          "energy_advice": "自然と触れ合う日"
         },
         {
           "day": 13,
@@ -4185,7 +5715,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "心のデトックス",
           "color_of_the_day": "鋼青色",
-          "recommended_tea": "アールグレイ"
+          "recommended_tea": "アールグレイ",
+          "lucky_number": 58,
+          "power_stone": "アメジスト",
+          "aroma_oil": "ラベンダー",
+          "meditation_theme": "感謝の瞑想",
+          "flower_of_the_day": "桜 - 精神の美",
+          "energy_advice": "今日は新しい挑戦の時"
         },
         {
           "day": 14,
@@ -4201,7 +5737,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "創造力爆発",
           "color_of_the_day": "深紅色",
-          "recommended_tea": "カモミールティー"
+          "recommended_tea": "カモミールティー",
+          "lucky_number": 59,
+          "power_stone": "ローズクォーツ",
+          "aroma_oil": "ユーカリ",
+          "meditation_theme": "慈悲の瞑想",
+          "flower_of_the_day": "梅 - 気品",
+          "energy_advice": "休息を大切にする日"
         },
         {
           "day": 15,
@@ -4217,7 +5759,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "人との縁を結ぶ",
           "color_of_the_day": "金色",
-          "recommended_tea": "ペパーミントティー"
+          "recommended_tea": "ペパーミントティー",
+          "lucky_number": 60,
+          "power_stone": "クリスタル",
+          "aroma_oil": "ローズマリー",
+          "meditation_theme": "呼吸に集中",
+          "flower_of_the_day": "椿 - 控えめな素晴らしさ",
+          "energy_advice": "人との繋がりを深める日"
         },
         {
           "day": 16,
@@ -4233,7 +5781,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "未来への種まき",
           "color_of_the_day": "朱色",
-          "recommended_tea": "緑茶"
+          "recommended_tea": "緑茶",
+          "lucky_number": 61,
+          "power_stone": "アクアマリン",
+          "aroma_oil": "オレンジ",
+          "meditation_theme": "マインドフルネス",
+          "flower_of_the_day": "菊 - 高貴",
+          "energy_advice": "創造性を発揮する時"
         },
         {
           "day": 17,
@@ -4249,7 +5803,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "宝物発見の予感",
           "color_of_the_day": "空色",
-          "recommended_tea": "ほうじ茶"
+          "recommended_tea": "ほうじ茶",
+          "lucky_number": 62,
+          "power_stone": "ガーネット",
+          "aroma_oil": "レモングラス",
+          "meditation_theme": "ボディスキャン",
+          "flower_of_the_day": "蓮 - 清らかな心",
+          "energy_advice": "内省の時間を作る日"
         },
         {
           "day": 18,
@@ -4265,7 +5825,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "内なる光が輝く",
           "color_of_the_day": "若草色",
-          "recommended_tea": "ジャスミンティー"
+          "recommended_tea": "ジャスミンティー",
+          "lucky_number": 63,
+          "power_stone": "ムーンストーン",
+          "aroma_oil": "イランイラン",
+          "meditation_theme": "愛と光の瞑想",
+          "flower_of_the_day": "薔薇 - 愛情",
+          "energy_advice": "感謝を表現する日"
         },
         {
           "day": 19,
@@ -4281,7 +5847,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "調和のメロディ",
           "color_of_the_day": "黄金色",
-          "recommended_tea": "ルイボスティー"
+          "recommended_tea": "ルイボスティー",
+          "lucky_number": 64,
+          "power_stone": "ラピスラズリ",
+          "aroma_oil": "サンダルウッド",
+          "meditation_theme": "チャクラ調整",
+          "flower_of_the_day": "向日葵 - 憧れ",
+          "energy_advice": "勇気を出して行動する時"
         },
         {
           "day": 20,
@@ -4297,7 +5869,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "自然の叡智授受",
           "color_of_the_day": "鋼青色",
-          "recommended_tea": "ローズヒップティー"
+          "recommended_tea": "ローズヒップティー",
+          "lucky_number": 65,
+          "power_stone": "マラカイト",
+          "aroma_oil": "フランキンセンス",
+          "meditation_theme": "グラウンディング",
+          "flower_of_the_day": "紫陽花 - 移り気",
+          "energy_advice": "直感に従う日"
         },
         {
           "day": 21,
@@ -4313,7 +5891,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "知恵の泉湧出",
           "color_of_the_day": "深紅色",
-          "recommended_tea": "白茶"
+          "recommended_tea": "白茶",
+          "lucky_number": 66,
+          "power_stone": "オニキス",
+          "aroma_oil": "ジャスミン",
+          "meditation_theme": "エネルギー浄化",
+          "flower_of_the_day": "牡丹 - 富貴",
+          "energy_advice": "学びを深める好機"
         },
         {
           "day": 22,
@@ -4329,7 +5913,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "至福の時間軸",
           "color_of_the_day": "金色",
-          "recommended_tea": "烏龍茶"
+          "recommended_tea": "烏龍茶",
+          "lucky_number": 67,
+          "power_stone": "シトリン",
+          "aroma_oil": "ベルガモット",
+          "meditation_theme": "未来創造",
+          "flower_of_the_day": "百合 - 純粋",
+          "energy_advice": "愛を分かち合う日"
         },
         {
           "day": 23,
@@ -4345,7 +5935,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "運気上昇の兆し",
           "color_of_the_day": "朱色",
-          "recommended_tea": "玄米茶"
+          "recommended_tea": "玄米茶",
+          "lucky_number": 68,
+          "power_stone": "ペリドット",
+          "aroma_oil": "ティーツリー",
+          "meditation_theme": "過去の癒し",
+          "flower_of_the_day": "カーネーション - 母の愛",
+          "energy_advice": "エネルギーを充電する時"
         },
         {
           "day": 24,
@@ -4361,7 +5957,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "心の扉が開放",
           "color_of_the_day": "空色",
-          "recommended_tea": "抹茶"
+          "recommended_tea": "抹茶",
+          "lucky_number": 69,
+          "power_stone": "トルマリン",
+          "aroma_oil": "ゼラニウム",
+          "meditation_theme": "内なる平和",
+          "flower_of_the_day": "コスモス - 乙女の真心",
+          "energy_advice": "変化を受け入れる日"
         },
         {
           "day": 25,
@@ -4377,7 +5979,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "宇宙との同調",
           "color_of_the_day": "若草色",
-          "recommended_tea": "柚子茶"
+          "recommended_tea": "柚子茶",
+          "lucky_number": 70,
+          "power_stone": "オパール",
+          "aroma_oil": "パチュリ",
+          "meditation_theme": "宇宙との繋がり",
+          "flower_of_the_day": "すずらん - 謙遜",
+          "energy_advice": "夢を描く時間"
         },
         {
           "day": 26,
@@ -4393,7 +6001,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "愛のバイブレーション",
           "color_of_the_day": "黄金色",
-          "recommended_tea": "生姜茶"
+          "recommended_tea": "生姜茶",
+          "lucky_number": 71,
+          "power_stone": "ターコイズ",
+          "aroma_oil": "シダーウッド",
+          "meditation_theme": "直感力向上",
+          "flower_of_the_day": "菜の花 - 快活",
+          "energy_advice": "心を整理する日"
         },
         {
           "day": 27,
@@ -4409,7 +6023,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "豊かさの波動",
           "color_of_the_day": "鋼青色",
-          "recommended_tea": "黒豆茶"
+          "recommended_tea": "黒豆茶",
+          "lucky_number": 72,
+          "power_stone": "エメラルド",
+          "aroma_oil": "カモミール",
+          "meditation_theme": "創造性開花",
+          "flower_of_the_day": "藤 - 優しさ",
+          "energy_advice": "自然と触れ合う日"
         },
         {
           "day": 28,
@@ -4425,7 +6045,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "運命の扉が開く日",
           "color_of_the_day": "深紅色",
-          "recommended_tea": "アールグレイ"
+          "recommended_tea": "アールグレイ",
+          "lucky_number": 73,
+          "power_stone": "アメジスト",
+          "aroma_oil": "ラベンダー",
+          "meditation_theme": "感謝の瞑想",
+          "flower_of_the_day": "桜 - 精神の美",
+          "energy_advice": "今日は新しい挑戦の時"
         },
         {
           "day": 29,
@@ -4441,7 +6067,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "宇宙からのメッセージ",
           "color_of_the_day": "金色",
-          "recommended_tea": "カモミールティー"
+          "recommended_tea": "カモミールティー",
+          "lucky_number": 74,
+          "power_stone": "ローズクォーツ",
+          "aroma_oil": "ユーカリ",
+          "meditation_theme": "慈悲の瞑想",
+          "flower_of_the_day": "梅 - 気品",
+          "energy_advice": "休息を大切にする日"
         },
         {
           "day": 30,
@@ -4457,7 +6089,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "奇跡を呼ぶ波動",
           "color_of_the_day": "朱色",
-          "recommended_tea": "ペパーミントティー"
+          "recommended_tea": "ペパーミントティー",
+          "lucky_number": 75,
+          "power_stone": "クリスタル",
+          "aroma_oil": "ローズマリー",
+          "meditation_theme": "呼吸に集中",
+          "flower_of_the_day": "椿 - 控えめな素晴らしさ",
+          "energy_advice": "人との繋がりを深める日"
         }
       ]
     },
@@ -4467,7 +6105,7 @@
       "month_name": "October",
       "month_name_jp": "10月",
       "api_version": "v1",
-      "generated_at": "2025-06-20T08:45:25.842291",
+      "generated_at": "2025-06-20T09:23:31.179371",
       "days": [
         {
           "day": 1,
@@ -4483,7 +6121,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "龍神様のご加護",
           "color_of_the_day": "空色",
-          "recommended_tea": "緑茶"
+          "recommended_tea": "緑茶",
+          "lucky_number": 76,
+          "power_stone": "アクアマリン",
+          "aroma_oil": "オレンジ",
+          "meditation_theme": "マインドフルネス",
+          "flower_of_the_day": "菊 - 高貴",
+          "energy_advice": "創造性を発揮する時"
         },
         {
           "day": 2,
@@ -4499,7 +6143,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "金運上昇のサイン",
           "color_of_the_day": "若草色",
-          "recommended_tea": "ほうじ茶"
+          "recommended_tea": "ほうじ茶",
+          "lucky_number": 77,
+          "power_stone": "ガーネット",
+          "aroma_oil": "レモングラス",
+          "meditation_theme": "ボディスキャン",
+          "flower_of_the_day": "蓮 - 清らかな心",
+          "energy_advice": "内省の時間を作る日"
         },
         {
           "day": 3,
@@ -4515,7 +6165,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "恋愛運絶好調",
           "color_of_the_day": "黄金色",
-          "recommended_tea": "ジャスミンティー"
+          "recommended_tea": "ジャスミンティー",
+          "lucky_number": 78,
+          "power_stone": "ムーンストーン",
+          "aroma_oil": "イランイラン",
+          "meditation_theme": "愛と光の瞑想",
+          "flower_of_the_day": "薔薇 - 愛情",
+          "energy_advice": "感謝を表現する日"
         },
         {
           "day": 4,
@@ -4531,7 +6187,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "直感力が冴える",
           "color_of_the_day": "鋼青色",
-          "recommended_tea": "ルイボスティー"
+          "recommended_tea": "ルイボスティー",
+          "lucky_number": 79,
+          "power_stone": "ラピスラズリ",
+          "aroma_oil": "サンダルウッド",
+          "meditation_theme": "チャクラ調整",
+          "flower_of_the_day": "向日葵 - 憧れ",
+          "energy_advice": "勇気を出して行動する時"
         },
         {
           "day": 5,
@@ -4547,7 +6209,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "隠れた才能開花",
           "color_of_the_day": "深紅色",
-          "recommended_tea": "ローズヒップティー"
+          "recommended_tea": "ローズヒップティー",
+          "lucky_number": 80,
+          "power_stone": "マラカイト",
+          "aroma_oil": "フランキンセンス",
+          "meditation_theme": "グラウンディング",
+          "flower_of_the_day": "紫陽花 - 移り気",
+          "energy_advice": "直感に従う日"
         },
         {
           "day": 6,
@@ -4563,7 +6231,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "人生の転機到来",
           "color_of_the_day": "金色",
-          "recommended_tea": "白茶"
+          "recommended_tea": "白茶",
+          "lucky_number": 81,
+          "power_stone": "オニキス",
+          "aroma_oil": "ジャスミン",
+          "meditation_theme": "エネルギー浄化",
+          "flower_of_the_day": "牡丹 - 富貴",
+          "energy_advice": "学びを深める好機"
         },
         {
           "day": 7,
@@ -4579,7 +6253,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "幸運の風が吹く",
           "color_of_the_day": "朱色",
-          "recommended_tea": "烏龍茶"
+          "recommended_tea": "烏龍茶",
+          "lucky_number": 82,
+          "power_stone": "シトリン",
+          "aroma_oil": "ベルガモット",
+          "meditation_theme": "未来創造",
+          "flower_of_the_day": "百合 - 純粋",
+          "energy_advice": "愛を分かち合う日"
         },
         {
           "day": 8,
@@ -4595,7 +6275,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "魂の成長期間",
           "color_of_the_day": "空色",
-          "recommended_tea": "玄米茶"
+          "recommended_tea": "玄米茶",
+          "lucky_number": 83,
+          "power_stone": "ペリドット",
+          "aroma_oil": "ティーツリー",
+          "meditation_theme": "過去の癒し",
+          "flower_of_the_day": "カーネーション - 母の愛",
+          "energy_advice": "エネルギーを充電する時"
         },
         {
           "day": 9,
@@ -4611,7 +6297,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "エネルギー充電日",
           "color_of_the_day": "若草色",
-          "recommended_tea": "抹茶"
+          "recommended_tea": "抹茶",
+          "lucky_number": 84,
+          "power_stone": "トルマリン",
+          "aroma_oil": "ゼラニウム",
+          "meditation_theme": "内なる平和",
+          "flower_of_the_day": "コスモス - 乙女の真心",
+          "energy_advice": "変化を受け入れる日"
         },
         {
           "day": 10,
@@ -4627,7 +6319,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "新次元への扉",
           "color_of_the_day": "黄金色",
-          "recommended_tea": "柚子茶"
+          "recommended_tea": "柚子茶",
+          "lucky_number": 85,
+          "power_stone": "オパール",
+          "aroma_oil": "パチュリ",
+          "meditation_theme": "宇宙との繋がり",
+          "flower_of_the_day": "すずらん - 謙遜",
+          "energy_advice": "夢を描く時間"
         },
         {
           "day": 11,
@@ -4643,7 +6341,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "守護霊のささやき",
           "color_of_the_day": "鋼青色",
-          "recommended_tea": "生姜茶"
+          "recommended_tea": "生姜茶",
+          "lucky_number": 86,
+          "power_stone": "ターコイズ",
+          "aroma_oil": "シダーウッド",
+          "meditation_theme": "直感力向上",
+          "flower_of_the_day": "菜の花 - 快活",
+          "energy_advice": "心を整理する日"
         },
         {
           "day": 12,
@@ -4659,7 +6363,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "願いが叶う予感",
           "color_of_the_day": "深紅色",
-          "recommended_tea": "黒豆茶"
+          "recommended_tea": "黒豆茶",
+          "lucky_number": 87,
+          "power_stone": "エメラルド",
+          "aroma_oil": "カモミール",
+          "meditation_theme": "創造性開花",
+          "flower_of_the_day": "藤 - 優しさ",
+          "energy_advice": "自然と触れ合う日"
         },
         {
           "day": 13,
@@ -4675,7 +6385,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "心のデトックス",
           "color_of_the_day": "金色",
-          "recommended_tea": "アールグレイ"
+          "recommended_tea": "アールグレイ",
+          "lucky_number": 88,
+          "power_stone": "アメジスト",
+          "aroma_oil": "ラベンダー",
+          "meditation_theme": "感謝の瞑想",
+          "flower_of_the_day": "桜 - 精神の美",
+          "energy_advice": "今日は新しい挑戦の時"
         },
         {
           "day": 14,
@@ -4691,7 +6407,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "創造力爆発",
           "color_of_the_day": "朱色",
-          "recommended_tea": "カモミールティー"
+          "recommended_tea": "カモミールティー",
+          "lucky_number": 89,
+          "power_stone": "ローズクォーツ",
+          "aroma_oil": "ユーカリ",
+          "meditation_theme": "慈悲の瞑想",
+          "flower_of_the_day": "梅 - 気品",
+          "energy_advice": "休息を大切にする日"
         },
         {
           "day": 15,
@@ -4707,7 +6429,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "人との縁を結ぶ",
           "color_of_the_day": "空色",
-          "recommended_tea": "ペパーミントティー"
+          "recommended_tea": "ペパーミントティー",
+          "lucky_number": 90,
+          "power_stone": "クリスタル",
+          "aroma_oil": "ローズマリー",
+          "meditation_theme": "呼吸に集中",
+          "flower_of_the_day": "椿 - 控えめな素晴らしさ",
+          "energy_advice": "人との繋がりを深める日"
         },
         {
           "day": 16,
@@ -4723,7 +6451,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "未来への種まき",
           "color_of_the_day": "若草色",
-          "recommended_tea": "緑茶"
+          "recommended_tea": "緑茶",
+          "lucky_number": 91,
+          "power_stone": "アクアマリン",
+          "aroma_oil": "オレンジ",
+          "meditation_theme": "マインドフルネス",
+          "flower_of_the_day": "菊 - 高貴",
+          "energy_advice": "創造性を発揮する時"
         },
         {
           "day": 17,
@@ -4739,7 +6473,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "宝物発見の予感",
           "color_of_the_day": "黄金色",
-          "recommended_tea": "ほうじ茶"
+          "recommended_tea": "ほうじ茶",
+          "lucky_number": 92,
+          "power_stone": "ガーネット",
+          "aroma_oil": "レモングラス",
+          "meditation_theme": "ボディスキャン",
+          "flower_of_the_day": "蓮 - 清らかな心",
+          "energy_advice": "内省の時間を作る日"
         },
         {
           "day": 18,
@@ -4755,7 +6495,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "内なる光が輝く",
           "color_of_the_day": "鋼青色",
-          "recommended_tea": "ジャスミンティー"
+          "recommended_tea": "ジャスミンティー",
+          "lucky_number": 93,
+          "power_stone": "ムーンストーン",
+          "aroma_oil": "イランイラン",
+          "meditation_theme": "愛と光の瞑想",
+          "flower_of_the_day": "薔薇 - 愛情",
+          "energy_advice": "感謝を表現する日"
         },
         {
           "day": 19,
@@ -4771,7 +6517,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "調和のメロディ",
           "color_of_the_day": "深紅色",
-          "recommended_tea": "ルイボスティー"
+          "recommended_tea": "ルイボスティー",
+          "lucky_number": 94,
+          "power_stone": "ラピスラズリ",
+          "aroma_oil": "サンダルウッド",
+          "meditation_theme": "チャクラ調整",
+          "flower_of_the_day": "向日葵 - 憧れ",
+          "energy_advice": "勇気を出して行動する時"
         },
         {
           "day": 20,
@@ -4787,7 +6539,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "自然の叡智授受",
           "color_of_the_day": "金色",
-          "recommended_tea": "ローズヒップティー"
+          "recommended_tea": "ローズヒップティー",
+          "lucky_number": 95,
+          "power_stone": "マラカイト",
+          "aroma_oil": "フランキンセンス",
+          "meditation_theme": "グラウンディング",
+          "flower_of_the_day": "紫陽花 - 移り気",
+          "energy_advice": "直感に従う日"
         },
         {
           "day": 21,
@@ -4803,7 +6561,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "知恵の泉湧出",
           "color_of_the_day": "朱色",
-          "recommended_tea": "白茶"
+          "recommended_tea": "白茶",
+          "lucky_number": 96,
+          "power_stone": "オニキス",
+          "aroma_oil": "ジャスミン",
+          "meditation_theme": "エネルギー浄化",
+          "flower_of_the_day": "牡丹 - 富貴",
+          "energy_advice": "学びを深める好機"
         },
         {
           "day": 22,
@@ -4819,7 +6583,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "至福の時間軸",
           "color_of_the_day": "空色",
-          "recommended_tea": "烏龍茶"
+          "recommended_tea": "烏龍茶",
+          "lucky_number": 97,
+          "power_stone": "シトリン",
+          "aroma_oil": "ベルガモット",
+          "meditation_theme": "未来創造",
+          "flower_of_the_day": "百合 - 純粋",
+          "energy_advice": "愛を分かち合う日"
         },
         {
           "day": 23,
@@ -4835,7 +6605,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "運気上昇の兆し",
           "color_of_the_day": "若草色",
-          "recommended_tea": "玄米茶"
+          "recommended_tea": "玄米茶",
+          "lucky_number": 98,
+          "power_stone": "ペリドット",
+          "aroma_oil": "ティーツリー",
+          "meditation_theme": "過去の癒し",
+          "flower_of_the_day": "カーネーション - 母の愛",
+          "energy_advice": "エネルギーを充電する時"
         },
         {
           "day": 24,
@@ -4851,7 +6627,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "心の扉が開放",
           "color_of_the_day": "黄金色",
-          "recommended_tea": "抹茶"
+          "recommended_tea": "抹茶",
+          "lucky_number": 99,
+          "power_stone": "トルマリン",
+          "aroma_oil": "ゼラニウム",
+          "meditation_theme": "内なる平和",
+          "flower_of_the_day": "コスモス - 乙女の真心",
+          "energy_advice": "変化を受け入れる日"
         },
         {
           "day": 25,
@@ -4867,7 +6649,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "宇宙との同調",
           "color_of_the_day": "鋼青色",
-          "recommended_tea": "柚子茶"
+          "recommended_tea": "柚子茶",
+          "lucky_number": 1,
+          "power_stone": "オパール",
+          "aroma_oil": "パチュリ",
+          "meditation_theme": "宇宙との繋がり",
+          "flower_of_the_day": "すずらん - 謙遜",
+          "energy_advice": "夢を描く時間"
         },
         {
           "day": 26,
@@ -4883,7 +6671,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "愛のバイブレーション",
           "color_of_the_day": "深紅色",
-          "recommended_tea": "生姜茶"
+          "recommended_tea": "生姜茶",
+          "lucky_number": 2,
+          "power_stone": "ターコイズ",
+          "aroma_oil": "シダーウッド",
+          "meditation_theme": "直感力向上",
+          "flower_of_the_day": "菜の花 - 快活",
+          "energy_advice": "心を整理する日"
         },
         {
           "day": 27,
@@ -4899,7 +6693,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "豊かさの波動",
           "color_of_the_day": "金色",
-          "recommended_tea": "黒豆茶"
+          "recommended_tea": "黒豆茶",
+          "lucky_number": 3,
+          "power_stone": "エメラルド",
+          "aroma_oil": "カモミール",
+          "meditation_theme": "創造性開花",
+          "flower_of_the_day": "藤 - 優しさ",
+          "energy_advice": "自然と触れ合う日"
         },
         {
           "day": 28,
@@ -4915,7 +6715,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "運命の扉が開く日",
           "color_of_the_day": "朱色",
-          "recommended_tea": "アールグレイ"
+          "recommended_tea": "アールグレイ",
+          "lucky_number": 4,
+          "power_stone": "アメジスト",
+          "aroma_oil": "ラベンダー",
+          "meditation_theme": "感謝の瞑想",
+          "flower_of_the_day": "桜 - 精神の美",
+          "energy_advice": "今日は新しい挑戦の時"
         },
         {
           "day": 29,
@@ -4931,7 +6737,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "宇宙からのメッセージ",
           "color_of_the_day": "空色",
-          "recommended_tea": "カモミールティー"
+          "recommended_tea": "カモミールティー",
+          "lucky_number": 5,
+          "power_stone": "ローズクォーツ",
+          "aroma_oil": "ユーカリ",
+          "meditation_theme": "慈悲の瞑想",
+          "flower_of_the_day": "梅 - 気品",
+          "energy_advice": "休息を大切にする日"
         },
         {
           "day": 30,
@@ -4947,7 +6759,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "奇跡を呼ぶ波動",
           "color_of_the_day": "若草色",
-          "recommended_tea": "ペパーミントティー"
+          "recommended_tea": "ペパーミントティー",
+          "lucky_number": 6,
+          "power_stone": "クリスタル",
+          "aroma_oil": "ローズマリー",
+          "meditation_theme": "呼吸に集中",
+          "flower_of_the_day": "椿 - 控えめな素晴らしさ",
+          "energy_advice": "人との繋がりを深める日"
         },
         {
           "day": 31,
@@ -4963,7 +6781,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "龍神様のご加護",
           "color_of_the_day": "黄金色",
-          "recommended_tea": "緑茶"
+          "recommended_tea": "緑茶",
+          "lucky_number": 7,
+          "power_stone": "アクアマリン",
+          "aroma_oil": "オレンジ",
+          "meditation_theme": "マインドフルネス",
+          "flower_of_the_day": "菊 - 高貴",
+          "energy_advice": "創造性を発揮する時"
         }
       ]
     },
@@ -4973,7 +6797,7 @@
       "month_name": "November",
       "month_name_jp": "11月",
       "api_version": "v1",
-      "generated_at": "2025-06-20T08:45:25.843713",
+      "generated_at": "2025-06-20T09:23:31.182461",
       "days": [
         {
           "day": 1,
@@ -4989,7 +6813,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "金運上昇のサイン",
           "color_of_the_day": "鋼青色",
-          "recommended_tea": "ほうじ茶"
+          "recommended_tea": "ほうじ茶",
+          "lucky_number": 8,
+          "power_stone": "ガーネット",
+          "aroma_oil": "レモングラス",
+          "meditation_theme": "ボディスキャン",
+          "flower_of_the_day": "蓮 - 清らかな心",
+          "energy_advice": "内省の時間を作る日"
         },
         {
           "day": 2,
@@ -5005,7 +6835,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "恋愛運絶好調",
           "color_of_the_day": "深紅色",
-          "recommended_tea": "ジャスミンティー"
+          "recommended_tea": "ジャスミンティー",
+          "lucky_number": 9,
+          "power_stone": "ムーンストーン",
+          "aroma_oil": "イランイラン",
+          "meditation_theme": "愛と光の瞑想",
+          "flower_of_the_day": "薔薇 - 愛情",
+          "energy_advice": "感謝を表現する日"
         },
         {
           "day": 3,
@@ -5021,7 +6857,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "直感力が冴える",
           "color_of_the_day": "金色",
-          "recommended_tea": "ルイボスティー"
+          "recommended_tea": "ルイボスティー",
+          "lucky_number": 10,
+          "power_stone": "ラピスラズリ",
+          "aroma_oil": "サンダルウッド",
+          "meditation_theme": "チャクラ調整",
+          "flower_of_the_day": "向日葵 - 憧れ",
+          "energy_advice": "勇気を出して行動する時"
         },
         {
           "day": 4,
@@ -5037,7 +6879,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "隠れた才能開花",
           "color_of_the_day": "朱色",
-          "recommended_tea": "ローズヒップティー"
+          "recommended_tea": "ローズヒップティー",
+          "lucky_number": 11,
+          "power_stone": "マラカイト",
+          "aroma_oil": "フランキンセンス",
+          "meditation_theme": "グラウンディング",
+          "flower_of_the_day": "紫陽花 - 移り気",
+          "energy_advice": "直感に従う日"
         },
         {
           "day": 5,
@@ -5053,7 +6901,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "人生の転機到来",
           "color_of_the_day": "空色",
-          "recommended_tea": "白茶"
+          "recommended_tea": "白茶",
+          "lucky_number": 12,
+          "power_stone": "オニキス",
+          "aroma_oil": "ジャスミン",
+          "meditation_theme": "エネルギー浄化",
+          "flower_of_the_day": "牡丹 - 富貴",
+          "energy_advice": "学びを深める好機"
         },
         {
           "day": 6,
@@ -5069,7 +6923,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "幸運の風が吹く",
           "color_of_the_day": "若草色",
-          "recommended_tea": "烏龍茶"
+          "recommended_tea": "烏龍茶",
+          "lucky_number": 13,
+          "power_stone": "シトリン",
+          "aroma_oil": "ベルガモット",
+          "meditation_theme": "未来創造",
+          "flower_of_the_day": "百合 - 純粋",
+          "energy_advice": "愛を分かち合う日"
         },
         {
           "day": 7,
@@ -5085,7 +6945,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "魂の成長期間",
           "color_of_the_day": "黄金色",
-          "recommended_tea": "玄米茶"
+          "recommended_tea": "玄米茶",
+          "lucky_number": 14,
+          "power_stone": "ペリドット",
+          "aroma_oil": "ティーツリー",
+          "meditation_theme": "過去の癒し",
+          "flower_of_the_day": "カーネーション - 母の愛",
+          "energy_advice": "エネルギーを充電する時"
         },
         {
           "day": 8,
@@ -5101,7 +6967,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "エネルギー充電日",
           "color_of_the_day": "鋼青色",
-          "recommended_tea": "抹茶"
+          "recommended_tea": "抹茶",
+          "lucky_number": 15,
+          "power_stone": "トルマリン",
+          "aroma_oil": "ゼラニウム",
+          "meditation_theme": "内なる平和",
+          "flower_of_the_day": "コスモス - 乙女の真心",
+          "energy_advice": "変化を受け入れる日"
         },
         {
           "day": 9,
@@ -5117,7 +6989,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "新次元への扉",
           "color_of_the_day": "深紅色",
-          "recommended_tea": "柚子茶"
+          "recommended_tea": "柚子茶",
+          "lucky_number": 16,
+          "power_stone": "オパール",
+          "aroma_oil": "パチュリ",
+          "meditation_theme": "宇宙との繋がり",
+          "flower_of_the_day": "すずらん - 謙遜",
+          "energy_advice": "夢を描く時間"
         },
         {
           "day": 10,
@@ -5133,7 +7011,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "守護霊のささやき",
           "color_of_the_day": "金色",
-          "recommended_tea": "生姜茶"
+          "recommended_tea": "生姜茶",
+          "lucky_number": 17,
+          "power_stone": "ターコイズ",
+          "aroma_oil": "シダーウッド",
+          "meditation_theme": "直感力向上",
+          "flower_of_the_day": "菜の花 - 快活",
+          "energy_advice": "心を整理する日"
         },
         {
           "day": 11,
@@ -5149,7 +7033,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "願いが叶う予感",
           "color_of_the_day": "朱色",
-          "recommended_tea": "黒豆茶"
+          "recommended_tea": "黒豆茶",
+          "lucky_number": 18,
+          "power_stone": "エメラルド",
+          "aroma_oil": "カモミール",
+          "meditation_theme": "創造性開花",
+          "flower_of_the_day": "藤 - 優しさ",
+          "energy_advice": "自然と触れ合う日"
         },
         {
           "day": 12,
@@ -5165,7 +7055,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "心のデトックス",
           "color_of_the_day": "空色",
-          "recommended_tea": "アールグレイ"
+          "recommended_tea": "アールグレイ",
+          "lucky_number": 19,
+          "power_stone": "アメジスト",
+          "aroma_oil": "ラベンダー",
+          "meditation_theme": "感謝の瞑想",
+          "flower_of_the_day": "桜 - 精神の美",
+          "energy_advice": "今日は新しい挑戦の時"
         },
         {
           "day": 13,
@@ -5181,7 +7077,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "創造力爆発",
           "color_of_the_day": "若草色",
-          "recommended_tea": "カモミールティー"
+          "recommended_tea": "カモミールティー",
+          "lucky_number": 20,
+          "power_stone": "ローズクォーツ",
+          "aroma_oil": "ユーカリ",
+          "meditation_theme": "慈悲の瞑想",
+          "flower_of_the_day": "梅 - 気品",
+          "energy_advice": "休息を大切にする日"
         },
         {
           "day": 14,
@@ -5197,7 +7099,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "人との縁を結ぶ",
           "color_of_the_day": "黄金色",
-          "recommended_tea": "ペパーミントティー"
+          "recommended_tea": "ペパーミントティー",
+          "lucky_number": 21,
+          "power_stone": "クリスタル",
+          "aroma_oil": "ローズマリー",
+          "meditation_theme": "呼吸に集中",
+          "flower_of_the_day": "椿 - 控えめな素晴らしさ",
+          "energy_advice": "人との繋がりを深める日"
         },
         {
           "day": 15,
@@ -5213,7 +7121,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "未来への種まき",
           "color_of_the_day": "鋼青色",
-          "recommended_tea": "緑茶"
+          "recommended_tea": "緑茶",
+          "lucky_number": 22,
+          "power_stone": "アクアマリン",
+          "aroma_oil": "オレンジ",
+          "meditation_theme": "マインドフルネス",
+          "flower_of_the_day": "菊 - 高貴",
+          "energy_advice": "創造性を発揮する時"
         },
         {
           "day": 16,
@@ -5229,7 +7143,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "宝物発見の予感",
           "color_of_the_day": "深紅色",
-          "recommended_tea": "ほうじ茶"
+          "recommended_tea": "ほうじ茶",
+          "lucky_number": 23,
+          "power_stone": "ガーネット",
+          "aroma_oil": "レモングラス",
+          "meditation_theme": "ボディスキャン",
+          "flower_of_the_day": "蓮 - 清らかな心",
+          "energy_advice": "内省の時間を作る日"
         },
         {
           "day": 17,
@@ -5245,7 +7165,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "内なる光が輝く",
           "color_of_the_day": "金色",
-          "recommended_tea": "ジャスミンティー"
+          "recommended_tea": "ジャスミンティー",
+          "lucky_number": 24,
+          "power_stone": "ムーンストーン",
+          "aroma_oil": "イランイラン",
+          "meditation_theme": "愛と光の瞑想",
+          "flower_of_the_day": "薔薇 - 愛情",
+          "energy_advice": "感謝を表現する日"
         },
         {
           "day": 18,
@@ -5261,7 +7187,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "調和のメロディ",
           "color_of_the_day": "朱色",
-          "recommended_tea": "ルイボスティー"
+          "recommended_tea": "ルイボスティー",
+          "lucky_number": 25,
+          "power_stone": "ラピスラズリ",
+          "aroma_oil": "サンダルウッド",
+          "meditation_theme": "チャクラ調整",
+          "flower_of_the_day": "向日葵 - 憧れ",
+          "energy_advice": "勇気を出して行動する時"
         },
         {
           "day": 19,
@@ -5277,7 +7209,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "自然の叡智授受",
           "color_of_the_day": "空色",
-          "recommended_tea": "ローズヒップティー"
+          "recommended_tea": "ローズヒップティー",
+          "lucky_number": 26,
+          "power_stone": "マラカイト",
+          "aroma_oil": "フランキンセンス",
+          "meditation_theme": "グラウンディング",
+          "flower_of_the_day": "紫陽花 - 移り気",
+          "energy_advice": "直感に従う日"
         },
         {
           "day": 20,
@@ -5293,7 +7231,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "知恵の泉湧出",
           "color_of_the_day": "若草色",
-          "recommended_tea": "白茶"
+          "recommended_tea": "白茶",
+          "lucky_number": 27,
+          "power_stone": "オニキス",
+          "aroma_oil": "ジャスミン",
+          "meditation_theme": "エネルギー浄化",
+          "flower_of_the_day": "牡丹 - 富貴",
+          "energy_advice": "学びを深める好機"
         },
         {
           "day": 21,
@@ -5309,7 +7253,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "至福の時間軸",
           "color_of_the_day": "黄金色",
-          "recommended_tea": "烏龍茶"
+          "recommended_tea": "烏龍茶",
+          "lucky_number": 28,
+          "power_stone": "シトリン",
+          "aroma_oil": "ベルガモット",
+          "meditation_theme": "未来創造",
+          "flower_of_the_day": "百合 - 純粋",
+          "energy_advice": "愛を分かち合う日"
         },
         {
           "day": 22,
@@ -5325,7 +7275,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "運気上昇の兆し",
           "color_of_the_day": "鋼青色",
-          "recommended_tea": "玄米茶"
+          "recommended_tea": "玄米茶",
+          "lucky_number": 29,
+          "power_stone": "ペリドット",
+          "aroma_oil": "ティーツリー",
+          "meditation_theme": "過去の癒し",
+          "flower_of_the_day": "カーネーション - 母の愛",
+          "energy_advice": "エネルギーを充電する時"
         },
         {
           "day": 23,
@@ -5341,7 +7297,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "心の扉が開放",
           "color_of_the_day": "深紅色",
-          "recommended_tea": "抹茶"
+          "recommended_tea": "抹茶",
+          "lucky_number": 30,
+          "power_stone": "トルマリン",
+          "aroma_oil": "ゼラニウム",
+          "meditation_theme": "内なる平和",
+          "flower_of_the_day": "コスモス - 乙女の真心",
+          "energy_advice": "変化を受け入れる日"
         },
         {
           "day": 24,
@@ -5357,7 +7319,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "宇宙との同調",
           "color_of_the_day": "金色",
-          "recommended_tea": "柚子茶"
+          "recommended_tea": "柚子茶",
+          "lucky_number": 31,
+          "power_stone": "オパール",
+          "aroma_oil": "パチュリ",
+          "meditation_theme": "宇宙との繋がり",
+          "flower_of_the_day": "すずらん - 謙遜",
+          "energy_advice": "夢を描く時間"
         },
         {
           "day": 25,
@@ -5373,7 +7341,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "愛のバイブレーション",
           "color_of_the_day": "朱色",
-          "recommended_tea": "生姜茶"
+          "recommended_tea": "生姜茶",
+          "lucky_number": 32,
+          "power_stone": "ターコイズ",
+          "aroma_oil": "シダーウッド",
+          "meditation_theme": "直感力向上",
+          "flower_of_the_day": "菜の花 - 快活",
+          "energy_advice": "心を整理する日"
         },
         {
           "day": 26,
@@ -5389,7 +7363,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "豊かさの波動",
           "color_of_the_day": "空色",
-          "recommended_tea": "黒豆茶"
+          "recommended_tea": "黒豆茶",
+          "lucky_number": 33,
+          "power_stone": "エメラルド",
+          "aroma_oil": "カモミール",
+          "meditation_theme": "創造性開花",
+          "flower_of_the_day": "藤 - 優しさ",
+          "energy_advice": "自然と触れ合う日"
         },
         {
           "day": 27,
@@ -5405,7 +7385,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "運命の扉が開く日",
           "color_of_the_day": "若草色",
-          "recommended_tea": "アールグレイ"
+          "recommended_tea": "アールグレイ",
+          "lucky_number": 34,
+          "power_stone": "アメジスト",
+          "aroma_oil": "ラベンダー",
+          "meditation_theme": "感謝の瞑想",
+          "flower_of_the_day": "桜 - 精神の美",
+          "energy_advice": "今日は新しい挑戦の時"
         },
         {
           "day": 28,
@@ -5421,7 +7407,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "宇宙からのメッセージ",
           "color_of_the_day": "黄金色",
-          "recommended_tea": "カモミールティー"
+          "recommended_tea": "カモミールティー",
+          "lucky_number": 35,
+          "power_stone": "ローズクォーツ",
+          "aroma_oil": "ユーカリ",
+          "meditation_theme": "慈悲の瞑想",
+          "flower_of_the_day": "梅 - 気品",
+          "energy_advice": "休息を大切にする日"
         },
         {
           "day": 29,
@@ -5437,7 +7429,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "奇跡を呼ぶ波動",
           "color_of_the_day": "鋼青色",
-          "recommended_tea": "ペパーミントティー"
+          "recommended_tea": "ペパーミントティー",
+          "lucky_number": 36,
+          "power_stone": "クリスタル",
+          "aroma_oil": "ローズマリー",
+          "meditation_theme": "呼吸に集中",
+          "flower_of_the_day": "椿 - 控えめな素晴らしさ",
+          "energy_advice": "人との繋がりを深める日"
         },
         {
           "day": 30,
@@ -5453,7 +7451,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "龍神様のご加護",
           "color_of_the_day": "深紅色",
-          "recommended_tea": "緑茶"
+          "recommended_tea": "緑茶",
+          "lucky_number": 37,
+          "power_stone": "アクアマリン",
+          "aroma_oil": "オレンジ",
+          "meditation_theme": "マインドフルネス",
+          "flower_of_the_day": "菊 - 高貴",
+          "energy_advice": "創造性を発揮する時"
         }
       ]
     },
@@ -5463,7 +7467,7 @@
       "month_name": "December",
       "month_name_jp": "12月",
       "api_version": "v1",
-      "generated_at": "2025-06-20T08:45:25.844958",
+      "generated_at": "2025-06-20T09:23:31.185153",
       "days": [
         {
           "day": 1,
@@ -5479,7 +7483,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "金運上昇のサイン",
           "color_of_the_day": "金色",
-          "recommended_tea": "ほうじ茶"
+          "recommended_tea": "ほうじ茶",
+          "lucky_number": 38,
+          "power_stone": "ガーネット",
+          "aroma_oil": "レモングラス",
+          "meditation_theme": "ボディスキャン",
+          "flower_of_the_day": "蓮 - 清らかな心",
+          "energy_advice": "内省の時間を作る日"
         },
         {
           "day": 2,
@@ -5495,7 +7505,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "恋愛運絶好調",
           "color_of_the_day": "朱色",
-          "recommended_tea": "ジャスミンティー"
+          "recommended_tea": "ジャスミンティー",
+          "lucky_number": 39,
+          "power_stone": "ムーンストーン",
+          "aroma_oil": "イランイラン",
+          "meditation_theme": "愛と光の瞑想",
+          "flower_of_the_day": "薔薇 - 愛情",
+          "energy_advice": "感謝を表現する日"
         },
         {
           "day": 3,
@@ -5511,7 +7527,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "直感力が冴える",
           "color_of_the_day": "空色",
-          "recommended_tea": "ルイボスティー"
+          "recommended_tea": "ルイボスティー",
+          "lucky_number": 40,
+          "power_stone": "ラピスラズリ",
+          "aroma_oil": "サンダルウッド",
+          "meditation_theme": "チャクラ調整",
+          "flower_of_the_day": "向日葵 - 憧れ",
+          "energy_advice": "勇気を出して行動する時"
         },
         {
           "day": 4,
@@ -5527,7 +7549,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "隠れた才能開花",
           "color_of_the_day": "若草色",
-          "recommended_tea": "ローズヒップティー"
+          "recommended_tea": "ローズヒップティー",
+          "lucky_number": 41,
+          "power_stone": "マラカイト",
+          "aroma_oil": "フランキンセンス",
+          "meditation_theme": "グラウンディング",
+          "flower_of_the_day": "紫陽花 - 移り気",
+          "energy_advice": "直感に従う日"
         },
         {
           "day": 5,
@@ -5543,7 +7571,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "人生の転機到来",
           "color_of_the_day": "黄金色",
-          "recommended_tea": "白茶"
+          "recommended_tea": "白茶",
+          "lucky_number": 42,
+          "power_stone": "オニキス",
+          "aroma_oil": "ジャスミン",
+          "meditation_theme": "エネルギー浄化",
+          "flower_of_the_day": "牡丹 - 富貴",
+          "energy_advice": "学びを深める好機"
         },
         {
           "day": 6,
@@ -5559,7 +7593,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "幸運の風が吹く",
           "color_of_the_day": "鋼青色",
-          "recommended_tea": "烏龍茶"
+          "recommended_tea": "烏龍茶",
+          "lucky_number": 43,
+          "power_stone": "シトリン",
+          "aroma_oil": "ベルガモット",
+          "meditation_theme": "未来創造",
+          "flower_of_the_day": "百合 - 純粋",
+          "energy_advice": "愛を分かち合う日"
         },
         {
           "day": 7,
@@ -5575,7 +7615,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "魂の成長期間",
           "color_of_the_day": "深紅色",
-          "recommended_tea": "玄米茶"
+          "recommended_tea": "玄米茶",
+          "lucky_number": 44,
+          "power_stone": "ペリドット",
+          "aroma_oil": "ティーツリー",
+          "meditation_theme": "過去の癒し",
+          "flower_of_the_day": "カーネーション - 母の愛",
+          "energy_advice": "エネルギーを充電する時"
         },
         {
           "day": 8,
@@ -5591,7 +7637,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "エネルギー充電日",
           "color_of_the_day": "金色",
-          "recommended_tea": "抹茶"
+          "recommended_tea": "抹茶",
+          "lucky_number": 45,
+          "power_stone": "トルマリン",
+          "aroma_oil": "ゼラニウム",
+          "meditation_theme": "内なる平和",
+          "flower_of_the_day": "コスモス - 乙女の真心",
+          "energy_advice": "変化を受け入れる日"
         },
         {
           "day": 9,
@@ -5607,7 +7659,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "新次元への扉",
           "color_of_the_day": "朱色",
-          "recommended_tea": "柚子茶"
+          "recommended_tea": "柚子茶",
+          "lucky_number": 46,
+          "power_stone": "オパール",
+          "aroma_oil": "パチュリ",
+          "meditation_theme": "宇宙との繋がり",
+          "flower_of_the_day": "すずらん - 謙遜",
+          "energy_advice": "夢を描く時間"
         },
         {
           "day": 10,
@@ -5623,7 +7681,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "守護霊のささやき",
           "color_of_the_day": "空色",
-          "recommended_tea": "生姜茶"
+          "recommended_tea": "生姜茶",
+          "lucky_number": 47,
+          "power_stone": "ターコイズ",
+          "aroma_oil": "シダーウッド",
+          "meditation_theme": "直感力向上",
+          "flower_of_the_day": "菜の花 - 快活",
+          "energy_advice": "心を整理する日"
         },
         {
           "day": 11,
@@ -5639,7 +7703,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "願いが叶う予感",
           "color_of_the_day": "若草色",
-          "recommended_tea": "黒豆茶"
+          "recommended_tea": "黒豆茶",
+          "lucky_number": 48,
+          "power_stone": "エメラルド",
+          "aroma_oil": "カモミール",
+          "meditation_theme": "創造性開花",
+          "flower_of_the_day": "藤 - 優しさ",
+          "energy_advice": "自然と触れ合う日"
         },
         {
           "day": 12,
@@ -5655,7 +7725,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "心のデトックス",
           "color_of_the_day": "黄金色",
-          "recommended_tea": "アールグレイ"
+          "recommended_tea": "アールグレイ",
+          "lucky_number": 49,
+          "power_stone": "アメジスト",
+          "aroma_oil": "ラベンダー",
+          "meditation_theme": "感謝の瞑想",
+          "flower_of_the_day": "桜 - 精神の美",
+          "energy_advice": "今日は新しい挑戦の時"
         },
         {
           "day": 13,
@@ -5671,7 +7747,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "創造力爆発",
           "color_of_the_day": "鋼青色",
-          "recommended_tea": "カモミールティー"
+          "recommended_tea": "カモミールティー",
+          "lucky_number": 50,
+          "power_stone": "ローズクォーツ",
+          "aroma_oil": "ユーカリ",
+          "meditation_theme": "慈悲の瞑想",
+          "flower_of_the_day": "梅 - 気品",
+          "energy_advice": "休息を大切にする日"
         },
         {
           "day": 14,
@@ -5687,7 +7769,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "人との縁を結ぶ",
           "color_of_the_day": "深紅色",
-          "recommended_tea": "ペパーミントティー"
+          "recommended_tea": "ペパーミントティー",
+          "lucky_number": 51,
+          "power_stone": "クリスタル",
+          "aroma_oil": "ローズマリー",
+          "meditation_theme": "呼吸に集中",
+          "flower_of_the_day": "椿 - 控えめな素晴らしさ",
+          "energy_advice": "人との繋がりを深める日"
         },
         {
           "day": 15,
@@ -5703,7 +7791,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "未来への種まき",
           "color_of_the_day": "金色",
-          "recommended_tea": "緑茶"
+          "recommended_tea": "緑茶",
+          "lucky_number": 52,
+          "power_stone": "アクアマリン",
+          "aroma_oil": "オレンジ",
+          "meditation_theme": "マインドフルネス",
+          "flower_of_the_day": "菊 - 高貴",
+          "energy_advice": "創造性を発揮する時"
         },
         {
           "day": 16,
@@ -5719,7 +7813,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "宝物発見の予感",
           "color_of_the_day": "朱色",
-          "recommended_tea": "ほうじ茶"
+          "recommended_tea": "ほうじ茶",
+          "lucky_number": 53,
+          "power_stone": "ガーネット",
+          "aroma_oil": "レモングラス",
+          "meditation_theme": "ボディスキャン",
+          "flower_of_the_day": "蓮 - 清らかな心",
+          "energy_advice": "内省の時間を作る日"
         },
         {
           "day": 17,
@@ -5735,7 +7835,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "内なる光が輝く",
           "color_of_the_day": "空色",
-          "recommended_tea": "ジャスミンティー"
+          "recommended_tea": "ジャスミンティー",
+          "lucky_number": 54,
+          "power_stone": "ムーンストーン",
+          "aroma_oil": "イランイラン",
+          "meditation_theme": "愛と光の瞑想",
+          "flower_of_the_day": "薔薇 - 愛情",
+          "energy_advice": "感謝を表現する日"
         },
         {
           "day": 18,
@@ -5751,7 +7857,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "調和のメロディ",
           "color_of_the_day": "若草色",
-          "recommended_tea": "ルイボスティー"
+          "recommended_tea": "ルイボスティー",
+          "lucky_number": 55,
+          "power_stone": "ラピスラズリ",
+          "aroma_oil": "サンダルウッド",
+          "meditation_theme": "チャクラ調整",
+          "flower_of_the_day": "向日葵 - 憧れ",
+          "energy_advice": "勇気を出して行動する時"
         },
         {
           "day": 19,
@@ -5767,7 +7879,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "自然の叡智授受",
           "color_of_the_day": "黄金色",
-          "recommended_tea": "ローズヒップティー"
+          "recommended_tea": "ローズヒップティー",
+          "lucky_number": 56,
+          "power_stone": "マラカイト",
+          "aroma_oil": "フランキンセンス",
+          "meditation_theme": "グラウンディング",
+          "flower_of_the_day": "紫陽花 - 移り気",
+          "energy_advice": "直感に従う日"
         },
         {
           "day": 20,
@@ -5783,7 +7901,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "知恵の泉湧出",
           "color_of_the_day": "鋼青色",
-          "recommended_tea": "白茶"
+          "recommended_tea": "白茶",
+          "lucky_number": 57,
+          "power_stone": "オニキス",
+          "aroma_oil": "ジャスミン",
+          "meditation_theme": "エネルギー浄化",
+          "flower_of_the_day": "牡丹 - 富貴",
+          "energy_advice": "学びを深める好機"
         },
         {
           "day": 21,
@@ -5799,7 +7923,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "至福の時間軸",
           "color_of_the_day": "深紅色",
-          "recommended_tea": "烏龍茶"
+          "recommended_tea": "烏龍茶",
+          "lucky_number": 58,
+          "power_stone": "シトリン",
+          "aroma_oil": "ベルガモット",
+          "meditation_theme": "未来創造",
+          "flower_of_the_day": "百合 - 純粋",
+          "energy_advice": "愛を分かち合う日"
         },
         {
           "day": 22,
@@ -5815,7 +7945,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "運気上昇の兆し",
           "color_of_the_day": "金色",
-          "recommended_tea": "玄米茶"
+          "recommended_tea": "玄米茶",
+          "lucky_number": 59,
+          "power_stone": "ペリドット",
+          "aroma_oil": "ティーツリー",
+          "meditation_theme": "過去の癒し",
+          "flower_of_the_day": "カーネーション - 母の愛",
+          "energy_advice": "エネルギーを充電する時"
         },
         {
           "day": 23,
@@ -5831,7 +7967,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "心の扉が開放",
           "color_of_the_day": "朱色",
-          "recommended_tea": "抹茶"
+          "recommended_tea": "抹茶",
+          "lucky_number": 60,
+          "power_stone": "トルマリン",
+          "aroma_oil": "ゼラニウム",
+          "meditation_theme": "内なる平和",
+          "flower_of_the_day": "コスモス - 乙女の真心",
+          "energy_advice": "変化を受け入れる日"
         },
         {
           "day": 24,
@@ -5847,7 +7989,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "宇宙との同調",
           "color_of_the_day": "空色",
-          "recommended_tea": "柚子茶"
+          "recommended_tea": "柚子茶",
+          "lucky_number": 61,
+          "power_stone": "オパール",
+          "aroma_oil": "パチュリ",
+          "meditation_theme": "宇宙との繋がり",
+          "flower_of_the_day": "すずらん - 謙遜",
+          "energy_advice": "夢を描く時間"
         },
         {
           "day": 25,
@@ -5863,7 +8011,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "愛のバイブレーション",
           "color_of_the_day": "若草色",
-          "recommended_tea": "生姜茶"
+          "recommended_tea": "生姜茶",
+          "lucky_number": 62,
+          "power_stone": "ターコイズ",
+          "aroma_oil": "シダーウッド",
+          "meditation_theme": "直感力向上",
+          "flower_of_the_day": "菜の花 - 快活",
+          "energy_advice": "心を整理する日"
         },
         {
           "day": 26,
@@ -5879,7 +8033,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "豊かさの波動",
           "color_of_the_day": "黄金色",
-          "recommended_tea": "黒豆茶"
+          "recommended_tea": "黒豆茶",
+          "lucky_number": 63,
+          "power_stone": "エメラルド",
+          "aroma_oil": "カモミール",
+          "meditation_theme": "創造性開花",
+          "flower_of_the_day": "藤 - 優しさ",
+          "energy_advice": "自然と触れ合う日"
         },
         {
           "day": 27,
@@ -5895,7 +8055,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "運命の扉が開く日",
           "color_of_the_day": "鋼青色",
-          "recommended_tea": "アールグレイ"
+          "recommended_tea": "アールグレイ",
+          "lucky_number": 64,
+          "power_stone": "アメジスト",
+          "aroma_oil": "ラベンダー",
+          "meditation_theme": "感謝の瞑想",
+          "flower_of_the_day": "桜 - 精神の美",
+          "energy_advice": "今日は新しい挑戦の時"
         },
         {
           "day": 28,
@@ -5911,7 +8077,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "宇宙からのメッセージ",
           "color_of_the_day": "深紅色",
-          "recommended_tea": "カモミールティー"
+          "recommended_tea": "カモミールティー",
+          "lucky_number": 65,
+          "power_stone": "ローズクォーツ",
+          "aroma_oil": "ユーカリ",
+          "meditation_theme": "慈悲の瞑想",
+          "flower_of_the_day": "梅 - 気品",
+          "energy_advice": "休息を大切にする日"
         },
         {
           "day": 29,
@@ -5927,7 +8099,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "奇跡を呼ぶ波動",
           "color_of_the_day": "金色",
-          "recommended_tea": "ペパーミントティー"
+          "recommended_tea": "ペパーミントティー",
+          "lucky_number": 66,
+          "power_stone": "クリスタル",
+          "aroma_oil": "ローズマリー",
+          "meditation_theme": "呼吸に集中",
+          "flower_of_the_day": "椿 - 控えめな素晴らしさ",
+          "energy_advice": "人との繋がりを深める日"
         },
         {
           "day": 30,
@@ -5943,7 +8121,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "龍神様のご加護",
           "color_of_the_day": "朱色",
-          "recommended_tea": "緑茶"
+          "recommended_tea": "緑茶",
+          "lucky_number": 67,
+          "power_stone": "アクアマリン",
+          "aroma_oil": "オレンジ",
+          "meditation_theme": "マインドフルネス",
+          "flower_of_the_day": "菊 - 高貴",
+          "energy_advice": "創造性を発揮する時"
         },
         {
           "day": 31,
@@ -5959,7 +8143,13 @@
           "moon_phase": "調査中",
           "daily_keyword": "金運上昇のサイン",
           "color_of_the_day": "空色",
-          "recommended_tea": "ほうじ茶"
+          "recommended_tea": "ほうじ茶",
+          "lucky_number": 68,
+          "power_stone": "ガーネット",
+          "aroma_oil": "レモングラス",
+          "meditation_theme": "ボディスキャン",
+          "flower_of_the_day": "蓮 - 清らかな心",
+          "energy_advice": "内省の時間を作る日"
         }
       ]
     }

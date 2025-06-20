@@ -117,6 +117,7 @@ The system follows a **Static Site Generator + API** architecture:
 - June 20, 2025: データ品質向上 - 色の日本語化、キーワード改善、1ヶ月表示機能追加
 - June 20, 2025: キーワードをスピリチュアルで面白い表現に変更（龍神様のご加護、宇宙からのメッセージ等）
 - June 20, 2025: 複数形式対応完了 - CSV、XML、TXT形式を追加、READMEファイル作成
+- June 20, 2025: データ種類大幅拡張 - ラッキーナンバー、パワーストーン、アロマオイル、瞑想テーマ、花言葉、エネルギーアドバイス追加
 
 ## User Preferences
 

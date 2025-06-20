@@ -45,6 +45,35 @@ TEAS = [
     "玄米茶", "抹茶", "柚子茶", "生姜茶", "黒豆茶"
 ]
 
+# 追加データ
+LUCKY_NUMBERS = list(range(1, 100))  # 1-99のラッキーナンバー
+POWER_STONES = [
+    "アメジスト", "ローズクォーツ", "クリスタル", "アクアマリン", "ガーネット",
+    "ムーンストーン", "ラピスラズリ", "マラカイト", "オニキス", "シトリン",
+    "ペリドット", "トルマリン", "オパール", "ターコイズ", "エメラルド"
+]
+AROMA_OILS = [
+    "ラベンダー", "ユーカリ", "ローズマリー", "オレンジ", "レモングラス",
+    "イランイラン", "サンダルウッド", "フランキンセンス", "ジャスミン", "ベルガモット",
+    "ティーツリー", "ゼラニウム", "パチュリ", "シダーウッド", "カモミール"
+]
+MEDITATION_THEMES = [
+    "感謝の瞑想", "慈悲の瞑想", "呼吸に集中", "マインドフルネス", "ボディスキャン",
+    "愛と光の瞑想", "チャクラ調整", "グラウンディング", "エネルギー浄化", "未来創造",
+    "過去の癒し", "内なる平和", "宇宙との繋がり", "直感力向上", "創造性開花"
+]
+FLOWER_MEANINGS = [
+    "桜 - 精神の美", "梅 - 気品", "椿 - 控えめな素晴らしさ", "菊 - 高貴", "蓮 - 清らかな心",
+    "薔薇 - 愛情", "向日葵 - 憧れ", "紫陽花 - 移り気", "牡丹 - 富貴", "百合 - 純粋",
+    "カーネーション - 母の愛", "コスモス - 乙女の真心", "すずらん - 謙遜", "菜の花 - 快活", "藤 - 優しさ"
+]
+ENERGY_ADVICE = [
+    "今日は新しい挑戦の時", "休息を大切にする日", "人との繋がりを深める日", "創造性を発揮する時",
+    "内省の時間を作る日", "感謝を表現する日", "勇気を出して行動する時", "直感に従う日",
+    "学びを深める好機", "愛を分かち合う日", "エネルギーを充電する時", "変化を受け入れる日",
+    "夢を描く時間", "心を整理する日", "自然と触れ合う日"
+]
+
 # --- メイン処理 ---
 def generate_koyomi_data(year):
     print(f"{year}年の暦データを生成します...")
@@ -97,6 +126,14 @@ def generate_koyomi_data(year):
             keyword = KEYWORDS[(day_of_year - 1) % len(KEYWORDS)]
             color = COLORS_OF_WEEK[weekday_index]
             tea = TEAS[(day_of_year - 1) % len(TEAS)]
+            
+            # 追加データの生成
+            lucky_number = LUCKY_NUMBERS[(day_of_year - 1) % len(LUCKY_NUMBERS)]
+            power_stone = POWER_STONES[(day_of_year - 1) % len(POWER_STONES)]
+            aroma_oil = AROMA_OILS[(day_of_year - 1) % len(AROMA_OILS)]
+            meditation_theme = MEDITATION_THEMES[(day_of_year - 1) % len(MEDITATION_THEMES)]
+            flower_meaning = FLOWER_MEANINGS[(day_of_year - 1) % len(FLOWER_MEANINGS)]
+            energy_advice = ENERGY_ADVICE[(day_of_year - 1) % len(ENERGY_ADVICE)]
 
             day_info = {
                 "day": day,
@@ -112,7 +149,13 @@ def generate_koyomi_data(year):
                 "moon_phase": "調査中",  # 月の満ち欠けも複雑なので今回は省略
                 "daily_keyword": keyword,
                 "color_of_the_day": color,
-                "recommended_tea": tea
+                "recommended_tea": tea,
+                "lucky_number": lucky_number,
+                "power_stone": power_stone,
+                "aroma_oil": aroma_oil,
+                "meditation_theme": meditation_theme,
+                "flower_of_the_day": flower_meaning,
+                "energy_advice": energy_advice
             }
             month_data["days"].append(day_info)
 
