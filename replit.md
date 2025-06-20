@@ -1,4 +1,4 @@
-# Japanese Calendar API
+# 暦データAPI (Calendar Data API)
 
 ## Overview
 
@@ -121,6 +121,7 @@ The system follows a **Static Site Generator + API** architecture:
 - June 20, 2025: 最終拡張完了 - 占星術、タロット、名言、音楽推奨、食事推奨、クリスタルヒーリング、風水アドバイス追加（計19データカテゴリ）
 - June 20, 2025: データ再生成完了 - 27項目の完全なデータで365日分を更新、トップページJavaScript更新
 - June 20, 2025: ドキュメントサイト最適化 - フィールド説明を主要項目に絞り、全27項目の存在を適切に案内
+- June 20, 2025: プロジェクト名変更 - 「日本暦データAPI」から「暦データAPI」に変更（西暦も扱うため、より正確な名称）
 
 ## User Preferences
 
