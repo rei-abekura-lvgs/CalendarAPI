@@ -112,8 +112,11 @@ The system follows a **Static Site Generator + API** architecture:
 - **Cache-Control**: 1-hour caching for performance
 
 ## Changelog
-- June 20, 2025. Initial setup
+- June 20, 2025: 初期セットアップ完了
+- June 20, 2025: JSON API機能確認完了 - 全エンドポイント正常動作
 
 ## User Preferences
 
-Preferred communication style: Simple, everyday language.
+- 日本語でのコミュニケーション
+- JSON APIとして直接URLアクセス可能な形式を希望
+- ドキュメントサイトは必須ではない
