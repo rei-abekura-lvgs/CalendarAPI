@@ -116,6 +116,7 @@ The system follows a **Static Site Generator + API** architecture:
 - June 20, 2025: JSON API機能確認完了 - 全エンドポイント正常動作
 - June 20, 2025: データ品質向上 - 色の日本語化、キーワード改善、1ヶ月表示機能追加
 - June 20, 2025: キーワードをスピリチュアルで面白い表現に変更（龍神様のご加護、宇宙からのメッセージ等）
+- June 20, 2025: 複数形式対応完了 - CSV、XML、TXT形式を追加、READMEファイル作成
 
 ## User Preferences
 
