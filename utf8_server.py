@@ -24,6 +24,9 @@ class UTF8HTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
 if __name__ == "__main__":
     port = int(os.environ.get('PORT', 5000))
     
+    # TCP_REUSEADDRを設定してアドレス再利用を許可
+    socketserver.TCPServer.allow_reuse_address = True
+    
     with socketserver.TCPServer(("0.0.0.0", port), UTF8HTTPRequestHandler) as httpd:
         print(f"UTF-8対応サーバーをポート {port} で起動中...")
         httpd.serve_forever()
