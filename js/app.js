@@ -281,3 +281,70 @@ if (typeof module !== 'undefined' && module.exports) {
         displayTodayData
     };
 }
+
+// Quick Access functionality
+function initializeQuickAccess() {
+    generateMonthLinks(2025); // Default year
+    generateYearDataLinks(2025);
+    
+    // Year button click handlers
+    document.querySelectorAll('.year-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const year = parseInt(this.dataset.year);
+            
+            // Update active state
+            document.querySelectorAll('.year-btn').forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            
+            // Update display
+            document.getElementById('selected-year').textContent = year;
+            generateMonthLinks(year);
+            generateYearDataLinks(year);
+        });
+    });
+}
+
+function generateMonthLinks(year) {
+    const container = document.getElementById('month-links');
+    const months = ['1月', '2月', '3月', '4月', '5月', '6月', 
+                   '7月', '8月', '9月', '10月', '11月', '12月'];
+    
+    container.innerHTML = '';
+    
+    months.forEach((month, index) => {
+        const monthNum = String(index + 1).padStart(2, '0');
+        const col = document.createElement('div');
+        col.className = 'col-4 col-md-3';
+        
+        const link = document.createElement('a');
+        link.href = `https://rei-abekura-lvgs.github.io/CalendarAPI/api/${year}/${monthNum}.json`;
+        link.target = '_blank';
+        link.className = 'btn btn-outline-primary btn-sm w-100';
+        link.textContent = month;
+        
+        col.appendChild(link);
+        container.appendChild(col);
+    });
+}
+
+function generateYearDataLinks(year) {
+    const container = document.getElementById('year-data-links');
+    const formats = [
+        { ext: 'json', name: 'JSON', class: 'btn-primary', icon: 'fas fa-download' },
+        { ext: 'csv', name: 'CSV', class: 'btn-outline-success', icon: 'fas fa-file-csv' },
+        { ext: 'xml', name: 'XML', class: 'btn-outline-warning', icon: 'fas fa-file-code' },
+        { ext: 'txt', name: 'TXT', class: 'btn-outline-info', icon: 'fas fa-file-alt' }
+    ];
+    
+    container.innerHTML = '';
+    
+    formats.forEach(format => {
+        const link = document.createElement('a');
+        link.href = `https://rei-abekura-lvgs.github.io/CalendarAPI/api/${year}/all.${format.ext}`;
+        link.target = '_blank';
+        link.className = `btn ${format.class} btn-sm w-100`;
+        link.innerHTML = `<i class="${format.icon} me-2"></i>${format.name}形式`;
+        
+        container.appendChild(link);
+    });
+}

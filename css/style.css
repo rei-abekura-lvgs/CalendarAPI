@@ -13,6 +13,33 @@ body {
     line-height: 1.6;
 }
 
+/* Quick Access Year Buttons */
+.year-btn {
+    margin: 2px;
+    transition: all 0.3s ease;
+}
+
+.year-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.year-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Card animations */
+.card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
 .hero-section {
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
 }

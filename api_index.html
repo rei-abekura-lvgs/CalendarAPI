@@ -105,7 +105,7 @@
         
         <div class="stats">
             <h2>📊 データ統計</h2>
-            <p><strong>対象年:</strong> 2025年〜2027年（3年分） | <strong>総日数:</strong> 1095日 | <strong>対応形式:</strong> 4種類</p>
+            <p><strong>対象年:</strong> 2025年〜2036年（12年分） | <strong>総日数:</strong> 4383日 | <strong>対応形式:</strong> 4種類</p>
             <p><strong>最終更新:</strong> <span id="lastUpdate">Loading...</span></p>
         </div>
 
@@ -123,14 +123,9 @@
             </div>
 
             <div class="file-section">
-                <h3>📊 年間データ (2025年〜2027年)</h3>
-                <ul class="file-list">
-                    <li><a href="api/2025/all.json">2025年全データ <span class="format-badge">JSON</span></a></li>
-                    <li><a href="api/2025/all.csv">2025年全データ <span class="format-badge">CSV</span></a></li>
-                    <li><a href="api/2025/all.xml">2025年全データ <span class="format-badge">XML</span></a></li>
-                    <li><a href="api/2025/all.txt">2025年全データ <span class="format-badge">TXT</span></a></li>
-                    <li><a href="api/2026/all.json">2026年全データ <span class="format-badge">JSON</span></a></li>
-                    <li><a href="api/2027/all.json">2027年全データ <span class="format-badge">JSON</span></a></li>
+                <h3>📊 年間データ (2025年〜2036年)</h3>
+                <ul class="file-list" id="yearlyFiles">
+                    <!-- 動的に生成 -->
                 </ul>
             </div>
 
@@ -170,10 +165,10 @@ GET /api/2025/all.json</div>
             { ext: 'txt', name: 'TXT', color: '#f39c12' }
         ];
 
-        // 月別ファイル一覧を生成（3年分）
+        // 月別ファイル一覧を生成（12年分）
         function generateMonthlyFiles() {
             const container = document.getElementById('monthlyFiles');
-            const years = [2025, 2026, 2027];
+            const years = Array.from({length: 12}, (_, i) => 2025 + i); // 2025-2036
             
             years.forEach(year => {
                 const yearDiv = document.createElement('div');
@@ -195,6 +190,27 @@ GET /api/2025/all.json</div>
                     
                     container.appendChild(li);
                 }
+            });
+        }
+
+        // 年間ファイル一覧を生成（12年分）
+        function generateYearlyFiles() {
+            const container = document.getElementById('yearlyFiles');
+            const years = Array.from({length: 12}, (_, i) => 2025 + i); // 2025-2036
+            
+            years.forEach(year => {
+                const li = document.createElement('li');
+                li.innerHTML = `<strong>${year}年:</strong> `;
+                
+                formats.forEach(format => {
+                    const link = document.createElement('a');
+                    link.href = `api/${year}/all.${format.ext}`;
+                    link.innerHTML = `<span class="format-badge" style="background:${format.color}">${format.name}</span>`;
+                    link.style.marginRight = '5px';
+                    li.appendChild(link);
+                });
+                
+                container.appendChild(li);
             });
         }
 
@@ -259,6 +275,7 @@ ${JSON.stringify(sample, null, 2)}`;
         // 初期化
         document.addEventListener('DOMContentLoaded', function() {
             generateMonthlyFiles();
+            generateYearlyFiles();
             loadTodayData();
             loadSampleData();
         });

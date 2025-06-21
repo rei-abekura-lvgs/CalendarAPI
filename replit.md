@@ -125,6 +125,8 @@ The system follows a **Static Site Generator + API** architecture:
 - June 20, 2025: GitHub Pages対応 - 実際のGitHub Pages URL（rei-abekura-lvgs.github.io/CalendarAPI）に全てのエンドポイントを更新
 - June 20, 2025: クイックアクセス機能追加 - エンドポイント表に直接リンク追加、全12ヶ月とCSV/XML/TXT形式への即座アクセス可能
 - June 20, 2025: 3年分データ生成完了 - 2025年〜2027年（3年分、計1095日）のデータを生成、api_index.htmlページも3年分対応に更新
+- June 21, 2025: 12年分データ生成完了 - 2025年〜2036年（12年分、計4383日）のデータを生成、祝日計算を改善（移動祝日対応）
+- June 21, 2025: UI大幅改善 - クイックアクセスを年選択式に変更、api_index.htmlページを12年分対応、インタラクティブなデザインに更新
 
 ## User Preferences
 
