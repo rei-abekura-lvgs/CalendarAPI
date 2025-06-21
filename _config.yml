@@ -4,10 +4,10 @@
 title: "日本暦データAPI"
 description: "日本の暦データをJSON形式で提供する無料APIサービス"
 baseurl: ""
-url: "https://your-username.github.io"
+url: "https://rei-abekura-lvgs.github.io"
 
 # Repository
-repository: "your-username/japanese-calendar-api"
+repository: "rei-abekura-lvgs/CalendarAPI"
 
 # Build settings
 markdown: kramdown
