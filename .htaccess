@@ -1,0 +1,23 @@
+# UTF-8エンコーディングを強制
+AddDefaultCharset UTF-8
+
+# TXTファイルのMIMEタイプを設定
+<Files "*.txt">
+    ForceType "text/plain; charset=utf-8"
+</Files>
+
+# その他のテキストファイル
+<Files "*.csv">
+    ForceType "text/csv; charset=utf-8"
+</Files>
+
+<Files "*.xml">
+    ForceType "application/xml; charset=utf-8"
+</Files>
+
+# CORSヘッダー
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+    Header set Access-Control-Allow-Methods "GET, OPTIONS"
+    Header set Access-Control-Allow-Headers "Content-Type"
+</IfModule>
