@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# APIエンドポイント
+Allow: /api/
+
+# 静的ファイル
+Allow: /css/
+Allow: /js/
+
+# サイトマップ
+Sitemap: https://rei-abekura-lvgs.github.io/CalendarAPI/sitemap.xml
+
+# クロール頻度の提案
+Crawl-delay: 1
