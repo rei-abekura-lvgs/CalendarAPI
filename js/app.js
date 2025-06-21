@@ -1,5 +1,10 @@
 // Japanese Calendar API Documentation Site JavaScript
 
+// Constants
+const API_BASE_URL = './api';
+const CACHE_DURATION = 5 * 60 * 1000; // 5 minutes
+const SUPPORTED_YEARS = Array.from({length: 12}, (_, i) => 2025 + i);
+
 // DOM Content Loaded Event
 document.addEventListener('DOMContentLoaded', function() {
     initializeApp();
@@ -9,7 +14,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Initialize the application
 function initializeApp() {
-    // Smooth scrolling for navigation links
+    setupSmoothScrolling();
+    initializePrism();
+    addCopyCodeButtons();
+}
+
+// Setup smooth scrolling for navigation links
+function setupSmoothScrolling() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -22,14 +33,13 @@ function initializeApp() {
             }
         });
     });
+}
 
-    // Initialize Prism.js for code highlighting
+// Initialize Prism.js for code highlighting
+function initializePrism() {
     if (typeof Prism !== 'undefined') {
         Prism.highlightAll();
     }
-
-    // Copy code functionality
-    addCopyCodeButtons();
 }
 
 // Load today's data for the demo card
@@ -41,12 +51,26 @@ async function loadTodayData() {
         const month = String(today.getMonth() + 1).padStart(2, '0');
         const day = today.getDate();
         
-        // Get current month data with cache busting
-        const cacheBuster = new Date().getTime();
-        const response = await fetch(`./api/2025/${month}.json?v=${cacheBuster}`);
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
+        const data = await fetchAPIData(`2025/${month}.json`);
+        displayTodayData(data, day);
+        
+    } catch (error) {
+        showTodayDataError('データの読み込みに失敗しました');
+        console.error('Error loading today data:', error);
+    }
+}
+
+// Fetch API data with caching and error handling
+async function fetchAPIData(endpoint) {
+    const cacheBuster = new Date().getTime();
+    const response = await fetch(`${API_BASE_URL}/${endpoint}?v=${cacheBuster}`);
+    
+    if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    
+    return await response.json();
+}
         
         const monthData = await response.json();
         const todayData = monthData.days.find(d => d.day === day);
