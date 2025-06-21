@@ -52,7 +52,13 @@ async function loadTodayData() {
         const day = today.getDate();
         
         const data = await fetchAPIData(`2025/${month}.json`);
-        displayTodayData(data, day);
+        const todayData = data.days.find(d => d.day === day);
+        
+        if (todayData) {
+            displayTodayData(todayData);
+        } else {
+            showTodayDataError('本日のデータが見つかりません');
+        }
         
     } catch (error) {
         showTodayDataError('データの読み込みに失敗しました');
@@ -152,7 +158,7 @@ function showTodayDataError(message) {
 }
 
 // Test API endpoint functionality
-async function testEndpoint(endpoint) {
+function testEndpoint(endpoint) {
     const button = event.target;
     const originalText = button.textContent;
     
@@ -161,25 +167,26 @@ async function testEndpoint(endpoint) {
     button.disabled = true;
     button.classList.add('loading');
     
-    try {
-        const response = await fetch(`.${endpoint}`);
-        if (!response.ok) {
-            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-        }
-        
-        const data = await response.json();
-        showEndpointResult(button, data, true);
-    } catch (error) {
-        console.error('Endpoint test failed:', error);
-        showEndpointResult(button, { error: error.message }, false);
-    } finally {
-        // Reset button state
-        setTimeout(() => {
-            button.textContent = originalText;
-            button.disabled = false;
-            button.classList.remove('loading');
-        }, 2000);
-    }
+    fetch(`.${endpoint}`)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+            }
+            return response.json();
+        })
+        .then(data => showEndpointResult(button, data, true))
+        .catch(error => {
+            console.error('Endpoint test failed:', error);
+            showEndpointResult(button, { error: error.message }, false);
+        })
+        .finally(() => {
+            // Reset button state
+            setTimeout(() => {
+                button.textContent = originalText;
+                button.disabled = false;
+                button.classList.remove('loading');
+            }, 2000);
+        });
 }
 
 // Show endpoint test result
@@ -247,25 +254,32 @@ function addCopyCodeButtons() {
 }
 
 // Copy code to clipboard
-async function copyCodeToClipboard(codeBlock, button) {
+function copyCodeToClipboard(codeBlock, button) {
     const code = codeBlock.textContent;
     const originalContent = button.innerHTML;
     
-    try {
-        await navigator.clipboard.writeText(code);
-        button.innerHTML = '<i class="fas fa-check text-success"></i>';
-        button.classList.add('btn-success');
-        button.classList.remove('btn-outline-secondary');
-        
-        setTimeout(() => {
-            button.innerHTML = originalContent;
-            button.classList.remove('btn-success');
-            button.classList.add('btn-outline-secondary');
-        }, 2000);
-    } catch (err) {
-        console.error('Failed to copy code:', err);
-        button.innerHTML = '<i class="fas fa-times text-danger"></i>';
-        
+    if (navigator.clipboard) {
+        navigator.clipboard.writeText(code).then(() => {
+            button.innerHTML = '<i class="fas fa-check text-success"></i>';
+            button.classList.add('btn-success');
+            button.classList.remove('btn-outline-secondary');
+            
+            setTimeout(() => {
+                button.innerHTML = originalContent;
+                button.classList.remove('btn-success');
+                button.classList.add('btn-outline-secondary');
+            }, 2000);
+        }).catch(err => {
+            console.error('Failed to copy code:', err);
+            button.innerHTML = '<i class="fas fa-times text-danger"></i>';
+            
+            setTimeout(() => {
+                button.innerHTML = originalContent;
+            }, 2000);
+        });
+    } else {
+        // Fallback for older browsers
+        button.innerHTML = '<i class="fas fa-times text-warning"></i>';
         setTimeout(() => {
             button.innerHTML = originalContent;
         }, 2000);
