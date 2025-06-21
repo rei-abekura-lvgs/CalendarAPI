@@ -4,6 +4,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     initializeApp();
     loadTodayData();
+    initializeQuickAccess();
 });
 
 // Initialize the application

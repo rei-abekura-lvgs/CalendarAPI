@@ -5,28 +5,93 @@ from pathlib import Path
 
 # --- 設定とマスターデータ ---
 
-YEARS = [2025, 2026, 2027]  # 生成する年（複数年対応）
+YEARS = list(range(2025, 2037))  # 2025年から2036年まで（12年分）
 
-# 簡易的な祝日マスター (本来はライブラリなどを使う)
-HOLIDAYS = {
-    "01-01": "元日",
-    "01-13": "成人の日",
-    "02-11": "建国記念の日",
-    "02-23": "天皇誕生日",
-    "03-20": "春分の日",
-    "04-29": "昭和の日",
-    "05-03": "憲法記念日",
-    "05-04": "みどりの日",
-    "05-05": "こどもの日",
-    "05-06": "振替休日",
-    "07-21": "海の日",
-    "08-11": "山の日",
-    "09-15": "敬老の日",
-    "09-23": "秋分の日",
-    "10-13": "スポーツの日",
-    "11-03": "文化の日",
-    "11-23": "勤労感謝の日",
-}
+def get_holidays_for_year(year):
+    """年別の祝日を計算（固定祝日と移動祝日の両方に対応）"""
+    holidays = {}
+    
+    # 固定祝日
+    fixed_holidays = {
+        "01-01": "元日",
+        "02-11": "建国記念の日", 
+        "02-23": "天皇誕生日",
+        "04-29": "昭和の日",
+        "05-03": "憲法記念日",
+        "05-04": "みどりの日",
+        "05-05": "こどもの日",
+        "08-11": "山の日",
+        "11-03": "文化の日",
+        "11-23": "勤労感謝の日"
+    }
+    holidays.update(fixed_holidays)
+    
+    # 移動祝日の計算
+    import calendar
+    
+    # 成人の日（1月第2月曜日）
+    first_monday = None
+    for day in range(1, 8):
+        if calendar.weekday(year, 1, day) == 0:  # 月曜日
+            first_monday = day
+            break
+    if first_monday:
+        adult_day = first_monday + 7
+        holidays[f"01-{adult_day:02d}"] = "成人の日"
+    
+    # 海の日（7月第3月曜日）
+    third_monday_july = None
+    monday_count = 0
+    for day in range(1, 32):
+        if calendar.weekday(year, 7, day) == 0:  # 月曜日
+            monday_count += 1
+            if monday_count == 3:
+                third_monday_july = day
+                break
+    if third_monday_july:
+        holidays[f"07-{third_monday_july:02d}"] = "海の日"
+    
+    # 敬老の日（9月第3月曜日）
+    third_monday_sept = None
+    monday_count = 0
+    for day in range(1, 31):
+        if calendar.weekday(year, 9, day) == 0:  # 月曜日
+            monday_count += 1
+            if monday_count == 3:
+                third_monday_sept = day
+                break
+    if third_monday_sept:
+        holidays[f"09-{third_monday_sept:02d}"] = "敬老の日"
+    
+    # スポーツの日（10月第2月曜日）
+    second_monday_oct = None
+    monday_count = 0
+    for day in range(1, 32):
+        if calendar.weekday(year, 10, day) == 0:  # 月曜日
+            monday_count += 1
+            if monday_count == 2:
+                second_monday_oct = day
+                break
+    if second_monday_oct:
+        holidays[f"10-{second_monday_oct:02d}"] = "スポーツの日"
+    
+    # 春分の日・秋分の日は簡易計算（実際の計算は複雑）
+    # 2025-2036年の近似値
+    spring_equinox_days = {
+        2025: 20, 2026: 20, 2027: 21, 2028: 20, 2029: 20, 2030: 20,
+        2031: 21, 2032: 20, 2033: 20, 2034: 21, 2035: 21, 2036: 20
+    }
+    autumn_equinox_days = {
+        2025: 23, 2026: 23, 2027: 23, 2028: 22, 2029: 23, 2030: 23,
+        2031: 23, 2032: 22, 2033: 23, 2034: 23, 2035: 23, 2036: 22
+    }
+    
+    if year in spring_equinox_days:
+        holidays[f"03-{spring_equinox_days[year]:02d}"] = "春分の日"
+    if year in autumn_equinox_days:
+        holidays[f"09-{autumn_equinox_days[year]:02d}"] = "秋分の日"
+    
+    return holidays
 
 ROKUYO_LIST = ["大安", "赤口", "先勝", "友引", "先負", "仏滅"]
 WEEKDAY_LIST = ["月曜日", "火曜日", "水曜日", "木曜日", "金曜日", "土曜日", "日曜日"]
@@ -120,6 +185,9 @@ def generate_koyomi_data(year):
     output_dir = Path("api") / str(year)
     output_dir.mkdir(parents=True, exist_ok=True)
 
+    # その年の祝日を取得
+    holidays = get_holidays_for_year(year)
+
     # 全年データを格納するリスト
     all_data = {
         "year": year,
@@ -155,8 +223,8 @@ def generate_koyomi_data(year):
             weekday_name = WEEKDAY_LIST[weekday_index]
 
             # 祝日
-            is_holiday = date_str in HOLIDAYS
-            holiday_name = HOLIDAYS.get(date_str)
+            is_holiday = date_str in holidays
+            holiday_name = holidays.get(date_str)
 
             # 簡易六曜
             rokuyo_index = (month + day) % 6

@@ -1,7 +1,7 @@
 {
   "year": 2027,
   "api_version": "v1",
-  "generated_at": "2025-06-20T16:58:17.807274",
+  "generated_at": "2025-06-21T12:38:03.828772",
   "months": [
     {
       "year": 2027,
@@ -9,7 +9,7 @@
       "month_name": "January",
       "month_name_jp": "1月",
       "api_version": "v1",
-      "generated_at": "2025-06-20T16:58:17.807314",
+      "generated_at": "2025-06-21T12:38:03.828800",
       "days": [
         {
           "day": 1,
@@ -308,8 +308,8 @@
           "weekday_en": "Monday",
           "weekday_short": "Mon",
           "is_weekend": false,
-          "is_holiday": false,
-          "holiday_name": null,
+          "is_holiday": true,
+          "holiday_name": "成人の日",
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
@@ -366,8 +366,8 @@
           "weekday_en": "Wednesday",
           "weekday_short": "Wed",
           "is_weekend": false,
-          "is_holiday": true,
-          "holiday_name": "成人の日",
+          "is_holiday": false,
+          "holiday_name": null,
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
@@ -918,7 +918,7 @@
       "month_name": "February",
       "month_name_jp": "2月",
       "api_version": "v1",
-      "generated_at": "2025-06-20T16:58:17.815786",
+      "generated_at": "2025-06-21T12:38:03.831329",
       "days": [
         {
           "day": 1,
@@ -1740,7 +1740,7 @@
       "month_name": "March",
       "month_name_jp": "3月",
       "api_version": "v1",
-      "generated_at": "2025-06-20T16:58:17.819851",
+      "generated_at": "2025-06-21T12:38:03.833757",
       "days": [
         {
           "day": 1,
@@ -2300,8 +2300,8 @@
           "weekday_en": "Saturday",
           "weekday_short": "Sat",
           "is_weekend": true,
-          "is_holiday": true,
-          "holiday_name": "春分の日",
+          "is_holiday": false,
+          "holiday_name": null,
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
@@ -2329,8 +2329,8 @@
           "weekday_en": "Sunday",
           "weekday_short": "Sun",
           "is_weekend": true,
-          "is_holiday": false,
-          "holiday_name": null,
+          "is_holiday": true,
+          "holiday_name": "春分の日",
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
@@ -2649,7 +2649,7 @@
       "month_name": "April",
       "month_name_jp": "4月",
       "api_version": "v1",
-      "generated_at": "2025-06-20T16:58:17.827853",
+      "generated_at": "2025-06-21T12:38:03.836072",
       "days": [
         {
           "day": 1,
@@ -3529,7 +3529,7 @@
       "month_name": "May",
       "month_name_jp": "5月",
       "api_version": "v1",
-      "generated_at": "2025-06-20T16:58:17.834810",
+      "generated_at": "2025-06-21T12:38:03.838873",
       "days": [
         {
           "day": 1,
@@ -3683,8 +3683,8 @@
           "weekday_en": "Thursday",
           "weekday_short": "Thu",
           "is_weekend": false,
-          "is_holiday": true,
-          "holiday_name": "振替休日",
+          "is_holiday": false,
+          "holiday_name": null,
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
@@ -4438,7 +4438,7 @@
       "month_name": "June",
       "month_name_jp": "6月",
       "api_version": "v1",
-      "generated_at": "2025-06-20T16:58:17.837956",
+      "generated_at": "2025-06-21T12:38:03.841438",
       "days": [
         {
           "day": 1,
@@ -5318,7 +5318,7 @@
       "month_name": "July",
       "month_name_jp": "7月",
       "api_version": "v1",
-      "generated_at": "2025-06-20T16:58:17.843787",
+      "generated_at": "2025-06-21T12:38:03.843744",
       "days": [
         {
           "day": 1,
@@ -5849,8 +5849,8 @@
           "weekday_en": "Monday",
           "weekday_short": "Mon",
           "is_weekend": false,
-          "is_holiday": false,
-          "holiday_name": null,
+          "is_holiday": true,
+          "holiday_name": "海の日",
           "rokuyo": "先勝",
           "season_24": null,
           "moon_phase": "調査中",
@@ -5907,8 +5907,8 @@
           "weekday_en": "Wednesday",
           "weekday_short": "Wed",
           "is_weekend": false,
-          "is_holiday": true,
-          "holiday_name": "海の日",
+          "is_holiday": false,
+          "holiday_name": null,
           "rokuyo": "先負",
           "season_24": null,
           "moon_phase": "調査中",
@@ -6227,7 +6227,7 @@
       "month_name": "August",
       "month_name_jp": "8月",
       "api_version": "v1",
-      "generated_at": "2025-06-20T16:58:17.849150",
+      "generated_at": "2025-06-21T12:38:03.846600",
       "days": [
         {
           "day": 1,
@@ -7136,7 +7136,7 @@
       "month_name": "September",
       "month_name_jp": "9月",
       "api_version": "v1",
-      "generated_at": "2025-06-20T16:58:17.852827",
+      "generated_at": "2025-06-21T12:38:03.848921",
       "days": [
         {
           "day": 1,
@@ -7551,8 +7551,8 @@
           "weekday_en": "Wednesday",
           "weekday_short": "Wed",
           "is_weekend": false,
-          "is_holiday": true,
-          "holiday_name": "敬老の日",
+          "is_holiday": false,
+          "holiday_name": null,
           "rokuyo": "大安",
           "season_24": null,
           "moon_phase": "調査中",
@@ -7696,8 +7696,8 @@
           "weekday_en": "Monday",
           "weekday_short": "Mon",
           "is_weekend": false,
-          "is_holiday": false,
-          "holiday_name": null,
+          "is_holiday": true,
+          "holiday_name": "敬老の日",
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
@@ -8016,7 +8016,7 @@
       "month_name": "October",
       "month_name_jp": "10月",
       "api_version": "v1",
-      "generated_at": "2025-06-20T16:58:17.856785",
+      "generated_at": "2025-06-21T12:38:03.851189",
       "days": [
         {
           "day": 1,
@@ -8315,8 +8315,8 @@
           "weekday_en": "Monday",
           "weekday_short": "Mon",
           "is_weekend": false,
-          "is_holiday": false,
-          "holiday_name": null,
+          "is_holiday": true,
+          "holiday_name": "スポーツの日",
           "rokuyo": "友引",
           "season_24": null,
           "moon_phase": "調査中",
@@ -8373,8 +8373,8 @@
           "weekday_en": "Wednesday",
           "weekday_short": "Wed",
           "is_weekend": false,
-          "is_holiday": true,
-          "holiday_name": "スポーツの日",
+          "is_holiday": false,
+          "holiday_name": null,
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
@@ -8925,7 +8925,7 @@
       "month_name": "November",
       "month_name_jp": "11月",
       "api_version": "v1",
-      "generated_at": "2025-06-20T16:58:17.859063",
+      "generated_at": "2025-06-21T12:38:03.853534",
       "days": [
         {
           "day": 1,
@@ -9805,7 +9805,7 @@
       "month_name": "December",
       "month_name_jp": "12月",
       "api_version": "v1",
-      "generated_at": "2025-06-20T16:58:17.865402",
+      "generated_at": "2025-06-21T12:38:03.855876",
       "days": [
         {
           "day": 1,

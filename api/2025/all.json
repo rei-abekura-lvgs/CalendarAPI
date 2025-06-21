@@ -1,7 +1,7 @@
 {
   "year": 2025,
   "api_version": "v1",
-  "generated_at": "2025-06-20T16:58:17.637697",
+  "generated_at": "2025-06-21T12:38:03.709159",
   "months": [
     {
       "year": 2025,
@@ -9,7 +9,7 @@
       "month_name": "January",
       "month_name_jp": "1月",
       "api_version": "v1",
-      "generated_at": "2025-06-20T16:58:17.637754",
+      "generated_at": "2025-06-21T12:38:03.709191",
       "days": [
         {
           "day": 1,
@@ -918,7 +918,7 @@
       "month_name": "February",
       "month_name_jp": "2月",
       "api_version": "v1",
-      "generated_at": "2025-06-20T16:58:17.641430",
+      "generated_at": "2025-06-21T12:38:03.717420",
       "days": [
         {
           "day": 1,
@@ -1740,7 +1740,7 @@
       "month_name": "March",
       "month_name_jp": "3月",
       "api_version": "v1",
-      "generated_at": "2025-06-20T16:58:17.645260",
+      "generated_at": "2025-06-21T12:38:03.719784",
       "days": [
         {
           "day": 1,
@@ -2649,7 +2649,7 @@
       "month_name": "April",
       "month_name_jp": "4月",
       "api_version": "v1",
-      "generated_at": "2025-06-20T16:58:17.651457",
+      "generated_at": "2025-06-21T12:38:03.722555",
       "days": [
         {
           "day": 1,
@@ -3529,7 +3529,7 @@
       "month_name": "May",
       "month_name_jp": "5月",
       "api_version": "v1",
-      "generated_at": "2025-06-20T16:58:17.654537",
+      "generated_at": "2025-06-21T12:38:03.725540",
       "days": [
         {
           "day": 1,
@@ -3683,8 +3683,8 @@
           "weekday_en": "Tuesday",
           "weekday_short": "Tue",
           "is_weekend": false,
-          "is_holiday": true,
-          "holiday_name": "振替休日",
+          "is_holiday": false,
+          "holiday_name": null,
           "rokuyo": "仏滅",
           "season_24": null,
           "moon_phase": "調査中",
@@ -4438,7 +4438,7 @@
       "month_name": "June",
       "month_name_jp": "6月",
       "api_version": "v1",
-      "generated_at": "2025-06-20T16:58:17.657409",
+      "generated_at": "2025-06-21T12:38:03.728374",
       "days": [
         {
           "day": 1,
@@ -5318,7 +5318,7 @@
       "month_name": "July",
       "month_name_jp": "7月",
       "api_version": "v1",
-      "generated_at": "2025-06-20T16:58:17.661169",
+      "generated_at": "2025-06-21T12:38:03.731501",
       "days": [
         {
           "day": 1,
@@ -6227,7 +6227,7 @@
       "month_name": "August",
       "month_name_jp": "8月",
       "api_version": "v1",
-      "generated_at": "2025-06-20T16:58:17.665188",
+      "generated_at": "2025-06-21T12:38:03.734625",
       "days": [
         {
           "day": 1,
@@ -7136,7 +7136,7 @@
       "month_name": "September",
       "month_name_jp": "9月",
       "api_version": "v1",
-      "generated_at": "2025-06-20T16:58:17.672681",
+      "generated_at": "2025-06-21T12:38:03.737516",
       "days": [
         {
           "day": 1,
@@ -8016,7 +8016,7 @@
       "month_name": "October",
       "month_name_jp": "10月",
       "api_version": "v1",
-      "generated_at": "2025-06-20T16:58:17.677634",
+      "generated_at": "2025-06-21T12:38:03.740203",
       "days": [
         {
           "day": 1,
@@ -8925,7 +8925,7 @@
       "month_name": "November",
       "month_name_jp": "11月",
       "api_version": "v1",
-      "generated_at": "2025-06-20T16:58:17.680474",
+      "generated_at": "2025-06-21T12:38:03.742648",
       "days": [
         {
           "day": 1,
@@ -9805,7 +9805,7 @@
       "month_name": "December",
       "month_name_jp": "12月",
       "api_version": "v1",
-      "generated_at": "2025-06-20T16:58:17.684737",
+      "generated_at": "2025-06-21T12:38:03.745464",
       "days": [
         {
           "day": 1,

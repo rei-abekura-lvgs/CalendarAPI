@@ -169,91 +169,51 @@
         <section id="quick-access" class="mb-5">
             <h2 class="section-title"><i class="fas fa-link me-2"></i>クイックアクセス</h2>
             
+            <!-- 年選択 -->
+            <div class="mb-4">
+                <div class="d-flex flex-wrap justify-content-center gap-2">
+                    <button class="btn btn-outline-primary year-btn active" data-year="2025">2025年</button>
+                    <button class="btn btn-outline-primary year-btn" data-year="2026">2026年</button>
+                    <button class="btn btn-outline-primary year-btn" data-year="2027">2027年</button>
+                    <button class="btn btn-outline-primary year-btn" data-year="2028">2028年</button>
+                    <button class="btn btn-outline-primary year-btn" data-year="2029">2029年</button>
+                    <button class="btn btn-outline-primary year-btn" data-year="2030">2030年</button>
+                    <button class="btn btn-outline-primary year-btn" data-year="2031">2031年</button>
+                    <button class="btn btn-outline-primary year-btn" data-year="2032">2032年</button>
+                    <button class="btn btn-outline-primary year-btn" data-year="2033">2033年</button>
+                    <button class="btn btn-outline-primary year-btn" data-year="2034">2034年</button>
+                    <button class="btn btn-outline-primary year-btn" data-year="2035">2035年</button>
+                    <button class="btn btn-outline-primary year-btn" data-year="2036">2036年</button>
+                </div>
+            </div>
+
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-8">
                     <div class="card">
                         <div class="card-header">
-                            <h5 class="mb-0"><i class="fas fa-calendar me-2"></i>月別データ</h5>
+                            <h5 class="mb-0"><i class="fas fa-calendar me-2"></i>月別データ（<span id="selected-year">2025</span>年）</h5>
                         </div>
                         <div class="card-body">
-                            <div class="row g-2">
-                                <div class="col-4">
-                                    <a href="https://rei-abekura-lvgs.github.io/CalendarAPI/api/2025/01.json" target="_blank" class="btn btn-outline-primary btn-sm w-100">1月</a>
-                                </div>
-                                <div class="col-4">
-                                    <a href="https://rei-abekura-lvgs.github.io/CalendarAPI/api/2025/02.json" target="_blank" class="btn btn-outline-primary btn-sm w-100">2月</a>
-                                </div>
-                                <div class="col-4">
-                                    <a href="https://rei-abekura-lvgs.github.io/CalendarAPI/api/2025/03.json" target="_blank" class="btn btn-outline-primary btn-sm w-100">3月</a>
-                                </div>
-                                <div class="col-4">
-                                    <a href="https://rei-abekura-lvgs.github.io/CalendarAPI/api/2025/04.json" target="_blank" class="btn btn-outline-primary btn-sm w-100">4月</a>
-                                </div>
-                                <div class="col-4">
-                                    <a href="https://rei-abekura-lvgs.github.io/CalendarAPI/api/2025/05.json" target="_blank" class="btn btn-outline-primary btn-sm w-100">5月</a>
-                                </div>
-                                <div class="col-4">
-                                    <a href="https://rei-abekura-lvgs.github.io/CalendarAPI/api/2025/06.json" target="_blank" class="btn btn-outline-primary btn-sm w-100">6月</a>
-                                </div>
-                                <div class="col-4">
-                                    <a href="https://rei-abekura-lvgs.github.io/CalendarAPI/api/2025/07.json" target="_blank" class="btn btn-outline-primary btn-sm w-100">7月</a>
-                                </div>
-                                <div class="col-4">
-                                    <a href="https://rei-abekura-lvgs.github.io/CalendarAPI/api/2025/08.json" target="_blank" class="btn btn-outline-primary btn-sm w-100">8月</a>
-                                </div>
-                                <div class="col-4">
-                                    <a href="https://rei-abekura-lvgs.github.io/CalendarAPI/api/2025/09.json" target="_blank" class="btn btn-outline-primary btn-sm w-100">9月</a>
-                                </div>
-                                <div class="col-4">
-                                    <a href="https://rei-abekura-lvgs.github.io/CalendarAPI/api/2025/10.json" target="_blank" class="btn btn-outline-primary btn-sm w-100">10月</a>
-                                </div>
-                                <div class="col-4">
-                                    <a href="https://rei-abekura-lvgs.github.io/CalendarAPI/api/2025/11.json" target="_blank" class="btn btn-outline-primary btn-sm w-100">11月</a>
-                                </div>
-                                <div class="col-4">
-                                    <a href="https://rei-abekura-lvgs.github.io/CalendarAPI/api/2025/12.json" target="_blank" class="btn btn-outline-primary btn-sm w-100">12月</a>
-                                </div>
+                            <div class="row g-2" id="month-links">
+                                <!-- 動的に生成 -->
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <div class="card">
                         <div class="card-header">
-                            <h5 class="mb-0"><i class="fas fa-database me-2"></i>年間データ・その他形式</h5>
+                            <h5 class="mb-0"><i class="fas fa-database me-2"></i>年間データ・形式</h5>
                         </div>
                         <div class="card-body">
-                            <h6 class="text-muted mb-3">2025年</h6>
-                            <div class="d-grid gap-2 mb-3">
-                                <a href="https://rei-abekura-lvgs.github.io/CalendarAPI/api/2025/all.json" target="_blank" class="btn btn-primary btn-sm">
-                                    <i class="fas fa-download me-2"></i>JSON形式
-                                </a>
-                                <a href="https://rei-abekura-lvgs.github.io/CalendarAPI/api/2025/all.csv" target="_blank" class="btn btn-outline-success btn-sm">
-                                    <i class="fas fa-file-csv me-2"></i>CSV形式
-                                </a>
-                                <a href="https://rei-abekura-lvgs.github.io/CalendarAPI/api/2025/all.xml" target="_blank" class="btn btn-outline-warning btn-sm">
-                                    <i class="fas fa-file-code me-2"></i>XML形式
-                                </a>
-                                <a href="https://rei-abekura-lvgs.github.io/CalendarAPI/api/2025/all.txt" target="_blank" class="btn btn-outline-info btn-sm">
-                                    <i class="fas fa-file-alt me-2"></i>TXT形式
-                                </a>
+                            <div class="d-grid gap-2" id="year-data-links">
+                                <!-- 動的に生成 -->
                             </div>
-                            
-                            <h6 class="text-muted mb-3">2026年・2027年</h6>
-                            <div class="row g-2">
-                                <div class="col-6">
-                                    <a href="https://rei-abekura-lvgs.github.io/CalendarAPI/api/2026/all.json" target="_blank" class="btn btn-outline-primary btn-sm w-100">2026年 JSON</a>
-                                </div>
-                                <div class="col-6">
-                                    <a href="https://rei-abekura-lvgs.github.io/CalendarAPI/api/2027/all.json" target="_blank" class="btn btn-outline-primary btn-sm w-100">2027年 JSON</a>
-                                </div>
-                            </div>
-                            <div class="mt-2">
-                                <a href="api_index.html" class="btn btn-secondary btn-sm w-100">
-                                    <i class="fas fa-list me-2"></i>全ファイル一覧
-                                </a>
-                            </div>
+                            <hr>
+                            <a href="api_index.html" class="btn btn-secondary btn-sm w-100">
+                                <i class="fas fa-list me-2"></i>全ファイル一覧（12年分）
+                            </a>
                         </div>
                     </div>
                 </div>

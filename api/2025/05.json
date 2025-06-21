@@ -4,7 +4,7 @@
   "month_name": "May",
   "month_name_jp": "5月",
   "api_version": "v1",
-  "generated_at": "2025-06-20T16:58:17.654537",
+  "generated_at": "2025-06-21T12:38:03.725540",
   "days": [
     {
       "day": 1,
@@ -158,8 +158,8 @@
       "weekday_en": "Tuesday",
       "weekday_short": "Tue",
       "is_weekend": false,
-      "is_holiday": true,
-      "holiday_name": "振替休日",
+      "is_holiday": false,
+      "holiday_name": null,
       "rokuyo": "仏滅",
       "season_24": null,
       "moon_phase": "調査中",
