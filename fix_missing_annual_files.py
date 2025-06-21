@@ -132,7 +132,7 @@ def generate_annual_txt(year):
     total_days = 0
     
     for date_str, day_data in data.items():
-        if date_str.startswith(str(year)):
+        if isinstance(date_str, str) and date_str.startswith(str(year)) and '-' in date_str:
             total_days += 1
             if day_data.get('is_holiday') and day_data.get('holiday_name'):
                 month = int(date_str.split('-')[1])
