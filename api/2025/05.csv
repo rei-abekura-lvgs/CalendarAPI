@@ -4,7 +4,7 @@ date,weekday,weekday_en,is_weekend,is_holiday,holiday_name,rokuyo,daily_keyword,
 2025-05-03,土曜日,Saturday,True,True,憲法記念日,先勝,奇跡を呼ぶ波動,鋼青色,ペパーミントティー
 2025-05-04,日曜日,Sunday,True,True,みどりの日,友引,龍神様のご加護,深紅色,緑茶
 2025-05-05,月曜日,Monday,False,True,こどもの日,先負,金運上昇のサイン,金色,ほうじ茶
-2025-05-06,火曜日,Tuesday,False,True,振替休日,仏滅,恋愛運絶好調,朱色,ジャスミンティー
+2025-05-06,火曜日,Tuesday,False,False,,仏滅,恋愛運絶好調,朱色,ジャスミンティー
 2025-05-07,水曜日,Wednesday,False,False,,大安,直感力が冴える,空色,ルイボスティー
 2025-05-08,木曜日,Thursday,False,False,,赤口,隠れた才能開花,若草色,ローズヒップティー
 2025-05-09,金曜日,Friday,False,False,,先勝,人生の転機到来,黄金色,白茶
