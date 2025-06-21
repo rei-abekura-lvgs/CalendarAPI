@@ -59,9 +59,8 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#overview">概要</a></li>
                     <li class="nav-item"><a class="nav-link" href="#endpoints">エンドポイント</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#quick-access">クイックアクセス</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#examples">使用例</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#response">レスポンス形式</a></li>
+                    <li class="nav-item"><a class="nav-link" href="search.html">検索機能</a></li>
+                    <li class="nav-item"><a class="nav-link" href="fortune.html">運勢機能</a></li>
                     <li class="nav-item"><a class="nav-link" href="api_index.html">全ファイル一覧</a></li>
                     <li class="nav-item"><a class="nav-link" href="#license">ライセンス</a></li>
                 </ul>
@@ -79,9 +78,15 @@
                         日本の暦データ（祝日、六曜、日々のキーワードなど）をJSON形式で提供する無料のAPIサービスです。
                         GitHub Pagesでホストされ、CORS対応により様々なWebアプリケーションから利用できます。
                     </p>
-                    <div class="d-flex gap-3">
+                    <div class="d-flex gap-3 flex-wrap">
                         <a href="#endpoints" class="btn btn-primary btn-lg">
                             <i class="fas fa-play me-2"></i>使い始める
+                        </a>
+                        <a href="search.html" class="btn btn-success btn-lg">
+                            <i class="fas fa-search me-2"></i>データ検索
+                        </a>
+                        <a href="fortune.html" class="btn btn-warning btn-lg">
+                            <i class="fas fa-star me-2"></i>運勢診断
                         </a>
                         <a href="https://github.com/rei-abekura-lvgs/CalendarAPI" class="btn btn-outline-primary btn-lg" target="_blank">
                             <i class="fab fa-github me-2"></i>GitHub
@@ -126,13 +131,13 @@
                 </div>
                 <div class="col-md-6">
                     <div class="feature-card">
-                        <h4><i class="fas fa-rocket text-primary me-2"></i>特徴</h4>
+                        <h4><i class="fas fa-rocket text-primary me-2"></i>新機能</h4>
                         <ul>
-                            <li>完全無料で利用可能</li>
-                            <li>認証不要</li>
-                            <li>CORS対応</li>
-                            <li>JSON形式での提供</li>
-                            <li>GitHub Pagesでの高速配信</li>
+                            <li><a href="search.html" class="text-decoration-none">検索機能</a> - 六曜、祝日、キーワード検索</li>
+                            <li><a href="fortune.html" class="text-decoration-none">運勢診断</a> - 27項目統合の総合運勢</li>
+                            <li>週間運勢・相性診断</li>
+                            <li>統計情報・ラッキーデー検索</li>
+                            <li>完全無料・認証不要</li>
                             <li>レスポンシブAPIドキュメント</li>
                         </ul>
                     </div>

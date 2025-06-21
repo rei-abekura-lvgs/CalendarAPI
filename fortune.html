@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>運勢機能 - 暦データAPI</title>
+    <meta name="description" content="27項目のデータを統合した総合運勢表示。今日の運勢、週間運勢、相性診断が利用可能。">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    
+    <style>
+        .fortune-card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        .fortune-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        }
+        .score-circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+        }
+        .score-excellent { background: linear-gradient(45deg, #ff6b6b, #ffa500); }
+        .score-good { background: linear-gradient(45deg, #4ecdc4, #44a08d); }
+        .score-normal { background: linear-gradient(45deg, #45b7d1, #96c93d); }
+        .score-caution { background: linear-gradient(45deg, #f093fb, #f5576c); }
+        .score-warning { background: linear-gradient(45deg, #4facfe, #00f2fe); }
+        
+        .recommendation {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 10px 0;
+        }
+        .warning {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            border-radius: 10px;
+            padding: 15px;
+            margin: 10px 0;
+        }
+        .highlight-item {
+            background: #f8f9fa;
+            border-left: 4px solid #007bff;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+        }
+        .compatibility-result {
+            text-align: center;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+        .loading-fortune {
+            text-align: center;
+            padding: 40px;
+        }
+    </style>
+</head>
+<body>
+    <!-- ナビゲーション -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-calendar-alt me-2"></i>暦データAPI
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">ホーム</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="api_index.html">API一覧</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="search.html">検索</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="fortune.html">運勢</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h1 class="text-center mb-4">
+            <i class="fas fa-star text-warning me-2"></i>総合運勢
+        </h1>
+
+        <!-- 機能選択タブ -->
+        <ul class="nav nav-tabs justify-content-center mb-4" id="fortuneTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="today-tab" data-bs-toggle="tab" data-bs-target="#today" type="button">
+                    <i class="fas fa-sun me-1"></i>今日の運勢
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="weekly-tab" data-bs-toggle="tab" data-bs-target="#weekly" type="button">
+                    <i class="fas fa-calendar-week me-1"></i>週間運勢
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="compatibility-tab" data-bs-toggle="tab" data-bs-target="#compatibility" type="button">
+                    <i class="fas fa-heart me-1"></i>相性診断
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="custom-tab" data-bs-toggle="tab" data-bs-target="#custom" type="button">
+                    <i class="fas fa-calendar-day me-1"></i>指定日運勢
+                </button>
+            </li>
+        </ul>
+
+        <!-- タブコンテンツ -->
+        <div class="tab-content" id="fortuneTabContent">
+            <!-- 今日の運勢 -->
+            <div class="tab-pane fade show active" id="today" role="tabpanel">
+                <div class="text-center mb-4">
+                    <button class="btn btn-primary btn-lg" onclick="loadTodaysFortune()">
+                        <i class="fas fa-magic me-2"></i>今日の運勢を見る
+                    </button>
+                </div>
+                <div id="todayFortuneResult"></div>
+            </div>
+
+            <!-- 週間運勢 -->
+            <div class="tab-pane fade" id="weekly" role="tabpanel">
+                <div class="text-center mb-4">
+                    <div class="row">
+                        <div class="col-md-6 mx-auto">
+                            <input type="date" id="weekStartDate" class="form-control mb-2">
+                            <button class="btn btn-success btn-lg w-100" onclick="loadWeeklyFortune()">
+                                <i class="fas fa-calendar-week me-2"></i>週間運勢を見る
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div id="weeklyFortuneResult"></div>
+            </div>
+
+            <!-- 相性診断 -->
+            <div class="tab-pane fade" id="compatibility" role="tabpanel">
+                <div class="row">
+                    <div class="col-md-8 mx-auto">
+                        <div class="card">
+                            <div class="card-header text-center">
+                                <h5><i class="fas fa-heart text-danger me-2"></i>相性診断</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label for="date1" class="form-label">日付1</label>
+                                        <input type="date" id="date1" class="form-control">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="date2" class="form-label">日付2</label>
+                                        <input type="date" id="date2" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="text-center mt-3">
+                                    <button class="btn btn-danger btn-lg" onclick="checkCompatibility()">
+                                        <i class="fas fa-heart me-2"></i>相性を診断
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="compatibilityResult"></div>
+            </div>
+
+            <!-- 指定日運勢 -->
+            <div class="tab-pane fade" id="custom" role="tabpanel">
+                <div class="text-center mb-4">
+                    <div class="row">
+                        <div class="col-md-6 mx-auto">
+                            <input type="date" id="customDate" class="form-control mb-2">
+                            <button class="btn btn-info btn-lg w-100" onclick="loadCustomFortune()">
+                                <i class="fas fa-calendar-day me-2"></i>この日の運勢を見る
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div id="customFortuneResult"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- 運勢API -->
+    <script src="js/fortune-api.js"></script>
+    
+    <script>
+        // 今日の運勢読み込み
+        async function loadTodaysFortune() {
+            const container = document.getElementById('todayFortuneResult');
+            showFortuneLoading(container);
+
+            try {
+                const fortune = await fortuneAPI.getTodaysFortune();
+                if (fortune) {
+                    displayFortune(container, fortune);
+                } else {
+                    showFortuneError(container, '今日の運勢データを取得できませんでした');
+                }
+            } catch (error) {
+                console.error('今日の運勢エラー:', error);
+                showFortuneError(container, '運勢取得中にエラーが発生しました');
+            }
+        }
+
+        // 週間運勢読み込み
+        async function loadWeeklyFortune() {
+            const startDate = document.getElementById('weekStartDate').value;
+            const container = document.getElementById('weeklyFortuneResult');
+            
+            showFortuneLoading(container);
+
+            try {
+                const fortunes = await fortuneAPI.getWeeklyFortune(startDate || undefined);
+                if (fortunes && fortunes.length > 0) {
+                    displayWeeklyFortune(container, fortunes);
+                } else {
+                    showFortuneError(container, '週間運勢データを取得できませんでした');
+                }
+            } catch (error) {
+                console.error('週間運勢エラー:', error);
+                showFortuneError(container, '週間運勢取得中にエラーが発生しました');
+            }
+        }
+
+        // 相性診断
+        async function checkCompatibility() {
+            const date1 = document.getElementById('date1').value;
+            const date2 = document.getElementById('date2').value;
+            const container = document.getElementById('compatibilityResult');
+
+            if (!date1 || !date2) {
+                alert('両方の日付を入力してください');
+                return;
+            }
+
+            showFortuneLoading(container);
+
+            try {
+                const compatibility = await fortuneAPI.getCompatibility(date1, date2);
+                if (compatibility) {
+                    displayCompatibility(container, compatibility);
+                } else {
+                    showFortuneError(container, '相性診断データを取得できませんでした');
+                }
+            } catch (error) {
+                console.error('相性診断エラー:', error);
+                showFortuneError(container, '相性診断中にエラーが発生しました');
+            }
+        }
+
+        // 指定日運勢読み込み
+        async function loadCustomFortune() {
+            const customDate = document.getElementById('customDate').value;
+            const container = document.getElementById('customFortuneResult');
+
+            if (!customDate) {
+                alert('日付を選択してください');
+                return;
+            }
+
+            showFortuneLoading(container);
+
+            try {
+                const fortune = await fortuneAPI.getDateFortune(customDate);
+                if (fortune) {
+                    displayFortune(container, fortune);
+                } else {
+                    showFortuneError(container, '指定日の運勢データを取得できませんでした');
+                }
+            } catch (error) {
+                console.error('指定日運勢エラー:', error);
+                showFortuneError(container, '運勢取得中にエラーが発生しました');
+            }
+        }
+
+        // 運勢表示関数
+        function displayFortune(container, fortune) {
+            const scoreClass = getScoreClass(fortune.scores.overall);
+            
+            let html = `
+                <div class="fortune-card">
+                    <div class="card-header bg-primary text-white text-center">
+                        <h4>${fortune.date} (${fortune.weekday})</h4>
+                        <h5>${fortune.summary.level}</h5>
+                    </div>
+                    <div class="card-body">
+                        <!-- 総合スコア -->
+                        <div class="text-center mb-4">
+                            <div class="score-circle ${scoreClass} mx-auto mb-2">
+                                ${fortune.summary.score}
+                            </div>
+                            <p class="mb-0">${fortune.summary.message}</p>
+                            <small class="text-muted">${fortune.summary.specialNote}</small>
+                        </div>
+
+                        <!-- 各運勢スコア -->
+                        <div class="row mb-4">
+                            <div class="col-6 col-md-3 text-center">
+                                <h6>恋愛運</h6>
+                                <div class="score-circle ${getScoreClass(fortune.scores.love)} mx-auto" style="width: 60px; height: 60px; font-size: 1rem;">
+                                    ${Math.round(fortune.scores.love)}
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 text-center">
+                                <h6>金運</h6>
+                                <div class="score-circle ${getScoreClass(fortune.scores.money)} mx-auto" style="width: 60px; height: 60px; font-size: 1rem;">
+                                    ${Math.round(fortune.scores.money)}
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 text-center">
+                                <h6>健康運</h6>
+                                <div class="score-circle ${getScoreClass(fortune.scores.health)} mx-auto" style="width: 60px; height: 60px; font-size: 1rem;">
+                                    ${Math.round(fortune.scores.health)}
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 text-center">
+                                <h6>仕事運</h6>
+                                <div class="score-circle ${getScoreClass(fortune.scores.work)} mx-auto" style="width: 60px; height: 60px; font-size: 1rem;">
+                                    ${Math.round(fortune.scores.work)}
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 今日のハイライト -->
+                        <div class="mb-4">
+                            <h6><i class="fas fa-star text-warning me-2"></i>今日のハイライト</h6>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="highlight-item">
+                                        <strong>キーワード:</strong> ${fortune.highlights.keyword}
+                                    </div>
+                                    <div class="highlight-item">
+                                        <strong>ラッキーカラー:</strong> ${fortune.highlights.color}
+                                    </div>
+                                    <div class="highlight-item">
+                                        <strong>パワーストーン:</strong> ${fortune.highlights.powerStone}
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="highlight-item">
+                                        <strong>おすすめのお茶:</strong> ${fortune.highlights.tea}
+                                    </div>
+                                    <div class="highlight-item">
+                                        <strong>アロマオイル:</strong> ${fortune.highlights.aroma}
+                                    </div>
+                                    <div class="highlight-item">
+                                        <strong>タロットカード:</strong> ${fortune.highlights.tarot}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- おすすめアクション -->
+                        ${fortune.recommendations.length > 0 ? `
+                        <div class="mb-4">
+                            <h6><i class="fas fa-lightbulb text-info me-2"></i>おすすめアクション</h6>
+                            ${fortune.recommendations.map(rec => `
+                                <div class="recommendation">
+                                    <strong>${rec.action}</strong><br>
+                                    <small>${rec.detail}</small>
+                                </div>
+                            `).join('')}
+                        </div>
+                        ` : ''}
+
+                        <!-- 注意事項 -->
+                        ${fortune.warnings.length > 0 ? `
+                        <div class="mb-4">
+                            <h6><i class="fas fa-exclamation-triangle text-warning me-2"></i>注意事項</h6>
+                            ${fortune.warnings.map(warning => `
+                                <div class="warning">
+                                    <strong>${warning.message}</strong>
+                                </div>
+                            `).join('')}
+                        </div>
+                        ` : ''}
+
+                        <!-- エネルギーアドバイス -->
+                        <div class="alert alert-info">
+                            <strong>エネルギーアドバイス:</strong> ${fortune.highlights.advice}
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            container.innerHTML = html;
+        }
+
+        function displayWeeklyFortune(container, fortunes) {
+            let html = `<h4 class="mb-4 text-center">週間運勢 (${fortunes.length}日分)</h4>`;
+            
+            fortunes.forEach(fortune => {
+                const scoreClass = getScoreClass(fortune.scores.overall);
+                html += `
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-md-3 text-center">
+                                    <h6>${fortune.date}</h6>
+                                    <small class="text-muted">${fortune.weekday}</small>
+                                    <div class="score-circle ${scoreClass} mx-auto mt-2" style="width: 50px; height: 50px; font-size: 0.9rem;">
+                                        ${fortune.summary.score}
+                                    </div>
+                                </div>
+                                <div class="col-md-9">
+                                    <h6>${fortune.summary.level}</h6>
+                                    <p class="mb-2">${fortune.summary.message}</p>
+                                    <small class="text-muted">
+                                        <i class="fas fa-key me-1"></i>${fortune.highlights.keyword}
+                                        <i class="fas fa-palette ms-3 me-1"></i>${fortune.highlights.color}
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            container.innerHTML = html;
+        }
+
+        function displayCompatibility(container, compatibility) {
+            const scoreClass = getScoreClass(compatibility.compatibility);
+            
+            let html = `
+                <div class="compatibility-result ${scoreClass.replace('score-', 'bg-')}" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                    <h4>相性診断結果</h4>
+                    <div class="score-circle mx-auto mb-3" style="background: white; color: #333;">
+                        ${compatibility.analysis.score}
+                    </div>
+                    <h5>${compatibility.analysis.level}</h5>
+                    <p>${compatibility.analysis.message}</p>
+                    
+                    <div class="row mt-4">
+                        <div class="col-md-6">
+                            <h6>${compatibility.date1}</h6>
+                            <small>比較対象日</small>
+                        </div>
+                        <div class="col-md-6">
+                            <h6>${compatibility.date2}</h6>
+                            <small>比較対象日</small>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-3">
+                        <small>
+                            六曜の一致: ${compatibility.analysis.details.rokuyoMatch ? '✓' : '✗'} 
+                            パワーストーンの一致: ${compatibility.analysis.details.stoneMatch ? '✓' : '✗'} 
+                            色の一致: ${compatibility.analysis.details.colorMatch ? '✓' : '✗'}
+                        </small>
+                    </div>
+                </div>
+            `;
+            
+            container.innerHTML = html;
+        }
+
+        function getScoreClass(score) {
+            if (score >= 80) return 'score-excellent';
+            if (score >= 60) return 'score-good';
+            if (score >= 40) return 'score-normal';
+            if (score >= 20) return 'score-caution';
+            return 'score-warning';
+        }
+
+        function showFortuneLoading(container) {
+            container.innerHTML = `
+                <div class="loading-fortune">
+                    <i class="fas fa-crystal-ball fa-spin fa-3x text-primary mb-3"></i>
+                    <h5>運勢を占っています...</h5>
+                    <p class="text-muted">27項目のデータを統合中</p>
+                </div>
+            `;
+        }
+
+        function showFortuneError(container, message) {
+            container.innerHTML = `
+                <div class="alert alert-danger text-center">
+                    <i class="fas fa-exclamation-triangle fa-2x mb-3"></i>
+                    <h5>エラー</h5>
+                    <p>${message}</p>
+                </div>
+            `;
+        }
+
+        // 初期化：今日の日付を設定
+        document.addEventListener('DOMContentLoaded', function() {
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('weekStartDate').value = today;
+            document.getElementById('customDate').value = today;
+            document.getElementById('date1').value = today;
+            
+            const tomorrow = new Date();
+            tomorrow.setDate(tomorrow.getDate() + 1);
+            document.getElementById('date2').value = tomorrow.toISOString().split('T')[0];
+        });
+    </script>
+</body>
+</html>
