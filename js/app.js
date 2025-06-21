@@ -341,7 +341,11 @@ function generateMonthLinks(year) {
         col.className = 'col-4 col-md-3';
         
         const link = document.createElement('a');
-        link.href = `https://rei-abekura-lvgs.github.io/CalendarAPI/api/${year}/${monthNum}.json`;
+        // Use relative URL for local development, absolute for production
+        const baseUrl = window.location.hostname === 'localhost' || window.location.hostname.includes('replit') 
+            ? './' 
+            : 'https://rei-abekura-lvgs.github.io/CalendarAPI/';
+        link.href = `${baseUrl}api/${year}/${monthNum}.json`;
         link.target = '_blank';
         link.className = 'btn btn-outline-primary btn-sm w-100';
         link.textContent = month;
@@ -364,7 +368,11 @@ function generateYearDataLinks(year) {
     
     formats.forEach(format => {
         const link = document.createElement('a');
-        link.href = `https://rei-abekura-lvgs.github.io/CalendarAPI/api/${year}/all.${format.ext}`;
+        // Use relative URL for local development, absolute for production
+        const baseUrl = window.location.hostname === 'localhost' || window.location.hostname.includes('replit') 
+            ? './' 
+            : 'https://rei-abekura-lvgs.github.io/CalendarAPI/';
+        link.href = `${baseUrl}api/${year}/all.${format.ext}`;
         link.target = '_blank';
         link.className = `btn ${format.class} btn-sm w-100`;
         link.innerHTML = `<i class="${format.icon} me-2"></i>${format.name}形式`;
