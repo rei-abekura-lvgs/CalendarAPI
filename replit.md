@@ -132,6 +132,7 @@ The system follows a **Static Site Generator + API** architecture:
 - June 21, 2025: 最終品質向上 - エンドポイントレスポンス表示のレスポンシブ改善、README大幅更新（27項目対応、正確なURL、使用例改善）、favicon追加、JavaScriptエラー修正
 - June 21, 2025: 404問題解決・テスト環境完備 - クイックアクセスリンクを環境自動判定に修正、包括的テストツール作成（test_api.py）、Replitテストガイド作成、全エンドポイント動作確認完了
 - June 21, 2025: 完全ファイル対応・テスト完備 - 欠損していた年間XML/TXTファイル生成、27項目対応CSV更新、文字化け問題解決、実用テストガイド（quick_test_demo.py）作成、全形式・全年数対応完了
+- June 21, 2025: 文字化け問題完全解決 - UTF-8対応HTTPサーバー実装（utf8_server.py）、全形式でのContent-Type適切設定、ブラウザでの日本語表示正常化、12年分・27項目データ完全対応確認
 
 ## User Preferences
 
