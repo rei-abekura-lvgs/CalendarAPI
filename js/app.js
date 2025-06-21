@@ -71,20 +71,6 @@ async function fetchAPIData(endpoint) {
     
     return await response.json();
 }
-        
-        const monthData = await response.json();
-        const todayData = monthData.days.find(d => d.day === day);
-        
-        if (todayData) {
-            displayTodayData(todayData);
-        } else {
-            showTodayDataError('本日のデータが見つかりません');
-        }
-    } catch (error) {
-        console.error('Error loading today data:', error);
-        showTodayDataError('データの読み込みに失敗しました');
-    }
-}
 
 // Display today's data in the demo card
 function displayTodayData(data) {
