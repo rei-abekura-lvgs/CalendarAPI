@@ -1,18 +1,21 @@
 #!/usr/bin/env python3
 import http.server
 import socketserver
-import mimetypes
 import os
 
 class UTF8HTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
     def end_headers(self):
-        # UTF-8エンコーディングを強制
-        if self.path.endswith('.txt'):
+        # UTF-8エンコーディングを強制設定
+        if hasattr(self, '_content_type_set') and self._content_type_set:
+            pass  # 既に設定済み
+        elif self.path.endswith('.txt'):
             self.send_header('Content-Type', 'text/plain; charset=utf-8')
         elif self.path.endswith('.csv'):
             self.send_header('Content-Type', 'text/csv; charset=utf-8')
         elif self.path.endswith('.xml'):
             self.send_header('Content-Type', 'application/xml; charset=utf-8')
+        elif self.path.endswith('.json'):
+            self.send_header('Content-Type', 'application/json; charset=utf-8')
         
         # CORS対応
         self.send_header('Access-Control-Allow-Origin', '*')
