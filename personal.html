@@ -342,49 +342,127 @@
     <script>
         // ページ初期化
         document.addEventListener('DOMContentLoaded', function() {
-            // detailedFortuneAPIの初期化
-            if (typeof DetailedFortuneAPI !== 'undefined') {
-                window.detailedFortuneAPI = new DetailedFortuneAPI();
-                detailedFortuneAPI.initializeDateSelectors();
-                
-                // 診断ボタンのイベントリスナーを設定
-                const fortuneBtn = document.getElementById('fortuneAnalysisBtn');
-                if (fortuneBtn) {
-                    fortuneBtn.addEventListener('click', async () => {
-                        const result = await detailedFortuneAPI.calculateDetailedFortune();
-                        if (result) {
-                            const resultContainer = document.getElementById('personalFortuneResult');
-                            displayDetailedFortuneResult(result, resultContainer);
-                        }
-                    });
-                }
-                
-                // 保存された生年月日を復元
-                const savedData = localStorage.getItem('userBirthData');
-                if (savedData) {
-                    try {
-                        const birthData = JSON.parse(savedData);
-                        if (birthData.year) document.getElementById('birthYear').value = birthData.year;
-                        if (birthData.month) document.getElementById('birthMonth').value = birthData.month;
-                        
-                        // 日選択肢を更新してから日の値を設定
-                        if (birthData.year && birthData.month) {
-                            detailedFortuneAPI.updateDayOptions();
-                            // 少し遅延させて日の値を設定
-                            setTimeout(() => {
-                                if (birthData.day) document.getElementById('birthDay').value = birthData.day;
-                            }, 100);
-                        }
-                        
-                        if (birthData.gender) {
-                            document.querySelector(`input[name="gender"][value="${birthData.gender}"]`).checked = true;
-                        }
-                    } catch (e) {
-                        console.log('保存データの復元に失敗しました');
+            // DOM要素の存在確認後に初期化
+            setTimeout(() => {
+                // detailedFortuneAPIの初期化
+                if (typeof DetailedFortuneAPI !== 'undefined') {
+                    window.detailedFortuneAPI = new DetailedFortuneAPI();
+                    
+                    // 年選択肢を手動で初期化
+                    initializeYearOptions();
+                    
+                    // 時間選択肢を初期化
+                    initializeHourOptions();
+                    
+                    // 日選択肢の動的更新設定
+                    setupDateUpdaters();
+                    
+                    // 保存データを復元
+                    restoreSavedData();
+                    
+                    // 診断ボタンのイベントリスナーを設定
+                    const fortuneBtn = document.getElementById('fortuneAnalysisBtn');
+                    if (fortuneBtn) {
+                        fortuneBtn.addEventListener('click', async () => {
+                            const result = await detailedFortuneAPI.calculateDetailedFortune();
+                            if (result) {
+                                const resultContainer = document.getElementById('personalFortuneResult');
+                                displayDetailedFortuneResult(result, resultContainer);
+                            }
+                        });
                     }
                 }
-            }
+            }, 100);
         });
+
+        // 年選択肢の初期化関数
+        function initializeYearOptions() {
+            const yearSelect = document.getElementById('birthYear');
+            if (yearSelect && yearSelect.children.length <= 1) {
+                for (let year = 2010; year >= 1940; year--) {
+                    const option = document.createElement('option');
+                    option.value = year;
+                    option.textContent = `${year}年`;
+                    yearSelect.appendChild(option);
+                }
+            }
+        }
+
+        // 日付更新機能の設定
+        function setupDateUpdaters() {
+            const yearSelect = document.getElementById('birthYear');
+            const monthSelect = document.getElementById('birthMonth');
+            const daySelect = document.getElementById('birthDay');
+            
+            if (yearSelect && monthSelect && daySelect) {
+                [yearSelect, monthSelect].forEach(select => {
+                    select.addEventListener('change', updateDayOptions);
+                });
+            }
+        }
+
+        // 日選択肢の更新
+        function updateDayOptions() {
+            const yearSelect = document.getElementById('birthYear');
+            const monthSelect = document.getElementById('birthMonth');
+            const daySelect = document.getElementById('birthDay');
+            
+            if (!yearSelect || !monthSelect || !daySelect) return;
+            
+            const year = parseInt(yearSelect.value);
+            const month = parseInt(monthSelect.value);
+            
+            if (!year || !month) return;
+            
+            const daysInMonth = new Date(year, month, 0).getDate();
+            daySelect.innerHTML = '<option value="">日を選択</option>';
+            
+            for (let day = 1; day <= daysInMonth; day++) {
+                const option = document.createElement('option');
+                option.value = day;
+                option.textContent = `${day}日`;
+                daySelect.appendChild(option);
+            }
+        }
+
+        // 時間選択肢の初期化
+        function initializeHourOptions() {
+            const hourSelect = document.getElementById('birthHour');
+            if (hourSelect && hourSelect.children.length <= 2) {
+                for (let hour = 0; hour <= 23; hour++) {
+                    const option = document.createElement('option');
+                    option.value = hour;
+                    option.textContent = `${hour}時`;
+                    hourSelect.appendChild(option);
+                }
+            }
+        }
+
+        // 保存データ復元処理
+        function restoreSavedData() {
+            const savedData = localStorage.getItem('userBirthData');
+            if (savedData) {
+                try {
+                    const birthData = JSON.parse(savedData);
+                    if (birthData.year) document.getElementById('birthYear').value = birthData.year;
+                    if (birthData.month) document.getElementById('birthMonth').value = birthData.month;
+                    
+                    // 日選択肢を更新してから日の値を設定
+                    if (birthData.year && birthData.month) {
+                        updateDayOptions();
+                        setTimeout(() => {
+                            if (birthData.day) document.getElementById('birthDay').value = birthData.day;
+                        }, 100);
+                    }
+                    
+                    if (birthData.gender) {
+                        document.querySelector(`input[name="gender"][value="${birthData.gender}"]`).checked = true;
+                    }
+                } catch (e) {
+                    console.log('保存データの復元に失敗しました');
+                }
+            }
+        }
 
         // 詳細運勢診断関数
         async function calculateDetailedFortune() {
