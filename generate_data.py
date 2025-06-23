@@ -40,6 +40,25 @@ def calculate_ichiryu_manbai_days(year):
     
     return ichiryu_days
 
+def get_jikkan_junishi(year, month, day):
+    """十干十二支を計算"""
+    # 十干（じっかん）
+    jikkan = ["甲", "乙", "丙", "丁", "戊", "己", "庚", "辛", "壬", "癸"]
+    
+    # 十二支（じゅうにし）
+    junishi = ["子", "丑", "寅", "卯", "辰", "巳", "午", "未", "申", "酉", "戌", "亥"]
+    
+    # 基準日からの日数を計算（1900年1月1日を基準とする）
+    base_date = datetime.date(1900, 1, 1)
+    current_date = datetime.date(year, month, day)
+    days_diff = (current_date - base_date).days
+    
+    # 十干十二支のサイクル（60日周期）
+    jikkan_index = (days_diff + 6) % 10  # 1900年1月1日は庚子なので調整
+    junishi_index = (days_diff + 6) % 12
+    
+    return f"{jikkan[jikkan_index]}{junishi[junishi_index]}"
+
 def get_holidays_for_year(year):
     """年別の祝日を計算（固定祝日と移動祝日の両方に対応）"""
     holidays = {}
@@ -274,6 +293,9 @@ def generate_koyomi_data(year):
             color = COLORS_OF_WEEK[weekday_index]
             tea = TEAS[(day_of_year - 1) % len(TEAS)]
             
+            # 十干十二支を追加
+            jikkan_junishi = get_jikkan_junishi(year, month, day)
+            
             # 追加データの生成
             lucky_number = LUCKY_NUMBERS[(day_of_year - 1) % len(LUCKY_NUMBERS)]
             power_stone = POWER_STONES[(day_of_year - 1) % len(POWER_STONES)]
@@ -302,6 +324,7 @@ def generate_koyomi_data(year):
                 "holiday_name": holiday_name,
                 "rokuyo": rokuyo,
                 "is_ichiryu_manbai": is_ichiryu_manbai,
+                "jikkan_junishi": jikkan_junishi,
                 "season_24": None,  # 二十四節気は複雑なので今回は省略
                 "moon_phase": "調査中",  # 月の満ち欠けも複雑なので今回は省略
                 "daily_keyword": keyword,
