@@ -1,23 +1,54 @@
-# UTF-8エンコーディングを強制
-AddDefaultCharset UTF-8
-
-# TXTファイルのMIMEタイプを設定
-<Files "*.txt">
-    ForceType "text/plain; charset=utf-8"
-</Files>
-
-# その他のテキストファイル
-<Files "*.csv">
-    ForceType "text/csv; charset=utf-8"
-</Files>
-
-<Files "*.xml">
-    ForceType "application/xml; charset=utf-8"
-</Files>
-
-# CORSヘッダー
+# セキュリティヘッダー設定
 <IfModule mod_headers.c>
-    Header set Access-Control-Allow-Origin "*"
-    Header set Access-Control-Allow-Methods "GET, OPTIONS"
-    Header set Access-Control-Allow-Headers "Content-Type"
+    # XSSプロテクション
+    Header always set X-XSS-Protection "1; mode=block"
+    
+    # コンテンツタイプスニッフィング防止
+    Header always set X-Content-Type-Options "nosniff"
+    
+    # フレーム組み込み防止
+    Header always set X-Frame-Options "SAMEORIGIN"
+    
+    # HTTPS強制（GitHub Pagesで自動対応）
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+    
+    # CORS設定
+    Header always set Access-Control-Allow-Origin "*"
+    Header always set Access-Control-Allow-Methods "GET, OPTIONS"
+    Header always set Access-Control-Allow-Headers "Content-Type, Accept"
 </IfModule>
+
+# MIMEタイプ設定（文字化け防止）
+<IfModule mod_mime.c>
+    AddCharset UTF-8 .json
+    AddCharset UTF-8 .csv
+    AddCharset UTF-8 .txt
+    AddCharset UTF-8 .xml
+    
+    # キャッシュ制御
+    <FilesMatch "\.(json|csv|xml|txt)$">
+        Header set Cache-Control "public, max-age=3600"
+    </FilesMatch>
+</IfModule>
+
+# ダウンロード時のファイル名設定
+<FilesMatch "\.csv$">
+    Header set Content-Disposition "attachment"
+</FilesMatch>
+
+<FilesMatch "\.xml$">
+    Header set Content-Disposition "attachment"
+</FilesMatch>
+
+<FilesMatch "\.txt$">
+    Header set Content-Disposition "inline"
+</FilesMatch>
+
+# 不要ファイルへのアクセス禁止
+<FilesMatch "\.(py|pyc|log|bak|backup)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# ディレクトリ一覧表示禁止
+Options -Indexes

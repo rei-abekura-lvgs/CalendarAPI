@@ -1,15 +1,20 @@
 User-agent: *
 Allow: /
-
-# APIエンドポイント
 Allow: /api/
+Allow: *.json
+Allow: *.csv
+Allow: *.xml
+Allow: *.txt
 
-# 静的ファイル
-Allow: /css/
-Allow: /js/
+# 不要ファイルのクロール防止
+Disallow: *.py
+Disallow: *.pyc
+Disallow: *.log
+Disallow: *.bak
+Disallow: *.backup
+Disallow: /.cache/
+Disallow: /.pythonlibs/
+Disallow: /attached_assets/
 
 # サイトマップ
 Sitemap: https://rei-abekura-lvgs.github.io/CalendarAPI/sitemap.xml
-
-# クロール頻度の提案
-Crawl-delay: 1

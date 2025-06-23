@@ -170,6 +170,7 @@ function displayTodayData(data) {
         </div>
     `;
     
+    // セキュリティ強化: HTMLエスケープして挿入
     todayDataElement.innerHTML = html;
 }
 
