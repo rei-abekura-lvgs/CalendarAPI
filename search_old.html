@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>検索機能 - 暦データAPI</title>
+    <meta name="description" content="暦データの検索機能。六曜、祝日、パワーストーン、キーワードで検索可能。">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    
+    <style>
+        .search-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        .search-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transform: translateY(-2px);
+        }
+        .result-item {
+            border-left: 4px solid #007bff;
+            background: #f8f9fa;
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .search-history {
+            background: #e3f2fd;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .loading {
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- ナビゲーション -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-calendar-alt me-2"></i>暦データAPI
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">ホーム</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="api_index.html">API一覧</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="search.html">検索</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="fortune.html">運勢</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h1 class="text-center mb-4">
+            <i class="fas fa-search text-primary me-2"></i>暦データ検索
+        </h1>
+
+        <!-- 検索フォーム -->
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <div class="search-card p-3">
+                    <h5><i class="fas fa-yin-yang text-warning me-2"></i>六曜検索</h5>
+                    <select id="rokuyoSelect" class="form-select mb-2">
+                        <option value="">六曜を選択</option>
+                        <option value="大安">大安</option>
+                        <option value="友引">友引</option>
+                        <option value="先勝">先勝</option>
+                        <option value="先負">先負</option>
+                        <option value="赤口">赤口</option>
+                        <option value="仏滅">仏滅</option>
+                    </select>
+                    <button class="btn btn-warning btn-sm w-100" onclick="searchRokuyo()">
+                        <i class="fas fa-search me-1"></i>検索
+                    </button>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <div class="search-card p-3">
+                    <h5><i class="fas fa-flag text-danger me-2"></i>祝日検索</h5>
+                    <select id="yearSelect" class="form-select mb-2">
+                        <option value="2025">2025年</option>
+                        <option value="2026">2026年</option>
+                        <option value="2027">2027年</option>
+                        <option value="2028">2028年</option>
+                        <option value="2029">2029年</option>
+                        <option value="2030">2030年</option>
+                    </select>
+                    <select id="monthSelect" class="form-select mb-2">
+                        <option value="">全ての月</option>
+                        <option value="1">1月</option>
+                        <option value="2">2月</option>
+                        <option value="3">3月</option>
+                        <option value="4">4月</option>
+                        <option value="5">5月</option>
+                        <option value="6">6月</option>
+                        <option value="7">7月</option>
+                        <option value="8">8月</option>
+                        <option value="9">9月</option>
+                        <option value="10">10月</option>
+                        <option value="11">11月</option>
+                        <option value="12">12月</option>
+                    </select>
+                    <button class="btn btn-danger btn-sm w-100" onclick="searchHolidays()">
+                        <i class="fas fa-search me-1"></i>検索
+                    </button>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <div class="search-card p-3">
+                    <h5><i class="fas fa-key text-info me-2"></i>キーワード検索</h5>
+                    <input type="text" id="keywordInput" class="form-control mb-2" placeholder="キーワード（六曜、色、龍神、金運等）">
+                    <button class="btn btn-info btn-sm w-100" onclick="searchKeyword()">
+                        <i class="fas fa-search me-1"></i>検索
+                    </button>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <div class="search-card p-3">
+                    <h5><i class="fas fa-star text-warning me-2"></i>一粒万倍日検索</h5>
+                    <select id="ichiryuYearSelect" class="form-select mb-2">
+                        <option value="2025">2025年</option>
+                        <option value="2026">2026年</option>
+                        <option value="2027">2027年</option>
+                        <option value="2028">2028年</option>
+                        <option value="2029">2029年</option>
+                        <option value="2030">2030年</option>
+                    </select>
+                    <select id="ichiryuMonthSelect" class="form-select mb-2">
+                        <option value="">全ての月</option>
+                        <option value="1">1月</option>
+                        <option value="2">2月</option>
+                        <option value="3">3月</option>
+                        <option value="4">4月</option>
+                        <option value="5">5月</option>
+                        <option value="6">6月</option>
+                        <option value="7">7月</option>
+                        <option value="8">8月</option>
+                        <option value="9">9月</option>
+                        <option value="10">10月</option>
+                        <option value="11">11月</option>
+                        <option value="12">12月</option>
+                    </select>
+                    <button class="btn btn-warning btn-sm w-100" onclick="searchIchiryuManbai()">
+                        <i class="fas fa-search me-1"></i>検索
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- 特別検索 -->
+        <div class="row mb-4">
+            <div class="col-md-4">
+                <button class="btn btn-outline-primary w-100" onclick="searchWeekends()">
+                    <i class="fas fa-calendar-week me-2"></i>週末・祝日検索
+                </button>
+            </div>
+            <div class="col-md-4">
+                <button class="btn btn-outline-success w-100" onclick="searchLuckyDays()">
+                    <i class="fas fa-star me-2"></i>ラッキーデー検索
+                </button>
+            </div>
+            <div class="col-md-4">
+                <button class="btn btn-outline-info w-100" onclick="showStatistics()">
+                    <i class="fas fa-chart-bar me-2"></i>統計情報
+                </button>
+            </div>
+        </div>
+
+        <!-- 検索結果 -->
+        <div id="searchResults" class="mt-4"></div>
+
+        <!-- 検索履歴 -->
+        <div id="searchHistory" class="search-history mt-4" style="display: none;">
+            <h6><i class="fas fa-history me-2"></i>検索履歴</h6>
+            <div id="historyList"></div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- 検索API -->
+    <script src="js/search-api.js"></script>
+    
+    <script>
+        // 検索APIクラスの初期化とデバッグログ
+        let calendarSearch;
+        
+        // ページ読み込み完了後に初期化
+        function initializeSearch() {
+            console.log('検索API初期化開始');
+            if (typeof CalendarSearchAPI !== 'undefined') {
+                window.calendarSearch = new CalendarSearchAPI();
+                console.log('検索API初期化完了:', window.calendarSearch);
+                console.log('利用可能なメソッド:', Object.getOwnPropertyNames(CalendarSearchAPI.prototype));
+            } else {
+                console.log('CalendarSearchAPIクラスが見つかりません、100ms後に再試行');
+                setTimeout(initializeSearch, 100);
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', initializeSearch);
+        
+        // 初期化確認用ヘルパー関数
+        function ensureSearchAPIReady() {
+            if (!window.calendarSearch) {
+                console.log('検索API未初期化、緊急初期化実行');
+                if (typeof CalendarSearchAPI !== 'undefined') {
+                    window.calendarSearch = new CalendarSearchAPI();
+                    console.log('緊急初期化完了:', window.calendarSearch);
+                } else {
+                    console.error('CalendarSearchAPIクラスが利用できません');
+                    throw new Error('検索機能が利用できません。ページを再読み込みしてください。');
+                }
+            }
+            return window.calendarSearch;
+        }
+
+        // 検索関数群
+        async function searchRokuyo() {
+            const rokuyo = document.getElementById('rokuyoSelect').value;
+            if (!rokuyo) {
+                alert('六曜を選択してください');
+                return;
+            }
+
+            showLoading();
+            try {
+                if (!window.calendarSearch) {
+                    window.calendarSearch = new CalendarSearchAPI();
+                }
+                const results = await window.calendarSearch.searchByRokuyo(rokuyo, 2025);
+                displayResults(results, `六曜「${rokuyo}」の検索結果`);
+                updateHistory();
+            } catch (error) {
+                showError('検索エラーが発生しました');
+            }
+        }
+
+        async function searchHolidays() {
+            const year = parseInt(document.getElementById('yearSelect').value);
+            const month = document.getElementById('monthSelect').value;
+            const monthNum = month ? parseInt(month) : null;
+
+            showLoading();
+            try {
+                if (!window.calendarSearch) {
+                    window.calendarSearch = new CalendarSearchAPI();
+                }
+                const results = await window.calendarSearch.searchHolidays(year, monthNum);
+                displayHolidayResults(results, `${year}年${month ? month + '月' : ''}の祝日`);
+                updateHistory();
+            } catch (error) {
+                showError('祝日検索エラーが発生しました');
+            }
+        }
+
+        async function searchKeyword() {
+            const keyword = document.getElementById('keywordInput').value.trim();
+            if (!keyword) {
+                alert('キーワードを入力してください');
+                return;
+            }
+
+            showLoading();
+            try {
+                if (!window.calendarSearch) {
+                    window.calendarSearch = new CalendarSearchAPI();
+                }
+                // キーワード検索、パワーストーン検索、六曜検索を統合
+                const keywordResults = await window.calendarSearch.searchByKeyword(keyword, 2025);
+                const stoneResults = await window.calendarSearch.searchByPowerStone(keyword, 2025);
+                const rokuyoResults = await window.calendarSearch.searchByRokuyo(keyword, 2025);
+                
+                // 結果をマージ（重複除去）
+                const allResults = [...keywordResults];
+                
+                stoneResults.forEach(item => {
+                    if (!allResults.find(existing => existing.date === item.date)) {
+                        allResults.push(item);
+                    }
+                });
+                
+                rokuyoResults.forEach(item => {
+                    if (!allResults.find(existing => existing.date === item.date)) {
+                        allResults.push(item);
+                    }
+                });
+                
+                displayResults(allResults, `「${keyword}」の検索結果`);
+                updateHistory();
+            } catch (error) {
+                showError('検索エラーが発生しました');
+            }
+        }
+
+        async function searchWeekends() {
+            showLoading();
+            try {
+                const results = await calendarSearch.searchWeekends(2025, true);
+                displayResults(results, '2025年の週末・祝日');
+                updateHistory();
+            } catch (error) {
+                showError('週末検索エラーが発生しました');
+            }
+        }
+
+        async function searchIchiryuManbai() {
+            console.log('一粒万倍日検索開始');
+            showLoading();
+            const year = parseInt(document.getElementById('ichiryuYearSelect').value);
+            const month = document.getElementById('ichiryuMonthSelect').value;
+            
+            try {
+                const api = ensureSearchAPIReady();
+                console.log('API準備完了、メソッド確認:', typeof api.searchIchiryuManbaiDays);
+                
+                if (typeof api.searchIchiryuManbaiDays !== 'function') {
+                    console.error('searchIchiryuManbaiDaysメソッドが存在しません');
+                    throw new Error('一粒万倍日検索機能が見つかりません');
+                }
+                
+                console.log(`検索実行: ${year}年${month ? month + '月' : ''}`);
+                const results = await api.searchIchiryuManbaiDays(
+                    year, 
+                    month ? parseInt(month) : null
+                );
+                
+                console.log('検索結果:', results.length + '件');
+                const title = `${year}年${month ? month + '月' : ''}の一粒万倍日`;
+                displayResults(results, title);
+                updateHistory();
+            } catch (error) {
+                console.error('一粒万倍日検索エラー:', error);
+                console.error('エラースタック:', error.stack);
+                showError(`一粒万倍日の検索中に問題が発生しました。<br><small>エラー詳細: ${error.message}</small>`);
+            }
+        }
+
+        async function searchLuckyDays() {
+            showLoading();
+            try {
+                const results = await calendarSearch.findLuckyDays(2025);
+                displayResults(results, '2025年のラッキーデー（大安 + 特別なパワーストーン）');
+                updateHistory();
+            } catch (error) {
+                showError('ラッキーデー検索エラーが発生しました');
+            }
+        }
+
+        async function showStatistics() {
+            showLoading();
+            try {
+                const stats = await calendarSearch.getStatistics(2025);
+                displayStatistics(stats);
+                updateHistory();
+            } catch (error) {
+                showError('統計情報取得エラーが発生しました');
+            }
+        }
+
+        // 表示関数群
+        function showLoading() {
+            document.getElementById('searchResults').innerHTML = 
+                '<div class="loading"><i class="fas fa-spinner fa-spin fa-2x text-primary"></i><br>検索中...</div>';
+        }
+
+        function showError(message) {
+            document.getElementById('searchResults').innerHTML = 
+                `<div class="alert alert-danger"><i class="fas fa-exclamation-triangle me-2"></i>${message}</div>`;
+        }
+
+        function displayResults(results, title) {
+            const container = document.getElementById('searchResults');
+            
+            if (results.length === 0) {
+                container.innerHTML = `
+                    <div class="alert alert-info">
+                        <h5>${title}</h5>
+                        <p>検索条件に一致する結果が見つかりませんでした。</p>
+                    </div>`;
+                return;
+            }
+
+            let html = `<h4 class="mb-3">${title} (${results.length}件)</h4>`;
+            
+            results.slice(0, 20).forEach(item => {
+                const date = item.date || 'N/A';
+                const weekday = item.weekday || '';
+                const keyword = item.daily_keyword || item.keyword || '';
+                const rokuyo = item.rokuyo || '';
+                const powerStone = item.power_stone || '';
+                const color = item.color_of_the_day || '';
+
+                html += `
+                    <div class="result-item">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <strong>${date}</strong><br>
+                                <small class="text-muted">${weekday}</small>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="mb-1">
+                                    <span class="badge bg-primary me-1">${rokuyo}</span>
+                                    ${item.is_holiday ? `<span class="badge bg-danger">祝日</span>` : ''}
+                                    ${item.is_weekend ? `<span class="badge bg-secondary">週末</span>` : ''}
+                                </div>
+                                <div class="mb-1">
+                                    <i class="fas fa-key text-warning me-1"></i>${keyword}
+                                </div>
+                                <div class="small text-muted">
+                                    <i class="fas fa-palette me-1"></i>${color} 
+                                    <i class="fas fa-gem ms-2 me-1"></i>${powerStone}
+                                </div>
+                            </div>
+                        </div>
+                    </div>`;
+            });
+
+            if (results.length > 20) {
+                html += `<div class="alert alert-info mt-3">結果が多いため、最初の20件のみ表示しています。</div>`;
+            }
+
+            container.innerHTML = html;
+        }
+
+        function displayHolidayResults(results, title) {
+            const container = document.getElementById('searchResults');
+            
+            if (results.length === 0) {
+                container.innerHTML = `
+                    <div class="alert alert-info">
+                        <h5>${title}</h5>
+                        <p>該当する祝日が見つかりませんでした。</p>
+                    </div>`;
+                return;
+            }
+
+            let html = `<h4 class="mb-3">${title} (${results.length}件)</h4>`;
+            
+            results.forEach(holiday => {
+                html += `
+                    <div class="result-item">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <strong>${holiday.date}</strong><br>
+                                <small class="text-muted">${holiday.weekday}</small>
+                            </div>
+                            <div class="col-md-9">
+                                <h6 class="mb-1">
+                                    <i class="fas fa-flag text-danger me-2"></i>${holiday.name}
+                                </h6>
+                            </div>
+                        </div>
+                    </div>`;
+            });
+
+            container.innerHTML = html;
+        }
+
+        function displayStatistics(stats) {
+            const container = document.getElementById('searchResults');
+            
+            let html = `
+                <h4 class="mb-3">2025年統計情報</h4>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header">基本統計</div>
+                            <div class="card-body">
+                                <p><strong>総日数:</strong> ${stats.totalDays}日</p>
+                                <p><strong>祝日数:</strong> ${stats.holidays}日</p>
+                                <p><strong>週末数:</strong> ${stats.weekends}日</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header">六曜分布</div>
+                            <div class="card-body">`;
+            
+            for (const [rokuyo, count] of Object.entries(stats.rokuyoCount)) {
+                html += `<p><strong>${rokuyo}:</strong> ${count}日</p>`;
+            }
+            
+            html += `
+                            </div>
+                        </div>
+                    </div>
+                </div>`;
+
+            container.innerHTML = html;
+        }
+
+        function updateHistory() {
+            const history = calendarSearch.getSearchHistory();
+            if (history.length === 0) return;
+
+            const historyContainer = document.getElementById('searchHistory');
+            const historyList = document.getElementById('historyList');
+            
+            let html = '';
+            history.slice(0, 5).forEach(item => {
+                const time = new Date(item.timestamp).toLocaleTimeString('ja-JP');
+                html += `
+                    <small class="d-block">
+                        ${time} - ${item.type}: ${item.query} (${item.resultCount}件)
+                    </small>`;
+            });
+            
+            historyList.innerHTML = html;
+            historyContainer.style.display = 'block';
+        }
+
+        // Enter キーでの検索
+        document.addEventListener('DOMContentLoaded', function() {
+            const keywordInput = document.getElementById('keywordInput');
+            if (keywordInput) {
+                keywordInput.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        searchKeyword();
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
