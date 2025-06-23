@@ -44,35 +44,7 @@ class DetailedFortuneAPI {
         // 時間選択肢（0〜23時）
         const hourSelect = document.getElementById('birthHour');
         if (hourSelect) {
-            for (let hour = 0; hour <= 23; hour++) {
-                const option = document.createElement('option');
-                option.value = hour;
-                option.textContent = `${hour}時`;
-                hourSelect.appendChild(option);
-            }
-        }
-    }
-
-    /**
-     * 日選択肢の動的更新（月・年に応じて）
-     */
-    updateDayOptions() {
-        const yearSelect = document.getElementById('birthYear');
-        const monthSelect = document.getElementById('birthMonth');
-        const daySelect = document.getElementById('birthDay');
-        
-        if (!yearSelect || !monthSelect || !daySelect) return;
-        
-        const year = parseInt(yearSelect.value);
-        const month = parseInt(monthSelect.value);
-        
-        if (!year || !month) return;
-        
-        // 月の日数を計算
-        const daysInMonth = new Date(year, month, 0).getDate();
-        
-        // 既存の選択肢をクリア
-        daySelect.innerHTML = '<option value="">日を選択</option>';
+            for (let hour = 0; hour 日を選択';
         
     /**
      * 詳細運勢診断メイン関数
@@ -660,37 +632,7 @@ class DetailedFortuneAPI {
         recommendations.push(...elementAdvice);
         
         // スコアに基づく推奨事項
-        if (scores.love < 60) {
-            recommendations.push(`恋愛運向上のため、今日は${todayData.color_of_the_day}の小物を身につけてみてください。`);
-            recommendations.push(`${todayData.flower_message}の花言葉を意識して、愛情表現を豊かにしましょう。`);
-        }
-        
-        if (scores.work < 60) {
-            recommendations.push(`仕事運を高めるため、${todayData.meditation_theme}を実践してみましょう。`);
-            recommendations.push(`集中力を高めるため、${todayData.aroma_oil}のアロマを取り入れてください。`);
-        }
-        
-        if (scores.money < 60) {
-            recommendations.push(`金運向上のため、${todayData.power_stone}を持ち歩くと良いでしょう。`);
-            recommendations.push(`今日のラッキーナンバー${todayData.lucky_number}を意識した行動をとってみてください。`);
-        }
-        
-        if (scores.health < 60) {
-            recommendations.push(`健康運のため、${todayData.recommended_tea}を飲んでリラックスしましょう。`);
-            recommendations.push(`${todayData.crystal_healing}のエネルギーで心身を整えてください。`);
-        }
-
-        return recommendations;
-    }
-
-    generateDetailedWarnings(fourPillars, daiun, ryunen) {
-        const warnings = [];
-        
-        if (ryunen.fortune.score < 50) {
-            warnings.push(`${ryunen.year}年は${ryunen.relationship}の年です。慎重な行動を心がけてください。`);
-        }
-        
-        if (daiun.period >= 4) {
+        if (scores.love = 4) {
             warnings.push('人生の転換期です。大きな決断は慎重に検討しましょう。');
         }
 
