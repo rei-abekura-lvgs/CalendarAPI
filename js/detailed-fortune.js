@@ -298,15 +298,7 @@ class DetailedFortuneAPI {
         const hourKan = dayHourKanTable[dayKan][hourShiIndex];
         const kanshi = hourKan + hourShi;
         
-        // デバッグログ
-        console.log('時柱計算デバッグ:', {
-            入力時間: hour,
-            日干: dayKan,
-            時支インデックス: hourShiIndex,
-            時支: hourShi,
-            時干: hourKan,
-            結果: kanshi
-        });
+
         
         return {
             kanshi: kanshi,
@@ -512,15 +504,7 @@ class DetailedFortuneAPI {
         const monthKan = monthKanTable[yearKan][month - 1];
         const monthShiChar = monthShi[month - 1];
         
-        // デバッグログ
-        console.log('月柱計算デバッグ:', {
-            年: year,
-            月: month,
-            年干: yearKan,
-            月干: monthKan,
-            月支: monthShiChar,
-            結果: monthKan + monthShiChar
-        });
+
         
         return monthKan + monthShiChar;
     }
