@@ -130,9 +130,9 @@
 
             <div class="col-md-4 mb-3">
                 <div class="search-card p-3">
-                    <h5><i class="fas fa-key text-info me-2"></i>キーワード・パワーストーン検索</h5>
-                    <input type="text" id="combinedInput" class="form-control mb-2" placeholder="キーワード・パワーストーン名（龍神、アメジスト等）">
-                    <button class="btn btn-info btn-sm w-100" onclick="searchCombined()">
+                    <h5><i class="fas fa-key text-info me-2"></i>キーワード検索</h5>
+                    <input type="text" id="keywordInput" class="form-control mb-2" placeholder="キーワード（六曜、色、龍神、金運等）">
+                    <button class="btn btn-info btn-sm w-100" onclick="searchKeyword()">
                         <i class="fas fa-search me-1"></i>検索
                     </button>
                 </div>
@@ -210,10 +210,18 @@
     <script>
         // 検索APIクラスの初期化
         let calendarSearch;
-        document.addEventListener('DOMContentLoaded', function() {
-            calendarSearch = new CalendarSearchAPI();
-            console.log('検索API初期化完了:', calendarSearch);
-        });
+        
+        // ページ読み込み完了後に初期化
+        function initializeSearch() {
+            if (typeof CalendarSearchAPI !== 'undefined') {
+                window.calendarSearch = new CalendarSearchAPI();
+                console.log('検索API初期化完了:', window.calendarSearch);
+            } else {
+                setTimeout(initializeSearch, 100); // 100ms後に再試行
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', initializeSearch);
 
         // 検索関数群
         async function searchRokuyo() {
@@ -225,7 +233,10 @@
 
             showLoading();
             try {
-                const results = await calendarSearch.searchByRokuyo(rokuyo, 2025);
+                if (!window.calendarSearch) {
+                    window.calendarSearch = new CalendarSearchAPI();
+                }
+                const results = await window.calendarSearch.searchByRokuyo(rokuyo, 2025);
                 displayResults(results, `六曜「${rokuyo}」の検索結果`);
                 updateHistory();
             } catch (error) {
@@ -240,7 +251,10 @@
 
             showLoading();
             try {
-                const results = await calendarSearch.searchHolidays(year, monthNum);
+                if (!window.calendarSearch) {
+                    window.calendarSearch = new CalendarSearchAPI();
+                }
+                const results = await window.calendarSearch.searchHolidays(year, monthNum);
                 displayHolidayResults(results, `${year}年${month ? month + '月' : ''}の祝日`);
                 updateHistory();
             } catch (error) {
@@ -248,28 +262,39 @@
             }
         }
 
-        async function searchCombined() {
-            const keyword = document.getElementById('combinedInput').value.trim();
+        async function searchKeyword() {
+            const keyword = document.getElementById('keywordInput').value.trim();
             if (!keyword) {
-                alert('キーワードまたはパワーストーン名を入力してください');
+                alert('キーワードを入力してください');
                 return;
             }
 
             showLoading();
             try {
-                // キーワード検索とパワーストーン検索の両方を実行
-                const keywordResults = await calendarSearch.searchByKeyword(keyword, 2025);
-                const stoneResults = await calendarSearch.searchByPowerStone(keyword, 2025);
+                if (!window.calendarSearch) {
+                    window.calendarSearch = new CalendarSearchAPI();
+                }
+                // キーワード検索、パワーストーン検索、六曜検索を統合
+                const keywordResults = await window.calendarSearch.searchByKeyword(keyword, 2025);
+                const stoneResults = await window.calendarSearch.searchByPowerStone(keyword, 2025);
+                const rokuyoResults = await window.calendarSearch.searchByRokuyo(keyword, 2025);
                 
                 // 結果をマージ（重複除去）
                 const allResults = [...keywordResults];
+                
                 stoneResults.forEach(item => {
                     if (!allResults.find(existing => existing.date === item.date)) {
                         allResults.push(item);
                     }
                 });
                 
-                displayResults(allResults, `「${keyword}」の検索結果（キーワード・パワーストーン統合）`);
+                rokuyoResults.forEach(item => {
+                    if (!allResults.find(existing => existing.date === item.date)) {
+                        allResults.push(item);
+                    }
+                });
+                
+                displayResults(allResults, `「${keyword}」の検索結果`);
                 updateHistory();
             } catch (error) {
                 showError('検索エラーが発生しました');
@@ -293,12 +318,12 @@
             const month = document.getElementById('ichiryuMonthSelect').value;
             
             try {
-                // calendarSearchオブジェクトに関数が存在するかチェック
-                if (!calendarSearch || typeof calendarSearch.searchIchiryuManbaiDays !== 'function') {
-                    throw new Error('一粒万倍日検索機能が利用できません。ページを再読み込みしてください。');
+                // calendarSearchが未初期化の場合は初期化
+                if (!window.calendarSearch) {
+                    window.calendarSearch = new CalendarSearchAPI();
                 }
                 
-                const results = await calendarSearch.searchIchiryuManbaiDays(
+                const results = await window.calendarSearch.searchIchiryuManbaiDays(
                     year, 
                     month ? parseInt(month) : null
                 );
@@ -488,11 +513,11 @@
 
         // Enter キーでの検索
         document.addEventListener('DOMContentLoaded', function() {
-            const combinedInput = document.getElementById('combinedInput');
-            if (combinedInput) {
-                combinedInput.addEventListener('keypress', function(e) {
+            const keywordInput = document.getElementById('keywordInput');
+            if (keywordInput) {
+                keywordInput.addEventListener('keypress', function(e) {
                     if (e.key === 'Enter') {
-                        searchCombined();
+                        searchKeyword();
                     }
                 });
             }
