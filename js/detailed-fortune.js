@@ -272,12 +272,12 @@ class DetailedFortuneAPI {
             '子', '丑', '寅', '卯', '辰', '巳', '午', '未', '申', '酉', '戌', '亥'
         ];
         
-        // 時刻から時支を正確に算出
+        // 時刻から時支を正確に算出（1時=丑時）
         let hourShiIndex;
-        if (hour === 23 || hour === 0 || hour === 1) {
+        if (hour === 23 || hour === 0) {
             hourShiIndex = 0; // 子時 (23:00-01:00)
         } else {
-            hourShiIndex = Math.floor((hour + 1) / 2);
+            hourShiIndex = Math.floor((hour + 1) / 2); // 1時=丑時
         }
         const hourShi = hourToShi[hourShiIndex % 12];
         
@@ -497,7 +497,7 @@ class DetailedFortuneAPI {
             '癸': ['甲', '乙', '丙', '丁', '戊', '己', '庚', '辛', '壬', '癸', '甲', '乙']
         };
         
-        const monthShi = ['寅', '卯', '辰', '巳', '午', '未', '申', '酉', '戌', '亥', '子', '丑'];
+        const monthShi = ['丑', '寅', '卯', '辰', '巳', '午', '未', '申', '酉', '戌', '亥', '子'];
         
         const monthKan = monthKanTable[yearKan][month - 1];
         const monthShiChar = monthShi[month - 1];
