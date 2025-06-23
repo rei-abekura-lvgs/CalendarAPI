@@ -299,13 +299,28 @@
         // 診断実行
         async function performFortuneDiagnosis() {
             const resultContainer = document.getElementById('personalFortuneResult');
+            if (!resultContainer) {
+                console.error('結果表示エリアが見つかりません');
+                return;
+            }
             
             // 入力データ取得
-            const year = document.getElementById('birthYear').value;
-            const month = document.getElementById('birthMonth').value;
-            const day = document.getElementById('birthDay').value;
-            const hour = document.getElementById('birthHour').value;
-            const gender = document.querySelector('input[name="gender"]:checked')?.value;
+            const yearElement = document.getElementById('birthYear');
+            const monthElement = document.getElementById('birthMonth');
+            const dayElement = document.getElementById('birthDay');
+            const hourElement = document.getElementById('birthHour');
+            const genderElement = document.querySelector('input[name="gender"]:checked');
+            
+            if (!yearElement || !monthElement || !dayElement || !hourElement) {
+                showError(resultContainer, '入力フォームの読み込みに問題があります');
+                return;
+            }
+            
+            const year = yearElement.value;
+            const month = monthElement.value;
+            const day = dayElement.value;
+            const hour = hourElement.value;
+            const gender = genderElement?.value;
             
             // 入力検証
             if (!year || !month || !day || !gender) {
@@ -368,24 +383,28 @@
 
         // ローディング表示
         function showLoading(container, message) {
-            container.innerHTML = `
-                <div class="text-center py-5">
-                    <div class="spinner-border text-primary mb-3" role="status" style="width: 3rem; height: 3rem;">
-                        <span class="visually-hidden">Loading...</span>
+            if (container) {
+                container.innerHTML = `
+                    <div class="text-center py-5">
+                        <div class="spinner-border text-primary mb-3" role="status" style="width: 3rem; height: 3rem;">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <h5 class="text-muted">${message}</h5>
                     </div>
-                    <h5 class="text-muted">${message}</h5>
-                </div>
-            `;
+                `;
+            }
         }
 
         // エラー表示
         function showError(container, message) {
-            container.innerHTML = `
-                <div class="alert alert-danger d-flex align-items-center" role="alert">
-                    <i class="fas fa-exclamation-triangle me-2"></i>
-                    ${message}
-                </div>
-            `;
+            if (container) {
+                container.innerHTML = `
+                    <div class="alert alert-danger d-flex align-items-center" role="alert">
+                        <i class="fas fa-exclamation-triangle me-2"></i>
+                        ${message}
+                    </div>
+                `;
+            }
         }
 
         // 詳細運勢結果表示
