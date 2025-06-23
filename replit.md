@@ -139,6 +139,7 @@ The system follows a **Static Site Generator + API** architecture:
 - June 23, 2025: 十干十二支データ追加・全形式対応完了 - 29項目目として十干十二支フィールド追加、CSV/XML/TXT全形式に反映、仕様書(specification.md)作成、デザイン統一化完了
 - June 23, 2025: 四柱推命機能完全実装 - 十干五行、十二支五行、陰陽、動物、十二運、空亡(天中殺)を追加し37項目に拡張、検索機能・UI・全形式ファイル対応完了
 - June 23, 2025: 空亡計算正確性向上 - 日空亡を60干支周期で正確計算、空亡種類・影響範囲データ追加で39項目完成、12年分データ・全形式完全対応、kuubou_explanation.md作成
+- June 23, 2025: 個人運勢機能完全実装・全体リファクタリング完了 - 生年月日入力による個人空亡・四柱推命運勢計算、メインページタブ統合、JavaScript最適化、GitHub Pages完全対応、全機能動作確認済み
 
 ## User Preferences
 

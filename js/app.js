@@ -17,6 +17,8 @@ function initializeApp() {
     setupSmoothScrolling();
     initializePrism();
     addCopyCodeButtons();
+    // 少し遅延させて生年月日を復元（DOM要素が確実に存在するように）
+    setTimeout(restoreBirthDate, 100);
 }
 
 // Setup smooth scrolling for navigation links
