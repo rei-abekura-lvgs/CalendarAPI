@@ -299,6 +299,24 @@
             }
         }
 
+        async function searchIchiryuManbai() {
+            showLoading();
+            const year = parseInt(document.getElementById('ichiryuYearSelect').value);
+            const month = document.getElementById('ichiryuMonthSelect').value;
+            
+            try {
+                const results = await calendarSearch.searchIchiryuManbaiDays(
+                    year, 
+                    month ? parseInt(month) : null
+                );
+                const title = `${year}年${month ? month + '月' : ''}の一粒万倍日`;
+                displayResults(results, title);
+                updateHistory();
+            } catch (error) {
+                showError('一粒万倍日検索エラーが発生しました');
+            }
+        }
+
         async function searchLuckyDays() {
             showLoading();
             try {
