@@ -94,6 +94,10 @@ function displayTodayData(data) {
             <span class="today-data-label">六曜</span>
             <span class="today-data-value">${data.rokuyo}</span>
         </div>
+        <div class="today-data-item">
+            <span class="today-data-label">十干十二支</span>
+            <span class="today-data-value">${data.jikkan_junishi || '計算中'}</span>
+        </div>
         ${data.is_holiday ? `
         <div class="today-data-item">
             <span class="today-data-label">祝日</span>

@@ -217,10 +217,11 @@
                             for (const day of monthData.days) {
                                 let match = false;
                                 
-                                // キーワード検索（複数フィールドを対象）
+                                // キーワード検索（29項目すべてを対象）
                                 const searchFields = [
                                     day.daily_keyword,
                                     day.rokuyo,
+                                    day.jikkan_junishi,
                                     day.color_of_the_day,
                                     day.power_stone,
                                     day.recommended_tea,
@@ -254,6 +255,7 @@
                                         date: day.date,
                                         weekday: day.weekday,
                                         rokuyo: day.rokuyo,
+                                        jikkan_junishi: day.jikkan_junishi,
                                         daily_keyword: day.daily_keyword,
                                         color_of_the_day: day.color_of_the_day,
                                         power_stone: day.power_stone,
@@ -426,6 +428,7 @@
                             ${item.is_ichiryu_manbai ? `<span class="badge bg-warning text-dark me-1">一粒万倍日</span>` : ''}
                         </div>
                         ${keyword ? `<div class="text-muted small">キーワード: ${keyword}</div>` : ''}
+                        ${item.jikkan_junishi ? `<div class="text-muted small">十干十二支: ${item.jikkan_junishi}</div>` : ''}
                         ${item.power_stone ? `<div class="text-muted small">パワーストーン: ${item.power_stone}</div>` : ''}
                         ${item.color_of_the_day ? `<div class="text-muted small">今日の色: ${item.color_of_the_day}</div>` : ''}
                     </div>
