@@ -725,30 +725,55 @@ class DetailedFortuneAPI {
     getElementSpecificAdvice(element, todayData) {
         const advice = [];
         
+        // 五行属性に基づくパワーストーン推奨
+        const personalStone = this.getPersonalPowerStone(element);
+        
         switch(element) {
             case '木':
-                advice.push(`木属性のあなたには、${todayData.power_stone}が成長エネルギーを高めます。`);
+                advice.push(`木属性のあなたには、${personalStone}が成長エネルギーを高めます。`);
                 advice.push(`創造性を活かす仕事や趣味に力を注ぐと良い日です。`);
+                advice.push(`今日は${todayData.meditation_theme}の瞑想で内なる成長を促しましょう。`);
                 break;
             case '火':
-                advice.push(`火属性のあなたには、${todayData.aroma_oil}で情熱を調整しましょう。`);
+                advice.push(`火属性のあなたには、${personalStone}で情熱をコントロールしましょう。`);
                 advice.push(`人とのコミュニケーションを大切にする日です。`);
+                advice.push(`${todayData.aroma_oil}のアロマで感情のバランスを整えてください。`);
                 break;
             case '土':
-                advice.push(`土属性のあなたには、${todayData.crystal_healing}が安定感をもたらします。`);
+                advice.push(`土属性のあなたには、${personalStone}が安定感をもたらします。`);
                 advice.push(`基盤固めや計画立案に適した日です。`);
+                advice.push(`${todayData.crystal_healing}のエネルギーで地に足をつけた行動を。`);
                 break;
             case '金':
-                advice.push(`金属性のあなたには、${todayData.power_stone}が決断力を高めます。`);
+                advice.push(`金属性のあなたには、${personalStone}が決断力を高めます。`);
                 advice.push(`整理整頓や品質向上に取り組むと良い日です。`);
+                advice.push(`${todayData.feng_shui_advice}を参考に環境を整えましょう。`);
                 break;
             case '水':
-                advice.push(`水属性のあなたには、${todayData.recommended_tea}で直感力を研ぎ澄ませましょう。`);
+                advice.push(`水属性のあなたには、${personalStone}で直感力を研ぎ澄ませましょう。`);
                 advice.push(`学習や研究、深い思考に適した日です。`);
+                advice.push(`${todayData.recommended_tea}を飲んで心を静めてください。`);
                 break;
         }
         
         return advice;
+    }
+
+    /**
+     * 五行属性に基づく個人専用パワーストーン
+     */
+    getPersonalPowerStone(element) {
+        const stones = {
+            '木': ['アベンチュリン', 'プレナイト', 'ペリドット', 'グリーンアゲート'],
+            '火': ['カーネリアン', 'サンストーン', 'ルビー', 'ガーネット'],
+            '土': ['タイガーアイ', 'シトリン', 'イエロージャスパー', 'スモーキークォーツ'],
+            '金': ['ローズクォーツ', 'クンツァイト', 'モルガナイト', 'ピンクトルマリン'],
+            '水': ['アクアマリン', 'ブルーレースアゲート', 'ソーダライト', 'ラピスラズリ']
+        };
+        
+        const stoneList = stones[element] || ['クリアクォーツ'];
+        const index = Math.floor(Math.random() * stoneList.length);
+        return stoneList[index];
     }
 
     /**
