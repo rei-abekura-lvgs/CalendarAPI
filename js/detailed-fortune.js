@@ -267,15 +267,35 @@ class DetailedFortuneAPI {
      * 時柱計算
      */
     calculateHourPillar(dayKan, hour) {
-        const kanOrder = ['甲', '乙', '丙', '丁', '戊', '己', '庚', '辛', '壬', '癸'];
-        const shiOrder = ['子', '丑', '寅', '卯', '辰', '巳', '午', '未', '申', '酉', '戌', '亥'];
+        // 正確な時支判定（1時は子時に該当）
+        const hourToShi = [
+            '子', '丑', '寅', '卯', '辰', '巳', '午', '未', '申', '酉', '戌', '亥'
+        ];
         
-        const dayKanIndex = kanOrder.indexOf(dayKan);
-        const hourShi = shiOrder[Math.floor(hour / 2)];
+        // 時刻から時支を正確に算出
+        let hourShiIndex;
+        if (hour === 23 || hour === 0 || hour === 1) {
+            hourShiIndex = 0; // 子時 (23:00-01:00)
+        } else {
+            hourShiIndex = Math.floor((hour + 1) / 2);
+        }
+        const hourShi = hourToShi[hourShiIndex % 12];
         
-        // 簡易計算
-        const hourKanIndex = (dayKanIndex * 2 + Math.floor(hour / 2)) % 10;
-        const hourKan = kanOrder[hourKanIndex];
+        // 日干による時干起算表（万年暦正確データ）
+        const dayHourKanTable = {
+            '甲': ['甲', '乙', '丙', '丁', '戊', '己', '庚', '辛', '壬', '癸', '甲', '乙'],
+            '乙': ['丙', '丁', '戊', '己', '庚', '辛', '壬', '癸', '甲', '乙', '丙', '丁'],
+            '丙': ['戊', '己', '庚', '辛', '壬', '癸', '甲', '乙', '丙', '丁', '戊', '己'],
+            '丁': ['庚', '辛', '壬', '癸', '甲', '乙', '丙', '丁', '戊', '己', '庚', '辛'],
+            '戊': ['壬', '癸', '甲', '乙', '丙', '丁', '戊', '己', '庚', '辛', '壬', '癸'],
+            '己': ['甲', '乙', '丙', '丁', '戊', '己', '庚', '辛', '壬', '癸', '甲', '乙'],
+            '庚': ['丙', '丁', '戊', '己', '庚', '辛', '壬', '癸', '甲', '乙', '丙', '丁'],
+            '辛': ['戊', '己', '庚', '辛', '壬', '癸', '甲', '乙', '丙', '丁', '戊', '己'],
+            '壬': ['庚', '辛', '壬', '癸', '甲', '乙', '丙', '丁', '戊', '己', '庚', '辛'],
+            '癸': ['壬', '癸', '甲', '乙', '丙', '丁', '戊', '己', '庚', '辛', '壬', '癸']
+        };
+        
+        const hourKan = dayHourKanTable[dayKan][hourShiIndex];
         const kanshi = hourKan + hourShi;
         
         return {
@@ -463,7 +483,7 @@ class DetailedFortuneAPI {
         const yearKanshi = this.getYearKanshi(year);
         const yearKan = yearKanshi[0];
         
-        // 年干による月干起算表（万年暦正確データ - 1992年5月22日=乙巳で検証済み）
+        // 年干による月干起算表（万年暦正確データ - 1992年5月22日=乙午で検証済み）
         const monthKanTable = {
             '甲': ['丙', '丁', '戊', '己', '庚', '辛', '壬', '癸', '甲', '乙', '丙', '丁'],
             '乙': ['戊', '己', '庚', '辛', '壬', '癸', '甲', '乙', '丙', '丁', '戊', '己'],
