@@ -135,6 +135,7 @@ The system follows a **Static Site Generator + API** architecture:
 - June 21, 2025: 文字化け問題完全解決 - UTF-8対応HTTPサーバー実装（utf8_server.py）、全形式でのContent-Type適切設定、ブラウザでの日本語表示正常化、12年分・27項目データ完全対応確認
 - June 21, 2025: 包括的テスト完備・最終品質確認 - 欠落年間ファイル生成、階層構造JSONデータ対応、全52エンドポイント動作確認、comprehensive_final_test.py作成、プロダクション準備完了
 - June 23, 2025: 一粒万倍日機能追加 - 28項目目として「is_ichiryu_manbai」フィールド追加、12年分全データ再生成、検索機能拡張、JavaScriptエラー修正完了
+- June 23, 2025: 12年分検索機能完成 - 2025年〜2036年対応の年選択機能、祝日名表示修正、直接データアクセス方式で全機能安定動作確認
 
 ## User Preferences
 
