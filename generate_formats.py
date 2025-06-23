@@ -41,17 +41,18 @@ def generate_csv(data, output_file):
     with open(output_file, 'w', newline='', encoding='utf-8') as csvfile:
         writer = csv.writer(csvfile)
         
-        # ヘッダー行（37項目すべて）
+        # ヘッダー行（39項目すべて）
         writer.writerow([
             'day', 'date', 'weekday', 'weekday_en', 'weekday_short', 'is_weekend', 'is_holiday', 
             'holiday_name', 'rokuyo', 'is_ichiryu_manbai', 'jikkan_junishi', 'jikkan', 'junishi',
             'jikkan_gogyou', 'junishi_gogyou', 'jikkan_yin_yang', 'junishi_animal', 'juuni_un', 'is_kuubou',
-            'season_24', 'moon_phase', 'daily_keyword', 'color_of_the_day', 'recommended_tea', 'lucky_number', 
-            'power_stone', 'aroma_oil', 'meditation_theme', 'flower_of_the_day', 'energy_advice', 'zodiac_influence',
-            'tarot_card', 'wise_quote', 'recommended_music', 'recommended_food', 'crystal_healing', 'feng_shui_tip'
+            'kuubou_type', 'kuubou_effect', 'season_24', 'moon_phase', 'daily_keyword', 'color_of_the_day', 
+            'recommended_tea', 'lucky_number', 'power_stone', 'aroma_oil', 'meditation_theme', 'flower_of_the_day', 
+            'energy_advice', 'zodiac_influence', 'tarot_card', 'wise_quote', 'recommended_music', 'recommended_food', 
+            'crystal_healing', 'feng_shui_tip'
         ])
         
-        # データ行（37項目すべて）
+        # データ行（39項目すべて）
         for day in data['days']:
             writer.writerow([
                 day.get('day', ''),
@@ -73,6 +74,8 @@ def generate_csv(data, output_file):
                 day.get('junishi_animal', ''),
                 day.get('juuni_un', ''),
                 day.get('is_kuubou', ''),
+                day.get('kuubou_type', ''),
+                day.get('kuubou_effect', ''),
                 day.get('season_24', ''),
                 day.get('moon_phase', ''),
                 day.get('daily_keyword', ''),

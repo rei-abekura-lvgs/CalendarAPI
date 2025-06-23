@@ -70,9 +70,51 @@ def get_jikkan_junishi_details(year, month, day):
     juuni_un_index = (jikkan_index + month) % 12
     juuni_un = juuni_un_list[juuni_un_index]
     
-    # 空亡（天中殺）を計算（簡易版：10日に2日の割合）
-    kuubou_cycle = days_diff % 10
-    is_kuubou = kuubou_cycle >= 8  # 10日のうち最後の2日を空亡とする
+    # 空亡（天中殺）を計算（日空亡：全員共通）
+    # 60干支の組み合わせから空亡を正確に判定
+    rokujuukan_position = days_diff % 60
+    
+    # 10干×12支の組み合わせで、十二支の最後の2つが常に空亡
+    # 甲子～癸亥の60日周期で、戌亥が空亡となる日を計算
+    
+    # 空亡のパターン（10組×6日ずつ）
+    # 甲子〜乙亥(0-11): 戌亥空亡
+    # 丙子〜丁亥(12-23): 申酉空亡  
+    # 戊子〜己亥(24-35): 午未空亡
+    # 庚子〜辛亥(36-47): 辰巳空亡
+    # 壬子〜癸亥(48-59): 寅卯空亡
+    
+    kuubou_types = {
+        0: {'空亡支': '戌亥', '影響': '家庭・不動産'},    # 甲子〜乙亥
+        1: {'空亡支': '申酉', '影響': '友人・兄弟'},    # 丙子〜丁亥  
+        2: {'空亡支': '午未', '影響': '配偶者・恋愛'},  # 戊子〜己亥
+        3: {'空亡支': '辰巳', '影響': '財運・社会'},    # 庚子〜辛亥
+        4: {'空亡支': '寅卯', '影響': '親・目上'}      # 壬子〜癸亥
+    }
+    
+    # 60日を12日ずつ5グループに分割
+    kuubou_group = rokujuukan_position // 12
+    
+    # 空亡判定：その日の支が空亡支に該当するか
+    kuubou_info = kuubou_types.get(kuubou_group, {'空亡支': '', '影響': ''})
+    
+    # 戌亥空亡の場合：戌(10)亥(11)が空亡
+    # 申酉空亡の場合：申(8)酉(9)が空亡
+    # 午未空亡の場合：午(6)未(7)が空亡  
+    # 辰巳空亡の場合：辰(4)巳(5)が空亡
+    # 寅卯空亡の場合：寅(2)卯(3)が空亡
+    
+    kuubou_junishi_pairs = {
+        0: [10, 11],  # 戌亥
+        1: [8, 9],    # 申酉
+        2: [6, 7],    # 午未
+        3: [4, 5],    # 辰巳
+        4: [2, 3]     # 寅卯
+    }
+    
+    is_kuubou = junishi_index in kuubou_junishi_pairs.get(kuubou_group, [])
+    kuubou_type = kuubou_info['空亡支'] if is_kuubou else None
+    kuubou_effect = kuubou_info['影響'] if is_kuubou else None
     
     return {
         "jikkan_junishi": f"{jikkan[jikkan_index]}{junishi[junishi_index]}",
@@ -83,7 +125,9 @@ def get_jikkan_junishi_details(year, month, day):
         "jikkan_yin_yang": jikkan_yin_yang[jikkan_index],
         "junishi_animal": junishi_animals[junishi_index],
         "juuni_un": juuni_un,
-        "is_kuubou": is_kuubou
+        "is_kuubou": is_kuubou,
+        "kuubou_type": kuubou_type,
+        "kuubou_effect": kuubou_effect
     }
 
 def get_holidays_for_year(year):
@@ -363,6 +407,8 @@ def generate_koyomi_data(year):
                 "junishi_animal": jikkan_junishi_data["junishi_animal"],
                 "juuni_un": jikkan_junishi_data["juuni_un"],
                 "is_kuubou": jikkan_junishi_data["is_kuubou"],
+                "kuubou_type": jikkan_junishi_data.get("kuubou_type"),
+                "kuubou_effect": jikkan_junishi_data.get("kuubou_effect"),
                 
                 # 既存フィールド
                 "season_24": None,  # 二十四節気は複雑なので今回は省略
