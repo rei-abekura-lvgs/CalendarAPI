@@ -246,52 +246,68 @@ class CalendarSearchAPI {
      * 一粒万倍日検索
      */
     async searchIchiryuManbaiDays(year = 2025, month = null) {
-        const data = await this.loadYearData(year);
-        if (!data) return [];
-
-        const results = [];
+        console.log(`一粒万倍日検索開始: ${year}年${month ? month + '月' : ''}`);
         
-        if (data.months) {
-            for (const monthData of data.months) {
-                if (month && monthData.month !== month) continue;
+        try {
+            const data = await this.loadYearData(year);
+            if (!data) {
+                console.error('データの読み込みに失敗');
+                return [];
+            }
+
+            console.log('データ構造:', Object.keys(data));
+            const results = [];
+            
+            if (data.months && Array.isArray(data.months)) {
+                console.log(`${data.months.length}ヶ月のデータを処理中`);
                 
-                if (monthData.days) {
-                    for (const day of monthData.days) {
-                        if (day.is_ichiryu_manbai) {
+                for (const monthData of data.months) {
+                    if (month && monthData.month !== month) continue;
+                    
+                    if (monthData.days && Array.isArray(monthData.days)) {
+                        for (const day of monthData.days) {
+                            if (day.is_ichiryu_manbai === true) {
+                                results.push({
+                                    date: day.date,
+                                    day: day.day,
+                                    month: monthData.month,
+                                    weekday: day.weekday,
+                                    rokuyo: day.rokuyo,
+                                    keyword: day.daily_keyword,
+                                    isHoliday: day.is_holiday
+                                });
+                            }
+                        }
+                    }
+                }
+            } else {
+                console.log('旧形式のデータ構造を処理中');
+                for (const [dateStr, dayData] of Object.entries(data)) {
+                    if (dateStr.match(/^\d{4}-\d{2}-\d{2}$/) && dayData.is_ichiryu_manbai === true) {
+                        const [y, m, d] = dateStr.split('-').map(Number);
+                        if (!month || m === month) {
                             results.push({
-                                date: day.date,
-                                day: day.day,
-                                month: monthData.month,
-                                weekday: day.weekday,
-                                rokuyo: day.rokuyo,
-                                keyword: day.daily_keyword,
-                                isHoliday: day.is_holiday
+                                date: dateStr,
+                                day: d,
+                                month: m,
+                                weekday: dayData.weekday,
+                                rokuyo: dayData.rokuyo,
+                                keyword: dayData.daily_keyword,
+                                isHoliday: dayData.is_holiday
                             });
                         }
                     }
                 }
             }
-        } else {
-            for (const [dateStr, dayData] of Object.entries(data)) {
-                if (dateStr.match(/^\d{4}-\d{2}-\d{2}$/) && dayData.is_ichiryu_manbai) {
-                    const [y, m, d] = dateStr.split('-').map(Number);
-                    if (!month || m === month) {
-                        results.push({
-                            date: dateStr,
-                            day: d,
-                            month: m,
-                            weekday: dayData.weekday,
-                            rokuyo: dayData.rokuyo,
-                            keyword: dayData.daily_keyword,
-                            isHoliday: dayData.is_holiday
-                        });
-                    }
-                }
-            }
-        }
 
-        this.addToHistory('ichiryu_manbai', `${year}年${month ? month + '月' : ''}`, results.length);
-        return results;
+            console.log(`一粒万倍日検索完了: ${results.length}件見つかりました`);
+            this.addToHistory('ichiryu_manbai', `${year}年${month ? month + '月' : ''}`, results.length);
+            return results;
+            
+        } catch (error) {
+            console.error('一粒万倍日検索エラー:', error);
+            throw new Error(`一粒万倍日検索中にエラーが発生しました: ${error.message}`);
+        }
     }
 
     /**

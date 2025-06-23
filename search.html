@@ -313,7 +313,8 @@
                 displayResults(results, title);
                 updateHistory();
             } catch (error) {
-                showError('一粒万倍日検索エラーが発生しました');
+                console.error('一粒万倍日検索エラー:', error);
+                showError(`一粒万倍日の検索中に問題が発生しました。もう一度お試しください。<br><small>エラー詳細: ${error.message}</small>`);
             }
         }
 
