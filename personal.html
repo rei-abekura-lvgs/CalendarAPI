@@ -235,7 +235,7 @@
 
                         <!-- 診断ボタン -->
                         <div class="text-center mb-4">
-                            <button type="button" class="btn btn-lg px-5 py-3" onclick="calculateDetailedFortune()" 
+                            <button type="button" id="fortuneAnalysisBtn" class="btn btn-lg px-5 py-3" 
                                     style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border: none; border-radius: 25px; color: white; font-weight: bold; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);">
                                 <i class="fas fa-magic me-2"></i>詳細運勢診断を開始
                             </button>
@@ -346,6 +346,12 @@
             if (typeof DetailedFortuneAPI !== 'undefined') {
                 window.detailedFortuneAPI = new DetailedFortuneAPI();
                 detailedFortuneAPI.initializeDateSelectors();
+                
+                // 診断ボタンのイベントリスナーを設定
+                const fortuneBtn = document.getElementById('fortuneAnalysisBtn');
+                if (fortuneBtn) {
+                    fortuneBtn.addEventListener('click', calculateDetailedFortune);
+                }
                 
                 // 保存された生年月日を復元
                 const savedData = localStorage.getItem('userBirthData');
