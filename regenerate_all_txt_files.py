@@ -1,60 +1,13 @@
 """
-欠落しているXML・TXTファイルを新ファイル名形式で生成
+全TXTファイルを詳細な内容で再生成
+月別・年間すべてのTXTファイルを改善された形式で更新
 """
 
 import json
-import xml.etree.ElementTree as ET
 from pathlib import Path
 
-def generate_xml_from_json(json_path, xml_path):
-    """JSONファイルからXMLファイルを生成"""
-    
-    with open(json_path, 'r', encoding='utf-8') as f:
-        data = json.load(f)
-    
-    # XMLルート要素作成
-    if isinstance(data, dict) and 'months' in data:
-        # 年間データの場合
-        root = ET.Element('calendar_data')
-        root.set('year', str(data['year']))
-        root.set('api_version', data['api_version'])
-        
-        for month_data in data['months']:
-            month_elem = ET.SubElement(root, 'month')
-            month_elem.set('number', str(month_data['month']))
-            month_elem.set('name', month_data['month_name_jp'])
-            
-            for day_data in month_data['days']:
-                day_elem = ET.SubElement(month_elem, 'day')
-                for key, value in day_data.items():
-                    if isinstance(value, bool):
-                        day_elem.set(key, str(value).lower())
-                    elif value is not None:
-                        day_elem.set(key, str(value))
-    else:
-        # 月別データの場合
-        root = ET.Element('month_data')
-        if isinstance(data, dict):
-            root.set('year', str(data.get('year', '')))
-            root.set('month', str(data.get('month', '')))
-            root.set('month_name', data.get('month_name_jp', ''))
-            
-            if 'days' in data:
-                for day_data in data['days']:
-                    day_elem = ET.SubElement(root, 'day')
-                    for key, value in day_data.items():
-                        if isinstance(value, bool):
-                            day_elem.set(key, str(value).lower())
-                        elif value is not None:
-                            day_elem.set(key, str(value))
-    
-    # XMLファイル保存
-    tree = ET.ElementTree(root)
-    ET.indent(tree, space="  ", level=0)
-    tree.write(xml_path, encoding='utf-8', xml_declaration=True)
-
-def generate_txt_from_json(json_path, txt_path):
-    """JSONファイルからTXTファイルを生成"""
+def generate_detailed_txt_from_json(json_path, txt_path):
+    """JSONファイルから詳細なTXTファイルを生成"""
     
     with open(json_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
@@ -122,13 +75,13 @@ def generate_txt_from_json(json_path, txt_path):
             content.append("祝日なし")
         content.append("")
         
-        content.append("■ 一粒万倍日一覧")
-        content.append("-" * 30)
+        content.append("■ 一粒万倍日一覧（開運・金運上昇の日）")
+        content.append("-" * 40)
         if ichiryu_days:
             for i, date in enumerate(ichiryu_days):
-                if i % 6 == 0 and i > 0:
+                if i % 5 == 0 and i > 0:
                     content.append("")
-                content.append(date + ("  " if (i + 1) % 6 != 0 else ""))
+                content.append(date + ("  " if (i + 1) % 5 != 0 else ""))
         else:
             content.append("該当日なし")
         content.append("")
@@ -140,6 +93,18 @@ def generate_txt_from_json(json_path, txt_path):
                 content.append(f"{kuubou['date']} - {kuubou['jikkan_junishi']} ({kuubou['type']})")
         else:
             content.append("該当日なし")
+        content.append("")
+        
+        # データ項目説明
+        content.append("■ 提供データ項目（39項目）")
+        content.append("-" * 35)
+        content.append("基本情報: 日付、曜日、祝日、六曜")
+        content.append("開運情報: 一粒万倍日、ラッキーナンバー、パワーストーン")
+        content.append("四柱推命: 十干十二支、五行、陰陽、動物、十二運、空亡")
+        content.append("スピリチュアル: キーワード、瞑想テーマ、エネルギーアドバイス")
+        content.append("ライフスタイル: 推奨茶、アロマ、音楽、食事、風水")
+        content.append("占術: 占星術、タロット、クリスタルヒーリング")
+        content.append("その他: 花言葉、名言、二十四節気、月相")
         
     else:
         # 月別データの場合
@@ -159,6 +124,8 @@ def generate_txt_from_json(json_path, txt_path):
                 taian_days = []
                 butsumetsu_days = []
                 weekend_days = []
+                special_keywords = []
+                power_stones = set()
                 
                 for day_data in data['days']:
                     date = day_data['date']
@@ -177,6 +144,15 @@ def generate_txt_from_json(json_path, txt_path):
                         butsumetsu_days.append(f"{date} ({weekday})")
                     if day_data.get('is_weekend'):
                         weekend_days.append(f"{date} ({weekday})")
+                    
+                    # スピリチュアル要素の収集
+                    keyword = day_data.get('daily_keyword', '')
+                    if keyword and len(keyword) > 5:  # 興味深いキーワードのみ
+                        special_keywords.append(f"{date}: {keyword}")
+                    
+                    stone = day_data.get('power_stone', '')
+                    if stone:
+                        power_stones.add(stone)
                 
                 content.append("■ 月間統計")
                 content.append(f"総日数: {len(data['days'])}日")
@@ -218,6 +194,20 @@ def generate_txt_from_json(json_path, txt_path):
                     content.extend(butsumetsu_days)
                     content.append("")
                 
+                # スピリチュアル情報
+                if special_keywords:
+                    content.append("■ 特別なメッセージ・キーワード")
+                    content.append("-" * 35)
+                    for keyword in special_keywords[:5]:  # 最大5個まで
+                        content.append(keyword)
+                    content.append("")
+                
+                if power_stones:
+                    content.append("■ 今月のパワーストーン")
+                    content.append("-" * 25)
+                    content.append(", ".join(sorted(power_stones)))
+                    content.append("")
+                
                 # データ項目説明
                 content.append("■ 提供データ項目（39項目）")
                 content.append("-" * 35)
@@ -233,8 +223,8 @@ def generate_txt_from_json(json_path, txt_path):
     with open(txt_path, 'w', encoding='utf-8') as f:
         f.write('\n'.join(content))
 
-def generate_missing_files():
-    """欠落しているファイルを生成"""
+def regenerate_all_txt_files():
+    """全TXTファイルを再生成"""
     
     generated_count = 0
     
@@ -243,53 +233,30 @@ def generate_missing_files():
         if not year_dir.exists():
             continue
             
-        print(f'{year}年の欠落ファイル生成中...')
+        print(f'{year}年のTXTファイル再生成中...')
         
-        # 月別ファイル生成
+        # 月別TXTファイル再生成
         for month in range(1, 13):
             json_file = year_dir / f'{month:02d}.json'
-            xml_file = year_dir / f'{year}-{month:02d}.xml'
             txt_file = year_dir / f'{year}-{month:02d}.txt'
             
             if json_file.exists():
-                # XMLファイル生成
-                if not xml_file.exists():
-                    try:
-                        generate_xml_from_json(json_file, xml_file)
-                        generated_count += 1
-                        print(f'  ✓ 生成: {xml_file.name}')
-                    except Exception as e:
-                        print(f'  ✗ エラー: {xml_file.name} - {e}')
-                
-                # TXTファイル生成
-                if not txt_file.exists():
-                    try:
-                        generate_txt_from_json(json_file, txt_file)
-                        generated_count += 1
-                        print(f'  ✓ 生成: {txt_file.name}')
-                    except Exception as e:
-                        print(f'  ✗ エラー: {txt_file.name} - {e}')
+                try:
+                    generate_detailed_txt_from_json(json_file, txt_file)
+                    generated_count += 1
+                    print(f'  ✓ 再生成: {txt_file.name}')
+                except Exception as e:
+                    print(f'  ✗ エラー: {txt_file.name} - {e}')
         
-        # 年間ファイル生成
+        # 年間TXTファイル再生成
         annual_json = year_dir / 'all.json'
-        annual_xml = year_dir / f'{year}-all.xml'
         annual_txt = year_dir / f'{year}-all.txt'
         
         if annual_json.exists():
-            # 年間XMLファイル生成
-            if not annual_xml.exists():
-                try:
-                    generate_xml_from_json(annual_json, annual_xml)
-                    generated_count += 1
-                    print(f'  ✓ 生成: {annual_xml.name}')
-                except Exception as e:
-                    print(f'  ✗ エラー: {annual_xml.name} - {e}')
-            
-            # 年間TXTファイル（既存のものがあれば上書き）
             try:
-                generate_txt_from_json(annual_json, annual_txt)
+                generate_detailed_txt_from_json(annual_json, annual_txt)
                 generated_count += 1
-                print(f'  ✓ 生成: {annual_txt.name}')
+                print(f'  ✓ 再生成: {annual_txt.name}')
             except Exception as e:
                 print(f'  ✗ エラー: {annual_txt.name} - {e}')
     
@@ -297,12 +264,12 @@ def generate_missing_files():
 
 def main():
     """メイン処理"""
-    print('=== 欠落ファイル生成（新ファイル名形式） ===')
+    print('=== 全TXTファイル詳細内容再生成 ===')
     
-    generated_count = generate_missing_files()
+    generated_count = regenerate_all_txt_files()
     
-    print(f'\n✅ 生成完了: {generated_count}個のファイル')
-    print('新ファイル名形式で統一されました')
+    print(f'\n✅ 再生成完了: {generated_count}個のTXTファイル')
+    print('詳細で有用な情報を含む形式に改善されました')
 
 if __name__ == '__main__':
     main()
