@@ -7,6 +7,39 @@ from pathlib import Path
 
 YEARS = list(range(2025, 2037))  # 2025年から2036年まで（12年分）
 
+def calculate_ichiryu_manbai_days(year):
+    """一粒万倍日を計算する"""
+    ichiryu_days = []
+    
+    # 一粒万倍日の干支組み合わせ
+    # 甲子、己巳、甲午、己亥、乙酉、庚寅、甲辰、己酉、庚子、乙巳
+    # 簡易計算：月ごとの一粒万倍日パターン
+    ichiryu_patterns = {
+        1: [3, 6, 8, 15, 18, 20, 27, 30],    # 1月
+        2: [2, 5, 12, 14, 19, 24, 26],       # 2月  
+        3: [1, 8, 13, 16, 20, 25, 28],       # 3月
+        4: [2, 5, 9, 17, 20, 29],            # 4月
+        5: [2, 7, 14, 19, 26, 31],           # 5月
+        6: [3, 8, 13, 18, 25, 30],           # 6月
+        7: [5, 7, 12, 17, 24, 29],           # 7月
+        8: [1, 8, 13, 16, 20, 25, 28],       # 8月
+        9: [2, 9, 12, 17, 24, 29],           # 9月
+        10: [1, 6, 9, 14, 21, 26],           # 10月
+        11: [2, 5, 10, 13, 18, 25, 30],      # 11月
+        12: [2, 7, 12, 15, 19, 27, 30]       # 12月
+    }
+    
+    for month in range(1, 13):
+        for day in ichiryu_patterns.get(month, []):
+            try:
+                date = datetime.date(year, month, day)
+                ichiryu_days.append(date.strftime("%m-%d"))
+            except ValueError:
+                # 存在しない日付（例：2月30日）はスキップ
+                continue
+    
+    return ichiryu_days
+
 def get_holidays_for_year(year):
     """年別の祝日を計算（固定祝日と移動祝日の両方に対応）"""
     holidays = {}
