@@ -135,6 +135,8 @@ def generate_txt(data, output_file):
             f.write(f"  六曜: {day_data.get('rokuyo', '')}\n")
             f.write(f"  十干十二支: {day_data.get('jikkan_junishi', '')} ({day_data.get('jikkan', '')}{day_data.get('jikkan_gogyou', '')}/{day_data.get('junishi', '')}{day_data.get('junishi_gogyou', '')})\n")
             f.write(f"  陰陽: {day_data.get('jikkan_yin_yang', '')} | 動物: {day_data.get('junishi_animal', '')} | 十二運: {day_data.get('juuni_un', '')}\n")
+            if day_data.get('kuubou_type'):
+                f.write(f"  空亡種類: {day_data.get('kuubou_type', '')} | 影響: {day_data.get('kuubou_effect', '')}\n")
             f.write(f"  キーワード: {day_data.get('daily_keyword', '')}\n")
             f.write(f"  今日の色: {day_data.get('color_of_the_day', '')}\n")
             f.write(f"  パワーストーン: {day_data.get('power_stone', '')}\n")
