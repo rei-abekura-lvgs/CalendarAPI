@@ -1,0 +1,24 @@
+# ダウンロード時のファイル名設定
+<FilesMatch "\.(csv|xml|txt)$">
+    Header set Content-Disposition "attachment"
+</FilesMatch>
+
+# CSVファイルの正しいMIMEタイプとファイル名
+<FilesMatch "\.csv$">
+    Header set Content-Type "text/csv; charset=utf-8"
+</FilesMatch>
+
+# XMLファイルの正しいMIMEタイプ
+<FilesMatch "\.xml$">
+    Header set Content-Type "application/xml; charset=utf-8"
+</FilesMatch>
+
+# TXTファイルの正しいMIMEタイプ
+<FilesMatch "\.txt$">
+    Header set Content-Type "text/plain; charset=utf-8"
+</FilesMatch>
+
+# キャッシュ設定
+<FilesMatch "\.(json|csv|xml|txt)$">
+    Header set Cache-Control "public, max-age=3600"
+</FilesMatch>
