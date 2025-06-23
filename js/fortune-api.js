@@ -252,26 +252,30 @@ class FortuneAPI {
         const maxScore = Math.max(scores.love, scores.money, scores.health, scores.work);
         
         if (scores.love === maxScore && scores.love >= 70) {
+            const colorText = dayData.color_of_the_day || '明るい色';
+            const stoneText = dayData.power_stone || 'お気に入りのアクセサリー';
             recommendations.push({
                 type: 'love',
                 action: '恋愛運が絶好調です。積極的な行動を。',
-                detail: `${dayData.power_stone}を身につけて、${dayData.color_of_the_day}を意識したファッションで。`
+                detail: `${stoneText}を身につけて、${colorText}を意識したファッションで。`
             });
         }
 
         if (scores.money === maxScore && scores.money >= 70) {
+            const teaText = dayData.recommended_tea || 'お気に入りのお茶';
             recommendations.push({
                 type: 'money',
                 action: '金運が上昇中。投資や重要な買い物に良い日。',
-                detail: `${dayData.recommended_tea}を飲んで金運パワーをチャージ。`
+                detail: `${teaText}を飲んで金運パワーをチャージ。`
             });
         }
 
         if (scores.health >= 70) {
+            const aromaText = dayData.aroma_oil || 'リラックス効果のあるアロマ';
             recommendations.push({
                 type: 'health',
                 action: '健康運良好。新しい運動習慣を始めるのに最適。',
-                detail: `${dayData.aroma_oil}でリラックスタイムを。`
+                detail: `${aromaText}でリラックスタイムを。`
             });
         }
 
