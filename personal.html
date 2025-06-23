@@ -319,7 +319,9 @@
                 </div>
                 <div class="col-md-6 text-md-end">
                     <div class="d-flex justify-content-md-end justify-content-start align-items-center gap-3 mb-2">
-
+                        <a href="https://forms.gle/b5J96GXJ8bXxXRxe7" class="text-light" target="_blank" title="お問い合わせフォーム">
+                            <i class="fas fa-envelope fa-lg"></i>
+                        </a>
                         <a href="https://github.com/rei-abekura-lvgs/CalendarAPI" class="text-light" target="_blank" title="GitHub Repository">
                             <i class="fab fa-github fa-lg"></i>
                         </a>
@@ -446,37 +448,144 @@
             const html = `
                 <div class="row">
                     <div class="col-md-12">
-                        <!-- 四柱推命基本情報 -->
+                        <!-- 四柱推命命式表 -->
                         <div class="card mb-4 personal-fortune-card">
                             <div class="card-header text-white" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 20px 20px 0 0;">
                                 <h6 class="mb-0 text-center">
-                                    <i class="fas fa-yin-yang me-2"></i>四柱推命分析結果
+                                    <i class="fas fa-table me-2"></i>四柱推命命式表
                                 </h6>
                             </div>
                             <div class="card-body">
-                                <div class="row text-center mb-4">
-                                    <div class="col-3">
-                                        <div class="mb-2"><strong>年柱</strong></div>
-                                        <div class="badge bg-primary fs-6 mb-1">${fortune.fourPillars.year.kanshi}</div>
-                                        <div class="small text-muted">${fortune.fourPillars.year.animal}</div>
+                                <!-- 命式表形式 -->
+                                <div class="fortune-chart mb-4">
+                                    <table class="table table-bordered text-center">
+                                        <thead>
+                                            <tr class="table-dark">
+                                                <th>時柱</th>
+                                                <th>日柱</th>
+                                                <th>月柱</th>
+                                                <th>年柱</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="fw-bold text-primary fs-5">${fortune.fourPillars.hour ? fortune.fourPillars.hour.kan : '不明'}</td>
+                                                <td class="fw-bold text-warning fs-5">${fortune.fourPillars.day.kan}</td>
+                                                <td class="fw-bold text-success fs-5">${fortune.fourPillars.month.kan}</td>
+                                                <td class="fw-bold text-info fs-5">${fortune.fourPillars.year.kan}</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="fw-bold text-primary fs-5">${fortune.fourPillars.hour ? fortune.fourPillars.hour.shi : '不明'}</td>
+                                                <td class="fw-bold text-warning fs-5">${fortune.fourPillars.day.shi}</td>
+                                                <td class="fw-bold text-success fs-5">${fortune.fourPillars.month.shi}</td>
+                                                <td class="fw-bold text-info fs-5">${fortune.fourPillars.year.shi}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <!-- 五行・陰陽詳細 -->
+                                <div class="row mb-4">
+                                    <div class="col-md-6">
+                                        <h6><i class="fas fa-leaf me-2 text-success"></i>五行バランス</h6>
+                                        <div class="small">
+                                            <div>年柱: ${fortune.fourPillars.year.element}（${fortune.fourPillars.year.yinYang}）</div>
+                                            <div>月柱: ${fortune.fourPillars.month.element}（${fortune.fourPillars.month.yinYang}）</div>
+                                            <div>日柱: ${fortune.fourPillars.day.element}（${fortune.fourPillars.day.yinYang}）</div>
+                                            ${fortune.fourPillars.hour ? `<div>時柱: ${fortune.fourPillars.hour.element}（${fortune.fourPillars.hour.yinYang}）</div>` : '<div>時柱: 不明</div>'}
+                                        </div>
                                     </div>
-                                    <div class="col-3">
-                                        <div class="mb-2"><strong>月柱</strong></div>
-                                        <div class="badge bg-success fs-6 mb-1">${fortune.fourPillars.month.kanshi}</div>
-                                        <div class="small text-muted">${fortune.fourPillars.month.animal}</div>
-                                    </div>
-                                    <div class="col-3">
-                                        <div class="mb-2"><strong>日柱</strong></div>
-                                        <div class="badge bg-warning fs-6 mb-1">${fortune.fourPillars.day.kanshi}</div>
-                                        <div class="small text-muted">${fortune.fourPillars.day.animal}</div>
-                                    </div>
-                                    <div class="col-3">
-                                        <div class="mb-2"><strong>時柱</strong></div>
-                                        <div class="badge bg-info fs-6 mb-1">${fortune.fourPillars.hour.kanshi}</div>
-                                        <div class="small text-muted">${fortune.fourPillars.hour.animal}</div>
+                                    <div class="col-md-6">
+                                        <h6><i class="fas fa-paw me-2 text-warning"></i>十二支動物</h6>
+                                        <div class="small">
+                                            <div>年柱: ${fortune.fourPillars.year.animal}</div>
+                                            <div>月柱: ${fortune.fourPillars.month.animal}</div>
+                                            <div>日柱: ${fortune.fourPillars.day.animal}</div>
+                                            ${fortune.fourPillars.hour ? `<div>時柱: ${fortune.fourPillars.hour.animal}</div>` : '<div>時柱: 不明</div>'}
+                                        </div>
                                     </div>
                                 </div>
-                                <hr>
+                            </div>
+                        </div>
+
+                        <!-- 大運・流年情報 -->
+                        <div class="card mb-4 personal-fortune-card">
+                            <div class="card-header text-white" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%); border-radius: 20px 20px 0 0;">
+                                <h6 class="mb-0 text-center">
+                                    <i class="fas fa-clock me-2"></i>大運・流年分析
+                                </h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h6><i class="fas fa-calendar-alt me-2 text-primary"></i>現在の大運</h6>
+                                        <div class="mb-3">
+                                            <div class="fw-bold">${fortune.daiun.description}</div>
+                                            <div class="small text-muted">${fortune.daiun.startAge}歳〜${fortune.daiun.endAge}歳</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6><i class="fas fa-star me-2 text-warning"></i>今年の流年</h6>
+                                        <div class="mb-3">
+                                            <div class="fw-bold">${fortune.ryunen.year}年（${fortune.ryunen.pillar.kanshi}）</div>
+                                            <div class="small text-muted">${fortune.ryunen.relationship}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 運勢スコア詳細 -->
+                        <div class="card mb-4 personal-fortune-card">
+                            <div class="card-header text-white" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); border-radius: 20px 20px 0 0; color: #333 !important;">
+                                <h6 class="mb-0 text-center text-dark">
+                                    <i class="fas fa-chart-line me-2"></i>今日の運勢スコア
+                                </h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="row text-center">
+                                    <div class="col-md-3 mb-3">
+                                        <div class="score-circle ${getScoreClass(fortune.scores.love)}">
+                                            <div class="score-number">${Math.round(fortune.scores.love)}</div>
+                                        </div>
+                                        <div class="mt-2"><strong>恋愛運</strong></div>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <div class="score-circle ${getScoreClass(fortune.scores.money)}">
+                                            <div class="score-number">${Math.round(fortune.scores.money)}</div>
+                                        </div>
+                                        <div class="mt-2"><strong>金運</strong></div>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <div class="score-circle ${getScoreClass(fortune.scores.health)}">
+                                            <div class="score-number">${Math.round(fortune.scores.health)}</div>
+                                        </div>
+                                        <div class="mt-2"><strong>健康運</strong></div>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <div class="score-circle ${getScoreClass(fortune.scores.work)}">
+                                            <div class="score-number">${Math.round(fortune.scores.work)}</div>
+                                        </div>
+                                        <div class="mt-2"><strong>仕事運</strong></div>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="score-overall ${getScoreClass(fortune.scores.overall)}">
+                                        総合運: ${Math.round(fortune.scores.overall)}点
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 性格分析 -->
+                        <div class="card mb-4 personal-fortune-card">
+                            <div class="card-header text-white" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); border-radius: 20px 20px 0 0; color: #333 !important;">
+                                <h6 class="mb-0 text-center text-dark">
+                                    <i class="fas fa-user-circle me-2"></i>性格・才能分析
+                                </h6>
+                            </div>
+                            <div class="card-body">
+                                <p class="mb-3">${fortune.personality}</p>
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="mb-2"><strong>日干:</strong> ${fortune.fourPillars.day.kan} (${fortune.fourPillars.day.element}・${fortune.fourPillars.day.yinYang})</div>
@@ -484,13 +593,48 @@
                                     </div>
                                     <div class="col-md-6">
                                         ${fortune.daiun ? `<div class="mb-2"><strong>現在の運気:</strong> ${fortune.daiun.description}</div>` : ''}
-                                        ${fortune.ryunen ? `<div class="mb-2"><strong>今年の運気:</strong> ${fortune.ryunen.fortune.description}</div>` : ''}
+                                        ${fortune.ryunen ? `<div class="mb-2"><strong>今年の運気:</strong> ${fortune.ryunen.relationship}</div>` : ''}
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- 運勢スコア -->
+                        <!-- 今日のアドバイス -->
+                        <div class="card mb-4 personal-fortune-card">
+                            <div class="card-header text-white" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 20px 20px 0 0;">
+                                <h6 class="mb-0 text-center">
+                                    <i class="fas fa-lightbulb me-2"></i>今日のアドバイス
+                                </h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h6><i class="fas fa-star me-2 text-warning"></i>開運行動</h6>
+                                        <ul class="mb-3">
+                                            ${fortune.recommendations.map(rec => `<li>${rec}</li>`).join('')}
+                                        </ul>
+                                        
+                                        ${fortune.warnings.length > 0 ? `
+                                        <h6><i class="fas fa-exclamation-triangle me-2 text-danger"></i>注意事項</h6>
+                                        <ul class="mb-3">
+                                            ${fortune.warnings.map(warn => `<li>${warn}</li>`).join('')}
+                                        </ul>
+                                        ` : ''}
+
+                                        <h6><i class="fas fa-heart me-2 text-danger"></i>人生アドバイス</h6>
+                                        <ul>
+                                            ${fortune.lifeAdvice.map(advice => `<li>${advice}</li>`).join('')}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            container.innerHTML = html;
+        }
                         <div class="card mb-4 personal-fortune-card">
                             <div class="card-header text-white" style="background: linear-gradient(135deg, #ff6b6b 0%, #ffa500 100%); border-radius: 20px 20px 0 0;">
                                 <h6 class="mb-0 text-center">
