@@ -535,15 +535,22 @@ class DetailedFortuneAPI {
     }
 
     calculateBaseScores(fourPillars) {
-        // 日干の強弱による基本スコア
+        // 生年月日による個別スコア計算
         const dayElement = fourPillars.day.element;
-        const baseScore = 50;
+        const dayKan = fourPillars.day.kan;
+        const birthDate = fourPillars.birthDate;
+        
+        // 生年月日から基本値を算出（固定値を避ける）
+        const dayOfYear = Math.floor((birthDate - new Date(birthDate.getFullYear(), 0, 0)) / 86400000);
+        const birthVariation = (dayOfYear % 20) - 10; // -10から+9の範囲
+        
+        const baseScore = 50 + birthVariation;
         
         return {
-            love: baseScore + this.getElementBonus(dayElement, 'love'),
-            money: baseScore + this.getElementBonus(dayElement, 'money'),
-            health: baseScore + this.getElementBonus(dayElement, 'health'),
-            work: baseScore + this.getElementBonus(dayElement, 'work')
+            love: baseScore + this.getElementBonus(dayElement, 'love') + this.getKanModifier(dayKan, 'love'),
+            money: baseScore + this.getElementBonus(dayElement, 'money') + this.getKanModifier(dayKan, 'money'),
+            health: baseScore + this.getElementBonus(dayElement, 'health') + this.getKanModifier(dayKan, 'health'),
+            work: baseScore + this.getElementBonus(dayElement, 'work') + this.getKanModifier(dayKan, 'work')
         };
     }
 
@@ -556,6 +563,25 @@ class DetailedFortuneAPI {
             '水': { love: 10, money: 5, health: 10, work: 5 }
         };
         return bonuses[element]?.[category] || 0;
+    }
+
+    /**
+     * 十干による個別修正値
+     */
+    getKanModifier(kan, category) {
+        const modifiers = {
+            '甲': { love: 5, money: -3, health: 2, work: 8 },
+            '乙': { love: 8, money: 2, health: 5, work: -2 },
+            '丙': { love: 10, money: 3, health: -5, work: 7 },
+            '丁': { love: 12, money: -2, health: 3, work: 2 },
+            '戊': { love: -2, money: 8, health: 8, work: 3 },
+            '己': { love: 3, money: 5, health: 10, work: -3 },
+            '庚': { love: -5, money: 12, health: 2, work: 8 },
+            '辛': { love: 2, money: 10, health: 3, work: 5 },
+            '壬': { love: 7, money: 2, health: 8, work: 3 },
+            '癸': { love: 10, money: -2, health: 12, work: -3 }
+        };
+        return modifiers[kan]?.[category] || 0;
     }
 
     calculateDaiunStartAge(monthPillar, gender) {
@@ -639,15 +665,28 @@ class DetailedFortuneAPI {
         
         // 日干に基づく推奨事項
         const dayElement = fourPillars.day.element;
-        recommendations.push(`${dayElement}属性として、${todayData.power_stone}を身につけると運気が高まります。`);
+        const elementAdvice = this.getElementSpecificAdvice(dayElement, todayData);
+        recommendations.push(...elementAdvice);
         
         // スコアに基づく推奨事項
         if (scores.love < 60) {
-            recommendations.push('恋愛運向上のため、今日は${todayData.color_of_the_day}の小物を身につけてみてください。');
+            recommendations.push(`恋愛運向上のため、今日は${todayData.color_of_the_day}の小物を身につけてみてください。`);
+            recommendations.push(`${todayData.flower_message}の花言葉を意識して、愛情表現を豊かにしましょう。`);
         }
         
         if (scores.work < 60) {
-            recommendations.push('仕事運を高めるため、${todayData.meditation_theme}を実践してみましょう。');
+            recommendations.push(`仕事運を高めるため、${todayData.meditation_theme}を実践してみましょう。`);
+            recommendations.push(`集中力を高めるため、${todayData.aroma_oil}のアロマを取り入れてください。`);
+        }
+        
+        if (scores.money < 60) {
+            recommendations.push(`金運向上のため、${todayData.power_stone}を持ち歩くと良いでしょう。`);
+            recommendations.push(`今日のラッキーナンバー${todayData.lucky_number}を意識した行動をとってみてください。`);
+        }
+        
+        if (scores.health < 60) {
+            recommendations.push(`健康運のため、${todayData.recommended_tea}を飲んでリラックスしましょう。`);
+            recommendations.push(`${todayData.crystal_healing}のエネルギーで心身を整えてください。`);
         }
 
         return recommendations;
@@ -672,6 +711,74 @@ class DetailedFortuneAPI {
         
         advice.push(`現在は${daiun.description}です。この時期の特性を活かしていきましょう。`);
         advice.push(`あなたの日干（${fourPillars.day.kan}）は${fourPillars.day.element}属性で${fourPillars.day.yinYang}の性質を持ちます。`);
+        
+        // 五行に基づく人生アドバイス
+        const elementAdvice = this.getElementLifeAdvice(fourPillars.day.element);
+        advice.push(...elementAdvice);
+        
+        return advice;
+    }
+
+    /**
+     * 五行属性別の具体的アドバイス生成
+     */
+    getElementSpecificAdvice(element, todayData) {
+        const advice = [];
+        
+        switch(element) {
+            case '木':
+                advice.push(`木属性のあなたには、${todayData.power_stone}が成長エネルギーを高めます。`);
+                advice.push(`創造性を活かす仕事や趣味に力を注ぐと良い日です。`);
+                break;
+            case '火':
+                advice.push(`火属性のあなたには、${todayData.aroma_oil}で情熱を調整しましょう。`);
+                advice.push(`人とのコミュニケーションを大切にする日です。`);
+                break;
+            case '土':
+                advice.push(`土属性のあなたには、${todayData.crystal_healing}が安定感をもたらします。`);
+                advice.push(`基盤固めや計画立案に適した日です。`);
+                break;
+            case '金':
+                advice.push(`金属性のあなたには、${todayData.power_stone}が決断力を高めます。`);
+                advice.push(`整理整頓や品質向上に取り組むと良い日です。`);
+                break;
+            case '水':
+                advice.push(`水属性のあなたには、${todayData.recommended_tea}で直感力を研ぎ澄ませましょう。`);
+                advice.push(`学習や研究、深い思考に適した日です。`);
+                break;
+        }
+        
+        return advice;
+    }
+
+    /**
+     * 五行別の人生アドバイス
+     */
+    getElementLifeAdvice(element) {
+        const advice = [];
+        
+        switch(element) {
+            case '木':
+                advice.push('成長と発展を重視し、常に新しい挑戦を恐れないことが大切です。');
+                advice.push('協調性を活かしながらも、自分の信念を貫く強さを持ちましょう。');
+                break;
+            case '火':
+                advice.push('情熱と行動力を活かし、周囲を明るく照らす存在になりましょう。');
+                advice.push('感情のコントロールを学び、持続可能な情熱を維持することが重要です。');
+                break;
+            case '土':
+                advice.push('安定と信頼を基盤に、着実に目標に向かって進みましょう。');
+                advice.push('包容力を活かし、周囲をサポートする役割を大切にしてください。');
+                break;
+            case '金':
+                advice.push('正義感と意志の強さを活かし、筋の通った生き方を貫きましょう。');
+                advice.push('美意識と完璧主義を適度に保ち、柔軟性も身につけることが大切です。');
+                break;
+            case '水':
+                advice.push('知恵と直感力を活かし、深い洞察で物事の本質を見抜きましょう。');
+                advice.push('流動性を保ちながらも、自分の芯となる価値観を持ち続けてください。');
+                break;
+        }
         
         return advice;
     }
