@@ -177,12 +177,14 @@ function displayTodayData(data) {
 // Show error message for today's data
 function showTodayDataError(message) {
     const todayDataElement = document.getElementById('today-data');
-    todayDataElement.innerHTML = `
-        <div class="alert alert-warning" role="alert">
-            <i class="fas fa-exclamation-triangle me-2"></i>
-            ${message}
-        </div>
-    `;
+    if (todayDataElement) {
+        todayDataElement.innerHTML = `
+            <div class="alert alert-warning" role="alert">
+                <i class="fas fa-exclamation-triangle me-2"></i>
+                ${message}
+            </div>
+        `;
+    }
 }
 
 // Test API endpoint functionality
@@ -349,7 +351,10 @@ function initializeQuickAccess() {
             this.classList.add('active');
             
             // Update display
-            document.getElementById('selected-year').textContent = year;
+            const selectedYearElement = document.getElementById('selected-year');
+            if (selectedYearElement) {
+                selectedYearElement.textContent = year;
+            }
             generateMonthLinks(year);
             generateYearDataLinks(year);
         });
@@ -358,6 +363,8 @@ function initializeQuickAccess() {
 
 function generateMonthLinks(year) {
     const container = document.getElementById('month-links');
+    if (!container) return; // 要素が存在しない場合は処理を停止
+    
     const months = ['1月', '2月', '3月', '4月', '5月', '6月', 
                    '7月', '8月', '9月', '10月', '11月', '12月'];
     
@@ -437,6 +444,8 @@ function restoreBirthDate() {
 
 function generateYearDataLinks(year) {
     const container = document.getElementById('year-data-links');
+    if (!container) return; // 要素が存在しない場合は処理を停止
+    
     const formats = [
         { ext: 'json', name: 'JSON', class: 'btn-primary', icon: 'fas fa-download' },
         { ext: 'csv', name: 'CSV', class: 'btn-outline-success', icon: 'fas fa-file-csv' },

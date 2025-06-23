@@ -251,9 +251,14 @@
             const year = parseInt(yearSelect.value);
             const month = parseInt(monthSelect.value);
             
-            if (!year || !month) return;
+            if (!year || !month) {
+                daySelect.innerHTML = '<option value="">年月を先に選択してください</option>';
+                return;
+            }
             
             const daysInMonth = new Date(year, month, 0).getDate();
+            const currentDay = parseInt(daySelect.value); // 現在選択されている日を保持
+            
             daySelect.innerHTML = '<option value="">日を選択</option>';
             
             for (let day = 1; day <= daysInMonth; day++) {
@@ -261,6 +266,11 @@
                 option.value = day;
                 option.textContent = `${day}日`;
                 daySelect.appendChild(option);
+            }
+            
+            // 以前に選択されていた日が有効な場合は復元
+            if (currentDay && currentDay <= daysInMonth) {
+                daySelect.value = currentDay;
             }
         }
 
