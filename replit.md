@@ -163,6 +163,7 @@ The system follows a **Static Site Generator + API** architecture:
 - June 23, 2025: 後方互換性・UI最終修正完了 - 古いファイル名（03.csv）から新ファイル名（2026-03.csv）へのリダイレクト実装、404ページリンク修正、JavaScriptエラー対策（null参照チェック）、CSVアクセス完全正常化確認、全機能安定動作
 - June 23, 2025: ファイル名完全統一・全形式対応完了 - 古いファイル名削除（468個）、新ファイル名形式統一（2026-01.csv）、欠落XML/TXTファイル生成（312個）、ダウンロード設定最適化、12年分全形式（JSON/CSV/XML/TXT）完全対応、四柱推命機能・暦データAPI完成
 - June 23, 2025: ライセンス設定完了・詳細TXTファイル改善 - MITライセンス（LICENSEファイル・README・全ページフッター）設定、教育・研究・個人利用目的明記、免責事項追加、156個TXTファイル詳細内容再生成（月間統計・祝日一覧・開運日情報）、法的設定完備
+- June 23, 2025: セキュリティ強化・不要ファイル削除完了 - 12個の開発用ファイル削除（test/demo/fix/cleanup系）、.htaccessセキュリティヘッダー強化（XSS・CSRF・Content-Type保護）、robots.txt最適化、個人診断ページフッターバグ修正、プロダクション環境準備完了
 
 ## User Preferences
 
