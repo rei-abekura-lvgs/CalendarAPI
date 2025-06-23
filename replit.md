@@ -136,6 +136,7 @@ The system follows a **Static Site Generator + API** architecture:
 - June 21, 2025: 包括的テスト完備・最終品質確認 - 欠落年間ファイル生成、階層構造JSONデータ対応、全52エンドポイント動作確認、comprehensive_final_test.py作成、プロダクション準備完了
 - June 23, 2025: 一粒万倍日機能追加 - 28項目目として「is_ichiryu_manbai」フィールド追加、12年分全データ再生成、検索機能拡張、JavaScriptエラー修正完了
 - June 23, 2025: 12年分検索機能完成 - 2025年〜2036年対応の年選択機能、祝日名表示修正、直接データアクセス方式で全機能安定動作確認
+- June 23, 2025: 十干十二支データ追加・全形式対応完了 - 29項目目として十干十二支フィールド追加、CSV/XML/TXT全形式に反映、仕様書(specification.md)作成、デザイン統一化完了
 
 ## User Preferences
 
