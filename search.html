@@ -421,7 +421,7 @@
                         <div class="result-date">${date} (${weekday})</div>
                         <div class="result-badges">
                             ${rokuyo ? `<span class="badge bg-primary me-1">${rokuyo}</span>` : ''}
-                            ${item.is_holiday ? `<span class="badge bg-danger me-1">祝日</span>` : ''}
+                            ${item.is_holiday ? `<span class="badge bg-danger me-1">${item.holiday_name || '祝日'}</span>` : ''}
                             ${item.is_weekend ? `<span class="badge bg-secondary me-1">週末</span>` : ''}
                             ${item.is_ichiryu_manbai ? `<span class="badge bg-warning text-dark me-1">一粒万倍日</span>` : ''}
                         </div>
