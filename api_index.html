@@ -286,7 +286,9 @@ GET /api/2025/all.json
                     
                     formats.forEach(format => {
                         const link = document.createElement('a');
-                        link.href = `api/${year}/${monthNum}.${format.ext}`;
+                        // Use new filename format for CSV, XML, TXT; keep old format for JSON
+                        const filename = format.ext === 'json' ? `${monthNum}.${format.ext}` : `${year}-${monthNum}.${format.ext}`;
+                        link.href = `api/${year}/${filename}`;
                         link.className = `btn btn-outline-${format.ext === 'json' ? 'primary' : format.ext === 'csv' ? 'success' : format.ext === 'xml' ? 'danger' : 'warning'} btn-sm me-1 mb-1`;
                         link.innerHTML = format.name;
                         link.setAttribute('target', '_blank');
@@ -310,7 +312,9 @@ GET /api/2025/all.json
                 
                 formats.forEach(format => {
                     const link = document.createElement('a');
-                    link.href = `api/${year}/all.${format.ext}`;
+                    // Use new filename format for CSV, XML, TXT; keep old format for JSON
+                    const filename = format.ext === 'json' ? `all.${format.ext}` : `${year}-all.${format.ext}`;
+                    link.href = `api/${year}/${filename}`;
                     link.className = `btn btn-outline-${format.ext === 'json' ? 'primary' : format.ext === 'csv' ? 'success' : format.ext === 'xml' ? 'danger' : 'warning'} btn-sm me-1 mb-1`;
                     link.innerHTML = format.name;
                     link.setAttribute('target', '_blank');

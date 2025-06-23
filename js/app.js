@@ -451,7 +451,10 @@ function generateYearDataLinks(year) {
         const baseUrl = window.location.hostname === 'localhost' || window.location.hostname.includes('replit') 
             ? './' 
             : 'https://rei-abekura-lvgs.github.io/CalendarAPI/';
-        link.href = `${baseUrl}api/${year}/all.${format.ext}`;
+        
+        // Use new filename format for all except JSON
+        const filename = format.ext === 'json' ? `all.${format.ext}` : `${year}-all.${format.ext}`;
+        link.href = `${baseUrl}api/${year}/${filename}`;
         link.target = '_blank';
         link.className = `btn ${format.class} btn-sm w-100`;
         link.innerHTML = `<i class="${format.icon} me-2"></i>${format.name}形式`;
