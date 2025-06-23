@@ -350,7 +350,13 @@
                 // 診断ボタンのイベントリスナーを設定
                 const fortuneBtn = document.getElementById('fortuneAnalysisBtn');
                 if (fortuneBtn) {
-                    fortuneBtn.addEventListener('click', calculateDetailedFortune);
+                    fortuneBtn.addEventListener('click', async () => {
+                        const result = await detailedFortuneAPI.calculateDetailedFortune();
+                        if (result) {
+                            const resultContainer = document.getElementById('personalFortuneResult');
+                            displayDetailedFortuneResult(result, resultContainer);
+                        }
+                    });
                 }
                 
                 // 保存された生年月日を復元
