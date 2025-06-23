@@ -222,7 +222,7 @@
                                             </label>
                                         </div>
                                         <div class="form-check form-check-lg">
-                                            <input class="form-check-input" type="radio" name="gender" id="genderFemale" value="female">
+                                            <input class="form-check-input" type="radio" name="gender" id="genderFemale" value="female" checked>
                                             <label class="form-check-label fw-bold" for="genderFemale">
                                                 <i class="fas fa-venus text-danger me-2"></i>女性
                                             </label>
@@ -343,7 +343,16 @@
                         const birthData = JSON.parse(savedData);
                         if (birthData.year) document.getElementById('birthYear').value = birthData.year;
                         if (birthData.month) document.getElementById('birthMonth').value = birthData.month;
-                        if (birthData.day) document.getElementById('birthDay').value = birthData.day;
+                        
+                        // 日選択肢を更新してから日の値を設定
+                        if (birthData.year && birthData.month) {
+                            detailedFortuneAPI.updateDayOptions();
+                            // 少し遅延させて日の値を設定
+                            setTimeout(() => {
+                                if (birthData.day) document.getElementById('birthDay').value = birthData.day;
+                            }, 100);
+                        }
+                        
                         if (birthData.gender) {
                             document.querySelector(`input[name="gender"][value="${birthData.gender}"]`).checked = true;
                         }

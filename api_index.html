@@ -262,17 +262,7 @@ GET /api/2025/all.json
             </div>
         </div>
 
-        <!-- サンプルデータ表示エリア -->
-        <div class="card api-card mt-4" id="sampleDataCard" style="display: none;">
-            <div class="card-header bg-dark text-white">
-                <h5 class="mb-0">
-                    <i class="fas fa-code me-2"></i>サンプルデータ
-                </h5>
-            </div>
-            <div class="card-body">
-                <pre id="sampleData" class="bg-light p-3 rounded" style="max-height: 400px; overflow-y: auto;"></pre>
-            </div>
-        </div>
+
     </div>
 
     <!-- Bootstrap JS -->
@@ -342,70 +332,12 @@ GET /api/2025/all.json
             });
         }
 
-        // 今日のデータを取得して表示
-        async function loadTodayData() {
-            try {
-                const today = new Date();
-                const month = today.getMonth() + 1;
-                const day = today.getDate();
-                
-                console.log(`今日の日付: ${today.getFullYear()}-${month}-${day}`);
-                
-                const cacheBuster = new Date().getTime();
-                const response = await fetch(`api/2025/${month.toString().padStart(2, '0')}.json?v=${cacheBuster}`);
-                const data = await response.json();
-                const todayData = data.days.find(d => d.day === day);
-                
-                if (todayData) {
-                    document.getElementById('todayData').innerHTML = `
-                        <strong>${todayData.date} (${todayData.weekday})</strong><br>
-                        <div style="margin-top: 10px;">
-                            <span style="color: #2980b9;">六曜:</span> ${todayData.rokuyo} | 
-                            <span style="color: #27ae60;">ラッキーナンバー:</span> ${todayData.lucky_number}<br>
-                            <span style="color: #8e44ad;">キーワード:</span> ${todayData.daily_keyword}<br>
-                            <span style="color: #f39c12;">今日の色:</span> ${todayData.color_of_the_day} | 
-                            <span style="color: #e67e22;">パワーストーン:</span> ${todayData.power_stone}<br>
-                            <span style="color: #16a085;">お茶:</span> ${todayData.recommended_tea} | 
-                            <span style="color: #c0392b;">タロット:</span> ${todayData.tarot_card}<br>
-                            <span style="color: #34495e;">格言:</span> ${todayData.wise_quote}
-                        </div>
-                    `;
-                } else {
-                    document.getElementById('todayData').innerHTML = 
-                        `<span style="color:#e74c3c">今日(${month}月${day}日)のデータが見つかりません</span>`;
-                }
-                
-                // 更新日時も表示
-                document.getElementById('lastUpdate').textContent = 
-                    new Date(data.generated_at).toLocaleString('ja-JP');
-                    
-            } catch (error) {
-                console.error('データ読み込みエラー:', error);
-                document.getElementById('todayData').innerHTML = 
-                    '<span style="color:#e74c3c">データの読み込みに失敗しました</span>';
-            }
-        }
 
-        // サンプルデータを表示
-        async function loadSampleData() {
-            try {
-                const response = await fetch('api/2025/06.json');
-                const data = await response.json();
-                const sample = data.days[19]; // 6月20日のデータ
-                
-                document.getElementById('sampleData').innerHTML = `サンプルデータ (6月20日):
-${JSON.stringify(sample, null, 2)}`;
-            } catch (error) {
-                console.error('サンプルデータの読み込みに失敗:', error);
-            }
-        }
 
         // 初期化
         document.addEventListener('DOMContentLoaded', function() {
             generateMonthlyFiles();
             generateYearlyFiles();
-            loadTodayData();
-            loadSampleData();
         });
     </script>
 </body>
