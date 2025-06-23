@@ -44,35 +44,7 @@ class DetailedFortuneAPI {
         // 時間選択肢（0〜23時）
         const hourSelect = document.getElementById('birthHour');
         if (hourSelect) {
-            for (let hour = 0; hour <= 23; hour++) {
-                const option = document.createElement('option');
-                option.value = hour;
-                option.textContent = `${hour}時`;
-                hourSelect.appendChild(option);
-            }
-        }
-    }
-
-    /**
-     * 日選択肢の動的更新（月・年に応じて）
-     */
-    updateDayOptions() {
-        const yearSelect = document.getElementById('birthYear');
-        const monthSelect = document.getElementById('birthMonth');
-        const daySelect = document.getElementById('birthDay');
-        
-        if (!yearSelect || !monthSelect || !daySelect) return;
-        
-        const year = parseInt(yearSelect.value);
-        const month = parseInt(monthSelect.value);
-        
-        if (!year || !month) return;
-        
-        // 月の日数を計算
-        const daysInMonth = new Date(year, month, 0).getDate();
-        
-        // 既存の日選択肢をクリア
-        daySelect.innerHTML = '<option value="">日</option>';
+            for (let hour = 0; hour 日</option>';
         
         // 新しい日選択肢を追加
         for (let day = 1; day <= daysInMonth; day++) {
