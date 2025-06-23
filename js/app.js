@@ -382,13 +382,18 @@ function generateMonthLinks(year) {
     });
 }
 
-// 個人運勢計算関数
-async function calculatePersonalFortune() {
-    const birthDate = document.getElementById('birthDate').value;
+// 詳細運勢診断関数
+async function calculateDetailedFortune() {
     const resultContainer = document.getElementById('personal-fortune-result');
     
-    if (!birthDate) {
-        resultContainer.innerHTML = '<small class="text-warning">生年月日を入力してください</small>';
+    // 入力検証
+    const year = document.getElementById('birthYear').value;
+    const month = document.getElementById('birthMonth').value;
+    const day = document.getElementById('birthDay').value;
+    const gender = document.querySelector('input[name="gender"]:checked')?.value;
+    
+    if (!year || !month || !day || !gender) {
+        resultContainer.innerHTML = '<small class="text-warning">すべての項目を入力してください</small>';
         return;
     }
 
@@ -396,31 +401,31 @@ async function calculatePersonalFortune() {
     resultContainer.innerHTML = `
         <div class="text-center">
             <div class="spinner-border spinner-border-sm text-primary" role="status">
-                <span class="visually-hidden">計算中...</span>
+                <span class="visually-hidden">診断中...</span>
             </div>
-            <div class="small text-muted mt-1">運勢を計算中...</div>
+            <div class="small text-muted mt-1">四柱推命で詳細分析中...</div>
         </div>
     `;
 
     try {
-        const personalFortune = await personalFortuneAPI.getPersonalFortune(birthDate);
+        const detailedFortune = await detailedFortuneAPI.calculateDetailedFortune();
         
-        if (personalFortune) {
-            displayPersonalFortune(personalFortune, resultContainer);
+        if (detailedFortune) {
+            displayDetailedFortune(detailedFortune, resultContainer);
             
-            // 生年月日をローカルストレージに保存（次回自動入力）
-            localStorage.setItem('userBirthDate', birthDate);
+            // 入力データをローカルストレージに保存
+            saveBirthData({ year, month, day, gender });
         } else {
-            resultContainer.innerHTML = '<small class="text-danger">運勢計算中にエラーが発生しました</small>';
+            resultContainer.innerHTML = '<small class="text-danger">運勢診断中にエラーが発生しました</small>';
         }
     } catch (error) {
-        console.error('個人運勢計算エラー:', error);
-        resultContainer.innerHTML = '<small class="text-danger">運勢計算に失敗しました</small>';
+        console.error('詳細運勢診断エラー:', error);
+        resultContainer.innerHTML = '<small class="text-danger">診断に失敗しました</small>';
     }
 }
 
-// 個人運勢表示関数
-function displayPersonalFortune(fortune, container) {
+// 詳細運勢表示関数
+function displayDetailedFortune(fortune, container) {
     const getScoreClass = (score) => {
         if (score >= 80) return 'text-success';
         if (score >= 60) return 'text-info';
@@ -428,51 +433,129 @@ function displayPersonalFortune(fortune, container) {
         return 'text-danger';
     };
 
-    const kuubouWarning = fortune.personalKuubou.isPersonalKuubou ? 
-        '<div class="alert alert-warning alert-sm p-2 mb-2"><small><i class="fas fa-exclamation-triangle me-1"></i>個人空亡期間中</small></div>' : '';
+    const getScoreBar = (score) => {
+        const percentage = Math.max(0, Math.min(100, score));
+        const colorClass = getScoreClass(score).replace('text-', 'bg-');
+        return `<div class="progress" style="height: 4px;"><div class="progress-bar ${colorClass}" style="width: ${percentage}%"></div></div>`;
+    };
+
+    // 大運・流年情報
+    const periodInfo = fortune.daiun && fortune.ryunen ? 
+        `<div class="small mb-2 p-2 bg-light rounded">
+            <div><strong>現在の運気:</strong> ${fortune.daiun.description}</div>
+            <div><strong>${fortune.ryunen.year}年運:</strong> ${fortune.ryunen.fortune.description}</div>
+        </div>` : '';
+
+    // 警告表示
+    const warnings = fortune.warnings && fortune.warnings.length > 0 ? 
+        `<div class="alert alert-warning alert-sm p-2 mb-2">
+            <small><i class="fas fa-exclamation-triangle me-1"></i>${fortune.warnings[0]}</small>
+        </div>` : '';
 
     const html = `
-        ${kuubouWarning}
-        <div class="row text-start">
-            <div class="col-6">
-                <div class="small mb-1">
-                    <strong>総合運</strong>
-                    <span class="${getScoreClass(fortune.scores.overall)}">${fortune.scores.overall}点</span>
+        ${warnings}
+        ${periodInfo}
+        <div class="text-start">
+            <div class="mb-2">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                    <span class="small"><strong>総合運</strong></span>
+                    <span class="small ${getScoreClass(fortune.scores.overall)}">${fortune.scores.overall}点</span>
                 </div>
-                <div class="small mb-1">
-                    <strong>恋愛運</strong>
-                    <span class="${getScoreClass(fortune.scores.love)}">${fortune.scores.love}点</span>
+                ${getScoreBar(fortune.scores.overall)}
+            </div>
+            
+            <div class="row g-1 mb-2">
+                <div class="col-6">
+                    <div class="small d-flex justify-content-between">
+                        <span>恋愛運</span>
+                        <span class="${getScoreClass(fortune.scores.love)}">${fortune.scores.love}</span>
+                    </div>
+                    ${getScoreBar(fortune.scores.love)}
+                </div>
+                <div class="col-6">
+                    <div class="small d-flex justify-content-between">
+                        <span>金運</span>
+                        <span class="${getScoreClass(fortune.scores.money)}">${fortune.scores.money}</span>
+                    </div>
+                    ${getScoreBar(fortune.scores.money)}
                 </div>
             </div>
-            <div class="col-6">
-                <div class="small mb-1">
-                    <strong>金運</strong>
-                    <span class="${getScoreClass(fortune.scores.money)}">${fortune.scores.money}点</span>
+            
+            <div class="row g-1 mb-2">
+                <div class="col-6">
+                    <div class="small d-flex justify-content-between">
+                        <span>健康運</span>
+                        <span class="${getScoreClass(fortune.scores.health)}">${fortune.scores.health}</span>
+                    </div>
+                    ${getScoreBar(fortune.scores.health)}
                 </div>
-                <div class="small mb-1">
-                    <strong>健康運</strong>
-                    <span class="${getScoreClass(fortune.scores.health)}">${fortune.scores.health}点</span>
+                <div class="col-6">
+                    <div class="small d-flex justify-content-between">
+                        <span>仕事運</span>
+                        <span class="${getScoreClass(fortune.scores.work)}">${fortune.scores.work}</span>
+                    </div>
+                    ${getScoreBar(fortune.scores.work)}
                 </div>
             </div>
         </div>
+        
         <hr class="my-2">
         <div class="small text-muted">
-            <div class="mb-1"><strong>生年干支:</strong> ${fortune.birthData.year.kanshi}</div>
-            <div class="mb-1"><strong>人生段階:</strong> ${fortune.birthData.lifeStage.stage}</div>
-            ${fortune.personalAdvice.length > 0 ? `<div class="mt-2"><strong>アドバイス:</strong><br>${fortune.personalAdvice[0]}</div>` : ''}
+            <div class="mb-1"><strong>四柱:</strong> ${fortune.fourPillars.year.kanshi} ${fortune.fourPillars.month.kanshi} ${fortune.fourPillars.day.kanshi} ${fortune.fourPillars.hour.kanshi}</div>
+            <div class="mb-1"><strong>日干:</strong> ${fortune.fourPillars.day.kan}(${fortune.fourPillars.day.element}・${fortune.fourPillars.day.yinYang})</div>
+            <div class="mb-1"><strong>相性度:</strong> ${fortune.todayCompatibility}%</div>
+            ${fortune.personality ? `<div class="mt-2"><strong>性格:</strong><br>${fortune.personality}</div>` : ''}
+            ${fortune.recommendations && fortune.recommendations.length > 0 ? `<div class="mt-2"><strong>今日のアドバイス:</strong><br>${fortune.recommendations[0]}</div>` : ''}
         </div>
     `;
     
     container.innerHTML = html;
 }
 
-// 生年月日の自動復元
+// 生年月日データの保存
+function saveBirthData(data) {
+    localStorage.setItem('userBirthData', JSON.stringify(data));
+}
+
+// 生年月日データの復元
 function restoreBirthDate() {
-    const savedBirthDate = localStorage.getItem('userBirthDate');
-    if (savedBirthDate) {
-        const birthDateInput = document.getElementById('birthDate');
-        if (birthDateInput) {
-            birthDateInput.value = savedBirthDate;
+    const savedData = localStorage.getItem('userBirthData');
+    if (savedData) {
+        try {
+            const data = JSON.parse(savedData);
+            
+            // 年選択肢の復元
+            const yearSelect = document.getElementById('birthYear');
+            if (yearSelect && data.year) {
+                yearSelect.value = data.year;
+            }
+            
+            // 月選択肢の復元
+            const monthSelect = document.getElementById('birthMonth');
+            if (monthSelect && data.month) {
+                monthSelect.value = data.month;
+                // 日選択肢を更新してから日を復元
+                if (detailedFortuneAPI) {
+                    detailedFortuneAPI.updateDayOptions();
+                    setTimeout(() => {
+                        const daySelect = document.getElementById('birthDay');
+                        if (daySelect && data.day) {
+                            daySelect.value = data.day;
+                        }
+                    }, 100);
+                }
+            }
+            
+            // 性別の復元
+            if (data.gender) {
+                const genderRadio = document.getElementById(data.gender === 'male' ? 'genderMale' : 'genderFemale');
+                if (genderRadio) {
+                    genderRadio.checked = true;
+                }
+            }
+            
+        } catch (error) {
+            console.error('保存データの復元に失敗:', error);
         }
     }
 }

@@ -123,15 +123,84 @@
                                     <div class="tab-pane fade" id="personal-fortune" role="tabpanel">
                                         <h6 class="card-title text-muted">あなたの今日の運勢</h6>
                                         <div class="mt-3">
-                                            <div class="mb-3">
-                                                <label for="birthDate" class="form-label small">生年月日</label>
-                                                <input type="date" class="form-control form-control-sm" id="birthDate" max="2010-12-31">
+                                            <!-- 生年月日入力 -->
+                                            <div class="mb-2">
+                                                <label class="form-label small">生年月日</label>
+                                                <div class="row g-1">
+                                                    <div class="col-4">
+                                                        <select class="form-select form-select-sm" id="birthYear">
+                                                            <option value="">年</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <select class="form-select form-select-sm" id="birthMonth">
+                                                            <option value="">月</option>
+                                                            <option value="1">1月</option>
+                                                            <option value="2">2月</option>
+                                                            <option value="3">3月</option>
+                                                            <option value="4">4月</option>
+                                                            <option value="5">5月</option>
+                                                            <option value="6">6月</option>
+                                                            <option value="7">7月</option>
+                                                            <option value="8">8月</option>
+                                                            <option value="9">9月</option>
+                                                            <option value="10">10月</option>
+                                                            <option value="11">11月</option>
+                                                            <option value="12">12月</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <select class="form-select form-select-sm" id="birthDay">
+                                                            <option value="">日</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <button type="button" class="btn btn-primary btn-sm w-100" onclick="calculatePersonalFortune()">
-                                                <i class="fas fa-crystal-ball me-1"></i>運勢診断
+                                            
+                                            <!-- 生時入力 -->
+                                            <div class="mb-2">
+                                                <label class="form-label small">生まれた時間</label>
+                                                <div class="row g-1">
+                                                    <div class="col-6">
+                                                        <select class="form-select form-select-sm" id="birthHour">
+                                                            <option value="">時</option>
+                                                            <option value="unknown">不明</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <select class="form-select form-select-sm" id="birthMinute">
+                                                            <option value="">分</option>
+                                                            <option value="0">00分</option>
+                                                            <option value="30">30分</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- 性別選択 -->
+                                            <div class="mb-3">
+                                                <label class="form-label small">性別</label>
+                                                <div class="row g-1">
+                                                    <div class="col-6">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="gender" id="genderMale" value="male">
+                                                            <label class="form-check-label small" for="genderMale">男性</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="gender" id="genderFemale" value="female">
+                                                            <label class="form-check-label small" for="genderFemale">女性</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <button type="button" class="btn btn-primary btn-sm w-100" onclick="calculateDetailedFortune()">
+                                                <i class="fas fa-stars me-1"></i>詳細運勢診断
                                             </button>
                                             <div id="personal-fortune-result" class="mt-3">
-                                                <small class="text-muted">生年月日を入力して診断ボタンを押してください</small>
+                                                <small class="text-muted">生年月日・時間・性別を入力して診断してください</small>
                                             </div>
                                         </div>
                                     </div>
@@ -545,6 +614,7 @@ curl -o "january_2025.json" \
     <!-- Fortune APIs -->
     <script src="js/fortune-api.js"></script>
     <script src="js/personal-fortune.js"></script>
+    <script src="js/detailed-fortune.js"></script>
     <!-- Custom JS -->
     <script src="js/app.js"></script>
 </body>
