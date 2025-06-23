@@ -6,7 +6,6 @@
 class DetailedFortuneAPI {
     constructor() {
         this.detailedCache = new Map();
-        this.initializeDateSelectors();
     }
 
     /**
@@ -15,12 +14,23 @@ class DetailedFortuneAPI {
     initializeDateSelectors() {
         // 年選択肢（1940年〜2010年）
         const yearSelect = document.getElementById('birthYear');
-        if (yearSelect) {
+        if (yearSelect && yearSelect.children.length <= 1) {
             for (let year = 2010; year >= 1940; year--) {
                 const option = document.createElement('option');
                 option.value = year;
-                option.textContent = `${year}年`;
+                option.textContent = year + '年';
                 yearSelect.appendChild(option);
+            }
+        }
+
+        // 時間選択肢（0〜23時）
+        const hourSelect = document.getElementById('birthHour');
+        if (hourSelect && hourSelect.children.length <= 2) {
+            for (let hour = 0; hour <= 23; hour++) {
+                const option = document.createElement('option');
+                option.value = hour;
+                option.textContent = hour + '時';
+                hourSelect.appendChild(option);
             }
         }
 
@@ -40,12 +50,38 @@ class DetailedFortuneAPI {
                 });
             }
         }
+    }
 
-        // 時間選択肢（0〜23時）
-        const hourSelect = document.getElementById('birthHour');
-        if (hourSelect) {
-            for (let hour = 0; hour 日を選択';
+    /**
+     * 日選択肢の動的更新（月・年に応じて）
+     */
+    updateDayOptions() {
+        const yearSelect = document.getElementById('birthYear');
+        const monthSelect = document.getElementById('birthMonth');
+        const daySelect = document.getElementById('birthDay');
         
+        if (!yearSelect || !monthSelect || !daySelect) return;
+        
+        const year = parseInt(yearSelect.value);
+        const month = parseInt(monthSelect.value);
+        
+        if (!year || !month) return;
+        
+        // 月の日数を計算
+        const daysInMonth = new Date(year, month, 0).getDate();
+        
+        // 既存の選択肢をクリア
+        daySelect.innerHTML = '<option value="">日を選択</option>';
+        
+        // 新しい日選択肢を追加
+        for (let day = 1; day <= daysInMonth; day++) {
+            const option = document.createElement('option');
+            option.value = day;
+            option.textContent = day + '日';
+            daySelect.appendChild(option);
+        }
+    }
+
     /**
      * 詳細運勢診断メイン関数
      */
@@ -92,11 +128,13 @@ class DetailedFortuneAPI {
                 todayData
             );
 
+            // キャッシュに保存
             this.detailedCache.set(cacheKey, detailedFortune);
+            
             return detailedFortune;
-
+            
         } catch (error) {
-            console.error('詳細運勢計算エラー:', error);
+            console.error('詳細運勢診断エラー:', error);
             return null;
         }
     }
@@ -108,7 +146,7 @@ class DetailedFortuneAPI {
         const year = document.getElementById('birthYear')?.value;
         const month = document.getElementById('birthMonth')?.value;
         const day = document.getElementById('birthDay')?.value;
-        const hour = document.getElementById('birthHour')?.value;
+        const hour = document.getElementById('birthHour')?.value || 'unknown';
         const minute = document.getElementById('birthMinute')?.value || 0;
         const gender = document.querySelector('input[name="gender"]:checked')?.value;
 
@@ -116,7 +154,7 @@ class DetailedFortuneAPI {
             year: parseInt(year),
             month: parseInt(month),
             day: parseInt(day),
-            hour: hour === 'unknown' ? null : parseInt(hour),
+            hour: hour === 'unknown' ? 'unknown' : parseInt(hour),
             minute: parseInt(minute),
             gender: gender
         };
@@ -133,24 +171,25 @@ class DetailedFortuneAPI {
      * キャッシュキー生成
      */
     generateCacheKey(birthData) {
-        return `${birthData.year}-${birthData.month}-${birthData.day}-${birthData.hour || 'unknown'}-${birthData.minute}-${birthData.gender}`;
+        return `${birthData.year}-${birthData.month}-${birthData.day}-${birthData.hour}-${birthData.gender}`;
     }
 
     /**
      * 今日のデータ取得
      */
     async getTodayData() {
-        const today = new Date();
-        const month = String(today.getMonth() + 1).padStart(2, '0');
-        
         try {
-            const response = await fetch(`api/2025/${month}.json`);
-            if (!response.ok) throw new Error('データ取得失敗');
+            const today = new Date();
+            const year = today.getFullYear();
+            const month = (today.getMonth() + 1).toString().padStart(2, '0');
+            
+            const response = await fetch(`api/${year}/${month}.json`);
+            if (!response.ok) throw new Error('APIレスポンスエラー');
             
             const monthData = await response.json();
-            const todayStr = today.toISOString().split('T')[0];
+            const day = today.getDate();
             
-            return monthData.days.find(day => day.date === todayStr);
+            return monthData.days.find(dayData => dayData.day === day);
         } catch (error) {
             console.error('今日のデータ取得エラー:', error);
             return null;
@@ -161,53 +200,30 @@ class DetailedFortuneAPI {
      * 四柱推命計算（年月日時の四柱）
      */
     calculateFourPillars(birthData) {
-        const birthDate = new Date(birthData.year, birthData.month - 1, birthData.day, birthData.hour || 12, birthData.minute);
-        
-        // 年柱計算
-        const yearPillar = this.calculateYearPillar(birthData.year);
-        
-        // 月柱計算
-        const monthPillar = this.calculateMonthPillar(birthData.year, birthData.month);
-        
-        // 日柱計算
-        const dayPillar = this.calculateDayPillar(birthDate);
-        
-        // 時柱計算
-        const hourPillar = this.calculateHourPillar(dayPillar.kan, birthData.hour);
+        const year = this.calculateYearPillar(birthData.year);
+        const month = this.calculateMonthPillar(birthData.year, birthData.month);
+        const day = this.calculateDayPillar(new Date(birthData.year, birthData.month - 1, birthData.day));
+        const hour = birthData.hour !== 'unknown' ? 
+            this.calculateHourPillar(day.kan, birthData.hour) : null;
 
-        return {
-            year: yearPillar,
-            month: monthPillar,
-            day: dayPillar,
-            hour: hourPillar,
-            birthDate: birthDate
-        };
+        return { year, month, day, hour };
     }
 
     /**
      * 年柱計算
      */
     calculateYearPillar(year) {
-        // 1984年を甲子（0）として計算
-        const baseYear = 1984;
-        const yearDiff = year - baseYear;
-        const kanshiIndex = yearDiff % 60;
-        
-        const kan = ['甲', '乙', '丙', '丁', '戊', '己', '庚', '辛', '壬', '癸'];
-        const shi = ['子', '丑', '寅', '卯', '辰', '巳', '午', '未', '申', '酉', '戌', '亥'];
-        
-        const kanIndex = kanshiIndex % 10;
-        const shiIndex = kanshiIndex % 12;
+        const kanshi = this.getYearKanshi(year);
+        const kan = kanshi.charAt(0);
+        const shi = kanshi.charAt(1);
         
         return {
-            kanshi: kan[kanIndex] + shi[shiIndex],
-            kan: kan[kanIndex],
-            shi: shi[shiIndex],
-            kanIndex: kanIndex,
-            shiIndex: shiIndex,
-            element: this.getElementFromKan(kan[kanIndex]),
-            yinYang: this.getYinYangFromKan(kan[kanIndex]),
-            animal: this.getAnimalFromShi(shi[shiIndex])
+            kanshi: kanshi,
+            kan: kan,
+            shi: shi,
+            element: this.getElementFromKan(kan),
+            yinYang: this.getYinYangFromKan(kan),
+            animal: this.getAnimalFromShi(shi)
         };
     }
 
@@ -215,22 +231,17 @@ class DetailedFortuneAPI {
      * 月柱計算
      */
     calculateMonthPillar(year, month) {
-        // 節入り計算は簡略化（実際には節気で計算）
-        const kan = ['甲', '乙', '丙', '丁', '戊', '己', '庚', '辛', '壬', '癸'];
-        const shi = ['寅', '卯', '辰', '巳', '午', '未', '申', '酉', '戌', '亥', '子', '丑'];
-        
-        // 年の天干によって月の起点が変わる
-        const yearKanIndex = this.calculateYearPillar(year).kanIndex;
-        const monthKanIndex = (yearKanIndex * 2 + month - 1) % 10;
-        const monthShiIndex = (month - 1) % 12;
+        const kanshi = this.getMonthKanshi(year, month);
+        const kan = kanshi.charAt(0);
+        const shi = kanshi.charAt(1);
         
         return {
-            kanshi: kan[monthKanIndex] + shi[monthShiIndex],
-            kan: kan[monthKanIndex],
-            shi: shi[monthShiIndex],
-            element: this.getElementFromKan(kan[monthKanIndex]),
-            yinYang: this.getYinYangFromKan(kan[monthKanIndex]),
-            animal: this.getAnimalFromShi(shi[monthShiIndex])
+            kanshi: kanshi,
+            kan: kan,
+            shi: shi,
+            element: this.getElementFromKan(kan),
+            yinYang: this.getYinYangFromKan(kan),
+            animal: this.getAnimalFromShi(shi)
         };
     }
 
@@ -238,27 +249,17 @@ class DetailedFortuneAPI {
      * 日柱計算
      */
     calculateDayPillar(birthDate) {
-        // 1900年1月1日を甲子（0）とする
-        const baseDate = new Date(1900, 0, 1);
-        const diffTime = birthDate.getTime() - baseDate.getTime();
-        const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
-        const kanshiIndex = diffDays % 60;
-        
-        const kan = ['甲', '乙', '丙', '丁', '戊', '己', '庚', '辛', '壬', '癸'];
-        const shi = ['子', '丑', '寅', '卯', '辰', '巳', '午', '未', '申', '酉', '戌', '亥'];
-        
-        const kanIndex = kanshiIndex % 10;
-        const shiIndex = kanshiIndex % 12;
+        const kanshi = this.getDayKanshi(birthDate);
+        const kan = kanshi.charAt(0);
+        const shi = kanshi.charAt(1);
         
         return {
-            kanshi: kan[kanIndex] + shi[shiIndex],
-            kan: kan[kanIndex],
-            shi: shi[shiIndex],
-            kanIndex: kanIndex,
-            shiIndex: shiIndex,
-            element: this.getElementFromKan(kan[kanIndex]),
-            yinYang: this.getYinYangFromKan(kan[kanIndex]),
-            animal: this.getAnimalFromShi(shi[shiIndex])
+            kanshi: kanshi,
+            kan: kan,
+            shi: shi,
+            element: this.getElementFromKan(kan),
+            yinYang: this.getYinYangFromKan(kan),
+            animal: this.getAnimalFromShi(shi)
         };
     }
 
@@ -266,41 +267,24 @@ class DetailedFortuneAPI {
      * 時柱計算
      */
     calculateHourPillar(dayKan, hour) {
-        if (hour === null) {
-            return {
-                kanshi: '時間不明',
-                kan: '不明',
-                shi: '不明',
-                element: '不明',
-                yinYang: '不明',
-                animal: '不明'
-            };
-        }
-
-        // 時間から時支を決定
-        const timeToShi = [
-            '子', '丑', '寅', '卯', '辰', '巳', '午', '未', '申', '酉', '戌', '亥'
-        ];
+        const kanOrder = ['甲', '乙', '丙', '丁', '戊', '己', '庚', '辛', '壬', '癸'];
+        const shiOrder = ['子', '丑', '寅', '卯', '辰', '巳', '午', '未', '申', '酉', '戌', '亥'];
         
-        // 23-1時:子、1-3時:丑、3-5時:寅...
-        let shiIndex;
-        if (hour === 23 || hour === 0) shiIndex = 0; // 子
-        else shiIndex = Math.floor((hour + 1) / 2);
+        const dayKanIndex = kanOrder.indexOf(dayKan);
+        const hourShi = shiOrder[Math.floor(hour / 2)];
         
-        const shi = timeToShi[shiIndex];
-        
-        // 日干から時干を計算
-        const kan = ['甲', '乙', '丙', '丁', '戊', '己', '庚', '辛', '壬', '癸'];
-        const dayKanIndex = kan.indexOf(dayKan);
-        const hourKanIndex = (dayKanIndex * 2 + shiIndex) % 10;
+        // 簡易計算
+        const hourKanIndex = (dayKanIndex * 2 + Math.floor(hour / 2)) % 10;
+        const hourKan = kanOrder[hourKanIndex];
+        const kanshi = hourKan + hourShi;
         
         return {
-            kanshi: kan[hourKanIndex] + shi,
-            kan: kan[hourKanIndex],
-            shi: shi,
-            element: this.getElementFromKan(kan[hourKanIndex]),
-            yinYang: this.getYinYangFromKan(kan[hourKanIndex]),
-            animal: this.getAnimalFromShi(shi)
+            kanshi: kanshi,
+            kan: hourKan,
+            shi: hourShi,
+            element: this.getElementFromKan(hourKan),
+            yinYang: this.getYinYangFromKan(hourKan),
+            animal: this.getAnimalFromShi(hourShi)
         };
     }
 
@@ -308,75 +292,71 @@ class DetailedFortuneAPI {
      * 性別による補正計算
      */
     calculateGenderModifier(gender, fourPillars) {
-        const modifier = {
-            strength: 0,
-            sensitivity: 0,
-            leadership: 0,
-            intuition: 0
-        };
-
-        // 日干の陰陽と性別の相性
-        const dayYinYang = fourPillars.day.yinYang;
+        const baseModifier = gender === 'female' ? 1.05 : 0.95;
         
-        if ((gender === 'male' && dayYinYang === '陽') || 
-            (gender === 'female' && dayYinYang === '陰')) {
-            // 性別と日干の陰陽が一致
-            modifier.strength += 10;
-            modifier.leadership += 5;
+        // 五行による補正
+        const dayElement = fourPillars.day.element;
+        let elementModifier = 1.0;
+        
+        if (gender === 'female') {
+            switch (dayElement) {
+                case '水': elementModifier = 1.1; break;
+                case '木': elementModifier = 1.05; break;
+                case '土': elementModifier = 1.0; break;
+                case '金': elementModifier = 0.95; break;
+                case '火': elementModifier = 0.9; break;
+            }
         } else {
-            // 性別と日干の陰陽が異なる
-            modifier.sensitivity += 10;
-            modifier.intuition += 5;
+            switch (dayElement) {
+                case '火': elementModifier = 1.1; break;
+                case '金': elementModifier = 1.05; break;
+                case '土': elementModifier = 1.0; break;
+                case '木': elementModifier = 0.95; break;
+                case '水': elementModifier = 0.9; break;
+            }
         }
-
-        return modifier;
+        
+        return baseModifier * elementModifier;
     }
 
     /**
      * 今日との相性計算
      */
     calculateTodayCompatibility(fourPillars, todayData) {
-        let compatibility = 50; // 基本値
-
-        // 日干同士の相性
+        let compatibility = 50;
+        
+        // 干支による相性
         const dayElement = fourPillars.day.element;
-        const todayElement = this.getElementFromKan(todayData.jikkan);
+        const todayElement = this.getTodayElement(todayData);
         
         if (this.isCompatibleElements(dayElement, todayElement)) {
             compatibility += 20;
         } else if (this.isConflictingElements(dayElement, todayElement)) {
-            compatibility -= 10;
+            compatibility -= 15;
         }
-
-        // 十二支の相性
-        const dayAnimal = fourPillars.day.animal;
-        const todayAnimal = this.getAnimalFromShi(todayData.junishi);
         
-        if (this.isCompatibleAnimals(dayAnimal, todayAnimal)) {
-            compatibility += 15;
-        }
-
-        return Math.max(0, Math.min(100, compatibility));
+        // ランダム要素を追加（実際の四柱推命はより複雑）
+        compatibility += Math.floor(Math.random() * 20) - 10;
+        
+        return Math.max(10, Math.min(90, compatibility));
     }
 
     /**
      * 大運計算（10年運）
      */
     calculateDaiun(fourPillars, gender) {
-        const now = new Date();
-        const age = now.getFullYear() - fourPillars.birthDate.getFullYear();
+        const currentYear = new Date().getFullYear();
+        const birthYear = fourPillars.year;
+        const age = currentYear - parseInt(birthYear.kanshi.match(/\d+/)?.[0] || '2000');
         
-        // 大運の開始年齢を計算（性別と生月により決定）
         const startAge = this.calculateDaiunStartAge(fourPillars.month, gender);
-        
-        // 現在の大運期を計算
-        const daiunPeriod = Math.floor((age - startAge) / 10);
+        const period = Math.floor((age - startAge) / 10);
         
         return {
-            period: daiunPeriod,
-            startAge: startAge + (daiunPeriod * 10),
-            endAge: startAge + ((daiunPeriod + 1) * 10),
-            description: this.getDaiunDescription(daiunPeriod, fourPillars.day.element)
+            period: period,
+            startAge: startAge + (period * 10),
+            endAge: startAge + ((period + 1) * 10) - 1,
+            description: this.getDaiunDescription(period, fourPillars.day.element)
         };
     }
 
@@ -384,17 +364,21 @@ class DetailedFortuneAPI {
      * 流年計算（年運）
      */
     calculateRyunen(fourPillars, currentYear) {
-        const ryunenPillar = this.calculateYearPillar(currentYear);
+        const yearKanshi = this.getYearKanshi(currentYear);
+        const yearElement = this.getElementFromKan(yearKanshi.charAt(0));
         const dayElement = fourPillars.day.element;
         
-        // 流年と日干の関係を分析
-        const relationship = this.analyzeElementRelationship(dayElement, ryunenPillar.element);
+        const relationship = this.analyzeElementRelationship(dayElement, yearElement);
+        const fortune = this.calculateRyunenFortune(relationship);
         
         return {
             year: currentYear,
-            pillar: ryunenPillar,
+            pillar: {
+                kanshi: yearKanshi,
+                element: yearElement
+            },
             relationship: relationship,
-            fortune: this.calculateRyunenFortune(relationship)
+            fortune: fortune
         };
     }
 
@@ -402,44 +386,41 @@ class DetailedFortuneAPI {
      * 総合運勢計算
      */
     calculateComprehensiveFortune(fourPillars, genderModifier, todayCompatibility, daiun, ryunen, todayData) {
-        // 基本運勢（日干の強弱から）
-        const baseScores = this.calculateBaseScores(fourPillars);
+        // 基本スコア計算
+        const baseScores = this.calculateBaseScores(todayData);
         
-        // 今日の相性による修正
-        const compatibilityModifier = (todayCompatibility - 50) / 5;
+        // 個人修正値計算
+        const personalModifier = this.calculatePersonalModifier(todayData, fourPillars);
         
-        // 大運・流年による修正
+        // 大運・流年修正
         const periodModifier = this.calculatePeriodModifier(daiun, ryunen);
-
+        
         // 最終スコア計算
-        const finalScores = {
-            love: Math.max(0, Math.min(100, 
-                baseScores.love + compatibilityModifier + periodModifier.love + genderModifier.sensitivity)),
-            money: Math.max(0, Math.min(100, 
-                baseScores.money + compatibilityModifier + periodModifier.money + genderModifier.strength)),
-            health: Math.max(0, Math.min(100, 
-                baseScores.health + compatibilityModifier + periodModifier.health)),
-            work: Math.max(0, Math.min(100, 
-                baseScores.work + compatibilityModifier + periodModifier.work + genderModifier.leadership)),
-            overall: 0
+        const scores = {
+            love: Math.round((baseScores.love * genderModifier * personalModifier * periodModifier) * (todayCompatibility / 100)),
+            money: Math.round((baseScores.money * genderModifier * personalModifier * periodModifier) * (todayCompatibility / 100)),
+            health: Math.round((baseScores.health * genderModifier * personalModifier * periodModifier) * (todayCompatibility / 100)),
+            work: Math.round((baseScores.work * genderModifier * personalModifier * periodModifier) * (todayCompatibility / 100))
         };
-
-        finalScores.overall = Math.round(
-            (finalScores.love + finalScores.money + finalScores.health + finalScores.work) / 4
-        );
-
+        
+        scores.overall = Math.round((scores.love + scores.money + scores.health + scores.work) / 4);
+        
+        // その他の詳細情報
+        const personality = this.generatePersonalityAnalysis(fourPillars);
+        const recommendations = this.generateDetailedRecommendations(fourPillars, todayData, scores);
+        const warnings = this.generateDetailedWarnings(fourPillars, daiun, ryunen);
+        const lifeAdvice = this.generateLifeAdvice(fourPillars, daiun);
+        
         return {
-            date: todayData.date,
-            fourPillars: fourPillars,
-            genderModifier: genderModifier,
-            todayCompatibility: todayCompatibility,
-            daiun: daiun,
-            ryunen: ryunen,
-            scores: finalScores,
-            personality: this.generatePersonalityAnalysis(fourPillars),
-            recommendations: this.generateDetailedRecommendations(fourPillars, todayData, finalScores),
-            warnings: this.generateDetailedWarnings(fourPillars, daiun, ryunen),
-            lifeAdvice: this.generateLifeAdvice(fourPillars, daiun)
+            fourPillars,
+            scores,
+            todayCompatibility,
+            daiun,
+            ryunen,
+            personality,
+            recommendations,
+            warnings,
+            lifeAdvice
         };
     }
 
@@ -448,20 +429,18 @@ class DetailedFortuneAPI {
      */
     getElementFromKan(kan) {
         const elements = {
-            '甲': '木', '乙': '木', '丙': '火', '丁': '火',
-            '戊': '土', '己': '土', '庚': '金', '辛': '金',
+            '甲': '木', '乙': '木',
+            '丙': '火', '丁': '火',
+            '戊': '土', '己': '土',
+            '庚': '金', '辛': '金',
             '壬': '水', '癸': '水'
         };
-        return elements[kan] || '不明';
+        return elements[kan] || '土';
     }
 
     getYinYangFromKan(kan) {
-        const yinYang = {
-            '甲': '陽', '乙': '陰', '丙': '陽', '丁': '陰',
-            '戊': '陽', '己': '陰', '庚': '陽', '辛': '陰',
-            '壬': '陽', '癸': '陰'
-        };
-        return yinYang[kan] || '不明';
+        const yangKan = ['甲', '丙', '戊', '庚', '壬'];
+        return yangKan.includes(kan) ? '陽' : '陰';
     }
 
     getAnimalFromShi(shi) {
@@ -470,127 +449,129 @@ class DetailedFortuneAPI {
             '辰': '龍', '巳': '蛇', '午': '馬', '未': '羊',
             '申': '猿', '酉': '鶏', '戌': '犬', '亥': '猪'
         };
-        return animals[shi] || '不明';
+        return animals[shi] || '龍';
+    }
+
+    getYearKanshi(year) {
+        const kan = ['庚', '辛', '壬', '癸', '甲', '乙', '丙', '丁', '戊', '己'];
+        const shi = ['申', '酉', '戌', '亥', '子', '丑', '寅', '卯', '辰', '巳', '午', '未'];
+        return kan[year % 10] + shi[year % 12];
+    }
+
+    getMonthKanshi(year, month) {
+        const monthShi = ['寅', '卯', '辰', '巳', '午', '未', '申', '酉', '戌', '亥', '子', '丑'];
+        const kan = ['甲', '乙', '丙', '丁', '戊', '己', '庚', '辛', '壬', '癸'];
+        
+        const yearKanIndex = year % 10;
+        const monthKanIndex = (yearKanIndex * 2 + month - 1) % 10;
+        
+        return kan[monthKanIndex] + monthShi[(month - 1) % 12];
+    }
+
+    getDayKanshi(date) {
+        // 簡易計算（実際は複雑な暦計算が必要）
+        const baseDate = new Date(1900, 0, 1);
+        const daysDiff = Math.floor((date - baseDate) / (1000 * 60 * 60 * 24));
+        
+        const kan = ['甲', '乙', '丙', '丁', '戊', '己', '庚', '辛', '壬', '癸'];
+        const shi = ['子', '丑', '寅', '卯', '辰', '巳', '午', '未', '申', '酉', '戌', '亥'];
+        
+        return kan[daysDiff % 10] + shi[daysDiff % 12];
     }
 
     isCompatibleElements(element1, element2) {
         const compatible = {
-            '木': ['水'], '火': ['木'], '土': ['火'], 
-            '金': ['土'], '水': ['金']
+            '木': ['火', '水'],
+            '火': ['土', '木'],
+            '土': ['金', '火'],
+            '金': ['水', '土'],
+            '水': ['木', '金']
         };
-        return compatible[element1]?.includes(element2) || compatible[element2]?.includes(element1);
+        return compatible[element1]?.includes(element2) || false;
     }
 
     isConflictingElements(element1, element2) {
-        const conflicts = {
-            '木': ['金'], '火': ['水'], '土': ['木'], 
-            '金': ['火'], '水': ['土']
+        const conflicting = {
+            '木': ['金', '土'],
+            '火': ['水', '金'],
+            '土': ['木', '水'],
+            '金': ['火', '木'],
+            '水': ['火', '土']
         };
-        return conflicts[element1]?.includes(element2) || conflicts[element2]?.includes(element1);
+        return conflicting[element1]?.includes(element2) || false;
     }
 
-    isCompatibleAnimals(animal1, animal2) {
-        const compatible = [
-            ['鼠', '龍', '猿'], ['牛', '蛇', '鶏'], 
-            ['虎', '馬', '犬'], ['兎', '羊', '猪']
-        ];
-        return compatible.some(group => group.includes(animal1) && group.includes(animal2));
+    getTodayElement(todayData) {
+        // 今日の要素を決定（簡易版）
+        const elements = ['木', '火', '土', '金', '水'];
+        return elements[todayData.day % 5];
     }
 
-    calculateBaseScores(fourPillars) {
-        // 生年月日による個別スコア計算
-        const dayElement = fourPillars.day.element;
-        const dayKan = fourPillars.day.kan;
-        const birthDate = fourPillars.birthDate;
-        
-        // 生年月日から基本値を算出（固定値を避ける）
-        const dayOfYear = Math.floor((birthDate - new Date(birthDate.getFullYear(), 0, 0)) / 86400000);
-        const birthVariation = (dayOfYear % 20) - 10; // -10から+9の範囲
-        
-        const baseScore = 50 + birthVariation;
-        
+    calculateBaseScores(dayData) {
         return {
-            love: baseScore + this.getElementBonus(dayElement, 'love') + this.getKanModifier(dayKan, 'love'),
-            money: baseScore + this.getElementBonus(dayElement, 'money') + this.getKanModifier(dayKan, 'money'),
-            health: baseScore + this.getElementBonus(dayElement, 'health') + this.getKanModifier(dayKan, 'health'),
-            work: baseScore + this.getElementBonus(dayElement, 'work') + this.getKanModifier(dayKan, 'work')
+            love: 50 + Math.floor(Math.random() * 30),
+            money: 50 + Math.floor(Math.random() * 30),
+            health: 50 + Math.floor(Math.random() * 30),
+            work: 50 + Math.floor(Math.random() * 30)
         };
     }
 
-    getElementBonus(element, category) {
-        const bonuses = {
-            '木': { love: 10, money: 0, health: 5, work: 5 },
-            '火': { love: 15, money: 5, health: 0, work: 10 },
-            '土': { love: 5, money: 10, health: 10, work: 5 },
-            '金': { love: 0, money: 15, health: 5, work: 10 },
-            '水': { love: 10, money: 5, health: 10, work: 5 }
-        };
-        return bonuses[element]?.[category] || 0;
-    }
-
-    /**
-     * 十干による個別修正値
-     */
-    getKanModifier(kan, category) {
-        const modifiers = {
-            '甲': { love: 5, money: -3, health: 2, work: 8 },
-            '乙': { love: 8, money: 2, health: 5, work: -2 },
-            '丙': { love: 10, money: 3, health: -5, work: 7 },
-            '丁': { love: 12, money: -2, health: 3, work: 2 },
-            '戊': { love: -2, money: 8, health: 8, work: 3 },
-            '己': { love: 3, money: 5, health: 10, work: -3 },
-            '庚': { love: -5, money: 12, health: 2, work: 8 },
-            '辛': { love: 2, money: 10, health: 3, work: 5 },
-            '壬': { love: 7, money: 2, health: 8, work: 3 },
-            '癸': { love: 10, money: -2, health: 12, work: -3 }
-        };
-        return modifiers[kan]?.[category] || 0;
+    calculatePersonalModifier(dayData, fourPillars) {
+        const dayElement = fourPillars.day.element;
+        let modifier = 1.0;
+        
+        // 五行による個人修正
+        switch (dayElement) {
+            case '木': modifier = 1.05; break;
+            case '火': modifier = 1.03; break;
+            case '土': modifier = 1.00; break;
+            case '金': modifier = 0.98; break;
+            case '水': modifier = 1.02; break;
+        }
+        
+        return modifier;
     }
 
     calculateDaiunStartAge(monthPillar, gender) {
-        // 簡略化：性別により基本開始年齢を設定
+        // 簡易計算
         return gender === 'male' ? 8 : 7;
     }
 
     getDaiunDescription(period, dayElement) {
-        const descriptions = [
-            '青年期 - 学習と成長の時期',
-            '青年後期 - 実力蓄積の時期', 
-            '壮年期 - 活動と発展の時期',
-            '壮年後期 - 責任と指導の時期',
-            '熟年期 - 安定と智慧の時期',
-            '熟年後期 - 伝承と調和の時期'
-        ];
-        return descriptions[Math.min(period, descriptions.length - 1)] || '人生後期 - 達観の時期';
+        const descriptions = {
+            0: '運勢上昇期・新しいチャレンジに最適',
+            1: '安定期・着実な成長を重視',
+            2: '変化期・柔軟な対応が重要',
+            3: '発展期・大きな飛躍の可能性',
+            4: '調整期・内面の充実を図る',
+            5: '成熟期・経験を活かす時'
+        };
+        return descriptions[period] || '新たな段階への準備期';
     }
 
     analyzeElementRelationship(dayElement, yearElement) {
-        if (dayElement === yearElement) return '比肩・劫財';
-        if (this.isCompatibleElements(dayElement, yearElement)) return '印綬・偏印';
-        if (this.isConflictingElements(dayElement, yearElement)) return '官殺';
-        return '食傷・財星';
+        if (this.isCompatibleElements(dayElement, yearElement)) {
+            return '相生関係・運気上昇';
+        } else if (this.isConflictingElements(dayElement, yearElement)) {
+            return '相克関係・注意が必要';
+        } else {
+            return '中性関係・安定した年';
+        }
     }
 
     calculateRyunenFortune(relationship) {
         const fortunes = {
-            '比肩・劫財': { score: 60, description: '競争と協力の年' },
-            '印綬・偏印': { score: 80, description: '学習と成長の年' },
-            '官殺': { score: 40, description: '責任と試練の年' },
-            '食傷・財星': { score: 70, description: '創造と収穫の年' }
+            '相生関係・運気上昇': { score: 75, description: '良好な運勢' },
+            '相克関係・注意が必要': { score: 40, description: '慎重な行動を' },
+            '中性関係・安定した年': { score: 60, description: '安定した運勢' }
         };
-        return fortunes[relationship] || { score: 50, description: '変化の年' };
+        return fortunes[relationship] || { score: 50, description: '普通の運勢' };
     }
 
     calculatePeriodModifier(daiun, ryunen) {
-        const daiunBonus = Math.floor(daiun.period / 2) * 2;
-        const ryunenBonus = (ryunen.fortune.score - 50) / 10;
-        
-        return {
-            love: daiunBonus + ryunenBonus,
-            money: daiunBonus + ryunenBonus,
-            health: daiunBonus,
-            work: daiunBonus + ryunenBonus
-        };
+        const daiunModifier = daiun.period < 3 ? 1.05 : 0.95;
+        const ryunenModifier = ryunen.fortune.score > 60 ? 1.1 : 0.9;
+        return daiunModifier * ryunenModifier;
     }
 
     generatePersonalityAnalysis(fourPillars) {
@@ -598,138 +579,102 @@ class DetailedFortuneAPI {
         const dayYinYang = fourPillars.day.yinYang;
         
         const personalities = {
-            '木': {
-                '陽': '成長志向で積極的。リーダーシップがあり、新しいことにチャレンジする勇気を持つ。',
-                '陰': '柔軟性があり協調性が高い。周囲との調和を大切にし、着実に成長していく。'
-            },
-            '火': {
-                '陽': '情熱的で行動力がある。明るく社交的で、周囲を明るく照らす存在。',
-                '陰': '繊細で感受性が豊か。芸術的センスがあり、美しいものを愛する。'
-            },
-            '土': {
-                '陽': '安定感があり信頼される。現実的で着実、責任感が強い。',
-                '陰': '包容力があり面倒見が良い。優しく温かい心を持つ。'
-            },
-            '金': {
-                '陽': '意志が強く決断力がある。正義感が強く、筋を通す。',
-                '陰': '美意識が高く洗練されている。品格があり、完璧を求める。'
-            },
-            '水': {
-                '陽': '流動性があり適応力が高い。知恵があり、状況に応じて柔軟に対応する。',
-                '陰': '直感力が鋭く洞察力がある。静かな中に深い智慧を秘めている。'
-            }
+            '木': '成長力に富み、創造性豊かな性格です。',
+            '火': '情熱的で明るく、リーダーシップを発揮します。',
+            '土': '安定感があり、信頼される人格者です。',
+            '金': '意志が強く、正義感に満ちた性格です。',
+            '水': '柔軟性があり、深い洞察力を持ちます。'
         };
-
-        return personalities[dayElement]?.[dayYinYang] || '独特の個性を持つ魅力的な人格。';
+        
+        return personalities[dayElement] || 'バランスの取れた性格です。';
     }
 
     generateDetailedRecommendations(fourPillars, todayData, scores) {
         const recommendations = [];
-        
-        // 日干に基づく推奨事項
         const dayElement = fourPillars.day.element;
+        
+        // 五行別の基本推奨事項
         const elementAdvice = this.getElementSpecificAdvice(dayElement, todayData);
         recommendations.push(...elementAdvice);
         
         // スコアに基づく推奨事項
-        if (scores.love = 4) {
-            warnings.push('人生の転換期です。大きな決断は慎重に検討しましょう。');
+        if (scores.love < 60) {
+            recommendations.push('恋愛運向上のため、今日は' + todayData.color_of_the_day + 'の小物を身につけてみてください。');
         }
+        
+        if (scores.work < 60) {
+            recommendations.push('仕事運を高めるため、' + todayData.meditation_theme + 'を実践してみましょう。');
+        }
+        
+        return recommendations;
+    }
 
+    generateDetailedWarnings(fourPillars, daiun, ryunen) {
+        const warnings = [];
+        
+        if (ryunen.fortune.score < 50) {
+            warnings.push(ryunen.year + '年は' + ryunen.relationship + 'の年です。慎重な行動を心がけてください。');
+        }
+        
+        if (daiun.period > 3) {
+            warnings.push('現在の大運期は変化の時期です。無理をせず体調管理に注意してください。');
+        }
+        
         return warnings;
     }
 
     generateLifeAdvice(fourPillars, daiun) {
-        const advice = [];
-        
-        advice.push(`現在は${daiun.description}です。この時期の特性を活かしていきましょう。`);
-        advice.push(`あなたの日干（${fourPillars.day.kan}）は${fourPillars.day.element}属性で${fourPillars.day.yinYang}の性質を持ちます。`);
-        
-        // 五行に基づく人生アドバイス
-        const elementAdvice = this.getElementLifeAdvice(fourPillars.day.element);
-        advice.push(...elementAdvice);
-        
-        return advice;
+        const dayElement = fourPillars.day.element;
+        return this.getElementLifeAdvice(dayElement);
     }
 
-    /**
-     * 五行属性別の具体的アドバイス生成
-     */
     getElementSpecificAdvice(element, todayData) {
         const advice = [];
         
-        // 五行属性に基づくパワーストーン推奨
-        const personalStone = this.getPersonalPowerStone(element);
-        
-        switch(element) {
+        switch (element) {
             case '木':
-                advice.push(`木属性のあなたには、${personalStone}が成長エネルギーを高めます。`);
-                advice.push(`創造性を活かす仕事や趣味に力を注ぐと良い日です。`);
-                advice.push(`今日は${todayData.meditation_theme}の瞑想で内なる成長を促しましょう。`);
+                advice.push('成長と発展を意識した行動を心がけましょう。');
+                advice.push('新しい学びや挑戦が運気を高めます。');
                 break;
             case '火':
-                advice.push(`火属性のあなたには、${personalStone}で情熱をコントロールしましょう。`);
-                advice.push(`人とのコミュニケーションを大切にする日です。`);
-                advice.push(`${todayData.aroma_oil}のアロマで感情のバランスを整えてください。`);
+                advice.push('積極的なコミュニケーションが幸運を呼びます。');
+                advice.push('創造的な活動に時間を割いてみてください。');
                 break;
             case '土':
-                advice.push(`土属性のあなたには、${personalStone}が安定感をもたらします。`);
-                advice.push(`基盤固めや計画立案に適した日です。`);
-                advice.push(`${todayData.crystal_healing}のエネルギーで地に足をつけた行動を。`);
+                advice.push('基盤を固める活動が今日の開運行動です。');
+                advice.push('家族や親しい人との時間を大切にしましょう。');
                 break;
             case '金':
-                advice.push(`金属性のあなたには、${personalStone}が決断力を高めます。`);
-                advice.push(`整理整頓や品質向上に取り組むと良い日です。`);
-                advice.push(`${todayData.feng_shui_advice}を参考に環境を整えましょう。`);
+                advice.push('規律正しい行動が運気を安定させます。');
+                advice.push('美意識と完璧主義を適度に保ち、柔軟性も身につけることが大切です。');
                 break;
             case '水':
-                advice.push(`水属性のあなたには、${personalStone}で直感力を研ぎ澄ませましょう。`);
-                advice.push(`学習や研究、深い思考に適した日です。`);
-                advice.push(`${todayData.recommended_tea}を飲んで心を静めてください。`);
+                advice.push('知恵と直感力を活かし、深い洞察で物事の本質を見抜きましょう。');
+                advice.push('流動性を保ちながらも、自分の芯となる価値観を持ち続けてください。');
                 break;
         }
         
         return advice;
     }
 
-    /**
-     * 五行属性に基づく個人専用パワーストーン
-     */
-    getPersonalPowerStone(element) {
-        const stones = {
-            '木': ['アベンチュリン', 'プレナイト', 'ペリドット', 'グリーンアゲート'],
-            '火': ['カーネリアン', 'サンストーン', 'ルビー', 'ガーネット'],
-            '土': ['タイガーアイ', 'シトリン', 'イエロージャスパー', 'スモーキークォーツ'],
-            '金': ['ローズクォーツ', 'クンツァイト', 'モルガナイト', 'ピンクトルマリン'],
-            '水': ['アクアマリン', 'ブルーレースアゲート', 'ソーダライト', 'ラピスラズリ']
-        };
-        
-        const stoneList = stones[element] || ['クリアクォーツ'];
-        const index = Math.floor(Math.random() * stoneList.length);
-        return stoneList[index];
-    }
-
-    /**
-     * 五行別の人生アドバイス
-     */
     getElementLifeAdvice(element) {
         const advice = [];
         
-        switch(element) {
+        switch (element) {
             case '木':
-                advice.push('成長と発展を重視し、常に新しい挑戦を恐れないことが大切です。');
-                advice.push('協調性を活かしながらも、自分の信念を貫く強さを持ちましょう。');
+                advice.push('常に成長を心がけ、新しいことに挑戦し続けることが人生の鍵です。');
+                advice.push('自然との調和を大切にし、環境に配慮した生活を送りましょう。');
                 break;
             case '火':
-                advice.push('情熱と行動力を活かし、周囲を明るく照らす存在になりましょう。');
-                advice.push('感情のコントロールを学び、持続可能な情熱を維持することが重要です。');
+                advice.push('情熱を持って生きることで、周囲の人々を照らす存在になれます。');
+                advice.push('創造性を発揮できる分野で才能を開花させましょう。');
                 break;
             case '土':
-                advice.push('安定と信頼を基盤に、着実に目標に向かって進みましょう。');
-                advice.push('包容力を活かし、周囲をサポートする役割を大切にしてください。');
+                advice.push('安定した基盤を築くことで、長期的な成功を手にできます。');
+                advice.push('人との信頼関係を大切にし、コミュニティに貢献することが重要です。');
                 break;
             case '金':
-                advice.push('正義感と意志の強さを活かし、筋の通った生き方を貫きましょう。');
+                advice.push('正義感と責任感を持って行動することで、人生の目標を達成できます。');
                 advice.push('美意識と完璧主義を適度に保ち、柔軟性も身につけることが大切です。');
                 break;
             case '水':
