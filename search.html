@@ -133,6 +133,8 @@
                 if (typeof CalendarSearchAPI !== 'undefined') {
                     searchAPI = new CalendarSearchAPI();
                     console.log('API初期化成功');
+                    console.log('利用可能なメソッド:', Object.getOwnPropertyNames(Object.getPrototypeOf(searchAPI)));
+                    console.log('searchIchiryuManbaiDays存在確認:', typeof searchAPI.searchIchiryuManbaiDays);
                 } else {
                     console.error('CalendarSearchAPIが見つかりません');
                     setTimeout(initAPI, 200);
@@ -217,32 +219,74 @@
             performSearch();
         }
         
-        // 特別検索
+        // 特別検索 - 直接データ検索で実装
         async function searchSpecial(type) {
             console.log('特別検索:', type);
             showLoading();
             
             try {
-                if (!searchAPI) {
-                    throw new Error('検索機能が準備できていません');
-                }
-                
                 let results = [];
                 let title = '';
                 
                 if (type === 'ichiryu') {
                     console.log('一粒万倍日検索実行');
-                    console.log('API確認:', searchAPI);
-                    console.log('メソッド確認:', typeof searchAPI.searchIchiryuManbaiDays);
                     
-                    if (typeof searchAPI.searchIchiryuManbaiDays === 'function') {
-                        results = await searchAPI.searchIchiryuManbaiDays(2025);
-                        title = '2025年の一粒万倍日';
-                    } else {
-                        throw new Error('一粒万倍日検索機能が利用できません');
+                    // 直接データを読み込んで検索
+                    const response = await fetch('api/2025/all.json');
+                    if (!response.ok) {
+                        throw new Error('データの読み込みに失敗しました');
                     }
+                    
+                    const data = await response.json();
+                    console.log('データ読み込み成功:', Object.keys(data));
+                    
+                    // 一粒万倍日を検索
+                    if (data.months && Array.isArray(data.months)) {
+                        for (const monthData of data.months) {
+                            if (monthData.days && Array.isArray(monthData.days)) {
+                                for (const day of monthData.days) {
+                                    if (day.is_ichiryu_manbai === true) {
+                                        results.push({
+                                            date: day.date,
+                                            day: day.day,
+                                            month: monthData.month,
+                                            weekday: day.weekday,
+                                            rokuyo: day.rokuyo,
+                                            daily_keyword: day.daily_keyword,
+                                            is_holiday: day.is_holiday,
+                                            is_ichiryu_manbai: true
+                                        });
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+                    title = '2025年の一粒万倍日';
+                    console.log('一粒万倍日検索完了:', results.length + '件');
+                    
                 } else if (type === 'weekend') {
-                    results = await searchAPI.searchWeekends(2025);
+                    // 週末検索も直接実装
+                    const response = await fetch('api/2025/all.json');
+                    const data = await response.json();
+                    
+                    if (data.months && Array.isArray(data.months)) {
+                        for (const monthData of data.months) {
+                            if (monthData.days && Array.isArray(monthData.days)) {
+                                for (const day of monthData.days) {
+                                    if (day.is_weekend === true) {
+                                        results.push({
+                                            date: day.date,
+                                            weekday: day.weekday,
+                                            rokuyo: day.rokuyo,
+                                            daily_keyword: day.daily_keyword,
+                                            is_weekend: true
+                                        });
+                                    }
+                                }
+                            }
+                        }
+                    }
                     title = '2025年の週末';
                 }
                 
