@@ -57,7 +57,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#endpoints">APIを使い始める</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#endpoints">API仕様</a></li>
                     <li class="nav-item"><a class="nav-link" href="api_index.html">全ファイル一覧</a></li>
                     <li class="nav-item"><a class="nav-link" href="search.html">データ検索</a></li>
                     <li class="nav-item"><a class="nav-link" href="fortune.html">総合診断</a></li>
@@ -79,7 +79,7 @@
                     </p>
                     <div class="d-flex gap-3 flex-wrap">
                         <a href="#endpoints" class="btn btn-primary btn-lg">
-                            <i class="fas fa-code me-2"></i>APIを使い始める
+                            <i class="fas fa-code me-2"></i>API仕様
                         </a>
                         <a href="api_index.html" class="btn btn-info btn-lg">
                             <i class="fas fa-list me-2"></i>全ファイル一覧
@@ -503,18 +503,23 @@ curl -o "january_2025.json" \
     <!-- Footer -->
     <footer class="bg-dark text-light py-4">
         <div class="container">
-            <div class="row">
+            <div class="row align-items-center">
                 <div class="col-md-6">
-                    <h5>日本暦データAPI</h5>
-                    <p class="text-muted">日本の暦データをJSON形式で提供</p>
+                    <h5 class="mb-2">
+                        <i class="fas fa-calendar-alt me-2"></i>暦データAPI
+                    </h5>
+                    <p class="text-muted mb-0">日本の暦データをJSON形式で提供する無料APIサービス</p>
                 </div>
                 <div class="col-md-6 text-md-end">
-                    <div class="social-links">
-                        <a href="https://github.com/your-username/japanese-calendar-api" class="text-light me-3" target="_blank">
+                    <div class="d-flex justify-content-md-end justify-content-start align-items-center gap-3 mb-2">
+                        <a href="index.html#endpoints" class="text-light text-decoration-none">API仕様</a>
+                        <a href="api_index.html" class="text-light text-decoration-none">全ファイル一覧</a>
+                        <a href="search.html" class="text-light text-decoration-none">データ検索</a>
+                        <a href="https://github.com/rei-abekura-lvgs/CalendarAPI" class="text-light" target="_blank">
                             <i class="fab fa-github fa-lg"></i>
                         </a>
                     </div>
-                    <p class="text-muted mt-2">&copy; 2025 Japanese Calendar API. All rights reserved.</p>
+                    <p class="text-muted mb-0">&copy; 2025 暦データAPI. All rights reserved.</p>
                 </div>
             </div>
         </div>
