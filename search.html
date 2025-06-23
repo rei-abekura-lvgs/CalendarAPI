@@ -124,6 +124,7 @@
             <button class="btn btn-outline-danger quick-btn btn-sm" onclick="quickSearch('祝日')">祝日</button>
             <button class="btn btn-outline-secondary quick-btn btn-sm" onclick="searchSpecial('ichiryu')">一粒万倍日</button>
             <button class="btn btn-outline-dark quick-btn btn-sm" onclick="searchSpecial('weekend')">週末</button>
+            <button class="btn btn-outline-warning quick-btn btn-sm" onclick="searchSpecial('kuubou')">空亡(天中殺)</button>
         </div>
 
         <!-- 検索結果 -->
@@ -217,11 +218,18 @@
                             for (const day of monthData.days) {
                                 let match = false;
                                 
-                                // キーワード検索（29項目すべてを対象）
+                                // キーワード検索（37項目すべてを対象）
                                 const searchFields = [
                                     day.daily_keyword,
                                     day.rokuyo,
                                     day.jikkan_junishi,
+                                    day.jikkan,
+                                    day.junishi,
+                                    day.jikkan_gogyou,
+                                    day.junishi_gogyou,
+                                    day.jikkan_yin_yang,
+                                    day.junishi_animal,
+                                    day.juuni_un,
                                     day.color_of_the_day,
                                     day.power_stone,
                                     day.recommended_tea,
@@ -256,6 +264,11 @@
                                         weekday: day.weekday,
                                         rokuyo: day.rokuyo,
                                         jikkan_junishi: day.jikkan_junishi,
+                                        jikkan_gogyou: day.jikkan_gogyou,
+                                        junishi_gogyou: day.junishi_gogyou,
+                                        junishi_animal: day.junishi_animal,
+                                        juuni_un: day.juuni_un,
+                                        is_kuubou: day.is_kuubou,
                                         daily_keyword: day.daily_keyword,
                                         color_of_the_day: day.color_of_the_day,
                                         power_stone: day.power_stone,
@@ -359,7 +372,13 @@
                                             daily_keyword: day.daily_keyword,
                                             is_weekend: true,
                                             is_holiday: day.is_holiday,
-                                            color_of_the_day: day.color_of_the_day
+                                            color_of_the_day: day.color_of_the_day,
+                                            jikkan_junishi: day.jikkan_junishi,
+                                            jikkan_gogyou: day.jikkan_gogyou,
+                                            junishi_gogyou: day.junishi_gogyou,
+                                            junishi_animal: day.junishi_animal,
+                                            juuni_un: day.juuni_un,
+                                            is_kuubou: day.is_kuubou
                                         });
                                     }
                                 }
@@ -367,6 +386,34 @@
                         }
                     }
                     title = `${selectedYear}年の週末`;
+                    
+                } else if (type === 'kuubou') {
+                    // 空亡(天中殺)検索
+                    if (data.months && Array.isArray(data.months)) {
+                        for (const monthData of data.months) {
+                            if (monthData.days && Array.isArray(monthData.days)) {
+                                for (const day of monthData.days) {
+                                    if (day.is_kuubou === true) {
+                                        results.push({
+                                            date: day.date,
+                                            weekday: day.weekday,
+                                            rokuyo: day.rokuyo,
+                                            daily_keyword: day.daily_keyword,
+                                            jikkan_junishi: day.jikkan_junishi,
+                                            jikkan_gogyou: day.jikkan_gogyou,
+                                            junishi_gogyou: day.junishi_gogyou,
+                                            junishi_animal: day.junishi_animal,
+                                            juuni_un: day.juuni_un,
+                                            is_kuubou: true,
+                                            is_holiday: day.is_holiday,
+                                            color_of_the_day: day.color_of_the_day
+                                        });
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    title = `${selectedYear}年の空亡(天中殺)`;
                 }
                 
                 displayResults(results, title);
@@ -428,9 +475,11 @@
                             ${item.is_ichiryu_manbai ? `<span class="badge bg-warning text-dark me-1">一粒万倍日</span>` : ''}
                         </div>
                         ${keyword ? `<div class="text-muted small">キーワード: ${keyword}</div>` : ''}
-                        ${item.jikkan_junishi ? `<div class="text-muted small">十干十二支: ${item.jikkan_junishi}</div>` : ''}
+                        ${item.jikkan_junishi ? `<div class="text-muted small">十干十二支: ${item.jikkan_junishi} (${item.jikkan_gogyou || ''}/${item.junishi_gogyou || ''})</div>` : ''}
+                        ${item.junishi_animal ? `<div class="text-muted small">動物: ${item.junishi_animal} | 十二運: ${item.juuni_un || ''}</div>` : ''}
                         ${item.power_stone ? `<div class="text-muted small">パワーストーン: ${item.power_stone}</div>` : ''}
                         ${item.color_of_the_day ? `<div class="text-muted small">今日の色: ${item.color_of_the_day}</div>` : ''}
+                        ${item.is_kuubou ? `<div class="text-muted small text-warning">⚠️ 空亡(天中殺)</div>` : ''}
                     </div>
                 `;
             });

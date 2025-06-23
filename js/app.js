@@ -98,6 +98,24 @@ function displayTodayData(data) {
             <span class="today-data-label">十干十二支</span>
             <span class="today-data-value">${data.jikkan_junishi || '計算中'}</span>
         </div>
+        <div class="today-data-item">
+            <span class="today-data-label">十干</span>
+            <span class="today-data-value">${data.jikkan || ''} (${data.jikkan_gogyou || ''}・${data.jikkan_yin_yang || ''})</span>
+        </div>
+        <div class="today-data-item">
+            <span class="today-data-label">十二支</span>
+            <span class="today-data-value">${data.junishi || ''} (${data.junishi_animal || ''}・${data.junishi_gogyou || ''})</span>
+        </div>
+        <div class="today-data-item">
+            <span class="today-data-label">十二運</span>
+            <span class="today-data-value">${data.juuni_un || ''}</span>
+        </div>
+        ${data.is_kuubou ? `
+        <div class="today-data-item">
+            <span class="today-data-label">空亡(天中殺)</span>
+            <span class="holiday-badge">注意日</span>
+        </div>
+        ` : ''}
         ${data.is_holiday ? `
         <div class="today-data-item">
             <span class="today-data-label">祝日</span>
