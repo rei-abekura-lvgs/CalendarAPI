@@ -91,6 +91,29 @@
             </div>
         </div>
 
+        <!-- 年選択 -->
+        <div class="text-center mb-3">
+            <label for="yearSelector" class="form-label">検索対象年（2025年〜2036年対応）</label>
+            <div class="d-flex justify-content-center align-items-center gap-3">
+                <button class="btn btn-outline-secondary btn-sm" onclick="changeYear(-1)">◀ 前年</button>
+                <select id="yearSelector" class="form-select" style="max-width: 120px;">
+                    <option value="2025" selected>2025年</option>
+                    <option value="2026">2026年</option>
+                    <option value="2027">2027年</option>
+                    <option value="2028">2028年</option>
+                    <option value="2029">2029年</option>
+                    <option value="2030">2030年</option>
+                    <option value="2031">2031年</option>
+                    <option value="2032">2032年</option>
+                    <option value="2033">2033年</option>
+                    <option value="2034">2034年</option>
+                    <option value="2035">2035年</option>
+                    <option value="2036">2036年</option>
+                </select>
+                <button class="btn btn-outline-secondary btn-sm" onclick="changeYear(1)">次年 ▶</button>
+            </div>
+        </div>
+
         <!-- クイック検索 -->
         <div class="quick-search text-center">
             <h6 class="text-muted mb-3">よく検索されるキーワード</h6>
@@ -171,43 +194,83 @@
             }
         }
         
-        // 統合検索実行
+        // 統合検索実行（12年分対応）
         async function performUnifiedSearch(query) {
+            const selectedYear = parseInt(document.getElementById('yearSelector').value);
+            console.log(`${selectedYear}年で「${query}」を検索`);
+            
             const allResults = [];
             
             try {
-                // キーワード検索
-                const keywordResults = await searchAPI.searchByKeyword(query, 2025);
-                allResults.push(...keywordResults);
+                // 直接データアクセスで検索
+                const response = await fetch(`api/${selectedYear}/all.json`);
+                if (!response.ok) {
+                    throw new Error(`${selectedYear}年のデータが見つかりません`);
+                }
                 
-                // パワーストーン検索
-                const stoneResults = await searchAPI.searchByPowerStone(query, 2025);
-                stoneResults.forEach(item => {
-                    if (!allResults.find(existing => existing.date === item.date)) {
-                        allResults.push(item);
-                    }
-                });
+                const data = await response.json();
+                console.log(`${selectedYear}年データ読み込み完了`);
                 
-                // 六曜検索
-                const rokuyoResults = await searchAPI.searchByRokuyo(query, 2025);
-                rokuyoResults.forEach(item => {
-                    if (!allResults.find(existing => existing.date === item.date)) {
-                        allResults.push(item);
-                    }
-                });
-                
-                // 祝日検索
-                if (query.includes('祝日') || query.includes('休日')) {
-                    const holidayResults = await searchAPI.searchHolidays(2025);
-                    holidayResults.forEach(item => {
-                        if (!allResults.find(existing => existing.date === item.date)) {
-                            allResults.push(item);
+                if (data.months && Array.isArray(data.months)) {
+                    for (const monthData of data.months) {
+                        if (monthData.days && Array.isArray(monthData.days)) {
+                            for (const day of monthData.days) {
+                                let match = false;
+                                
+                                // キーワード検索（複数フィールドを対象）
+                                const searchFields = [
+                                    day.daily_keyword,
+                                    day.rokuyo,
+                                    day.color_of_the_day,
+                                    day.power_stone,
+                                    day.recommended_tea,
+                                    day.meditation_theme,
+                                    day.flower_of_the_day,
+                                    day.energy_advice,
+                                    day.zodiac_influence,
+                                    day.tarot_card,
+                                    day.wise_quote,
+                                    day.recommended_music,
+                                    day.recommended_food,
+                                    day.crystal_healing,
+                                    day.feng_shui_tip
+                                ];
+                                
+                                // 祝日検索
+                                if ((query.includes('祝日') || query.includes('休日')) && day.is_holiday) {
+                                    match = true;
+                                }
+                                
+                                // フィールド内容検索
+                                for (const field of searchFields) {
+                                    if (field && typeof field === 'string' && field.includes(query)) {
+                                        match = true;
+                                        break;
+                                    }
+                                }
+                                
+                                if (match) {
+                                    allResults.push({
+                                        date: day.date,
+                                        weekday: day.weekday,
+                                        rokuyo: day.rokuyo,
+                                        daily_keyword: day.daily_keyword,
+                                        color_of_the_day: day.color_of_the_day,
+                                        power_stone: day.power_stone,
+                                        is_holiday: day.is_holiday,
+                                        is_weekend: day.is_weekend,
+                                        is_ichiryu_manbai: day.is_ichiryu_manbai,
+                                        holiday_name: day.holiday_name
+                                    });
+                                }
+                            }
                         }
-                    });
+                    }
                 }
                 
             } catch (error) {
                 console.error('統合検索エラー:', error);
+                throw error;
             }
             
             return allResults;
@@ -219,26 +282,39 @@
             performSearch();
         }
         
-        // 特別検索 - 直接データ検索で実装
+        // 年変更ヘルパー関数
+        function changeYear(direction) {
+            const selector = document.getElementById('yearSelector');
+            const currentYear = parseInt(selector.value);
+            const newYear = currentYear + direction;
+            
+            if (newYear >= 2025 && newYear <= 2036) {
+                selector.value = newYear;
+                console.log(`年を${newYear}年に変更`);
+            }
+        }
+        
+        // 特別検索 - 12年分対応
         async function searchSpecial(type) {
-            console.log('特別検索:', type);
+            const selectedYear = parseInt(document.getElementById('yearSelector').value);
+            console.log(`特別検索: ${type}, 対象年: ${selectedYear}`);
             showLoading();
             
             try {
                 let results = [];
                 let title = '';
                 
+                // 選択された年のデータを読み込み
+                const response = await fetch(`api/${selectedYear}/all.json`);
+                if (!response.ok) {
+                    throw new Error(`${selectedYear}年のデータが見つかりません`);
+                }
+                
+                const data = await response.json();
+                console.log(`${selectedYear}年データ読み込み成功`);
+                
                 if (type === 'ichiryu') {
                     console.log('一粒万倍日検索実行');
-                    
-                    // 直接データを読み込んで検索
-                    const response = await fetch('api/2025/all.json');
-                    if (!response.ok) {
-                        throw new Error('データの読み込みに失敗しました');
-                    }
-                    
-                    const data = await response.json();
-                    console.log('データ読み込み成功:', Object.keys(data));
                     
                     // 一粒万倍日を検索
                     if (data.months && Array.isArray(data.months)) {
@@ -254,7 +330,9 @@
                                             rokuyo: day.rokuyo,
                                             daily_keyword: day.daily_keyword,
                                             is_holiday: day.is_holiday,
-                                            is_ichiryu_manbai: true
+                                            is_ichiryu_manbai: true,
+                                            color_of_the_day: day.color_of_the_day,
+                                            power_stone: day.power_stone
                                         });
                                     }
                                 }
@@ -262,14 +340,11 @@
                         }
                     }
                     
-                    title = '2025年の一粒万倍日';
+                    title = `${selectedYear}年の一粒万倍日`;
                     console.log('一粒万倍日検索完了:', results.length + '件');
                     
                 } else if (type === 'weekend') {
-                    // 週末検索も直接実装
-                    const response = await fetch('api/2025/all.json');
-                    const data = await response.json();
-                    
+                    // 週末検索
                     if (data.months && Array.isArray(data.months)) {
                         for (const monthData of data.months) {
                             if (monthData.days && Array.isArray(monthData.days)) {
@@ -280,14 +355,16 @@
                                             weekday: day.weekday,
                                             rokuyo: day.rokuyo,
                                             daily_keyword: day.daily_keyword,
-                                            is_weekend: true
+                                            is_weekend: true,
+                                            is_holiday: day.is_holiday,
+                                            color_of_the_day: day.color_of_the_day
                                         });
                                     }
                                 }
                             }
                         }
                     }
-                    title = '2025年の週末';
+                    title = `${selectedYear}年の週末`;
                 }
                 
                 displayResults(results, title);
