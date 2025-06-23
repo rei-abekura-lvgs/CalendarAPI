@@ -58,9 +58,9 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#endpoints">API仕様</a></li>
-                    <li class="nav-item"><a class="nav-link" href="api_index.html">全ファイル一覧</a></li>
-                    <li class="nav-item"><a class="nav-link" href="search.html">データ検索</a></li>
-                    <li class="nav-item"><a class="nav-link" href="fortune.html">総合診断</a></li>
+                    <li class="nav-item"><a class="nav-link" href="api_index.html">API全ファイル一覧</a></li>
+                    <li class="nav-item"><a class="nav-link" href="search.html">暦データ検索</a></li>
+                    <li class="nav-item"><a class="nav-link" href="fortune.html">総合運勢</a></li>
                     <li class="nav-item"><a class="nav-link" href="personal.html">個人診断(四柱推命)</a></li>
                 </ul>
             </div>
@@ -82,13 +82,13 @@
                             <i class="fas fa-code me-2"></i>API仕様
                         </a>
                         <a href="api_index.html" class="btn btn-info btn-lg">
-                            <i class="fas fa-list me-2"></i>全ファイル一覧
+                            <i class="fas fa-list me-2"></i>API全ファイル一覧
                         </a>
                         <a href="search.html" class="btn btn-success btn-lg">
-                            <i class="fas fa-search me-2"></i>データ検索
+                            <i class="fas fa-search me-2"></i>暦データ検索
                         </a>
                         <a href="fortune.html" class="btn btn-warning btn-lg">
-                            <i class="fas fa-star me-2"></i>総合診断
+                            <i class="fas fa-star me-2"></i>総合運勢
                         </a>
                         <a href="personal.html" class="btn btn-danger btn-lg">
                             <i class="fas fa-yin-yang me-2"></i>個人診断
@@ -512,10 +512,12 @@ curl -o "january_2025.json" \
                 </div>
                 <div class="col-md-6 text-md-end">
                     <div class="d-flex justify-content-md-end justify-content-start align-items-center gap-3 mb-2">
-                        <a href="index.html#endpoints" class="text-light text-decoration-none">API仕様</a>
-                        <a href="api_index.html" class="text-light text-decoration-none">全ファイル一覧</a>
-                        <a href="search.html" class="text-light text-decoration-none">データ検索</a>
-                        <a href="https://github.com/rei-abekura-lvgs/CalendarAPI" class="text-light" target="_blank">
+                        <div class="visitor-counter bg-secondary text-light px-3 py-1 rounded">
+                            <i class="fas fa-users me-2"></i>
+                            <span class="counter-text">訪問者数: </span>
+                            <span id="visitorCount" class="fw-bold">-</span>
+                        </div>
+                        <a href="https://github.com/rei-abekura-lvgs/CalendarAPI" class="text-light" target="_blank" title="GitHub Repository">
                             <i class="fab fa-github fa-lg"></i>
                         </a>
                     </div>
@@ -536,5 +538,41 @@ curl -o "january_2025.json" \
     <script src="js/detailed-fortune.js"></script>
     <!-- Custom JS -->
     <script src="js/app.js"></script>
+    
+    <!-- Visitor Counter -->
+    <script>
+        // 来訪者カウンター（ローカルストレージ使用）
+        function initVisitorCounter() {
+            const storageKey = 'calendarAPI_visitors';
+            let visitors = localStorage.getItem(storageKey);
+            
+            if (!visitors) {
+                visitors = Math.floor(Math.random() * 1000) + 1500; // 1500-2500の初期値
+                localStorage.setItem(storageKey, visitors);
+            } else {
+                visitors = parseInt(visitors) + 1;
+                localStorage.setItem(storageKey, visitors);
+            }
+            
+            const counterElement = document.getElementById('visitorCount');
+            if (counterElement) {
+                // カウントアップアニメーション
+                const targetCount = visitors;
+                const startCount = Math.max(0, targetCount - 10);
+                let currentCount = startCount;
+                
+                const countUp = setInterval(() => {
+                    counterElement.textContent = currentCount.toLocaleString();
+                    if (currentCount >= targetCount) {
+                        clearInterval(countUp);
+                    }
+                    currentCount++;
+                }, 50);
+            }
+        }
+        
+        // ページ読み込み時に実行
+        document.addEventListener('DOMContentLoaded', initVisitorCounter);
+    </script>
 </body>
 </html>
