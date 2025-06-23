@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>運勢機能 - 暦データAPI</title>
-    <meta name="description" content="27項目のデータを統合した総合運勢表示。今日の運勢、週間運勢、相性診断が利用可能。">
+    <title>総合運勢 - 暦データAPI</title>
+    <meta name="description" content="39項目のデータを統合した総合運勢表示。今日の運勢、週間運勢、指定日運勢が利用可能（全員共通）。">
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -115,18 +115,13 @@
                 </button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="personal-tab" data-bs-toggle="tab" data-bs-target="#personal" type="button">
-                    <i class="fas fa-user-astronaut me-1"></i>個人運勢診断
-                </button>
-            </li>
-            <li class="nav-item" role="presentation">
                 <button class="nav-link" id="weekly-tab" data-bs-toggle="tab" data-bs-target="#weekly" type="button">
                     <i class="fas fa-calendar-week me-1"></i>週間運勢
                 </button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="compatibility-tab" data-bs-toggle="tab" data-bs-target="#compatibility" type="button">
-                    <i class="fas fa-heart me-1"></i>相性診断
+                <button class="nav-link" id="date-tab" data-bs-toggle="tab" data-bs-target="#date" type="button">
+                    <i class="fas fa-calendar-day me-1"></i>指定日運勢
                 </button>
             </li>
             <li class="nav-item" role="presentation">
@@ -148,148 +143,23 @@
                 <div id="todayFortuneResult"></div>
             </div>
 
-            <!-- 個人運勢診断 -->
-            <div class="tab-pane fade" id="personal" role="tabpanel">
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <div class="card fortune-card">
-                            <div class="card-header bg-gradient text-white" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
-                                <h5 class="mb-0"><i class="fas fa-stars me-2"></i>詳細四柱推命診断</h5>
-                                <small>生年月日・時間・性別から運勢を詳細分析</small>
-                            </div>
-                            <div class="card-body">
-                                <!-- 生年月日入力セクション -->
-                                <div class="mb-4">
-                                    <h6 class="fw-bold mb-3"><i class="fas fa-calendar-alt me-2 text-primary"></i>生年月日</h6>
-                                    <div class="date-picker-modern">
-                                        <div class="row g-3">
-                                            <div class="col-md-4">
-                                                <label class="form-label small text-muted">年</label>
-                                                <select class="form-select form-select-lg" id="birthYear" style="border-radius: 12px;">
-                                                    <option value="">年を選択</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <label class="form-label small text-muted">月</label>
-                                                <select class="form-select form-select-lg" id="birthMonth" style="border-radius: 12px;">
-                                                    <option value="">月を選択</option>
-                                                    <option value="1">1月 (睦月)</option>
-                                                    <option value="2">2月 (如月)</option>
-                                                    <option value="3">3月 (弥生)</option>
-                                                    <option value="4">4月 (卯月)</option>
-                                                    <option value="5">5月 (皐月)</option>
-                                                    <option value="6">6月 (水無月)</option>
-                                                    <option value="7">7月 (文月)</option>
-                                                    <option value="8">8月 (葉月)</option>
-                                                    <option value="9">9月 (長月)</option>
-                                                    <option value="10">10月 (神無月)</option>
-                                                    <option value="11">11月 (霜月)</option>
-                                                    <option value="12">12月 (師走)</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <label class="form-label small text-muted">日</label>
-                                                <select class="form-select form-select-lg" id="birthDay" style="border-radius: 12px;">
-                                                    <option value="">日を選択</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- 生時入力セクション -->
-                                <div class="mb-4">
-                                    <h6 class="fw-bold mb-3"><i class="fas fa-clock me-2 text-success"></i>生まれた時間</h6>
-                                    <div class="row g-3">
-                                        <div class="col-md-4">
-                                            <label class="form-label small text-muted">時</label>
-                                            <select class="form-select form-select-lg" id="birthHour" style="border-radius: 12px;">
-                                                <option value="">時を選択</option>
-                                                <option value="unknown" class="text-muted">時間不明</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <label class="form-label small text-muted">分</label>
-                                            <select class="form-select form-select-lg" id="birthMinute" style="border-radius: 12px;">
-                                                <option value="0">00分</option>
-                                                <option value="15">15分</option>
-                                                <option value="30">30分</option>
-                                                <option value="45">45分</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <label class="form-label small text-muted">精度</label>
-                                            <select class="form-select form-select-lg" id="timeAccuracy" style="border-radius: 12px;">
-                                                <option value="exact">正確</option>
-                                                <option value="approximate">おおよそ</option>
-                                                <option value="unknown">不明</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <small class="text-muted mt-2 d-block">
-                                        <i class="fas fa-info-circle me-1"></i>
-                                        時間が不明でも診断できますが、時柱の計算ができないため一部の分析が制限されます
-                                    </small>
-                                </div>
-
-                                <!-- 性別・その他情報 -->
-                                <div class="mb-4">
-                                    <h6 class="fw-bold mb-3"><i class="fas fa-user me-2 text-info"></i>個人情報</h6>
-                                    <div class="row g-3">
-                                        <div class="col-md-6">
-                                            <label class="form-label small text-muted">性別</label>
-                                            <div class="d-flex gap-3">
-                                                <div class="form-check form-check-lg">
-                                                    <input class="form-check-input" type="radio" name="gender" id="genderMale" value="male">
-                                                    <label class="form-check-label fw-bold" for="genderMale">
-                                                        <i class="fas fa-mars text-primary me-2"></i>男性
-                                                    </label>
-                                                </div>
-                                                <div class="form-check form-check-lg">
-                                                    <input class="form-check-input" type="radio" name="gender" id="genderFemale" value="female">
-                                                    <label class="form-check-label fw-bold" for="genderFemale">
-                                                        <i class="fas fa-venus text-danger me-2"></i>女性
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label class="form-label small text-muted">診断の詳細レベル</label>
-                                            <select class="form-select form-select-lg" id="analysisLevel" style="border-radius: 12px;">
-                                                <option value="standard">標準診断</option>
-                                                <option value="detailed">詳細診断</option>
-                                                <option value="professional">専門診断</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- 診断ボタン -->
-                                <div class="text-center mb-4">
-                                    <button type="button" class="btn btn-lg px-5 py-3" onclick="calculateDetailedFortune()" 
-                                            style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border: none; border-radius: 25px; color: white; font-weight: bold;">
-                                        <i class="fas fa-magic me-2"></i>詳細運勢診断を開始
-                                    </button>
-                                    <div class="mt-2">
-                                        <small class="text-muted">
-                                            <i class="fas fa-shield-alt me-1"></i>
-                                            入力情報は暗号化されて安全に処理されます
-                                        </small>
-                                    </div>
-                                </div>
-
-                                <!-- 診断結果エリア -->
-                                <div id="personalFortuneResult">
-                                    <div class="text-center text-muted py-5">
-                                        <i class="fas fa-crystal-ball fa-3x mb-3" style="opacity: 0.3;"></i>
-                                        <p>上記の情報を入力して診断を開始してください</p>
-                                        <small>四柱推命の古典理論に基づいた本格的な運勢分析を行います</small>
-                                    </div>
-                                </div>
+            <!-- 指定日運勢 -->
+            <div class="tab-pane fade" id="date" role="tabpanel">
+                <div class="text-center mb-4">
+                    <h5>特定の日の運勢を調べる</h5>
+                    <div class="row justify-content-center">
+                        <div class="col-md-6">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
+                                <input type="date" class="form-control" id="fortuneDate" value="">
+                                <button class="btn btn-primary" type="button" onclick="getDateFortune()">
+                                    <i class="fas fa-search me-1"></i>運勢を調べる
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div id="dateFortuneResult"></div>
             </div>
 
             <!-- 週間運勢 -->
@@ -380,167 +250,32 @@
             }
         }
 
-        // 詳細運勢診断関数
-        async function calculateDetailedFortune() {
-            const resultContainer = document.getElementById('personalFortuneResult');
+        // 指定日運勢取得
+        async function getDateFortune() {
+            const dateInput = document.getElementById('fortuneDate');
+            const resultContainer = document.getElementById('dateFortuneResult');
             
-            // 入力検証
-            const year = document.getElementById('birthYear').value;
-            const month = document.getElementById('birthMonth').value;
-            const day = document.getElementById('birthDay').value;
-            const gender = document.querySelector('input[name="gender"]:checked')?.value;
-            
-            if (!year || !month || !day || !gender) {
-                showFortuneError(resultContainer, 'すべての必須項目を入力してください');
+            if (!dateInput.value) {
+                showFortuneError(resultContainer, '日付を選択してください');
                 return;
             }
 
-            // ローディング表示
-            showFortuneLoading(resultContainer, '四柱推命で詳細分析中...');
+            showFortuneLoading(resultContainer);
 
             try {
-                const detailedFortune = await detailedFortuneAPI.calculateDetailedFortune();
-                
-                if (detailedFortune) {
-                    displayDetailedFortuneResult(detailedFortune, resultContainer);
-                    
-                    // 入力データをローカルストレージに保存
-                    const birthData = { year, month, day, gender };
-                    localStorage.setItem('userBirthData', JSON.stringify(birthData));
+                const fortune = await fortuneAPI.getDateFortune(dateInput.value);
+                if (fortune) {
+                    displayFortune(resultContainer, fortune);
                 } else {
-                    showFortuneError(resultContainer, '運勢診断中にエラーが発生しました');
+                    showFortuneError(resultContainer, '指定日のデータを取得できませんでした');
                 }
             } catch (error) {
-                console.error('詳細運勢診断エラー:', error);
-                showFortuneError(resultContainer, '診断に失敗しました');
+                console.error('指定日運勢エラー:', error);
+                showFortuneError(resultContainer, '運勢取得中にエラーが発生しました');
             }
         }
 
-        // 詳細運勢結果表示
-        function displayDetailedFortuneResult(fortune, container) {
-            const getScoreClass = (score) => {
-                if (score >= 80) return 'score-excellent';
-                if (score >= 60) return 'score-good';
-                if (score >= 40) return 'score-normal';
-                if (score >= 20) return 'score-caution';
-                return 'score-warning';
-            };
 
-            const html = `
-                <div class="row">
-                    <div class="col-md-12">
-                        <!-- 四柱推命基本情報 -->
-                        <div class="card mb-4" style="border-radius: 15px; border: none; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
-                            <div class="card-header text-white" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 15px 15px 0 0;">
-                                <h6 class="mb-0"><i class="fas fa-yin-yang me-2"></i>四柱推命分析結果</h6>
-                            </div>
-                            <div class="card-body">
-                                <div class="row text-center">
-                                    <div class="col-3">
-                                        <div class="mb-2"><strong>年柱</strong></div>
-                                        <div class="badge bg-primary fs-6">${fortune.fourPillars.year.kanshi}</div>
-                                        <div class="small text-muted">${fortune.fourPillars.year.animal}</div>
-                                    </div>
-                                    <div class="col-3">
-                                        <div class="mb-2"><strong>月柱</strong></div>
-                                        <div class="badge bg-success fs-6">${fortune.fourPillars.month.kanshi}</div>
-                                        <div class="small text-muted">${fortune.fourPillars.month.animal}</div>
-                                    </div>
-                                    <div class="col-3">
-                                        <div class="mb-2"><strong>日柱</strong></div>
-                                        <div class="badge bg-warning fs-6">${fortune.fourPillars.day.kanshi}</div>
-                                        <div class="small text-muted">${fortune.fourPillars.day.animal}</div>
-                                    </div>
-                                    <div class="col-3">
-                                        <div class="mb-2"><strong>時柱</strong></div>
-                                        <div class="badge bg-info fs-6">${fortune.fourPillars.hour.kanshi}</div>
-                                        <div class="small text-muted">${fortune.fourPillars.hour.animal}</div>
-                                    </div>
-                                </div>
-                                <hr>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="mb-2"><strong>日干:</strong> ${fortune.fourPillars.day.kan} (${fortune.fourPillars.day.element}・${fortune.fourPillars.day.yinYang})</div>
-                                        <div class="mb-2"><strong>今日との相性:</strong> <span class="badge bg-secondary">${fortune.todayCompatibility}%</span></div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        ${fortune.daiun ? `<div class="mb-2"><strong>現在の運気:</strong> ${fortune.daiun.description}</div>` : ''}
-                                        ${fortune.ryunen ? `<div class="mb-2"><strong>今年の運気:</strong> ${fortune.ryunen.fortune.description}</div>` : ''}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 運勢スコア -->
-                        <div class="card mb-4" style="border-radius: 15px; border: none; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
-                            <div class="card-header text-white" style="background: linear-gradient(135deg, #ff6b6b 0%, #ffa500 100%); border-radius: 15px 15px 0 0;">
-                                <h6 class="mb-0"><i class="fas fa-chart-line me-2"></i>運勢スコア</h6>
-                            </div>
-                            <div class="card-body">
-                                <div class="row text-center">
-                                    <div class="col-6 col-md-3 mb-3">
-                                        <div class="score-circle mx-auto ${getScoreClass(fortune.scores.overall)}">
-                                            ${fortune.scores.overall}
-                                        </div>
-                                        <div class="mt-2"><strong>総合運</strong></div>
-                                    </div>
-                                    <div class="col-6 col-md-3 mb-3">
-                                        <div class="score-circle mx-auto ${getScoreClass(fortune.scores.love)}">
-                                            ${fortune.scores.love}
-                                        </div>
-                                        <div class="mt-2"><strong>恋愛運</strong></div>
-                                    </div>
-                                    <div class="col-6 col-md-3 mb-3">
-                                        <div class="score-circle mx-auto ${getScoreClass(fortune.scores.money)}">
-                                            ${fortune.scores.money}
-                                        </div>
-                                        <div class="mt-2"><strong>金運</strong></div>
-                                    </div>
-                                    <div class="col-6 col-md-3 mb-3">
-                                        <div class="score-circle mx-auto ${getScoreClass(fortune.scores.work)}">
-                                            ${fortune.scores.work}
-                                        </div>
-                                        <div class="mt-2"><strong>仕事運</strong></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 性格分析・アドバイス -->
-                        ${fortune.personality ? `
-                        <div class="card mb-4" style="border-radius: 15px; border: none; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
-                            <div class="card-header text-white" style="background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%); border-radius: 15px 15px 0 0;">
-                                <h6 class="mb-0"><i class="fas fa-user-circle me-2"></i>性格分析</h6>
-                            </div>
-                            <div class="card-body">
-                                <p>${fortune.personality}</p>
-                            </div>
-                        </div>
-                        ` : ''}
-
-                        ${fortune.recommendations && fortune.recommendations.length > 0 ? `
-                        <div class="card mb-4" style="border-radius: 15px; border: none; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
-                            <div class="card-header text-white" style="background: linear-gradient(135deg, #45b7d1 0%, #96c93d 100%); border-radius: 15px 15px 0 0;">
-                                <h6 class="mb-0"><i class="fas fa-lightbulb me-2"></i>今日のアドバイス</h6>
-                            </div>
-                            <div class="card-body">
-                                ${fortune.recommendations.map(rec => `<div class="recommendation"><i class="fas fa-star me-2"></i>${rec}</div>`).join('')}
-                            </div>
-                        </div>
-                        ` : ''}
-
-                        ${fortune.warnings && fortune.warnings.length > 0 ? `
-                        <div class="alert alert-warning" style="border-radius: 15px;">
-                            <h6><i class="fas fa-exclamation-triangle me-2"></i>注意事項</h6>
-                            ${fortune.warnings.map(warning => `<div>${warning}</div>`).join('')}
-                        </div>
-                        ` : ''}
-                    </div>
-                </div>
-            `;
-            
-            container.innerHTML = html;
-        }
 
         // 週間運勢読み込み
         async function loadWeeklyFortune() {
