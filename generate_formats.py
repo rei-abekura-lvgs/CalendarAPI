@@ -41,16 +41,17 @@ def generate_csv(data, output_file):
     with open(output_file, 'w', newline='', encoding='utf-8') as csvfile:
         writer = csv.writer(csvfile)
         
-        # ヘッダー行（29項目すべて）
+        # ヘッダー行（37項目すべて）
         writer.writerow([
             'day', 'date', 'weekday', 'weekday_en', 'weekday_short', 'is_weekend', 'is_holiday', 
-            'holiday_name', 'rokuyo', 'is_ichiryu_manbai', 'jikkan_junishi', 'season_24', 'moon_phase',
-            'daily_keyword', 'color_of_the_day', 'recommended_tea', 'lucky_number', 'power_stone', 
-            'aroma_oil', 'meditation_theme', 'flower_of_the_day', 'energy_advice', 'zodiac_influence',
+            'holiday_name', 'rokuyo', 'is_ichiryu_manbai', 'jikkan_junishi', 'jikkan', 'junishi',
+            'jikkan_gogyou', 'junishi_gogyou', 'jikkan_yin_yang', 'junishi_animal', 'juuni_un', 'is_kuubou',
+            'season_24', 'moon_phase', 'daily_keyword', 'color_of_the_day', 'recommended_tea', 'lucky_number', 
+            'power_stone', 'aroma_oil', 'meditation_theme', 'flower_of_the_day', 'energy_advice', 'zodiac_influence',
             'tarot_card', 'wise_quote', 'recommended_music', 'recommended_food', 'crystal_healing', 'feng_shui_tip'
         ])
         
-        # データ行（29項目すべて）
+        # データ行（37項目すべて）
         for day in data['days']:
             writer.writerow([
                 day.get('day', ''),
@@ -64,6 +65,14 @@ def generate_csv(data, output_file):
                 day.get('rokuyo', ''),
                 day.get('is_ichiryu_manbai', ''),
                 day.get('jikkan_junishi', ''),
+                day.get('jikkan', ''),
+                day.get('junishi', ''),
+                day.get('jikkan_gogyou', ''),
+                day.get('junishi_gogyou', ''),
+                day.get('jikkan_yin_yang', ''),
+                day.get('junishi_animal', ''),
+                day.get('juuni_un', ''),
+                day.get('is_kuubou', ''),
                 day.get('season_24', ''),
                 day.get('moon_phase', ''),
                 day.get('daily_keyword', ''),
@@ -117,9 +126,12 @@ def generate_txt(data, output_file):
             weekend_mark = "🌸" if day_data['is_weekend'] else "  "
             ichiryu_mark = "💰" if day_data.get('is_ichiryu_manbai') else "  "
             
-            f.write(f"{day_data['date']} ({day_data['weekday']}) {holiday_mark}{weekend_mark}{ichiryu_mark}\n")
+            kuubou_mark = "⚠️" if day_data.get('is_kuubou') else "  "
+            
+            f.write(f"{day_data['date']} ({day_data['weekday']}) {holiday_mark}{weekend_mark}{ichiryu_mark}{kuubou_mark}\n")
             f.write(f"  六曜: {day_data.get('rokuyo', '')}\n")
-            f.write(f"  十干十二支: {day_data.get('jikkan_junishi', '')}\n")
+            f.write(f"  十干十二支: {day_data.get('jikkan_junishi', '')} ({day_data.get('jikkan', '')}{day_data.get('jikkan_gogyou', '')}/{day_data.get('junishi', '')}{day_data.get('junishi_gogyou', '')})\n")
+            f.write(f"  陰陽: {day_data.get('jikkan_yin_yang', '')} | 動物: {day_data.get('junishi_animal', '')} | 十二運: {day_data.get('juuni_un', '')}\n")
             f.write(f"  キーワード: {day_data.get('daily_keyword', '')}\n")
             f.write(f"  今日の色: {day_data.get('color_of_the_day', '')}\n")
             f.write(f"  パワーストーン: {day_data.get('power_stone', '')}\n")
@@ -127,6 +139,8 @@ def generate_txt(data, output_file):
                 f.write(f"  祝日: {day_data['holiday_name']}\n")
             if day_data.get('is_ichiryu_manbai'):
                 f.write(f"  一粒万倍日\n")
+            if day_data.get('is_kuubou'):
+                f.write(f"  空亡(天中殺)\n")
             
             if day_data['holiday_name']:
                 f.write(f"  祝日: {day_data['holiday_name']}\n")

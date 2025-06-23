@@ -40,13 +40,21 @@ def calculate_ichiryu_manbai_days(year):
     
     return ichiryu_days
 
-def get_jikkan_junishi(year, month, day):
-    """十干十二支を計算"""
+def get_jikkan_junishi_details(year, month, day):
+    """十干十二支とその詳細情報を計算"""
     # 十干（じっかん）
     jikkan = ["甲", "乙", "丙", "丁", "戊", "己", "庚", "辛", "壬", "癸"]
     
     # 十二支（じゅうにし）
     junishi = ["子", "丑", "寅", "卯", "辰", "巳", "午", "未", "申", "酉", "戌", "亥"]
+    
+    # 十干の五行・陰陽
+    jikkan_gogyou = ["木", "木", "火", "火", "土", "土", "金", "金", "水", "水"]
+    jikkan_yin_yang = ["陽", "陰", "陽", "陰", "陽", "陰", "陽", "陰", "陽", "陰"]
+    
+    # 十二支の五行・動物
+    junishi_gogyou = ["水", "土", "木", "木", "土", "火", "火", "土", "金", "金", "土", "水"]
+    junishi_animals = ["鼠", "牛", "虎", "兎", "龍", "蛇", "馬", "羊", "猿", "鶏", "犬", "猪"]
     
     # 基準日からの日数を計算（1900年1月1日を基準とする）
     base_date = datetime.date(1900, 1, 1)
@@ -57,7 +65,26 @@ def get_jikkan_junishi(year, month, day):
     jikkan_index = (days_diff + 6) % 10  # 1900年1月1日は庚子なので調整
     junishi_index = (days_diff + 6) % 12
     
-    return f"{jikkan[jikkan_index]}{junishi[junishi_index]}"
+    # 十二運を計算（月支との関係、簡易版）
+    juuni_un_list = ["長生", "沐浴", "冠帯", "建禄", "帝旺", "衰", "病", "死", "墓", "絶", "胎", "養"]
+    juuni_un_index = (jikkan_index + month) % 12
+    juuni_un = juuni_un_list[juuni_un_index]
+    
+    # 空亡（天中殺）を計算（簡易版：10日に2日の割合）
+    kuubou_cycle = days_diff % 10
+    is_kuubou = kuubou_cycle >= 8  # 10日のうち最後の2日を空亡とする
+    
+    return {
+        "jikkan_junishi": f"{jikkan[jikkan_index]}{junishi[junishi_index]}",
+        "jikkan": jikkan[jikkan_index],
+        "junishi": junishi[junishi_index],
+        "jikkan_gogyou": jikkan_gogyou[jikkan_index],
+        "junishi_gogyou": junishi_gogyou[junishi_index],
+        "jikkan_yin_yang": jikkan_yin_yang[jikkan_index],
+        "junishi_animal": junishi_animals[junishi_index],
+        "juuni_un": juuni_un,
+        "is_kuubou": is_kuubou
+    }
 
 def get_holidays_for_year(year):
     """年別の祝日を計算（固定祝日と移動祝日の両方に対応）"""
@@ -293,8 +320,8 @@ def generate_koyomi_data(year):
             color = COLORS_OF_WEEK[weekday_index]
             tea = TEAS[(day_of_year - 1) % len(TEAS)]
             
-            # 十干十二支を追加
-            jikkan_junishi = get_jikkan_junishi(year, month, day)
+            # 十干十二支とその詳細情報を取得
+            jikkan_junishi_data = get_jikkan_junishi_details(year, month, day)
             
             # 追加データの生成
             lucky_number = LUCKY_NUMBERS[(day_of_year - 1) % len(LUCKY_NUMBERS)]
@@ -324,7 +351,20 @@ def generate_koyomi_data(year):
                 "holiday_name": holiday_name,
                 "rokuyo": rokuyo,
                 "is_ichiryu_manbai": is_ichiryu_manbai,
-                "jikkan_junishi": jikkan_junishi,
+                # 十干十二支基本情報
+                "jikkan_junishi": jikkan_junishi_data["jikkan_junishi"],
+                "jikkan": jikkan_junishi_data["jikkan"],
+                "junishi": jikkan_junishi_data["junishi"],
+                
+                # 四柱推命関連情報
+                "jikkan_gogyou": jikkan_junishi_data["jikkan_gogyou"],
+                "junishi_gogyou": jikkan_junishi_data["junishi_gogyou"],
+                "jikkan_yin_yang": jikkan_junishi_data["jikkan_yin_yang"],
+                "junishi_animal": jikkan_junishi_data["junishi_animal"],
+                "juuni_un": jikkan_junishi_data["juuni_un"],
+                "is_kuubou": jikkan_junishi_data["is_kuubou"],
+                
+                # 既存フィールド
                 "season_24": None,  # 二十四節気は複雑なので今回は省略
                 "moon_phase": "調査中",  # 月の満ち欠けも複雑なので今回は省略
                 "daily_keyword": keyword,
