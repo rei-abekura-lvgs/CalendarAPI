@@ -311,15 +311,28 @@
         </div>
     </div>
 
-    <!-- フッター -->
-    <footer class="bg-dark text-white text-center py-4 mt-5">
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
         <div class="container">
-            <p class="mb-2">&copy; 2025 暦データAPI - 個人運勢診断</p>
-            <p class="mb-0">
-                <a href="index.html" class="text-white-50 me-3">ホーム</a>
-                <a href="fortune.html" class="text-white-50 me-3">総合運勢</a>
-                <a href="api_index.html" class="text-white-50">API一覧</a>
-            </p>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h5 class="mb-2">
+                        <i class="fas fa-calendar-alt me-2"></i>暦データAPI
+                    </h5>
+                    <p class="text-muted mb-0">日本の暦データをJSON形式で提供する無料APIサービス</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="d-flex justify-content-md-end justify-content-start align-items-center gap-3 mb-2">
+                        <a href="index.html#endpoints" class="text-light text-decoration-none">API仕様</a>
+                        <a href="api_index.html" class="text-light text-decoration-none">全ファイル一覧</a>
+                        <a href="search.html" class="text-light text-decoration-none">データ検索</a>
+                        <a href="https://github.com/rei-abekura-lvgs/CalendarAPI" class="text-light" target="_blank">
+                            <i class="fab fa-github fa-lg"></i>
+                        </a>
+                    </div>
+                    <p class="text-muted mb-0">&copy; 2025 暦データAPI. All rights reserved.</p>
+                </div>
+            </div>
         </div>
     </footer>
 
