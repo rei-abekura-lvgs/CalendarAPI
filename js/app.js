@@ -380,6 +380,101 @@ function generateMonthLinks(year) {
     });
 }
 
+// 個人運勢計算関数
+async function calculatePersonalFortune() {
+    const birthDate = document.getElementById('birthDate').value;
+    const resultContainer = document.getElementById('personal-fortune-result');
+    
+    if (!birthDate) {
+        resultContainer.innerHTML = '<small class="text-warning">生年月日を入力してください</small>';
+        return;
+    }
+
+    // ローディング表示
+    resultContainer.innerHTML = `
+        <div class="text-center">
+            <div class="spinner-border spinner-border-sm text-primary" role="status">
+                <span class="visually-hidden">計算中...</span>
+            </div>
+            <div class="small text-muted mt-1">運勢を計算中...</div>
+        </div>
+    `;
+
+    try {
+        const personalFortune = await personalFortuneAPI.getPersonalFortune(birthDate);
+        
+        if (personalFortune) {
+            displayPersonalFortune(personalFortune, resultContainer);
+            
+            // 生年月日をローカルストレージに保存（次回自動入力）
+            localStorage.setItem('userBirthDate', birthDate);
+        } else {
+            resultContainer.innerHTML = '<small class="text-danger">運勢計算中にエラーが発生しました</small>';
+        }
+    } catch (error) {
+        console.error('個人運勢計算エラー:', error);
+        resultContainer.innerHTML = '<small class="text-danger">運勢計算に失敗しました</small>';
+    }
+}
+
+// 個人運勢表示関数
+function displayPersonalFortune(fortune, container) {
+    const getScoreClass = (score) => {
+        if (score >= 80) return 'text-success';
+        if (score >= 60) return 'text-info';
+        if (score >= 40) return 'text-warning';
+        return 'text-danger';
+    };
+
+    const kuubouWarning = fortune.personalKuubou.isPersonalKuubou ? 
+        '<div class="alert alert-warning alert-sm p-2 mb-2"><small><i class="fas fa-exclamation-triangle me-1"></i>個人空亡期間中</small></div>' : '';
+
+    const html = `
+        ${kuubouWarning}
+        <div class="row text-start">
+            <div class="col-6">
+                <div class="small mb-1">
+                    <strong>総合運</strong>
+                    <span class="${getScoreClass(fortune.scores.overall)}">${fortune.scores.overall}点</span>
+                </div>
+                <div class="small mb-1">
+                    <strong>恋愛運</strong>
+                    <span class="${getScoreClass(fortune.scores.love)}">${fortune.scores.love}点</span>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="small mb-1">
+                    <strong>金運</strong>
+                    <span class="${getScoreClass(fortune.scores.money)}">${fortune.scores.money}点</span>
+                </div>
+                <div class="small mb-1">
+                    <strong>健康運</strong>
+                    <span class="${getScoreClass(fortune.scores.health)}">${fortune.scores.health}点</span>
+                </div>
+            </div>
+        </div>
+        <hr class="my-2">
+        <div class="small text-muted">
+            <div class="mb-1"><strong>生年干支:</strong> ${fortune.birthData.year.kanshi}</div>
+            <div class="mb-1"><strong>人生段階:</strong> ${fortune.birthData.lifeStage.stage}</div>
+            ${fortune.personalAdvice.length > 0 ? `<div class="mt-2"><strong>アドバイス:</strong><br>${fortune.personalAdvice[0]}</div>` : ''}
+        </div>
+    `;
+    
+    container.innerHTML = html;
+}
+
+// 生年月日の自動復元
+function restoreBirthDate() {
+    const savedBirthDate = localStorage.getItem('userBirthDate');
+    if (savedBirthDate) {
+        const birthDateInput = document.getElementById('birthDate');
+        if (birthDateInput) {
+            birthDateInput.value = savedBirthDate;
+        }
+    }
+}
+
 function generateYearDataLinks(year) {
     const container = document.getElementById('year-data-links');
     const formats = [
