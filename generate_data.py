@@ -220,6 +220,9 @@ def generate_koyomi_data(year):
 
     # その年の祝日を取得
     holidays = get_holidays_for_year(year)
+    
+    # 一粒万倍日を取得
+    ichiryu_days = calculate_ichiryu_manbai_days(year)
 
     # 全年データを格納するリスト
     all_data = {
@@ -263,6 +266,9 @@ def generate_koyomi_data(year):
             rokuyo_index = (month + day) % 6
             rokuyo = ROKUYO_LIST[rokuyo_index]
             
+            # 一粒万倍日判定
+            is_ichiryu_manbai = date_str in ichiryu_days
+            
             # その他の情報
             keyword = KEYWORDS[(day_of_year - 1) % len(KEYWORDS)]
             color = COLORS_OF_WEEK[weekday_index]
@@ -295,6 +301,7 @@ def generate_koyomi_data(year):
                 "is_holiday": is_holiday,
                 "holiday_name": holiday_name,
                 "rokuyo": rokuyo,
+                "is_ichiryu_manbai": is_ichiryu_manbai,
                 "season_24": None,  # 二十四節気は複雑なので今回は省略
                 "moon_phase": "調査中",  # 月の満ち欠けも複雑なので今回は省略
                 "daily_keyword": keyword,

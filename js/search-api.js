@@ -243,6 +243,58 @@ class CalendarSearchAPI {
     }
 
     /**
+     * 一粒万倍日検索
+     */
+    async searchIchiryuManbaiDays(year = 2025, month = null) {
+        const data = await this.loadYearData(year);
+        if (!data) return [];
+
+        const results = [];
+        
+        if (data.months) {
+            for (const monthData of data.months) {
+                if (month && monthData.month !== month) continue;
+                
+                if (monthData.days) {
+                    for (const day of monthData.days) {
+                        if (day.is_ichiryu_manbai) {
+                            results.push({
+                                date: day.date,
+                                day: day.day,
+                                month: monthData.month,
+                                weekday: day.weekday,
+                                rokuyo: day.rokuyo,
+                                keyword: day.daily_keyword,
+                                isHoliday: day.is_holiday
+                            });
+                        }
+                    }
+                }
+            }
+        } else {
+            for (const [dateStr, dayData] of Object.entries(data)) {
+                if (dateStr.match(/^\d{4}-\d{2}-\d{2}$/) && dayData.is_ichiryu_manbai) {
+                    const [y, m, d] = dateStr.split('-').map(Number);
+                    if (!month || m === month) {
+                        results.push({
+                            date: dateStr,
+                            day: d,
+                            month: m,
+                            weekday: dayData.weekday,
+                            rokuyo: dayData.rokuyo,
+                            keyword: dayData.daily_keyword,
+                            isHoliday: dayData.is_holiday
+                        });
+                    }
+                }
+            }
+        }
+
+        this.addToHistory('ichiryu_manbai', `${year}年${month ? month + '月' : ''}`, results.length);
+        return results;
+    }
+
+    /**
      * ラッキーデー検索（大安 + パワーストーン組み合わせ）
      */
     async findLuckyDays(year = 2025, month = null) {
